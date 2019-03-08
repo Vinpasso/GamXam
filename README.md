@@ -1,2 +1,2 @@
 # GamXam
-Studying flashcard system
+Flashcard system for studying.
