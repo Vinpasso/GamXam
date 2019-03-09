@@ -14,7 +14,7 @@ function createWindow () {
     win.loadFile('html/index.html')
 
     // Uncomment for easy dev tool access
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 
     win.on('closed', () => {
             win = null

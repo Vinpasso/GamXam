@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+        targetNamespace="https://vpt1.org"
+        xmlns="https://vpt1.org"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+    <xs:element name="exam">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="head">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="version" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="body">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="question" type="question" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="question">
+        <xs:sequence>
+            <xs:element name="body" type="xs:string"/>
+            <xs:element name="answers">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="answer" type="answer" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                    <xs:attribute name="type" type="answer-type" default="all"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="type" type="question-type" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="answer">
+        <xs:sequence>
+            <xs:element name="body" type="xs:string"/>
+            <xs:element name="marks">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="mark" type="mark" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="mark">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="keyword"/>
+                            <xs:enumeration value="manual"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="points" type="xs:positiveInteger" default="1"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="question-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="extended-answer"/>
+            <xs:enumeration value="multiple-choice"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="answer-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="all"/>
+            <xs:enumeration value="any"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
