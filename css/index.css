@@ -1,0 +1,30 @@
+.drag-region {
+    -webkit-app-region: drag;
+}
+
+#window-controls .button {
+    font-family: "Segoe MDL2 Assets", sans-serif;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-app-region: no-drag;
+}
+
+#window-controls #close-button {
+    color: red;
+}
+
+#window-controls .button:hover {
+    background: rgba(0,0,0,0.2);
+    opacity: 1;
+}
+
+#window-controls #close-button:hover {
+    color: white;
+    background: red;
+}
+
+#window-controls #restore-button {
+    display: none;
+}
