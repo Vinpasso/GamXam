@@ -1,0 +1,13 @@
+{
+  "name": "gamxam",
+  "version": "0.1.0",
+  "description": "Flashcard system for studying.",
+  "main": "main.js",
+  "author": "Vincent Bode and Jan Felix Hoops",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^4.0.8"
+  }
+}

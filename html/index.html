@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GamXam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="author" content="Jan Felix Hoops">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="../js/window_controls.js"></script>
+    <script src="../js/tab_controls.js"></script>
+    <script src="../js/examiner.js"></script>
+</head>
+
+</body>
+<header id="titlebar">
+    <div class="d-flex flex-column flex-md-row align-items-center border-bottom shadow-sm drag-region">
+        <h5 class="p-2 my-0 mr-md-auto font-weight-normal">GamXam</h5>
+        <div class="row mx-0" id="window-controls">
+            <div class="button window-button" id="min-button">
+                <span>&#xE921;</span>
+            </div>
+            <div class="button window-button" id="max-button">
+                <span>&#xE922;</span>
+            </div>
+            <div class="button window-button" id="restore-button">
+                <span>&#xE923;</span>
+            </div>
+            <div class="button window-button" id="close-button">
+                <span>&#xE8BB;</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row w-100 mx-0">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 px-0">
+        <div class="list-group list-hard">
+            <a class="list-group-item text-center noselect tab-link active" onclick="openTab(event, 'training')">
+                <i class="fas fa-graduation-cap"></i><br />Training
+            </a>
+            <a class="list-group-item text-center noselect tab-link" onclick="openTab(event, 'adventure')">
+                <i class="fas fa-book"></i><br />Adventure Training
+            </a>
+            <a class="list-group-item text-center noselect tab-link" onclick="openTab(event, 'editor')">
+                <i class="fas fa-pen"></i><br />Editor
+            </a>
+            <div class="list-group-item inactive-item">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 tab-content">
+        <!-- default training section -->
+        <div class="tab-pane active" id="training">
+            <div class="px-3 py-3 pt-md-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 pb-3">Training</h1>
+
+                <div class="input-group container-fluid">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Load Questions</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="question-file">
+                        <label class="custom-file-label" for="question-file">Choose xml file</label>
+                    </div>
+                </div>
+
+                <div class="container-fluid pt-2">
+                    <div class="row mx-auto" id="exam-info">
+                        <h2>Exam: What-to-do</h2>
+                        <hr>
+                        <h4>24 questions</h4>
+                    </div>
+                    <hr>
+                    <div class="card mb-4">
+                        <div class="card-header" id="question-card-header">
+                            Question
+                        </div>
+                        <div class="card-body" id="question-card">
+                            What do you want to do today?
+                        </div>
+                    </div>
+                    <div class="card my-4">
+                        <div class="card-header">
+                            <label for="response">Your Response</label>
+                        </div>
+                        <div class="card-body">
+                            <textarea class="form-control mb-4" id="response" rows="3"></textarea>
+                            <button type="button" class="btn btn-primary" id="response-check-button"
+                                onclick="markResponse($('#response').val())">Check (ctrl-return)</button>
+                            <button type="button" class="btn btn-secondary" id="new-question-button"
+                                onclick="postRandomQuestion()">New Question (ctrl-shift-return)</button>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary" role="alert" id="question-expected-answers">
+                        8 answers remaining
+                    </div>
+                    <div id="response-alerts">
+                        <div class="card border-success" id="response-card">
+                            <div class="card-header">
+                                Response
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" id="response-model">Model response: Study some more</li>
+                                <li class="list-group-item" id="response-user">Your response: Go back to bed</li>
+                                <li class="list-group-item text-success" id="response-score">Score: 0/1 points</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- adventure section -->
+        <div class="tab-pane" id="adventure">
+            <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4">Adventure Training</h1>
+                <p class="lead">Coming soon!</p>
+            </div>
+        </div>
+        <!-- editor section -->
+        <div class="tab-pane" id="editor">
+            <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4">Editor</h1>
+                <p class="lead">Coming soon!</p>
+            </div>
+        </div>
+    </div>
+    </body>
+
+</html>
