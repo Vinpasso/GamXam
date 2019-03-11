@@ -9,7 +9,7 @@ function loadExam(file) {
         var xmlStr = reader.result;
         var domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
         handleExam(domxml);
-    }
+    };
     reader.readAsText(file);
 }
 
@@ -67,7 +67,8 @@ function markResponse(response) {
                     }
                     break;
                 case "regex":
-                    if(new RegExp(this.innerHTML.trim(), this.getAttribute("regex-flags")).test(response)) {
+                    if(flags)
+                    if(new RegExp(this.innerHTML.trim(), flags).test(response)) {
                         marks++;
                     }
                     break;
