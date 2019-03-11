@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exam xmlns="https://vpt1.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://vpt1.org questions.xsd">
+    <head>
+        <title>ATSE Review Question Catalog</title>
+        <version>1.0</version>
+        <!-- ID not found-->
+        <id>404</id>
+    </head>
+    <body>
+        <!-- TODO: Chapter Introduction -->
+
+        <!-- Chapter 1: Embedded Systems (Guest Lecture) !-->
+        <question type="extended-answer" id="1">
+            <body>Whats is an embedded system and some of it's common attributes?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Example Definitions:
+                        Real-time system, small microcontroller with little memory, programmed in assembler or in C.
+                        Information system that is integrated into a larger product.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">real.*time</mark>
+                        <mark type="keyword">memory</mark>
+                        <mark type="regex" regex-flags="i">information.*system</mark>
+                        <mark type="keyword">integrate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 2.1.1 -->
+        <question type="extended-answer" id="2">
+            <body>Define software architecture.</body>
+            <answers>
+                <answer>
+                    <body>
+                        Example definitions:
+                        1: The fundamental organization of a system embodied in its components, their relationsships to
+                        each other, and to the environment, and the principles guiding its design and evolution.
+                        4: Architecture is a set of significant design decisions that shape a system.
+                    </body>
+                    <marks>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">relationship</mark>
+                        <mark type="keyword">environment</mark>
+                        <mark type="keyword">design</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="3">
+            <body>What is the purpose of software architecture?</body>
+            <answers>
+                <answer>
+                    <body>Quality, Efficiency, Risk Minimization, Communication Means, Knowledge Management.</body>
+                    <marks>
+                        <mark type="keyword">Quality</mark>
+                        <mark type="keyword">Efficiency</mark>
+                        <mark type="keyword">Risk</mark>
+                        <mark type="keyword">Communicat</mark>
+                        <mark type="keyword">Knowledge</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="4">
+            <body>What is a system</body>
+            <answers>
+                <answer>
+                    <body>A collection of components organized to accomplish a set of functions with defined boundaries,
+                        components and interfaces, environment interaction and static structure and dynamic behavior
+                    </body>
+                    <marks>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">boundar</mark>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">environment</mark>
+                        <mark type="keyword">structure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="5">
+            <body>What is a system&apos;s environment?</body>
+            <answers>
+                <answer>
+                    <body>The developmental, operational, political and other influences on the system</body>
+                    <marks>
+                        <mark type="keyword">influence</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="6">
+            <body>What is an architectural description?</body>
+            <answers>
+                <answer>
+                    <body>A document recording the architecture of a system</body>
+                    <marks>
+                        <mark type="keyword">architect</mark>
+                        <mark type="keyword">system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="7">
+            <body>What are two key roles among stakeholders?</body>
+            <answers>
+                <answer>
+                    <body>The principal and the architect.</body>
+                    <marks>
+                        <mark type="keyword">principal</mark>
+                        <mark type="keyword">architect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="8">
+            <body>What is a stakeholder?</body>
+            <answers>
+                <answer>
+                    <body>An entity with interest in, or concerns relative to, the system that has varios roles with
+                        regard to creation/use of the architectural descriptions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">interest</mark>
+                        <mark type="keyword">concern</mark>
+                        <mark type="keyword">role</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9">
+            <body>What is a concern in relation to software architecture?</body>
+            <answers>
+                <answer>
+                    <body>An interest which pertains to the system's development, its operation, or any other aspect
+                        important to stakeholders. Includes considerations such as performance, reliability, security,
+                        distribution, evolvability.
+                    </body>
+                    <marks>
+                        <mark type="keyword">interest</mark>
+                        <mark type="keyword">dev</mark>
+                        <mark type="keyword">operat</mark>
+                        <mark type="keyword">stakeholder</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>What is the difference between a view and a viewpoint?</body>
+            <answers>
+                <answer>
+                    <body>View: Document addressing concerns of stakeholders conforming to a viewpoint. Viewpoint:
+                        Determines language (notation etc.) and any modeling methods or analysis techniques to be used
+                        to describe the view.
+                    </body>
+                    <marks>
+                        <mark type="keyword">concern</mark>
+                        <mark type="keyword">stakeholder</mark>
+                        <mark type="keyword">language</mark>
+                        <mark type="keyword">notation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11">
+            <body>What is an architecture rationale?</body>
+            <answers>
+                <answer>
+                    <body>The explanation/justification for an architecture decision including documentation for the
+                        chosen and not-chosen architecture alternatives
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">expl|justif</mark>
+                        <mark type="keyword">alternative</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12">
+            <body>What views are part of the 4+1 view model? How are they classified?</body>
+            <answers>
+                <answer>
+                    <body>Logical view (conceptual), process view (conceptual), implementation view (physical),
+                        deployment view (physical), use case view (both).
+                    </body>
+                    <marks>
+                        <mark type="keyword">logical</mark>
+                        <mark type="keyword">implementation</mark>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">deployment</mark>
+                        <mark type="keyword">concept</mark>
+                        <mark type="keyword">phys</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="13">
+            <body>What does the logical viewpoint describe in the 4+1 model?</body>
+            <answers>
+                <answer>
+                    <body>It describes the design&apos;s functionality from an end user perspective.</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">end.*user</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="14">
+            <body>What does the process viewpoint describe in the 4+1 model?</body>
+            <answers>
+                <answer>
+                    <body>It describes the dynamic communication, concurrency, and synchronization aspects</body>
+                    <marks>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">concur</mark>
+                        <mark type="keyword">synchro</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15">
+            <body>
+                What does the deployment viewpoint describe in the 4+1 model?
+            </body>
+            <answers>
+                <answer>
+                    <body>The mapping of software onto hardware, reflecting the distributed aspects.</body>
+                    <marks>
+                        <mark type="keyword">hardware</mark>
+                        <mark type="keyword">distribute</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16">
+            <body>What does the implementation view describe in the 4+1 model?</body>
+            <answers>
+                <answer>
+                    <body>The software's static organization in its development environment.</body>
+                    <marks>
+                        <mark type="keyword">static</mark>
+                        <mark type="keyword">organiz</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17">
+            <body>What is a scenario in the 4+1 view model?</body>
+            <answers>
+                <answer>
+                    <body>A scenario (use-case) is used to show that the elements of the four viewpoints work seamlessly
+                        together.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">work.*together</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="18">
+            <body>What does the 4+1 stand for in the 4+1 view model</body>
+            <answers>
+                <answer>
+                    <body>The 4+1 different viewpoints</body>
+                    <marks>
+                        <mark type="keyword">viewpoint</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="19">
+            <body>What diagrams are typically used for the logical, process, implementation, deployment, and use case
+                view in the 4+1 model?
+            </body>
+            <answers>
+                <answer>
+                    <body>Logical: class diagram, process: sequence diagram, implementation: component, deployment:
+                        deployment diagram
+                    </body>
+                    <marks>
+                        <mark type="keyword">class</mark>
+                        <mark type="keyword">sequence</mark>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">deployment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+    </body>
+</exam>
