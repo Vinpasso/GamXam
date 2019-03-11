@@ -9,7 +9,7 @@ function loadExam(file) {
         var xmlStr = reader.result;
         var domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
         handleExam(domxml);
-    }
+    };
     reader.readAsText(file);
 }
 
@@ -57,8 +57,21 @@ function markResponse(response) {
     $(question).find("answer").each(function (answerIndex) {
         let marks = 0;
         $(this).find("mark").each(function (markIndex) {
-            if(response.toLowerCase().indexOf(this.innerHTML.toLowerCase()) !== -1) {
-                marks++;
+            switch (this.getAttribute("type")) {
+                case "manual":
+                    marks++;
+                    break;
+                case "keyword":
+                    if(response.toLowerCase().indexOf(this.innerHTML.toLowerCase().trim()) !== -1) {
+                        marks++;
+                    }
+                    break;
+                case "regex":
+                    if(flags)
+                    if(new RegExp(this.innerHTML.trim(), flags).test(response)) {
+                        marks++;
+                    }
+                    break;
             }
         });
         if(marks > 0) {

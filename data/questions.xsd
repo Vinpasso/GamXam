@@ -12,6 +12,7 @@
                         <xs:sequence>
                             <xs:element name="title" type="xs:string"/>
                             <xs:element name="version" type="xs:string"/>
+                            <xs:element name="id" type="xs:string"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -39,6 +40,7 @@
             </xs:element>
         </xs:sequence>
         <xs:attribute name="type" type="question-type" use="required"/>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="answer">
@@ -63,10 +65,12 @@
                         <xs:restriction base="xs:string">
                             <xs:enumeration value="keyword"/>
                             <xs:enumeration value="manual"/>
+                            <xs:enumeration value="regex"/>
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:attribute>
                 <xs:attribute name="points" type="xs:positiveInteger" default="1"/>
+                <xs:attribute name="regex-flags" type="xs:string" default="i"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
