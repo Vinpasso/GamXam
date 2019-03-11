@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exam xmlns="https://vpt1.org">
+    <head>
+        <title>Test Question Catalog</title>
+        <version>1.0</version>
+    </head>
+    <body>
+        <question type="extended-answer">
+            <body>Reg-Ex Test Question: What is the meaning of life? (Answers: 42, fourty-two)</body>
+            <answers>
+                <answer>
+                    <body>42</body>
+                    <marks>
+                        <mark type="regex" points="1" regex-flags="i">
+                            42|fourty[\s-]two
+                        </mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer">
+            <body>Keyword Question: What is the name of your university?</body>
+            <answers>
+                <answer>
+                    <body>Technische Universität München</body>
+                    <marks>
+                        <mark type="keyword" points="1">
+                            technische
+                        </mark>
+                        <mark type="keyword" points="1">
+                            universität
+                        </mark>
+                        <mark type="keyword" points="1">
+                            münchen
+                        </mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+    </body>
+</exam>
