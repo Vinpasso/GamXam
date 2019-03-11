@@ -74,3 +74,50 @@ body {
     user-select: none;
     /* Non-prefixed version, currently supported by Chrome and Opera */
 }
+
+.filled-circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 0 4px;
+    margin-top: 6px;
+    background-color:gray;
+}
+
+#success-circle {
+    background-color: rgb(19, 197, 19) !important;
+}
+
+#somewhat-circle {
+    background-color: orange !important;
+}
+
+#failure-circle {
+    background-color: red !important;
+}
+
+.bg-stage-1 {
+    background-color:  rgb(0, 128, 255);
+}
+
+.bg-stage-2 {
+    background-color:  rgb(3, 141, 207);
+}
+
+.bg-stage-3 {
+    background-color:  rgb(7, 155, 160);
+}
+
+.bg-stage-4 {
+    background-color:  rgba(11, 169, 113);
+}
+
+.bg-stage-5 {
+    background-color:  rgba(15, 183, 66);
+}
+
+.bg-stage-6 {
+    background-color:  rgba(19, 197, 19);
+}

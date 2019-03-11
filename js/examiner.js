@@ -16,16 +16,10 @@ function loadExam(file) {
 function handleExam(xmlEncodedExam) {
     exam = xmlEncodedExam;
     examLength = exam.getElementsByTagName("question").length;
-    $("#exam-info").html("<h2>Exam: " +
-        $(exam).find("title")[0].innerHTML + "</h2><hr><h3>" +
-        examLength + " Questions</h3>");
-}
-
-function updateRemainingAnswers(answers) {
-    remainingAnswers = answers;
-    $("#question-expected-answers").html(
-        answers + " answers remaining"
-    );
+    $("#exam-info").html("<h5>Exam: " +
+        $(exam).find("title")[0].innerHTML + "</h5><hr><h5>" +
+        examLength + " Questions</h5>");
+    postRandomQuestion();
 }
 
 function postQuestion(index, newQuestion) {
@@ -33,7 +27,6 @@ function postQuestion(index, newQuestion) {
     question = newQuestion;
     $("#question-card").html($(newQuestion).children("body").html());
     let answers = $(newQuestion).find("answers > answer");
-    updateRemainingAnswers(answers.length);
     $("#response-alerts").html("");
 }
 
@@ -50,7 +43,6 @@ function showAnswer(answer, userResponse, score) {
         "            </ul>\n" +
         "        </div>\n"
     );
-    updateRemainingAnswers(remainingAnswers - 1);
 }
 
 function markResponse(response) {
