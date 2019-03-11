@@ -20,9 +20,12 @@ function handleExam(xmlEncodedExam) {
         $(exam).find("title")[0].innerHTML + "</h5><hr><h5>" +
         examLength + " Questions</h5>");
     postRandomQuestion();
+    $("#header-ui").css("display","block");
 }
 
 function postQuestion(index, newQuestion) {
+    $("#question-ui").css("display","block");
+    $("#solution-ui").css("display","none");
     $("#question-card-header").html("Question " + index);
     question = newQuestion;
     $("#question-card").html($(newQuestion).children("body").html());
@@ -31,6 +34,8 @@ function postQuestion(index, newQuestion) {
 }
 
 function showAnswer(answer, userResponse, score) {
+    $("#question-ui").css("display","none");
+    $("#solution-ui").css("display","block");
     $("#response-alerts").prepend(
         "        <div class=\"card my-4\" id=\"response-card\">\n" +
         "            <div class=\"card-header\">\n" +
@@ -77,6 +82,10 @@ $(document).on('keydown', function ( e ) {
 });
 
 $("document").ready(function(){
+    $("#header-ui").css("display","none");
+    $("#question-ui").css("display","none");
+    $("#solution-ui").css("display","none");
+
     $("#question-file").change(function() {
         var selectedFile = $("#question-file")[0].files[0];
         loadExam(selectedFile);

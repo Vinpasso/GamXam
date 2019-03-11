@@ -121,3 +121,7 @@ body {
 .bg-stage-6 {
     background-color:  rgba(19, 197, 19);
 }
+
+textarea {
+    resize: none;
+}
