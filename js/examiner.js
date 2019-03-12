@@ -1,6 +1,5 @@
 let exam;
 let question;
-let remainingAnswers;
 let examLength;
 
 function loadExam(file) {
@@ -33,7 +32,7 @@ function postQuestion(index, newQuestion) {
     $("#response-alerts").html("");
 }
 
-function showAnswer(answer, userResponse, score) {
+function showAnswer(modelResponse, userResponse, score, possibleScore) {
     $("#question-ui").css("display", "none");
     $("#solution-ui").css("display", "block");
     $("#response-alerts").prepend(
@@ -42,17 +41,37 @@ function showAnswer(answer, userResponse, score) {
         "                Response\n" +
         "            </div>\n" +
         "            <ul class=\"list-group list-group-flush\">\n" +
-        "                <li class=\"list-group-item\" id=\"response-model\">Model response: " + $(answer).children("body")[0].innerHTML + "</li>\n" +
+        "                <li class=\"list-group-item\" id=\"response-model\">Model response: " + modelResponse + "</li>\n" +
         "                <li class=\"list-group-item\" id=\"response-user\">Your response: " + userResponse + "</li>\n" +
-        "                <li class=\"list-group-item text-success\" id=\"response-score\">Score: " + score + "/" + $(answer).find("mark").length + " points</li>\n" +
+        "                <li class=\"list-group-item text-success\" id=\"response-score\">Score: " + score + "/" + possibleScore + " points</li>\n" +
         "            </ul>\n" +
         "        </div>\n"
     );
+    $("#grading-incorrect-button").removeClass("btn-primary");
+    $("#grading-partially-button").removeClass("btn-primary");
+    $("#grading-correct-button").removeClass("btn-primary");
+    $("#grading-incorrect-button").removeClass("btn-secondary");
+    $("#grading-partially-button").removeClass("btn-secondary");
+    $("#grading-correct-button").removeClass("btn-secondary");
+    if (score == 0) {
+        $("#grading-incorrect-button").addClass("btn-primary");
+        $("#grading-partially-button").addClass("btn-secondary");
+        $("#grading-correct-button").addClass("btn-secondary");
+    } else if (score < possibleScore) {
+        $("#grading-incorrect-button").addClass("btn-secondary");
+        $("#grading-partially-button").addClass("btn-primary");
+        $("#grading-correct-button").addClass("btn-secondary");
+    } else {
+        $("#grading-incorrect-button").addClass("btn-secondary");
+        $("#grading-partially-button").addClass("btn-secondary");
+        $("#grading-correct-button").addClass("btn-primary");
+    }
 }
 
-function markResponse(response) {
+function autoGradeResponse(response) {
     $(question).find("answer").each(function (answerIndex) {
         let marks = 0;
+        let possibleMarks = 0;
         $(this).find("mark").each(function (markIndex) {
             let regexFlags = this.getAttribute("regex-flags");
             if (regexFlags === null) {
@@ -62,24 +81,35 @@ function markResponse(response) {
             if (possiblePoints === null) {
                 possiblePoints = 1;
             }
+            possibleMarks += parseInt(possiblePoints);
             switch (this.getAttribute("type")) {
                 case "manual":
-                    marks += possiblePoints;
+                    marks += parseInt(possiblePoints);
                     break;
                 case "keyword":
                     if (response.toLowerCase().indexOf(this.innerHTML.toLowerCase().trim()) !== -1) {
-                        marks += possiblePoints;
+                        marks += parseInt(possiblePoints);
                     }
                     break;
                 case "regex":
                     if (new RegExp(this.innerHTML.trim(), regexFlags).test(response)) {
-                        marks += possiblePoints;
+                        marks += parseInt(possiblePoints);
                     }
                     break;
             }
         });
-        showAnswer(this, response, marks);
+        showAnswer($(this).children("body")[0].innerHTML, response, marks, possibleMarks);
     })
+}
+
+function gradeResponse(grade) {
+    if (grade.localeCompare("correct") == 0) {
+        console.log("correct");
+    } else if (grade.localeCompare("partially") == 0) {
+        console.log("partially");
+    } else {
+        console.log("incorrect");
+    }
 }
 
 function postRandomQuestion() {
@@ -92,10 +122,6 @@ $(document).on('keydown', function (e) {
     // Catch the newline CTRL-Enter -> check question
     if ((e.metaKey || e.ctrlKey) && !e.shiftKey && (e.which === 13)) {
         $("#response-submit-button")[0].onclick();
-    }
-    // Catch the newline CTRL-Shift-Enter -> new question
-    if ((e.metaKey || e.ctrlKey) && e.shiftKey && (e.which === 13)) {
-        $("#new-question-button")[0].onclick();
     }
 });
 

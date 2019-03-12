@@ -43,10 +43,16 @@ body {
     border-bottom-left-radius: 0px !important;
 }
 
-.list-group-item {
-    background-color: white;
+.list-group-item.tab-link{
+    background-color: darkgrey;
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+.list-group-item.tab-link.active {
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.125);
+    border-right: 0 none;
 }
 
 .inactive-item {
@@ -80,15 +86,15 @@ body {
     background-color:gray;
 }
 
-#success-circle {
+.correct-circle {
     background-color: rgb(19, 197, 19) !important;
 }
 
-#somewhat-circle {
+.partially-circle {
     background-color: orange !important;
 }
 
-#failure-circle {
+.incorrect-circle {
     background-color: red !important;
 }
 

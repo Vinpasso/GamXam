@@ -119,9 +119,9 @@
                                 <div class="card">
                                     <div class="row">
                                         <div class="col-sm" id="history-ui">
-                                            <span class="filled-circle" id="failure-circle"></span>
-                                            <span class="filled-circle" id="somewhat-circle"></span>
-                                            <span class="filled-circle" id="success-circle"></span>
+                                            <span class="filled-circle incorrect-circle"></span>
+                                            <span class="filled-circle partially-circle"></span>
+                                            <span class="filled-circle correct-circle"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -139,19 +139,19 @@
                             What do you want to do today?
                         </div>
                     </div>
-                    <div class="card my-4">
+                    <div class="card">
                         <div class="card-header">
                             <label for="response">Your Response</label>
                         </div>
                         <div class="card-body">
                             <textarea class="form-control mb-4" id="response" rows="3"></textarea>
                             <button type="button" class="btn btn-primary" id="response-submit-button"
-                                onclick="markResponse($('#response').val())">Submit (ctrl-return)</button>
+                                onclick="autoGradeResponse($('#response').val())">Submit (ctrl-return)</button>
                         </div>
                     </div>
                 </div>
                 <!-- solution ui section -->
-                <div class="container-fluid" id="solution-ui">
+                <div class="container-fluid mb-4" id="solution-ui">
                     <div id="response-alerts">
                         <div class="card border-success" id="response-card">
                             <div class="card-header">
@@ -162,6 +162,19 @@
                                 <li class="list-group-item" id="response-user">Your response: Go back to bed</li>
                                 <li class="list-group-item text-success" id="response-score">Score: 0/1 points</li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Grading
+                        </div>
+                        <div class="card-body" id="question-card">
+                            <button type="button" class="btn btn-primary" id="grading-incorrect-button"
+                                onclick="gradeResponse('incorrect')">Incorrect</button>
+                            <button type="button" class="btn btn-primary" id="grading-partially-button"
+                                onclick="gradeResponse('partially')">Partially Correct</button>
+                            <button type="button" class="btn btn-primary" id="grading-correct-button"
+                                onclick="gradeResponse('correct')">Correct</button>
                         </div>
                     </div>
                 </div>
