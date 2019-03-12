@@ -293,5 +293,126 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="20">
+            <body>What are the four parts of the C4 model and what do they focus on?</body>
+            <answers>
+                <answer>
+                    <body>System context diagram: Focus on people and software systems. Container diagram: Shows high
+                        level shape of the architecture and the distribution of responsibilities, as well as technology
+                        choices and communication between containers. Component diagram: Decomposes a container into
+                        components, including responsibilities and technology/implementation choices. Code diagram:
+                        Class diagrams or entity-relationship diagrams.
+                    </body>
+                    <marks>
+                        <mark type="keyword">context</mark>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">people</mark>
+                        <mark type="keyword">container</mark>
+                        <mark type="keyword">responsib</mark>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">code</mark>
+                        <mark type="keyword">class</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="21">
+            <body>What is the idea behind the C4 model?</body>
+            <answers>
+                <answer>
+                    <body>Precise notation is much less important than efficiently communicating the architecture to the
+                        target audience.
+                    </body>
+                    <marks>
+                        <mark type="keyword">notation</mark>
+                        <mark type="keyword">comunicat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="22">
+            <body>What types of system models are there and what do they describe?</body>
+            <answers>
+                <answer>
+                    <body>Object model: Describes the structure of the system and relationships between objects.
+                        Functional model: Describes the functions of the system and data flow through the system.
+                        Dynamic model: Describes how the system reacts to external events and how events flow through
+                        the system.
+                    </body>
+                    <marks>
+                        <mark type="keyword">object</mark>
+                        <mark type="keyword">relation</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">dynamic</mark>
+                        <mark type="regex">event|influenc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="23">
+            <body>What are the three main attributes characterizing models?</body>
+            <answers>
+                <answer>
+                    <body>Reduction: An increase in abstraction leads to easier communication. Pragmatism: A model is
+                        created with a purpose in mind. Mapping: There is a relationship between elements in the model
+                        and elements in the original.
+                    </body>
+                    <marks>
+                        <mark type="regex">reduc|abstract</mark>
+                        <mark type="regex">pragmat|purpos</mark>
+                        <mark type="regex">map|relat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="24">
+            <body>What do you call models that represent the current state of a system and the planned state of a
+                system?
+            </body>
+            <answers>
+                <answer>
+                    <body>As-is models describe the current situation, to-be models the planned state once the project
+                        is finished.
+                    </body>
+                    <marks>
+                        <mark type="regex">as.*is</mark>
+                        <mark type="regex">to.*be</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="25">
+            <body>What are the seven stages in the cycle of modeling?</body>
+            <answers>
+                <answer>
+                    <body>Understand (Comprehend the problem and possible solutions), Conceptualize (Formalize parts of
+                        the application domain into a concept language), Abstract (generalize and outline main
+                        problems), Define (Unambiguously specify concepts), Construct (actually create the model),
+                        Evaluate (based on quality characteristics), Refine (iterate)
+                    </body>
+                    <marks>
+                        <mark type="keyword">understand</mark>
+                        <mark type="keyword">concept</mark>
+                        <mark type="keyword">abstract</mark>
+                        <mark type="keyword">defin</mark>
+                        <mark type="keyword">construct</mark>
+                        <mark type="keyword">evaluate</mark>
+                        <mark type="keyword">refine</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="26">
+            <body>Draw the UML diagram of the IEEE 471 standard.</body>
+            <answers>
+                <answer>
+                    <body>See Chapter 2.1.1 slide 6</body>
+                    <marks>
+                        <mark type="manual"/>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
