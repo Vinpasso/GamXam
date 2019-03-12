@@ -414,5 +414,98 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="27">
+            <body>What are some of the benefity of modularity?</body>
+            <answers>
+                <answer>
+                    <body>Easier maintenance, reusability, understandability, reduced complexity, allows for work
+                        distribution.
+                    </body>
+                    <marks>
+                        <mark type="keyword">maint</mark>
+                        <mark type="keyword">reus</mark>
+                        <mark type="keyword">understand</mark>
+                        <mark type="keyword">complex</mark>
+                        <mark type="keyword">distribut</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="28">
+            <body>What is modularity?</body>
+            <answers>
+                <answer>
+                    <body>A decomposition of systems into modules that measures the degree to which components can be
+                        separated and recombined.
+                    </body>
+                    <marks>
+                        <mark type="keyword">decomposit</mark>
+                        <mark type="keyword">component</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="29">
+            <body>What is functional decomposition and what are some of its issues?</body>
+            <answers>
+                <answer>
+                    <body>Each module is a major processing step (function) in the application domain, which can be
+                        decomposed into smaller modules. Some issues include the spread of functionality all over the
+                        system and the need to understand the whole system to make changes to it, which leads to
+                        understandability and maintainability problems.
+                    </body>
+                    <marks>
+                        <mark type="regex">application.*domain</mark>
+                        <mark type="regex">understand|maintain</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30">
+            <body>What is a modular decomposition? What assumptions are made and what are some limitations?</body>
+            <answers>
+                <answer>
+                    <body>Each module represents a major abstraction in the application domain. Assumptions: It is
+                        possible to find concepts for a new system (greenfield engineering), an existing system
+                        (re-engineering), and we can create component-based interfaces for any system (interface
+                        engineering). Limitations: Non-unique, different concepts might be found for the same system.
+                    </body>
+                    <marks>
+                        <mark type="keyword">abstract</mark>
+                        <mark type="keyword">concept</mark>
+                        <mark type="keyword">unique</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="31">
+            <body>What is a black-box model?</body>
+            <answers>
+                <answer>
+                    <body>A black box model presents the functional perspective on a system. Only the interaction
+                        between the composition and the environment are taken into account in an abstract way.
+                    </body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">environ</mark>
+                        <mark type="keyword">abstract</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="32">
+            <body>What is a white-box model?</body>
+            <answers>
+                <answer>
+                    <body>A white box model presents the construction perspective on a system, capturing construction
+                        and operation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">construct</mark>
+                        <mark type="keyword">operat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
