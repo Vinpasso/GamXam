@@ -507,5 +507,52 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="33">
+            <body>What are the three steps to decompose a system?</body>
+            <answers>
+                <answer>
+                    <body>Step 1: Analyze dependencies between elements. Step 2: Elements with strong dependencies form
+                        components. Step 3: Dependencies between components are captured in interfaces.
+                    </body>
+                    <marks>
+                        <mark type="keyword">dependenc</mark>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">interface</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="34">
+            <body>What is a software component?</body>
+            <answers>
+                <answer>
+                    <body>Def 1: A software element conforming to a component model that can be independently deployed
+                        and composed according to a composition standard. Def 2: A unit of composition with
+                        contractually specified interfaces and explicit context dependencies only that can be deploed
+                        independently and is subject to comosition by third parties.
+                    </body>
+                    <marks>
+                        <mark type="regex">element|unit</mark>
+                        <mark type="regex">model|interface|dependenc</mark>
+                        <mark type="keyword">deploy</mark>
+                        <mark type="keyword">composit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="35">
+            <body>What is component-based software engineering? What shortcoming of object-orientation does it fix?
+            </body>
+            <answers>
+                <answer>
+                    <body>An approach to software development relying on reuse of entities (software components). It
+                        emerged because object-orientation tend to be too specific for effective reuse.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reuse</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
