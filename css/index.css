@@ -44,15 +44,9 @@ body {
 }
 
 .list-group-item {
-    background-color: darkgray;
+    background-color: white;
     padding-top: 25px;
     padding-bottom: 25px;
-}
-
-.list-group-item.active {
-    background-color: white;
-    border-color: rgba(0, 0, 0, 0.125);
-    border-right: 0 none;
 }
 
 .inactive-item {

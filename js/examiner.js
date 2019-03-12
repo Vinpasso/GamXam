@@ -64,16 +64,13 @@ function markResponse(response) {
                     }
                     break;
                 case "regex":
-                    if(flags)
                     if(new RegExp(this.innerHTML.trim(), flags).test(response)) {
                         marks++;
                     }
                     break;
             }
         });
-        if(marks > 0) {
-            showAnswer(this, response, marks);
-        }
+        showAnswer(this, response, marks);
     })
 }
 
@@ -86,7 +83,7 @@ $(document).on('keydown', function ( e ) {
     console.log(e.which);
     // Catch the newline CTRL-Enter -> check question
     if ((e.metaKey || e.ctrlKey) && !e.shiftKey && ( e.which === 13) ) {
-        $("#response-check-button")[0].onclick();
+        $("#response-submit-button")[0].onclick();
     }
     // Catch the newline CTRL-Shift-Enter -> new question
     if ((e.metaKey || e.ctrlKey) && e.shiftKey && ( e.which === 13) ) {
