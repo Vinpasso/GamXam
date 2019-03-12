@@ -15,7 +15,7 @@
                 <answer>
                     <body>42</body>
                     <marks>
-                        <mark type="regex" >
+                        <mark type="regex">
                             42|fourty[\s-]two
                         </mark>
                     </marks>
