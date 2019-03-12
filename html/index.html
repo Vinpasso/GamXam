@@ -87,7 +87,7 @@
                 </div>
                 <!-- ui section -->
                 <!-- information ui section -->
-                <div class="container-fluid" id="header-ui">
+                <div class="container-fluid" id="header-ui" style="display: none">
                     <hr>
                     <div class="row mx-auto" id="exam-info">
                         <h5>Exam: What-to-do</h5>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <!-- question ui section -->
-                <div class="container-fluid" id="question-ui">
+                <div class="container-fluid" id="question-ui" style="display: none">
                     <div class="card mb-4">
                         <div class="card-header" id="question-card-header">
                             Question
@@ -150,8 +150,20 @@
                         </div>
                     </div>
                 </div>
+                <!-- no more questions ui section -->
+                <div class="container-fluid" id="no-question-ui" style="display: none">
+                    <div class="card mb-4 mt-2">
+                        <div class="card-header" id="question-card-header">
+                            Currently, no more questions are available. Check again later!
+                        </div>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-primary" onclick="postRandomQuestion()">Next
+                                Question</button>
+                        </div>
+                    </div>
+                </div>
                 <!-- solution ui section -->
-                <div class="container-fluid mb-4" id="solution-ui">
+                <div class="container-fluid mb-4" id="solution-ui" style="display: none">
                     <div id="response-alerts">
                         <div class="card border-success" id="response-card">
                             <div class="card-header">

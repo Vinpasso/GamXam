@@ -1,7 +1,9 @@
 let exam;
 let question;
 let examLength;
+
 let progressStages;
+let cooldownDates;
 
 function loadExam(file) {
     var reader = new FileReader();
@@ -30,6 +32,8 @@ function initializeProgressStages() {
         progressStages[0].push(this.getAttribute("id"));
     });
     refreshProgressUI();
+
+    cooldownDates = {};
 }
 
 function refreshProgressUI() {
@@ -43,6 +47,7 @@ function refreshProgressUI() {
 function postQuestion(index, newQuestion) {
     $("#question-ui").css("display", "block");
     $("#solution-ui").css("display", "none");
+    $("#no-question-ui").css("display", "none");
     $("#question-card-header").html("Question " + index);
     question = newQuestion;
     $("#question-card").html($(newQuestion).children("body").html());
@@ -129,6 +134,30 @@ function getStageOfQuestion(qid) {
     return null;
 }
 
+function getCooldownDate(stage) {
+    let now = Date.now();
+    switch (stage) {
+        case 0:
+            // 5min
+            return now + (5 * 60 * 1000)
+        case 1:
+            // 10min
+            return now + (10 * 60 * 1000)
+        case 2:
+            // 15min
+            return now + (15 * 60 * 1000)
+        case 3:
+            // 20min
+            return now + (20 * 60 * 1000)
+        default:
+            return 0;
+    }
+}
+
+function addCooldown(stage) {
+    cooldownDates[question.getAttribute("id")] = getCooldownDate(stage);
+}
+
 function gradeResponse(grade) {
     let stage = getStageOfQuestion(question.getAttribute("id"));
     if (grade.localeCompare("correct") == 0) {
@@ -136,6 +165,7 @@ function gradeResponse(grade) {
         if (stage < progressStages.length - 1) {
             progressStages[stage].splice(progressStages[stage].indexOf(question.getAttribute("id")), 1);
             progressStages[stage + 1].push(question.getAttribute("id"));
+            addCooldown(stage);
         }
     } else if (grade.localeCompare("partially") == 0) {
         // no change
@@ -151,9 +181,39 @@ function gradeResponse(grade) {
     postRandomQuestion();
 }
 
+function questionAskable(question) {
+    if (progressStages[progressStages.length - 1].includes(question.getAttribute("id"))) {
+        return false;
+    }
+
+    if (question.getAttribute("id") in cooldownDates) {
+        if (cooldownDates[question.getAttribute("id")] < Date.now()) {
+            delete cooldownDates[question.getAttribute("id")];
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 function postRandomQuestion() {
-    let index = Math.floor(Math.random() * examLength);
-    postQuestion(index, exam.getElementsByTagName("question")[index]);
+    let possibleQuestions = [];
+    for (i = 0; i < examLength; i++) {
+        let q = exam.getElementsByTagName("question")[i];
+        if (questionAskable(q)) {
+            possibleQuestions.push(q);
+        }
+    }
+
+    if (possibleQuestions.length == 0) {
+        $("#no-question-ui").css("display", "block");
+        $("#solution-ui").css("display", "none");
+    } else {
+        let index = Math.floor(Math.random() * possibleQuestions.length);
+        postQuestion(possibleQuestions[index].getAttribute("id"), possibleQuestions[index]);
+    }
 }
 
 $(document).on('keydown', function (e) {
@@ -167,10 +227,6 @@ $(document).on('keydown', function (e) {
 });
 
 $("document").ready(function () {
-    $("#header-ui").css("display", "none");
-    $("#question-ui").css("display", "none");
-    $("#solution-ui").css("display", "none");
-
     $("#question-file").change(function () {
         var selectedFile = $("#question-file")[0].files[0];
         loadExam(selectedFile);
