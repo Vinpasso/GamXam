@@ -67,12 +67,10 @@ function markResponse(response) {
                     }
                     break;
                 case "regex":
-                    if(flags)
-                    if(new RegExp(this.innerHTML.trim(), flags).test(response)) {
+                    if(new RegExp(this.innerHTML.trim(), this.getAttribute("regex-flags")).test(response)) {
                         marks++;
                     }
-                    break;
-            }
+                    break;            }
         });
         if(marks > 0) {
             showAnswer(this, response, marks);
