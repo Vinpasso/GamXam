@@ -1,6 +1,7 @@
 let exam;
 let question;
 let examLength;
+let progressStages;
 
 function loadExam(file) {
     var reader = new FileReader();
@@ -18,8 +19,25 @@ function handleExam(xmlEncodedExam) {
     $("#exam-info").html("<h5>Exam: " +
         $(exam).find("title")[0].innerHTML + "</h5><hr><h5>" +
         examLength + " Questions</h5>");
+    initializeProgressStages();
     postRandomQuestion();
     $("#header-ui").css("display", "block");
+}
+
+function initializeProgressStages() {
+    progressStages = [[], [], [], [], [], []];
+    $(exam).find("question").each(function (index) {
+        progressStages[0].push(this.getAttribute("id"));
+    });
+    refreshProgressUI();
+}
+
+function refreshProgressUI() {
+    for (i = 0; i < progressStages.length; i++) {
+        let percentage = parseFloat(progressStages[i].length) / parseFloat(examLength) * parseFloat(100);
+        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).attr("aria-valuenow", percentage.toString())
+        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).css("width", percentage.toString() + "%")
+    }
 }
 
 function postQuestion(index, newQuestion) {
@@ -28,7 +46,7 @@ function postQuestion(index, newQuestion) {
     $("#question-card-header").html("Question " + index);
     question = newQuestion;
     $("#question-card").html($(newQuestion).children("body").html());
-    let answers = $(newQuestion).find("answers > answer");
+    $("#response").val("");
     $("#response-alerts").html("");
 }
 
@@ -102,14 +120,35 @@ function autoGradeResponse(response) {
     })
 }
 
-function gradeResponse(grade) {
-    if (grade.localeCompare("correct") == 0) {
-        console.log("correct");
-    } else if (grade.localeCompare("partially") == 0) {
-        console.log("partially");
-    } else {
-        console.log("incorrect");
+function getStageOfQuestion(qid) {
+    for (i = 0; i < progressStages.length; i++) {
+        if (progressStages[i].includes(qid)) {
+            return i;
+        }
     }
+    return null;
+}
+
+function gradeResponse(grade) {
+    let stage = getStageOfQuestion(question.getAttribute("id"));
+    if (grade.localeCompare("correct") == 0) {
+        // one stage up
+        if (stage < progressStages.length - 1) {
+            progressStages[stage].splice(progressStages[stage].indexOf(question.getAttribute("id")), 1);
+            progressStages[stage + 1].push(question.getAttribute("id"));
+        }
+    } else if (grade.localeCompare("partially") == 0) {
+        // no change
+    } else {
+        // one stage down
+        if (stage > 0) {
+            progressStages[stage].splice(progressStages[stage].indexOf(question.getAttribute("id")), 1);
+            progressStages[stage - 1].push(question.getAttribute("id"));
+        }
+    }
+
+    refreshProgressUI();
+    postRandomQuestion();
 }
 
 function postRandomQuestion() {
@@ -121,7 +160,9 @@ $(document).on('keydown', function (e) {
     console.log(e.which);
     // Catch the newline CTRL-Enter -> check question
     if ((e.metaKey || e.ctrlKey) && !e.shiftKey && (e.which === 13)) {
-        $("#response-submit-button")[0].onclick();
+        if ($("#question-ui").css("display").localeCompare("block") == 0) {
+            $("#response-submit-button")[0].onclick();
+        }
     }
 });
 
