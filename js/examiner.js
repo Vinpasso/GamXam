@@ -47,6 +47,33 @@ function refreshProgressUI() {
     }
 }
 
+function loadProgress(file) {
+    let reader = new FileReader();
+    reader.onload = function (e) {
+        let xmlStr = reader.result;
+        let domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
+        handleProgress(domxml);
+    };
+    reader.readAsText(file);
+}
+
+function handleProgress(xmlEncodedProgress) {
+    progressStages = [[], [], [], [], [], []];
+    for (i = 0; i < progressStages.length; i++) {
+        $(xmlEncodedProgress).find("stage[id='" + i + "']").children("question").each(function (questionIndex) {
+            progressStages[i].push(this.innerHTML);
+        });
+    }
+    refreshProgressUI();
+
+    cooldownDates = {};
+    $(xmlEncodedProgress).find("cooldown").each(function (cooldownIndex) {
+        cooldownDates[this.getAttribute("question")] = parseInt(this.innerHTML);
+    });
+
+    postRandomQuestion();
+}
+
 function saveProgress() {
     let xml = ["<?xml version=\"1.0\" encoding=\"UTF-8\" ?>", "<progress>"];
 
@@ -270,7 +297,11 @@ $(document).on('keydown', function (e) {
 
 $("document").ready(function () {
     $("#question-file").change(function () {
-        var selectedFile = $("#question-file")[0].files[0];
+        let selectedFile = $("#question-file")[0].files[0];
         loadExam(selectedFile);
+    });
+    $("#progress-file").change(function () {
+        let selectedFile = $("#progress-file")[0].files[0];
+        loadProgress(selectedFile);
     });
 });
