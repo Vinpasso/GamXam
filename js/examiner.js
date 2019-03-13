@@ -5,6 +5,7 @@ let examLength;
 
 let progressStages;
 let cooldownDates;
+let history;
 
 function loadExam(file) {
     examFileName = file.name.substring(0, file.name.length - 4);
@@ -37,6 +38,9 @@ function initializeProgressStages() {
     refreshProgressUI();
 
     cooldownDates = {};
+
+    history = []
+    refreshHistoryUI();
 }
 
 function refreshProgressUI() {
@@ -44,6 +48,27 @@ function refreshProgressUI() {
         let percentage = parseFloat(progressStages[i].length) / parseFloat(examLength) * parseFloat(100);
         $("#progress-ui > .progress > .bg-stage-" + (i + 1)).attr("aria-valuenow", percentage.toString())
         $("#progress-ui > .progress > .bg-stage-" + (i + 1)).css("width", percentage.toString() + "%")
+    }
+}
+
+function refreshHistoryUI() {
+    $("#history-ui")[0].innerHTML = "";
+    for (i = 0; i < 20; i++) {
+        if (i >= history.length) {
+            $("#history-ui")[0].innerHTML = "<span class=\"filled-circle\"></span>" + $("#history-ui")[0].innerHTML;
+            continue;
+        }
+
+        if (history[i] == -1) {
+            $("#history-ui")[0].innerHTML = "<span class=\"filled-circle incorrect-circle\"></span>" + $("#history-ui")[0].innerHTML;
+        } else if (history[i] == 0) {
+            $("#history-ui")[0].innerHTML = "<span class=\"filled-circle partially-circle\"></span>" + $("#history-ui")[0].innerHTML;
+        } else {
+            $("#history-ui")[0].innerHTML = "<span class=\"filled-circle correct-circle\"></span>" + $("#history-ui")[0].innerHTML;
+        }
+    }
+    for (i = history.length; i < 20; i++) {
+
     }
 }
 
@@ -236,16 +261,27 @@ function gradeResponse(grade) {
             progressStages[stage + 1].push(question.getAttribute("id"));
             addCooldown(stage);
         }
+
+        history.push(1);
     } else if (grade.localeCompare("partially") == 0) {
         // no change
+
+        history.push(0);
     } else {
         // one stage down
         if (stage > 0) {
             progressStages[stage].splice(progressStages[stage].indexOf(question.getAttribute("id")), 1);
             progressStages[stage - 1].push(question.getAttribute("id"));
         }
+
+        history.push(-1);
     }
 
+    if (history.length > 20) {
+        history.shift();
+    }
+
+    refreshHistoryUI();
     refreshProgressUI();
     postRandomQuestion();
 }
