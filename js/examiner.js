@@ -1,3 +1,4 @@
+let examFileName;
 let exam;
 let question;
 let examLength;
@@ -6,10 +7,11 @@ let progressStages;
 let cooldownDates;
 
 function loadExam(file) {
-    var reader = new FileReader();
+    examFileName = file.name.substring(0, file.name.length - 4);
+    let reader = new FileReader();
     reader.onload = function (e) {
-        var xmlStr = reader.result;
-        var domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
+        let xmlStr = reader.result;
+        let domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
         handleExam(domxml);
     };
     reader.readAsText(file);
@@ -24,6 +26,7 @@ function handleExam(xmlEncodedExam) {
     initializeProgressStages();
     postRandomQuestion();
     $("#header-ui").css("display", "block");
+    $("#progress-file").removeAttr("disabled");
 }
 
 function initializeProgressStages() {
@@ -42,6 +45,45 @@ function refreshProgressUI() {
         $("#progress-ui > .progress > .bg-stage-" + (i + 1)).attr("aria-valuenow", percentage.toString())
         $("#progress-ui > .progress > .bg-stage-" + (i + 1)).css("width", percentage.toString() + "%")
     }
+}
+
+function saveProgress() {
+    let xml = ["<?xml version=\"1.0\" encoding=\"UTF-8\" ?>", "<progress>"];
+
+    xml.push("<head>");
+    xml.push("<examid>");
+    xml.push($(exam).find("head").children("id")[0].innerHTML);
+    xml.push("</examid>");
+    xml.push("</head>");
+
+    xml.push("<stages>");
+    for (i = 0; i < progressStages.length; i++) {
+        xml.push("<stage id=\"" + i + "\">");
+        for (j = 0; j < progressStages[i].length; j++) {
+            xml.push("<question>" + progressStages[i][j] + "</question>");
+        }
+        xml.push("</stage>");
+    }
+    xml.push("</stages>");
+
+    xml.push("<cooldowns>")
+    for (var key in cooldownDates) {
+        xml.push("<cooldown question=\"" + key + "\">" + cooldownDates[key] + "</cooldown>");
+    }
+    xml.push("</cooldowns>")
+
+    xml.push("</progress>");
+
+    let text = xml.join("");
+    let blob = new Blob([text], { type: 'text/xml' });
+    let anchor = document.createElement('a');
+
+    anchor.download = "progress_" + examFileName + ".xml";
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.dataset.downloadurl = ['text/xml', anchor.download, anchor.href].join(':');
+    anchor.click();
+
+    window.URL.revokeObjectURL(blob);
 }
 
 function postQuestion(index, newQuestion) {

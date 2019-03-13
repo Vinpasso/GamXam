@@ -68,23 +68,19 @@
                 <!-- header -->
                 <h1 class="display-4 pb-3">Training</h1>
                 <div class="input-group container-fluid pb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Load Questions</span>
-                    </div>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="question-file">
-                        <label class="custom-file-label" for="question-file">Choose xml file</label>
+                        <label class="custom-file-label text-left" for="question-file">Choose question file</label>
                     </div>
                 </div>
-                <div class="input-group container-fluid">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Load Progress&nbsp;&nbsp;</span>
-                    </div>
+                <div class="input-group container-fluid pb-3">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="progress-file">
-                        <label class="custom-file-label" for="progress-file">Choose xml file</label>
+                        <input type="file" class="custom-file-input" id="progress-file" disabled>
+                        <label class="custom-file-label text-left" for="progress-file">Choose progress file</label>
                     </div>
                 </div>
+                <button type="button" class="btn btn-primary px-3" id="save-button"
+                                onclick="saveProgress()">Save Progress</button>
                 <!-- ui section -->
                 <!-- information ui section -->
                 <div class="container-fluid" id="header-ui" style="display: none">
