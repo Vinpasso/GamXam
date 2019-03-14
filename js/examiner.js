@@ -252,6 +252,10 @@ function addCooldown(stage) {
     cooldownDates[question.getAttribute("id")] = getCooldownDate(stage);
 }
 
+function addDefaultCooldown() {
+    cooldownDates[question.getAttribute("id")] = getCooldownDate(0);
+}
+
 function gradeResponse(grade) {
     let stage = getStageOfQuestion(question.getAttribute("id"));
     if (grade.localeCompare("correct") == 0) {
@@ -265,6 +269,7 @@ function gradeResponse(grade) {
         history.push(1);
     } else if (grade.localeCompare("partially") == 0) {
         // no change
+        addDefaultCooldown();
 
         history.push(0);
     } else {
@@ -273,6 +278,7 @@ function gradeResponse(grade) {
             progressStages[stage].splice(progressStages[stage].indexOf(question.getAttribute("id")), 1);
             progressStages[stage - 1].push(question.getAttribute("id"));
         }
+        addDefaultCooldown();
 
         history.push(-1);
     }
