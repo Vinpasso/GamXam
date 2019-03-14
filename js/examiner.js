@@ -89,13 +89,38 @@ function handleProgress(xmlEncodedProgress) {
             progressStages[i].push(this.innerHTML);
         });
     }
-    refreshProgressUI();
 
     cooldownDates = {};
     $(xmlEncodedProgress).find("cooldown").each(function (cooldownIndex) {
         cooldownDates[this.getAttribute("question")] = parseInt(this.innerHTML);
     });
 
+    // handle removed questions
+    for (i = 0; i < progressStages.length; i++) {
+        for (j = 0; j < progressStages[i].length; j++) {
+            if ($(exam).find("question[id='" + progressStages[i][j] + "']") === undefined) {
+                progressStages[i].splice(j, 1);
+            }
+        }
+    }
+    let killKeys = []
+    for (let key in cooldownDates) {
+        if ($(exam).find("question[id='" + key + "']") === undefined) {
+            killKeys.push(key);
+        }
+    }
+    for (key of killKeys) {
+        delete cooldownDates[key];
+    }
+    // handle new questions
+    for (i = 0; i < examLength; i++) {
+        let q = exam.getElementsByTagName("question")[i];
+        if (getStageOfQuestion(q.getAttribute("id")) === null) {
+            progressStages[0].push(q.getAttribute("id"));
+        }
+    }
+
+    refreshProgressUI();
     postRandomQuestion();
 }
 
