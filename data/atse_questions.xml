@@ -742,5 +742,137 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="47">
+            <body>What is the meaning of an entry (row/column) in the dependency structure matrix?</body>
+            <answers>
+                <answer>
+                    <body>The row depends on the column.</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">row.*depend.*column</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="48">
+            <body>What is a dependency structure matrix?</body>
+            <answers>
+                <answer>
+                    <body>A 2D matrix representing structural/functional interrelationships of objects, tasks, or
+                        teams
+                    </body>
+                    <marks>
+                        <mark type="keyword">structur</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="regex" regex-flags="i">relation|dependen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="49">
+            <body>What is partitioning in relation to a DSM?</body>
+            <answers>
+                <answer>
+                    <body>The collapsing of mutual dependent components into a group to transform the matrix into block
+                        triangular form.
+                    </body>
+                    <marks>
+                        <mark type="keyword">mutual</mark>
+                        <mark type="keyword">group</mark>
+                        <mark type="regex">block.*triang</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="50">
+            <body>What property does the lower triangular DSM ensure?</body>
+            <answers>
+                <answer>
+                    <body>That dependencies are acyclic.</body>
+                    <marks>
+                        <mark type="keyword">acyclic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="51">
+            <body>How is a hierarchical DSM different from a normal DSM?</body>
+            <answers>
+                <answer>
+                    <body>In a hierarchical DSM, groups are represented by a border instead of collapsed into one.
+                    </body>
+                    <marks>
+                        <mark type="keyword">group</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="52">
+            <body>How can a layered software system be detected in a DSM?</body>
+            <answers>
+                <answer>
+                    <body>Lower triangular form (each component accesses functionality somewhere below it).</body>
+                    <marks>
+                        <mark type="keyword">triang</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="53">
+            <body>How can a strictly layered software system be detected in a DSM?</body>
+            <answers>
+                <answer>
+                    <body>Only entries adjacent to one side of the diagonal.</body>
+                    <marks>
+                        <mark type="keyword">diag</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="54">
+            <body>What is the meaning of a change propagator in a DSM?</body>
+            <answers>
+                <answer>
+                    <body>A component that is dependent on/depends on many other components. A change in one of the
+                        components it depends on can also affect all components that depend on it.
+                    </body>
+                    <marks>
+                        <mark type="keyword">depend</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="55">
+            <body>What are some of the benefits of using a DSM?</body>
+            <answers>
+                <answer>
+                    <body>Better scaling than box-and-line diagrams, helps better understand flow of information,
+                        automatic mechanism for architectural discovery, efficient cycle detection and integration of
+                        dependency rules.
+                    </body>
+                    <marks>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">flow</mark>
+                        <mark type="keyword">discover</mark>
+                        <mark type="keyword">cycle</mark>
+                        <mark type="keyword">rules</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="56">
+            <body>What are some challenges of a DSM?</body>
+            <answers>
+                <answer>
+                    <body>Only as good as knowledge that goes into it. Unknown interdependencies can exist. Less
+                        intuitive than a graph.
+                    </body>
+                    <marks>
+                        <mark type="keyword">know</mark>
+                        <mark type="keyword">depend</mark>
+                        <mark type="keyword">graph</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
