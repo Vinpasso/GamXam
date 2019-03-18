@@ -546,10 +546,197 @@
             <answers>
                 <answer>
                     <body>An approach to software development relying on reuse of entities (software components). It
-                        emerged because object-orientation tend to be too specific for effective reuse.
+                        emerged because object-orientation tends to be too detailed and specific for effective reuse. A
+                        component is an independent executable entity made up of executable objects. The interface is
+                        published and all interactions are made through the published interface.
                     </body>
                     <marks>
                         <mark type="keyword">reuse</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="36">
+            <body>
+                What are some characteristics of software components?
+            </body>
+            <answers>
+                <answer>
+                    <body>They are standardized (conforms to a standard component model), independent (possibility to
+                        compose and deploy by itself), composable, deployable and documented.
+                    </body>
+                    <marks>
+                        <mark type="keyword">standard</mark>
+                        <mark type="keyword">independen</mark>
+                        <mark type="keyword">compos</mark>
+                        <mark type="keyword">deploy</mark>
+                        <mark type="keyword">document</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="37">
+            <body>What is a component model?</body>
+            <answers>
+                <answer>
+                    <body>A definition of standards for component implementation, documentation, and deployment.</body>
+                    <marks>
+                        <mark type="keyword">implement</mark>
+                        <mark type="keyword">document</mark>
+                        <mark type="keyword">deploy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question id="38" type="extended-answer">
+            <body>What are the basic elements of a component model?</body>
+            <answers>
+                <answer>
+                    <body>Interface definition, language used, naming conventions, meta-data, packaging</body>
+                    <marks>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">language</mark>
+                        <mark type="keyword">nam</mark>
+                        <mark type="keyword">meta</mark>
+                        <mark type="keyword">packag</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question id="39" type="extended-answer">
+            <body>What are the types of component compositions and how do they work?</body>
+            <answers>
+                <answer>
+                    <body>Sequential composition: An intermediate hooks into the exposed components of multiple
+                        interfaces. Hierarchical composition: One component hooks into the exposed interface of another
+                        component. Adaptive composition: A wrapper surrounds the internal components and wraps around
+                        the incoming and outgoing dependencies.
+                        <img src="res/39_composition.png"/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">sequen</mark>
+                        <mark type="keyword">hierarch</mark>
+                        <mark type="keyword">adapt</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="40">
+            <body>What are some of the benefits of component based software engineering?</body>
+            <answers>
+                <answer>
+                    <body>Independent components, standardized components, middleware, development process geared to
+                        reuse.
+                    </body>
+                    <marks>
+                        <mark type="keyword">independen</mark>
+                        <mark type="keyword">standard</mark>
+                        <mark type="keyword">middleware</mark>
+                        <mark type="keyword">reus</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="41">
+            <body>What are some cons of component-based software engineering?</body>
+            <answers>
+                <answer>
+                    <body>Trustworthiness of external components, certification of components, emergent property
+                        prediction, requirements trade-offs
+                    </body>
+                    <marks>
+                        <mark type="keyword">trust</mark>
+                        <mark type="keyword">certif</mark>
+                        <mark type="keyword">propert</mark>
+                        <mark type="keyword">trade</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="42">
+            <body>What is design by contract?</body>
+            <answers>
+                <answer>
+                    <body>A set of principles to produce dependable and robust object-oriented software</body>
+                    <marks>
+                        <mark type="keyword">principl</mark>
+                        <mark type="keyword">depend</mark>
+                        <mark type="keyword">robust</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="43">
+            <body>What are the two major characteristics of a contract in the design by contract principle?</body>
+            <answers>
+                <answer>
+                    <body>1: Each party expects benefits from the contract and is prepared to incur obligations to
+                        obtain them. These are documented in the contract document, and no other obligations can be can
+                        be imposed (no-hidden-clauses rule) to obtain the benefits.
+                    </body>
+                    <marks>
+                        <mark type="keyword">benefit</mark>
+                        <mark type="keyword">obligat</mark>
+                        <mark type="keyword">hidden</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="44">
+            <body>What are the pre/post conditions in a design-by-contract environment?</body>
+            <answers>
+                <answer>
+                    <body>They are assertions (expressions that evaluate to true or false), checking the requirements
+                        that any call must satisfy/the properties ensured at the end of execution of the procedure.
+                    </body>
+                    <marks>
+                        <mark type="keyword">assert</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="45">
+            <body>Give an example of a language with builtin design-by-contract functionality</body>
+            <answers>
+                <answer>
+                    <body>The Eiffel programming language</body>
+                    <marks>
+                        <mark type="keyword">eiffel</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="46">
+            <body>What are some of the principles in design by contract?</body>
+            <answers>
+                <answer>
+                    <body>1: Non-redundancy principle (The routine never checks its own precondition). 2: Reasonable
+                        precondition principle (the need is justified and documented). 3: Failure principle (execution
+                        of rescue clause to end, not leading to a retry, causes call to fail. 4: Disciplined exception
+                        handling principle (retry / failure) 5: Exception simplicity principle (rescue clauses are
+                        simple and focus only on obtaining a stable state.
+                    </body>
+                    <marks>
+                        <mark type="keyword">redundan</mark>
+                        <mark type="keyword">reasonable</mark>
+                        <mark type="keyword">fail</mark>
+                        <mark type="keyword">handl</mark>
+                        <mark type="keyword">simpl</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="46">
+            <body>What is the difference between defensive programming and design by contract?</body>
+            <answers>
+                <answer>
+                    <body>Defensive programming promotes putting checks in every module to detect unexpected situations.
+                        This can lead to redundant checks (duplication) and the responsibilities are less well defined.
+                    </body>
+                    <marks>
+                        <mark type="keyword">check</mark>
+                        <mark type="keyword">redundan</mark>
+                        <mark type="keyword">respons</mark>
                     </marks>
                 </answer>
             </answers>
