@@ -29,7 +29,7 @@
 
     <xs:complexType name="question">
         <xs:sequence>
-            <xs:element name="body" type="xs:string"/>
+            <xs:element name="body" type="xhtml-body"/>
             <xs:element name="answers">
                 <xs:complexType>
                     <xs:sequence>
@@ -45,7 +45,7 @@
 
     <xs:complexType name="answer">
         <xs:sequence>
-            <xs:element name="body" type="xs:string"/>
+            <xs:element name="body" type="xhtml-body"/>
             <xs:element name="marks">
                 <xs:complexType>
                     <xs:sequence>
@@ -87,4 +87,18 @@
             <xs:enumeration value="any"/>
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:complexType name="xhtml-body" mixed="true">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="img" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="src" use="required" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="p" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>
