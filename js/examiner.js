@@ -165,6 +165,7 @@ function saveProgress() {
 
 function postQuestion(index, newQuestion) {
     $("#question-ui").css("display", "block");
+    $("#answer-ui").css("display", "block");
     $("#solution-ui").css("display", "none");
     $("#no-question-ui").css("display", "none");
     $("#question-card-header").html("Question " + index);
@@ -175,7 +176,7 @@ function postQuestion(index, newQuestion) {
 }
 
 function showAnswer(modelResponse, userResponse, score, possibleScore) {
-    $("#question-ui").css("display", "none");
+    $("#answer-ui").css("display", "none");
     $("#solution-ui").css("display", "block");
     $("#response-alerts").prepend(
         "        <div class=\"card my-4\" id=\"response-card\">\n" +
@@ -345,6 +346,7 @@ function postRandomQuestion() {
 
     if (possibleQuestions.length == 0) {
         $("#no-question-ui").css("display", "block");
+        $("#question-ui").css("display", "none");
         $("#solution-ui").css("display", "none");
     } else {
         let index = Math.floor(Math.random() * possibleQuestions.length);
@@ -353,7 +355,6 @@ function postRandomQuestion() {
 }
 
 $(document).on('keydown', function (e) {
-    console.log(e.which);
     // Catch the newline CTRL-Enter -> check question
     if ((e.metaKey || e.ctrlKey) && !e.shiftKey && (e.which === 13)) {
         if ($("#question-ui").css("display").localeCompare("block") == 0) {
