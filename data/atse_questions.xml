@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <exam xmlns="https://vpt1.org"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="https://vpt1.org questions.xsd">
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://vpt1.org questions.xsd">
     <head>
         <title>ATSE Review Question Catalog</title>
         <version>1.0</version>
@@ -14,7 +13,7 @@
 
         <!-- Chapter 1: Embedded Systems (Guest Lecture) !-->
         <question type="extended-answer" id="1">
-            <body>Whats is an embedded system and some of it's common attributes?</body>
+            <body>What is an embedded system and some of it's common attributes?</body>
             <answers>
                 <answer>
                     <body>
@@ -39,7 +38,7 @@
                 <answer>
                     <body>
                         Example definitions:
-                        1: The fundamental organization of a system embodied in its components, their relationsships to
+                        1: The fundamental organization of a system embodied in its components, their relationships to
                         each other, and to the environment, and the principles guiding its design and evolution.
                         4: Architecture is a set of significant design decisions that shape a system.
                     </body>
@@ -530,7 +529,7 @@
                     <body>Def 1: A software element conforming to a component model that can be independently deployed
                         and composed according to a composition standard. Def 2: A unit of composition with
                         contractually specified interfaces and explicit context dependencies only that can be deploed
-                        independently and is subject to comosition by third parties.
+                        independently and is subject to composition by third parties.
                     </body>
                     <marks>
                         <mark type="regex">element|unit</mark>
@@ -870,6 +869,461 @@
                         <mark type="keyword">know</mark>
                         <mark type="keyword">depend</mark>
                         <mark type="keyword">graph</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 2.6: Safety -->
+        <question type="extended-answer" id="1000">
+            <body>What is the difference between safety and security?</body>
+            <answers>
+                <answer>
+                    <body>Safety ("Betriebssicherheit") is concerned with protecting the environment from the system
+                        while security ("Angriffssicherheit") is concerned with protecting the system from the
+                        environment.
+                    </body>
+                    <marks>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">environment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1001">
+            <body>What is the goal of the safety threshold concept?</body>
+            <answers>
+                <answer>
+                    <body>The goal is to determine how safe is 'safe enough' without over- or under-engineering a
+                        product.
+                    </body>
+                    <marks>
+                        <mark type="keyword">determine</mark>
+                        <mark type="keyword">safe enough</mark>
+                        <mark type="regex">over.*engineering</mark>
+                        <mark type="regex">under.*engineering</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1002">
+            <body>What is risk?</body>
+            <answers>
+                <answer>
+                    <body>Risk is the combination of the probability of occurrence of harm and the severity of that
+                        harm.
+                    </body>
+                    <marks>
+                        <mark type="keyword">combination</mark>
+                        <mark type="keyword">probability</mark>
+                        <mark type="keyword">severity</mark>
+                        <mark type="keyword">harm</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1003">
+            <body>What is risk aversion?</body>
+            <answers>
+                <answer>
+                    <body>The reluctance of people to accept a bargain with an uncertain payoff rather than another
+                        bargain with more certain, but possibly lower, expected payoff.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reluctance</mark>
+                        <mark type="keyword">accept</mark>
+                        <mark type="keyword">uncertain</mark>
+                        <mark type="keyword">certain</mark>
+                        <mark type="keyword">payoff</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1004">
+            <body>What is scale aversion?</body>
+            <answers>
+                <answer>
+                    <body>The tendency to want greater protection where consequences are high.</body>
+                    <marks>
+                        <mark type="keyword">tendency</mark>
+                        <mark type="keyword">protection</mark>
+                        <mark type="keyword">consequences</mark>
+                        <mark type="keyword">high</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1005">
+            <body>What is the ALARP principle?</body>
+            <answers>
+                <answer>
+                    <body>The "As Low As is Reasonably Practical" principle defines three risk regions: intolerable
+                        region, tolerable/ALARP region, and the broadly acceptable region.
+                    </body>
+                    <marks>
+                        <mark type="keyword">As Low As is Reasonably Practical</mark>
+                        <mark type="keyword">intolerable region</mark>
+                        <mark type="regex" regex-flags="i">tolerable region|ALARP region</mark>
+                        <mark type="keyword">broadly acceptable region</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1006">
+            <body>What is the goal of risk reduction?</body>
+            <answers>
+                <answer>
+                    <body>The goal is to reduce risk to a tolerable level by combining multiple methods/means (not to
+                        zero).
+                    </body>
+                    <marks>
+                        <mark type="keyword">reduce</mark>
+                        <mark type="keyword">tolerable level</mark>
+                        <mark type="keyword">combining</mark>
+                        <mark type="regex" regex-flags="i">methods|means</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1007">
+            <body>What is the definition of safety?</body>
+            <answers>
+                <answer>
+                    <body>The absence of unacceptable/unreasonable risk.</body>
+                    <marks>
+                        <mark type="keyword">absence</mark>
+                        <mark type="regex" regex-flags="i">unacceptable|unreasonable</mark>
+                        <mark type="keyword">risk</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1008">
+            <body>How are faults, errors, and failures connected?</body>
+            <answers>
+                <answer>
+                    <body>Faults manifest as an error and an error ultimately may cause a failure.</body>
+                    <marks>
+                        <mark type="keyword">manifest</mark>
+                        <mark type="keyword">may</mark>
+                        <mark type="keyword">cause</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1009">
+            <body>What is a fault?</body>
+            <answers>
+                <answer>
+                    <body>A fault is an abnormal condition that can cause an element or an item to fail.</body>
+                    <marks>
+                        <mark type="keyword">abnormal condition</mark>
+                        <mark type="keyword">cause</mark>
+                        <mark type="keyword">fail</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1010">
+            <body>What is an error?</body>
+            <answers>
+                <answer>
+                    <body>An error is the discrepancy between a computed, observed or measured value or condition and
+                        the true, specified or theoretically correct value or condition.
+                    </body>
+                    <marks>
+                        <mark type="keyword">discrepancy</mark>
+                        <mark type="regex" regex-flags="i">value|condition</mark>
+                        <mark type="regex" regex-flags="i">specified|theoretically correct</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1011">
+            <body>What is a failure?</body>
+            <answers>
+                <answer>
+                    <body>A failure is the termination of the ability of an element, to perform a function as required.
+                    </body>
+                    <marks>
+                        <mark type="keyword">termination</mark>
+                        <mark type="keyword">ability</mark>
+                        <mark type="keyword">element</mark>
+                        <mark type="keyword">perform</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">required</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1012">
+            <body>What is the difference between systematic and random issues?</body>
+            <answers>
+                <answer>
+                    <body>A random issue is caused by physical processes such as damage or fatigue, while a systematic
+                        issue
+                        is caused by specification or design issues, or hardware wear-out.
+                    </body>
+                    <marks>
+                        <mark type="keyword">physical processes</mark>
+                        <mark type="keyword">specification</mark>
+                        <mark type="keyword">design</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1013">
+            <body>What is a cascading failure?</body>
+            <answers>
+                <answer>
+                    <body>A failure of an element causing another element of the same item to fail.</body>
+                    <marks>
+                        <mark type="keyword">failure</mark>
+                        <mark type="keyword">element</mark>
+                        <mark type="keyword">another</mark>
+                        <mark type="keyword">same item</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1014">
+            <body>What is a common cause failure?</body>
+            <answers>
+                <answer>
+                    <body>A failure of two or more elements resulting form a single specific event or root cause.</body>
+                    <marks>
+                        <mark type="keyword">two or more</mark>
+                        <mark type="keyword">elements</mark>
+                        <mark type="keyword">root cause</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1015">
+            <body>What does functional safety cover?</body>
+            <answers>
+                <answer>
+                    <body>Functional safety focuses on the hazards and risks originating from the function of an (E/E)
+                        system.
+                    </body>
+                    <marks>
+                        <mark type="keyword">hazard</mark>
+                        <mark type="keyword">risk</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1016">
+            <body>What is the lifecycle approach to functional safety?</body>
+            <answers>
+                <answer>
+                    <body>The various life cycle activities and defenses against systematic failures that are necessary
+                        to achieve functional safety occurring at different stages in the design and operation of the
+                        system.
+                    </body>
+                    <marks>
+                        <mark type="keyword">life cycle activities</mark>
+                        <mark type="keyword">defense</mark>
+                        <mark type="keyword">systematic failure</mark>
+                        <mark type="keyword">stages</mark>
+                        <mark type="keyword">design</mark>
+                        <mark type="keyword">operation</mark>
+                        <mark type="keyword">system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1017">
+            <body>What does the lifecycle approach to functional safety emphasize?</body>
+            <answers>
+                <answer>
+                    <body>Integration of safety into the design; Systematic hazard identification and analysis;
+                        Addressing the entire system in addition to the subsystems and components; Using protection
+                        layers for risk reduction; Qualitative and quantitative approaches
+                    </body>
+                    <marks>
+                        <mark type="keyword">integration</mark>
+                        <mark type="keyword">systematic</mark>
+                        <mark type="keyword">entire system</mark>
+                        <mark type="keyword">protection layer</mark>
+                        <mark type="keyword">qualitative</mark>
+                        <mark type="keyword">quantitative</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1018">
+            <body>What are the two safety concepts in the lifecycle approach to functional safety?</body>
+            <answers>
+                <answer>
+                    <body>The functional safety concept is a statement of the functionality to achieve the safety goal.
+                        The
+                        technical safety concept is a statement of how this functionality is implemented in hardware or
+                        software.
+                    </body>
+                    <marks>
+                        <mark type="keyword">functional</mark>
+                        <mark type="keyword">statement</mark>
+                        <mark type="keyword">functionality</mark>
+                        <mark type="keyword">technical</mark>
+                        <mark type="keyword">implement</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1019">
+            <body>What are the objectives of safety analysis?</body>
+            <answers>
+                <answer>
+                    <body>The objectives are:
+                        ...to examine consequences of faults and failures on functions, behavior and design of
+                        items/elements.
+                        ...to provide information on conditions/causes that could lead to violation of a safety goal or
+                        safety requirement.
+                        ...to contribute to identification of new functional or non-functional hazards not previously
+                        identified during the hazard analysis and risk assessment.
+                    </body>
+                    <marks>
+                        <mark type="keyword">examine consequences</mark>
+                        <mark type="keyword">provide information</mark>
+                        <mark type="keyword">identification</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1020">
+            <body>What are the differences between qualitative and quantitative safety analysis methods?</body>
+            <answers>
+                <answer>
+                    <body>Qualitative methods require knowledge of relevant fault models and can identify failures.
+                        Quantitative methods also require knowledge about relevant fault models and additionally about
+                        quantitative hardware failure rates. They can complement qualitative analyses and are able to
+                        predict the frequency of random hardware failures. Thus they are used to verify hardware
+                        designs.
+                    </body>
+                    <marks>
+                        <mark type="keyword">knowledge</mark>
+                        <mark type="keyword">fault model</mark>
+                        <mark type="keyword">identify failure</mark>
+                        <mark type="keyword">failure rate</mark>
+                        <mark type="keyword">predict</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1021">
+            <body>What is the difference between inductive and deductive safety analysis methods?</body>
+            <answers>
+                <answer>
+                    <body>Inductive methods are bottom-up (fault to failure) methods, while deductive methods are
+                        top-down
+                        (failure to fault) methods.
+                    </body>
+                    <marks>
+                        <mark type="keyword">bottom-up</mark>
+                        <mark type="keyword">top-down</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1022">
+            <body>What is the usual relation between inductive and deductive safety analysis methods?</body>
+            <answers>
+                <answer>
+                    <body>They are usually complementary.</body>
+                    <marks>
+                        <mark type="keyword">complementary
+                        </mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1023">
+            <body>What inductive safety analysis method was discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Failure Mode and Effects Analysis (FMEA)</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">Failure Mode and Effects Analysis|FMEA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1024">
+            <body>What deductive safety analysis method was discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Fault Tree Analysis (FTA)</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">Fault Tree Analysis|FTA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1025">
+            <body>What is the most important FMEA terminology? Also briefly explain it.</body>
+            <answers>
+                <answer>
+                    <body>Failure Mode: Manner in which a component could potentially fail to meet design intent.
+                        Failure Effects: Effects of the failure mode on the function as perceived by the customer.
+                        Causes: Indications of a design weakness, the consequence of which is the failure mode.
+                        Detection/Prevention Measures: Activities which will assure the design adequacy for the failure
+                        cause under consideration.
+                    </body>
+                    <marks>
+                        <mark type="keyword">failure mode</mark>
+                        <mark type="keyword">failure effect</mark>
+                        <mark type="keyword">cause</mark>
+                        <mark type="regex" regex-flags="i">Detection Measure|Prevention Measure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1026">
+            <body>What quantitative variables does FMEA consider? Also briefly explain them.</body>
+            <answers>
+                <answer>
+                    <body>Severity: Rates the severity of a potential failure effect.
+                        Occurrence: Rates the likelihood that the failure will occur.
+                        Detection: Rates the likelihood that the problem will not be detected before it reaches the
+                        end-user.
+                        Risk Priority Number: Severity * Occurrence * Detection
+                    </body>
+                    <marks>
+                        <mark type="keyword">severity</mark>
+                        <mark type="keyword">occurrence</mark>
+                        <mark type="keyword">detection</mark>
+                        <mark type="keyword">risk priority number</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1027">
+            <body>What is the goal of FTA?</body>
+            <answers>
+                <answer>
+                    <body>The goal is to identify all conditions that lead to a system failure.</body>
+                    <marks>
+                        <mark type="keyword">identify</mark>
+                        <mark type="keyword">condition</mark>
+                        <mark type="keyword">fail</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1028">
+            <body>What is the procedure of FTA?</body>
+            <answers>
+                <answer>
+                    <body>Define the system under scrutiny. Determine undesired events (top event). Identify event or
+                        series of events that lead to the top level event.
+                    </body>
+                    <marks>
+                        <mark type="keyword">define</mark>
+                        <mark type="keyword">undesired event</mark>
+                        <mark type="keyword">identify</mark>
                     </marks>
                 </answer>
             </answers>
