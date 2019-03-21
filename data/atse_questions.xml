@@ -874,6 +874,131 @@
             </answers>
         </question>
 
+        <!-- Chapter 2.1.3 Guidelines for Modular Design -->
+        <question type="extended-answer" id="57">
+            <body>What is the formal definition of the structure of a system?</body>
+            <answers>
+                <answer>
+                    <body>The formal definition of a structure is defined by S:=(C,I,CON), where C denotes the
+                        components, env\in C denotes the environment, I denoting the interfaces and CON\subseteq I\cross
+                        I the connection between interfaces. A component can be a system itself.
+                    </body>
+                    <marks>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">environ</mark>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">connect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="58">
+            <body>What are the types of relationship in a system structure?</body>
+            <answers>
+                <answer>
+                    <body>Parent relationships (C\rightarrow C, parent(a)=env), Interface-component relationship
+                        (I\rightarrow C, assigned(i)=a),
+                        connections between interfaces (CON\rightarrow I\cross I, connected(c)=(a,b))
+                    </body>
+                    <marks>
+                        <mark type="keyword">parent</mark>
+                        <mark type="regex" regex-flags="i">assign|interface|component</mark>
+                        <mark type="keyword">connect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="59">
+            <body>How is coupling calculated?</body>
+            <answers>
+                <answer>
+                    <body>coupling(S):=\alpha * percentage of connections on same level + (1-\alpha) * percentage of
+                        connections on different levels. Where \alpha is a weighting factor of choice.
+                    </body>
+                    <marks>
+                        <mark type="keyword">alpha</mark>
+                        <mark type="keyword">connect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60">
+            <body>What are the types of coupling in order of decreasing coupling?</body>
+            <answers>
+                <answer>
+                    <body>Content, Common, External, Control, Stamp, Data</body>
+                    <marks>
+                        <mark type="keyword">content</mark>
+                        <mark type="keyword">common</mark>
+                        <mark type="keyword">external</mark>
+                        <mark type="keyword">control</mark>
+                        <mark type="keyword">stamp</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="61">
+            <body>What is the meaning of content coupling?</body>
+            <answers>
+                <answer>
+                    <body>One component directly affects the working of another component by modifying its data or
+                        passing control to unintended points in the other component. Any modification in the other
+                        component usually requires a modification in this component.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">control</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="62">
+            <body>What is the meaning of common coupling?</body>
+            <answers>
+                <answer>
+                    <body>Two components use shared data (global variables etc). This leads to a lack of clear data
+                        responsibility, reduced readability, reduced maintainability, difficulties in reuse and a
+                        reduced ability to control data access.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">respons</mark>
+                        <mark type="keyword">read</mark>
+                        <mark type="keyword">maintain</mark>
+                        <mark type="keyword">reus</mark>
+                        <mark type="keyword">access</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="63">
+            <body>What is the meaning of external coupling?</body>
+            <answers>
+                <answer>
+                    <body>Components communicate through an external medium (file, device, protocol, data format)</body>
+                    <marks>
+                        <mark type="keyword">medi</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="64">
+            <body>What is the meaning of control coupling?</body>
+            <answers>
+                <answer>
+                    <body>One component directs control to another component by passing control information. Good if
+                        paramenters allow factoring and reuse, bad if parameters cause completely different behavior or
+                        require knowledge of internal functions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">control</mark>
+                        <mark type="regex">info|param|arg</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
             <body>What is the difference between safety and security?</body>

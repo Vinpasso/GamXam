@@ -4,7 +4,7 @@ const { app, BrowserWindow } = require('electron')
 let win
 
 function createWindow () {
-    win = new BrowserWindow({ width: 1280, height: 720, frame: false, webPreferences: {
+    win = new BrowserWindow({ width: 1920, height: 1080, frame: false, webPreferences: {
         nodeIntegration: false,
         nodeIntegrationInWorker: false,
         contextIsolation: false,
