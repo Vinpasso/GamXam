@@ -2342,5 +2342,131 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Chapter 2.7: Security -->
+        <question type="extended-answer" id="1039">
+            <body>What is a distributed system?</body>
+            <answers>
+                <answer>
+                    <body>A distributed system consists of physically disjoint compute resources, interconnected by a
+                        network.
+                    </body>
+                    <marks>
+                        <mark type="keyword">disjoint</mark>
+                        <mark type="keyword">connected</mark>
+                        <mark type="keyword">network</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1040">
+            <body>What are a five of the characteristics of distributed systems covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Reliability, Availability, Heterogeneity, Openness, Security, Scalability, Fault-tolerance and
+                        failure handling, Concurrency, Transparency, Predictable performance
+                    </body>
+                    <marks>
+                        <mark type="keyword">reliability</mark>
+                        <mark type="keyword">availability</mark>
+                        <mark type="keyword">heterogeneity</mark>
+                        <mark type="keyword">openness</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">fault-tolerance</mark>
+                        <mark type="keyword">concurrency</mark>
+                        <mark type="keyword">transparency</mark>
+                        <mark type="keyword">predictable performance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1041">
+            <body>How are reliability and availability of a system related?</body>
+            <answers>
+                <answer>
+                    <body>A reliable system has high availability but an available system may or may not be reliable.
+                    </body>
+                    <marks>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">but</mark>
+                        <mark type="keyword">not</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1042">
+            <body>What are four of the aspects, that overall transparency depends on?</body>
+            <answers>
+                <answer>
+                    <body>Access: Hide differences in data representation.
+                        Location: Hide where a resource is located.
+                        Migration: Hide that a resource may move to another location.
+                        Relocation: Hide that a resource may be moved to another location while in use.
+                        Replication Hide that a resource is replicated.
+                        Concurrency: Hide that a resource may be shared by several competitive users.
+                        Failure: Hide the failure and recovery of a resource.
+                    </body>
+                    <marks>
+                        <mark type="keyword">access</mark>
+                        <mark type="keyword">location</mark>
+                        <mark type="keyword">migration</mark>
+                        <mark type="keyword">relocation</mark>
+                        <mark type="keyword">replication</mark>
+                        <mark type="keyword">concurrency</mark>
+                        <mark type="keyword">failure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1043">
+            <body>What is middleware?</body>
+            <answers>
+                <answer>
+                    <body>Middleware comprises services and abstractions that facilitate design, development and
+                        deployment of distributed applications in heterogeneous, networked environments.
+                    </body>
+                    <marks>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">abstract</mark>
+                        <mark type="keyword">design</mark>
+                        <mark type="keyword">develop</mark>
+                        <mark type="keyword">deploy</mark>
+                        <mark type="keyword">distributed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1044">
+            <body>What does middleware deal with?</body>
+            <answers>
+                <answer>
+                    <body>Capturing common functionalities (like message passing), interoperability, and system
+                        integration.
+                    </body>
+                    <marks>
+                        <mark type="keyword">common function</mark>
+                        <mark type="keyword">interoperability</mark>
+                        <mark type="keyword">integration</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1045">
+            <body>What are the three layers of the middle ware stack?</body>
+            <answers>
+                <answer>
+                    <body>Application layer
+                        Middleware layer
+                        IT infrastructure
+                    </body>
+                    <marks>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">middleware</mark>
+                        <mark type="keyword">infrastructure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
