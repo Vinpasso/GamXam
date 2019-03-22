@@ -1422,6 +1422,292 @@
             </answers>
         </question>
 
+        <!-- Chapter 2.2 Antipatterns -->
+        <question type="extended-answer" id="94">
+            <body>What is an antipattern?</body>
+            <answers>
+                <answer>
+                    <body>A literary form describing a commonly occurring solution to a problem that generates negative
+                        consequences. This can occur due to insufficient knowledge, experience in solving particular
+                        type of problem, or applying a pattern in the wrong context.
+                    </body>
+                    <marks>
+                        <mark type="keyword">solution</mark>
+                        <mark type="keyword">negative</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="95">
+            <body>What are some of the goals of a higher level vocabulary in relation to antipatterns?</body>
+            <answers>
+                <answer>
+                    <body>Simplify communication, enable concise description, provide real-world experience, provide
+                        remedy for most common predicaments, highlight the most common problems, provide the tools to
+                        recognize problems and causes. (Source: 2.2 slide 5)
+                    </body>
+                    <marks>
+                        <mark type="keyword">simpl</mark>
+                        <mark type="keyword">descr</mark>
+                        <mark type="keyword">exper</mark>
+                        <mark type="keyword">problem</mark>
+                        <mark type="keyword">cause</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="96">
+            <body>What are the two types of antipatterns relating to software?</body>
+            <answers>
+                <answer>
+                    <body>Software development antipatterns (describe useful refactorings) and software architecture
+                        antipatterns (system-level structure).
+                    </body>
+                    <marks>
+                        <mark type="keyword">dev</mark>
+                        <mark type="keyword">arch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="97">
+            <body>What are the seven deadly sins in software practice?</body>
+            <answers>
+                <answer>
+                    <body>Haste (lack of time), apathy (lack of care), narrow-mindedness (refuse to accept widely-known
+                        solutions), sloth (easy answers), avarice (excessive complexity), ignorance (failure to seek
+                        understanding), pride/hubris (not-invented-here)
+                    </body>
+                    <marks>
+                        <mark type="keyword">haste</mark>
+                        <mark type="keyword">apathy</mark>
+                        <mark type="keyword">narrow-minded</mark>
+                        <mark type="keyword">sloth</mark>
+                        <mark type="keyword">avarice</mark>
+                        <mark type="keyword">ignorance</mark>
+                        <mark type="regex" regex-flags="i">pride|hubris</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="98">
+            <body>What are typical root causes and other causes of the blob antipattern?</body>
+            <answers>
+                <answer>
+                    <body>Root causes: sloth, haste. Other causes: lack of (object-oriented) architecture and
+                        architecture enforcement, too limited intervention and specified disaster.
+                    </body>
+                    <marks>
+                        <mark type="keyword">sloth</mark>
+                        <mark type="keyword">haste</mark>
+                        <mark type="keyword">arch</mark>
+                        <mark type="keyword">enforce</mark>
+                        <mark type="keyword">intervent</mark>
+                        <mark type="keyword">disaster</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9001">
+            <body>What is the refactored solution of the blob antipattern?</body>
+            <answers>
+                <answer>
+                    <body>Refactoring of responsibilities</body>
+                    <marks>
+                        <mark type="keyword">respons</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="99">
+            <body>What is the functional decomposition antipattern?</body>
+            <answers>
+                <answer>
+                    <body>The result of experienced non-object-oriented developers developing in a object-oriented
+                        language, causing the program to look like a functional program using workarounds.
+                    </body>
+                    <marks>
+                        <mark type="keyword">object</mark>
+                        <mark type="keyword">function</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="100">
+            <body>What are the root causes and other causes of the functional decomposition antipattern?</body>
+            <answers>
+                <answer>
+                    <body>Root causes: avarice, greed, sloth. Other causes: lack of object-oriented understanding, lack
+                        of architecture enforcement, specified disaster.
+                    </body>
+                    <marks>
+                        <mark type="keyword">avarice</mark>
+                        <mark type="keyword">greed</mark>
+                        <mark type="keyword">sloth</mark>
+                        <mark type="keyword">object</mark>
+                        <mark type="keyword">enforce</mark>
+                        <mark type="keyword">disaster</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="101">
+            <body>Which room is used to torture Winston Smith?</body>
+            <answers>
+                <answer>
+                    <body>Room 101</body>
+                    <marks>
+                        <mark type="keyword">101</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="102">
+            <body>What is the auto-generated stovepipe antipattern?</body>
+            <answers>
+                <answer>
+                    <body>Occurs in an attempt to migrate existing software interfaces to distributed interfaces without
+                        modifying the software design. This generates a range of problems: Fine-grained communication
+                        between interfaces can be inefficient in distributed environments, existing interfaces may be
+                        implementation specific, applications might assume locality (access to filesystem etc.), and
+                        excessive complexity can arise in larger scale systems.
+                    </body>
+                    <marks>
+                        <mark type="keyword">distribut</mark>
+                        <mark type="keyword">interface</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="103">
+            <body>How can auto-generated stovepipe be refactored?</body>
+            <answers>
+                <answer>
+                    <body>By reengineering interfaces and creating a coarse-grained object model for communication.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reengineer</mark>
+                        <mark type="keyword">object</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="104">
+            <body>What is the golden hammer antipattern?</body>
+            <answers>
+                <answer>
+                    <body>When a team has experience in a particular solution approach and attempts to solve any new
+                        problems using the familiar approach, even though it might not be suitable for the specific
+                        problem instance.
+                    </body>
+                    <marks>
+                        <mark type="keyword">solution</mark>
+                        <mark type="keyword">problem</mark>
+                        <mark type="keyword">experience</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="105">
+            <body>What are the root causes of the golden hammer antipattern and what are some other causes?</body>
+            <answers>
+                <answer>
+                    <body>Root causes: ignorance, pride, narrow-mindedness. Other causes: several successes with a
+                        particular approach, large investment in a technology, isolation of group, reliance on
+                        proprietary features.
+                    </body>
+                    <marks>
+                        <mark type="keyword">ignorance</mark>
+                        <mark type="keyword">pride</mark>
+                        <mark type="keyword">narrow-minded</mark>
+                        <mark type="keyword">investment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="106">
+            <body>What is the refactored solution of the golden hammer antipattern?</body>
+            <answers>
+                <answer>
+                    <body>Expand your horizons</body>
+                    <marks>
+                        <mark type="keyword">horizon</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="107">
+            <body>What is the design by committee antipattern?</body>
+            <answers>
+                <answer>
+                    <body>A design that was influenced by many stakeholders, leading to excessive complexity in
+                        features/variations. May be found in some standards.
+                    </body>
+                    <marks>
+                        <mark type="keyword">complex</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="108">
+            <body>What are some root causes and other typical causes of the design by committee antipattern?</body>
+            <answers>
+                <answer>
+                    <body>Root causes: pride, avarice. Other typical causes: lack of project architect, bad meeting or
+                        software process, attempt to make everybody happy, gold plating (modifications based on
+                        proprietary interests)
+                    </body>
+                    <marks>
+                        <mark type="keyword">pride</mark>
+                        <mark type="keyword">avarice</mark>
+                        <mark type="keyword">arch</mark>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">gold</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="109">
+            <body>What is the refactored solution to the design by committee antipattern?</body>
+            <answers>
+                <answer>
+                    <body>Meeting facilitation. Use all the standard methods to hold coordinated meetings.</body>
+                    <marks>
+                        <mark type="keyword">facilitat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="110">
+            <body>What is a typical example of a design by committee used in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>The SQL standard, which started out in 1989 as a 115 page document, then had a 580 page 1992
+                        standardization called SQL92 and died before SQL3.
+                    </body>
+                    <marks>
+                        <mark type="keyword">sql</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9002">
+            <body>What are the antipatterns covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Blob, functional decomposition, auto-generated stovepipe, golden hammer, design by committee
+                    </body>
+                    <marks>
+                        <mark type="keyword">blob</mark>
+                        <mark type="keyword">functional decomposit</mark>
+                        <mark type="keyword">stovepipe</mark>
+                        <mark type="keyword">hammer</mark>
+                        <mark type="keyword">design by committee</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
             <body>What is the difference between safety and security?</body>
