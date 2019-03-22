@@ -923,7 +923,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="60">
-            <body>What are the types of coupling in order of decreasing coupling?</body>
+            <body>What are the types of coupling in order of decreasing coupling (lower is better)?</body>
             <answers>
                 <answer>
                     <body>Content, Common, External, Control, Stamp, Data</body>
@@ -998,6 +998,288 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="65">
+            <body>What is the meaning of stamp coupling?</body>
+            <answers>
+                <answer>
+                    <body>In stamp coupling, complete data structures are passed between components. The second
+                        component therefore has more information that it needs. Define interfaces to limit what clients
+                        can access.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">struct</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="66">
+            <body>What is the meaning of data coupling?</body>
+            <answers>
+                <answer>
+                    <body>Component passes only data (not data structures) to another component. Ensures the other
+                        component can only access information that it actually needs.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="67">
+            <body>What is the meaning of Cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Cohesion is a measure of how closely the responsibilities of a component are related (degree
+                        of interaction within a component, higher is better). It characterizes the components internal
+                        dependencies.
+                    </body>
+                    <marks>
+                        <mark type="keyword">respons</mark>
+                        <mark type="keyword">depend</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="68">
+            <body>What are the types of cohesion in descending level of cohesion (higher is better)?</body>
+            <answers>
+                <answer>
+                    <body>Functional, sequential, communicational, procedural, temporal, logical, coincidental.</body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">sequen</mark>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">procedur</mark>
+                        <mark type="keyword">tempo</mark>
+                        <mark type="keyword">logic</mark>
+                        <mark type="keyword">coinciden</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="69">
+            <body>What is the meaning of coincidental cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Elements are grouped into components without signification relation between elements, i.e. by
+                        accident. It degrades maintainability and reusability, refactor by breaking it into several
+                        modules.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">relat|accident</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="70">
+            <body>What is the meaning of logical cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Elements are related logically but not functionally. Example: Read input from tape, disk,
+                        network (operations are related logically, but their function differs significantly).
+                    </body>
+                    <marks>
+                        <mark type="keyword">logic</mark>
+                        <mark type="keyword">function</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="71">
+            <body>What is temporal cohesion?</body>
+            <answers>
+                <answer>
+                    <body>The elements are independent but are activated at at the similar times. Example:
+                        initialization component (print some status info, open a database connection, verify licensing).
+                        This is a weak relationship, usually stronger ones exist that would increase maintainability and
+                        reusability.
+                    </body>
+                    <marks>
+                        <mark type="keyword">time</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="72">
+            <body>What is procedural cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Elements are grouped into a component only to ensure a particular order of execution. They are
+                        still weakly connected, degrading reusability.
+                    </body>
+                    <marks>
+                        <mark type="keyword">order</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="73">
+            <body>What is communicational cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Elements in a component operate on the same (external) data. Probably leads to blobs when
+                        considering large components, e.g. for database interaction.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="74">
+            <body>What is sequential cohesion?</body>
+            <answers>
+                <answer>
+                    <body>The output of one part is input to another, data flows between parts (different from
+                        procedural cohesion).
+                    </body>
+                    <marks>
+                        <mark type="keyword">put</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="75">
+            <body>What is functional cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Every essential element to a single computation is contained in the component. These
+                        components often transform a single input into a single output. This is the ideal situation,
+                        with high reusability, testability, understandability, learnability and fault isolation. There
+                        are reduced regression faults and it is easy to extend the product.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">comput|operat</mark>
+                        <mark type="keyword">put</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="76">
+            <body>What are some advantages expected from striving for low coupling and high cohesion? What should be
+                avoided?
+            </body>
+            <answers>
+                <answer>
+                    <body>Simpler communication, local decision making, easy correctness proofs, less change
+                        propagation, increased reusability and comprehensability. But don&apos;t overdo it.
+                    </body>
+                    <marks>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">decision</mark>
+                        <mark type="keyword">proof</mark>
+                        <mark type="keyword">propagat</mark>
+                        <mark type="keyword">reus</mark>
+                        <mark type="keyword">comprehen</mark>
+                        <mark type="keyword">overdo</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="77">
+            <body>What is the single responsibility principle?</body>
+            <answers>
+                <answer>
+                    <body>A class should only ever have one reason to change. If there are more, split the
+                        functionality. Should lead to cohesion at package/implementation level. Idea is simple, but can
+                        be hard to get right in practice.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reason</mark>
+                        <mark type="keyword">change</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="78">
+            <body>What is responsability?</body>
+            <answers>
+                <answer>
+                    <body>A family of functions that serves one particular actor. It describes the core functionality of
+                        a class.
+                    </body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">actor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="79">
+            <body>What is an actor in relation to a responsibility?</body>
+            <answers>
+                <answer>
+                    <body>An actor for a responsibility is the single source of change for that responsibility.</body>
+                    <marks>
+                        <mark type="keyword">change</mark>
+                        <mark type="regex" regex-flags="i">single|only|sole</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="80">
+            <body>What is meant by separation of concerns?</body>
+            <answers>
+                <answer>
+                    <body>Talk about different things (features) in different places (non-functional and functional).
+                        Example: Business logic, presentation, data layer. Functional: related to
+                        low coupling/high cohesion.
+                    </body>
+                    <marks>
+                        <mark type="keyword">different</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="81">
+            <body>What is the open/closed principle?</body>
+            <answers>
+                <answer>
+                    <body>Software entities should be open for extension but closed for modifications. Related to
+                        inheritance/polymorphism in object-oriented programming.
+                    </body>
+                    <marks>
+                        <mark type="keyword">exten</mark>
+                        <mark type="keyword">modif</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="82">
+            <body>What is Liskov&apos;s substitution principle?</body>
+            <answers>
+                <answer>
+                    <body>If q(x) is a provable property of objects x of type t, then q(y) is provable for objects y of
+                        type s, where s subtype t. In words: Subtypes must be substitutable for base types, child
+                        classes must break parent&apos;s type definition.
+                    </body>
+                    <marks>
+                        <mark type="keyword">property</mark>
+                        <mark type="keyword">type</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="83">
+            <body>What is a child class not allowed to do in order to conform to Liskov&apos;s substitution principle?
+            </body>
+            <answers>
+                <answer>
+                    <body>It must not remove base class behavior, strengthen/weaken pre/post-conditions, violate base
+                        class invariants and require calling code to know it is different from the base type.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">remove|delete</mark>
+                        <mark type="keyword">condition</mark>
+                        <mark type="keyword">invariant</mark>
+                        <mark type="keyword">call</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
 
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
