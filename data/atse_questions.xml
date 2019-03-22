@@ -1735,5 +1735,185 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Chapter 2.7: Security -->
+        <question type="extended-answer" id="1029">
+            <body>What are the CIA security properties? Explain them briefly.</body>
+            <answers>
+                <answer>
+                    <body>Confidentiality: Can non-authorized parties see data?
+                        Integrity: Has data been altered?
+                        Availability: Is data always accessible?
+                    </body>
+                    <marks>
+                        <mark type="keyword">confidentiality</mark>
+                        <mark type="keyword">integrity</mark>
+                        <mark type="keyword">availability</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1030">
+            <body>What security properties other than CIA did the lecture cover?</body>
+            <answers>
+                <answer>
+                    <body>Non-repudiation: Impossibility to inappropriately deny an action.
+                        Authenticity: An action assigned to an entity was actually performed by that entity.
+                        Auditability: Ability to reconstruct earlier states of a system.
+                        Accountability: Ability to assign responsibility for actions to an entity.
+                        Privacy: Refers to security of personal information.
+                        Anonymity: The identity of an entity is hidden; one aspect of privacy.
+                    </body>
+                    <marks>
+                        <mark type="keyword">non-repudiation</mark>
+                        <mark type="keyword">authenticity</mark>
+                        <mark type="keyword">auditability</mark>
+                        <mark type="keyword">accountability</mark>
+                        <mark type="keyword">privacy</mark>
+                        <mark type="keyword">anonymity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1031">
+            <body>What effect does increasing security usually have on usability?</body>
+            <answers>
+                <answer>
+                    <body>It decreases usability.</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">decrease|worse</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1032">
+            <body>What four kinds of factors have to be leveraged for security?</body>
+            <answers>
+                <answer>
+                    <body>Technical: e.g. cryptography
+                        Organizational: e.g. defining responsibilities
+                        People-related: e.g. education
+                        Legal: e.g. liability regulations
+                    </body>
+                    <marks>
+                        <mark type="keyword">technic</mark>
+                        <mark type="keyword">organization</mark>
+                        <mark type="keyword">people</mark>
+                        <mark type="keyword">legal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1033">
+            <body>What five design principles for designing secure systems were covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Least privilege: Every subject should not have more privileges than necessary.
+                        Complete mediation: Access to every object must be controlled in a way not circumventable.
+                        Secure, fail-safe defaults: Security mechanisms should start in a secure state and return to a
+                        secure default state in case of failures.
+                        Compartmentalization: Organize resources into groups, isolated from others except for limited,
+                        controlled means of communication.
+                        Minimum exposure: Minimize the attack surface a system presents to a potential adversary.
+                    </body>
+                    <marks>
+                        <mark type="keyword">least privilege</mark>
+                        <mark type="keyword">complete mediation</mark>
+                        <mark type="keyword">fail-safe defaults</mark>
+                        <mark type="keyword">compartmentalization</mark>
+                        <mark type="keyword">minimum exposure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1034">
+            <body>What kinds of implementation-level attacks were discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>SQL injections, cross-site scripting (XSS), and buffer-overflow attacks.</body>
+                    <marks>
+                        <mark type="keyword">SQL</mark>
+                        <mark type="keyword">XSS</mark>
+                        <mark type="keyword">overflow</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1035">
+            <body>What are the three different types of XSS?</body>
+            <answers>
+                <answer>
+                    <body>Non-persistent (or reflective) attacks: Malicious code in a link that goes to the server and
+                        back.
+                        Persistent attacks: Malicious code in server store, sent from server to client.
+                        DOM based attacks: Server web application not involved.
+                    </body>
+                    <marks>
+                        <mark type="keyword">non-persistent</mark>
+                        <mark type="regex" regex-flags="i">\bpersistent\b</mark>
+                        <mark type="keyword">dom</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1036">
+            <body>What is an attack tree and how is it used?</body>
+            <answers>
+                <answer>
+                    <body>An attack tree is a fault tree considering the role of attackers. Nodes are assigned
+                        attributes such as possibilities, probabilities, and estimated impact. This identifies the most
+                        important attacks to deploy countermeasures for.
+                    </body>
+                    <marks>
+                        <mark type="keyword">fault tree</mark>
+                        <mark type="keyword">attribute</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1037">
+            <body>What is the BSI baseline protection?</body>
+            <answers>
+                <answer>
+                    <body>It is basically a catalog of what should be done in most situations in order to secure
+                        standard
+                        infrastructure.
+                    </body>
+                    <marks>
+                        <mark type="keyword">catalog</mark>
+                        <mark type="keyword">secur</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1038">
+            <body>What is the General Data Protection Regulation (GDPR)?</body>
+            <answers>
+                <answer>
+                    <body>The GDPR applies to every organization dealing with european citizens and regulates how these
+                        organizations have to handle private data.
+                    </body>
+                    <marks>
+                        <mark type="keyword">organization</mark>
+                        <mark type="keyword">europe</mark>
+                        <mark type="keyword">private data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1038">
+            <body>With which four goals may information security interfere with?</body>
+            <answers>
+                <answer>
+                    <body>Performance, usability, time to market, and cost objectives.</body>
+                    <marks>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">usability</mark>
+                        <mark type="keyword">time</mark>
+                        <mark type="keyword">cost</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
