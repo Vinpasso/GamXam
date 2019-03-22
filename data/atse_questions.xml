@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <exam xmlns="https://vpt1.org"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="https://vpt1.org questions.xsd">
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://vpt1.org questions.xsd">
     <head>
         <title>ATSE Review Question Catalog</title>
         <version>1.0</version>
@@ -14,7 +13,7 @@
 
         <!-- Chapter 1: Embedded Systems (Guest Lecture) !-->
         <question type="extended-answer" id="1">
-            <body>Whats is an embedded system and some of it's common attributes?</body>
+            <body>What is an embedded system and some of it's common attributes?</body>
             <answers>
                 <answer>
                     <body>
@@ -39,7 +38,7 @@
                 <answer>
                     <body>
                         Example definitions:
-                        1: The fundamental organization of a system embodied in its components, their relationsships to
+                        1: The fundamental organization of a system embodied in its components, their relationships to
                         each other, and to the environment, and the principles guiding its design and evolution.
                         4: Architecture is a set of significant design decisions that shape a system.
                     </body>
@@ -530,7 +529,7 @@
                     <body>Def 1: A software element conforming to a component model that can be independently deployed
                         and composed according to a composition standard. Def 2: A unit of composition with
                         contractually specified interfaces and explicit context dependencies only that can be deploed
-                        independently and is subject to comosition by third parties.
+                        independently and is subject to composition by third parties.
                     </body>
                     <marks>
                         <mark type="regex">element|unit</mark>
@@ -870,6 +869,1189 @@
                         <mark type="keyword">know</mark>
                         <mark type="keyword">depend</mark>
                         <mark type="keyword">graph</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 2.1.3 Guidelines for Modular Design -->
+        <question type="extended-answer" id="57">
+            <body>What is the formal definition of the structure of a system?</body>
+            <answers>
+                <answer>
+                    <body>The formal definition of a structure is defined by S:=(C,I,CON), where C denotes the
+                        components, env\in C denotes the environment, I denoting the interfaces and CON\subseteq I\cross
+                        I the connection between interfaces. A component can be a system itself.
+                    </body>
+                    <marks>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">environ</mark>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">connect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="58">
+            <body>What are the types of relationship in a system structure?</body>
+            <answers>
+                <answer>
+                    <body>Parent relationships (C\rightarrow C, parent(a)=env), Interface-component relationship
+                        (I\rightarrow C, assigned(i)=a),
+                        connections between interfaces (CON\rightarrow I\cross I, connected(c)=(a,b))
+                    </body>
+                    <marks>
+                        <mark type="keyword">parent</mark>
+                        <mark type="regex" regex-flags="i">assign|interface|component</mark>
+                        <mark type="keyword">connect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="59">
+            <body>How is coupling calculated?</body>
+            <answers>
+                <answer>
+                    <body>coupling(S):=\alpha * percentage of connections on same level + (1-\alpha) * percentage of
+                        connections on different levels. Where \alpha is a weighting factor of choice.
+                    </body>
+                    <marks>
+                        <mark type="keyword">alpha</mark>
+                        <mark type="keyword">connect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60">
+            <body>What are the types of coupling in order of decreasing coupling (lower is better)?</body>
+            <answers>
+                <answer>
+                    <body>Content, Common, External, Control, Stamp, Data</body>
+                    <marks>
+                        <mark type="keyword">content</mark>
+                        <mark type="keyword">common</mark>
+                        <mark type="keyword">external</mark>
+                        <mark type="keyword">control</mark>
+                        <mark type="keyword">stamp</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="61">
+            <body>What is the meaning of content coupling?</body>
+            <answers>
+                <answer>
+                    <body>One component directly affects the working of another component by modifying its data or
+                        passing control to unintended points in the other component. Any modification in the other
+                        component usually requires a modification in this component.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">control</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="62">
+            <body>What is the meaning of common coupling?</body>
+            <answers>
+                <answer>
+                    <body>Two components use shared data (global variables etc). This leads to a lack of clear data
+                        responsibility, reduced readability, reduced maintainability, difficulties in reuse and a
+                        reduced ability to control data access.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">respons</mark>
+                        <mark type="keyword">read</mark>
+                        <mark type="keyword">maintain</mark>
+                        <mark type="keyword">reus</mark>
+                        <mark type="keyword">access</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="63">
+            <body>What is the meaning of external coupling?</body>
+            <answers>
+                <answer>
+                    <body>Components communicate through an external medium (file, device, protocol, data format)</body>
+                    <marks>
+                        <mark type="keyword">medi</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="64">
+            <body>What is the meaning of control coupling?</body>
+            <answers>
+                <answer>
+                    <body>One component directs control to another component by passing control information. Good if
+                        paramenters allow factoring and reuse, bad if parameters cause completely different behavior or
+                        require knowledge of internal functions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">control</mark>
+                        <mark type="regex">info|param|arg</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="65">
+            <body>What is the meaning of stamp coupling?</body>
+            <answers>
+                <answer>
+                    <body>In stamp coupling, complete data structures are passed between components. The second
+                        component therefore has more information that it needs. Define interfaces to limit what clients
+                        can access.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">struct</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="66">
+            <body>What is the meaning of data coupling?</body>
+            <answers>
+                <answer>
+                    <body>Component passes only data (not data structures) to another component. Ensures the other
+                        component can only access information that it actually needs.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="67">
+            <body>What is the meaning of Cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Cohesion is a measure of how closely the responsibilities of a component are related (degree
+                        of interaction within a component, higher is better). It characterizes the components internal
+                        dependencies.
+                    </body>
+                    <marks>
+                        <mark type="keyword">respons</mark>
+                        <mark type="keyword">depend</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="68">
+            <body>What are the types of cohesion in descending level of cohesion (higher is better)?</body>
+            <answers>
+                <answer>
+                    <body>Functional, sequential, communicational, procedural, temporal, logical, coincidental.</body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">sequen</mark>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">procedur</mark>
+                        <mark type="keyword">tempo</mark>
+                        <mark type="keyword">logic</mark>
+                        <mark type="keyword">coinciden</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="69">
+            <body>What is the meaning of coincidental cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Elements are grouped into components without signification relation between elements, i.e. by
+                        accident. It degrades maintainability and reusability, refactor by breaking it into several
+                        modules.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">relat|accident</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="70">
+            <body>What is the meaning of logical cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Elements are related logically but not functionally. Example: Read input from tape, disk,
+                        network (operations are related logically, but their function differs significantly).
+                    </body>
+                    <marks>
+                        <mark type="keyword">logic</mark>
+                        <mark type="keyword">function</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="71">
+            <body>What is temporal cohesion?</body>
+            <answers>
+                <answer>
+                    <body>The elements are independent but are activated at at the similar times. Example:
+                        initialization component (print some status info, open a database connection, verify licensing).
+                        This is a weak relationship, usually stronger ones exist that would increase maintainability and
+                        reusability.
+                    </body>
+                    <marks>
+                        <mark type="keyword">time</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="72">
+            <body>What is procedural cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Elements are grouped into a component only to ensure a particular order of execution. They are
+                        still weakly connected, degrading reusability.
+                    </body>
+                    <marks>
+                        <mark type="keyword">order</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="73">
+            <body>What is communicational cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Elements in a component operate on the same (external) data. Probably leads to blobs when
+                        considering large components, e.g. for database interaction.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="74">
+            <body>What is sequential cohesion?</body>
+            <answers>
+                <answer>
+                    <body>The output of one part is input to another, data flows between parts (different from
+                        procedural cohesion).
+                    </body>
+                    <marks>
+                        <mark type="keyword">put</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="75">
+            <body>What is functional cohesion?</body>
+            <answers>
+                <answer>
+                    <body>Every essential element to a single computation is contained in the component. These
+                        components often transform a single input into a single output. This is the ideal situation,
+                        with high reusability, testability, understandability, learnability and fault isolation. There
+                        are reduced regression faults and it is easy to extend the product.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">comput|operat</mark>
+                        <mark type="keyword">put</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="76">
+            <body>What are some advantages expected from striving for low coupling and high cohesion? What should be
+                avoided?
+            </body>
+            <answers>
+                <answer>
+                    <body>Simpler communication, local decision making, easy correctness proofs, less change
+                        propagation, increased reusability and comprehensability. But don&apos;t overdo it.
+                    </body>
+                    <marks>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">decision</mark>
+                        <mark type="keyword">proof</mark>
+                        <mark type="keyword">propagat</mark>
+                        <mark type="keyword">reus</mark>
+                        <mark type="keyword">comprehen</mark>
+                        <mark type="keyword">overdo</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="77">
+            <body>What is the single responsibility principle?</body>
+            <answers>
+                <answer>
+                    <body>A class should only ever have one reason to change. If there are more, split the
+                        functionality. Should lead to cohesion at package/implementation level. Idea is simple, but can
+                        be hard to get right in practice.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reason</mark>
+                        <mark type="keyword">change</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="78">
+            <body>What is responsability?</body>
+            <answers>
+                <answer>
+                    <body>A family of functions that serves one particular actor. It describes the core functionality of
+                        a class.
+                    </body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">actor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="79">
+            <body>What is an actor in relation to a responsibility?</body>
+            <answers>
+                <answer>
+                    <body>An actor for a responsibility is the single source of change for that responsibility.</body>
+                    <marks>
+                        <mark type="keyword">change</mark>
+                        <mark type="regex" regex-flags="i">single|only|sole</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="80">
+            <body>What is meant by separation of concerns?</body>
+            <answers>
+                <answer>
+                    <body>Talk about different things (features) in different places (non-functional and functional).
+                        Example: Business logic, presentation, data layer. Functional: related to
+                        low coupling/high cohesion.
+                    </body>
+                    <marks>
+                        <mark type="keyword">different</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="81">
+            <body>What is the open/closed principle?</body>
+            <answers>
+                <answer>
+                    <body>Software entities should be open for extension but closed for modifications. Related to
+                        inheritance/polymorphism in object-oriented programming.
+                    </body>
+                    <marks>
+                        <mark type="keyword">exten</mark>
+                        <mark type="keyword">modif</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="82">
+            <body>What is Liskov&apos;s substitution principle?</body>
+            <answers>
+                <answer>
+                    <body>If q(x) is a provable property of objects x of type t, then q(y) is provable for objects y of
+                        type s, where s subtype t. In words: Subtypes must be substitutable for base types, child
+                        classes must break parent&apos;s type definition.
+                    </body>
+                    <marks>
+                        <mark type="keyword">property</mark>
+                        <mark type="keyword">type</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="83">
+            <body>What is a child class not allowed to do in order to conform to Liskov&apos;s substitution principle?
+            </body>
+            <answers>
+                <answer>
+                    <body>It must not remove base class behavior, strengthen/weaken pre/post-conditions, violate base
+                        class invariants and require calling code to know it is different from the base type.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">remove|delete</mark>
+                        <mark type="keyword">condition</mark>
+                        <mark type="keyword">invariant</mark>
+                        <mark type="keyword">call</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="84">
+            <body>What is the Interface-Segregation Principle (ISP)?</body>
+            <answers>
+                <answer>
+                    <body>Clients should not be forced to depend on interfaces they do not use (small cohesive
+                        interfaces instead of fat interfaces). Related to single responsibility principle.
+                    </body>
+                    <marks>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">use</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="85">
+            <body>What is meant by &apos;anticipate change&apos;?</body>
+            <answers>
+                <answer>
+                    <body>Build components in a way to minimize effort for potential future changes. Compromise between
+                        generality and specificity. Consider potential extensions/changes. Don&apos;t overdo it.
+                    </body>
+                    <marks>
+                        <mark type="keyword">future</mark>
+                        <mark type="keyword">change</mark>
+                        <mark type="keyword">specific</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="86">
+            <body>What is meant by &quot;don&apos;t repeat yourself&quot;?</body>
+            <answers>
+                <answer>
+                    <body>Every piece of knowledge and functionality must have a single, unambiguous, authoritative
+                        representation within a system. If there are more than one they can diverge unexpectedly, lead
+                        to redundancy, increase complexity and ambiguity.
+                    </body>
+                    <marks>
+                        <mark type="keyword">know</mark>
+                        <mark type="keyword">represent</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="87">
+            <body>What are the four types of duplication?</body>
+            <answers>
+                <answer>
+                    <body>Imposed duplication (developers feel they have no choice), inadvertent duplication (developers
+                        don&apos;t realize they are duplicating information), impatient duplication (developers get
+                        lazy), inter-developer duplication (multiple people duplicate a piece of information).
+                    </body>
+                    <marks>
+                        <mark type="keyword">imposed</mark>
+                        <mark type="keyword">inadvertent</mark>
+                        <mark type="keyword">impatient</mark>
+                        <mark type="keyword">inter</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="88">
+            <body>What is the difference between internal and external quality?</body>
+            <answers>
+                <answer>
+                    <body>Good question! It is referenced in 2.1.3/2.1.4 slide 54 but apparently defined elsewhere.
+                    </body>
+                    <marks>
+                        <mark type="manual"/>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="89">
+            <body>What are the parts of a three tier architecture?</body>
+            <answers>
+                <answer>
+                    <body>Load balancer, web/application server, data server</body>
+                    <marks>
+                        <mark type="keyword">balance</mark>
+                        <mark type="regex" regex-flags="i">web|appl</mark>
+                        <mark type="regex" regex-flags="i">data|stor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="90">
+            <body>What are some advantages/disadvantages of a three tier architecture?</body>
+            <answers>
+                <answer>
+                    <body>Effiecient, all in one hand, large attack surface (compromised web server equals compromised
+                        application)
+                    </body>
+                    <marks>
+                        <mark type="keyword">effici</mark>
+                        <mark type="keyword">attack</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="91">
+            <body>What are the parts of a four tier architecture?</body>
+            <answers>
+                <answer>
+                    <body>Load balancer, web server, application server, data server</body>
+                    <marks>
+                        <mark type="keyword">balance</mark>
+                        <mark type="keyword">web</mark>
+                        <mark type="keyword">appl</mark>
+                        <mark type="regex" regex-flags="i">data|stor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="92">
+            <body>What are the benefits and drawbacks of four tier over three tier?</body>
+            <answers>
+                <answer>
+                    <body>Reduced attack surface (web/application servers separated). However, need to run more
+                        servers.
+                    </body>
+                    <marks>
+                        <mark type="keyword">attack</mark>
+                        <mark type="keyword">server</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="93">
+            <body>What s a demilitarized zone?</body>
+            <answers>
+                <answer>
+                    <body>An intermediate zone between the hostile internet and the internal network used for public
+                        servers. Compromising a public server does not gain access to the internal network.
+                    </body>
+                    <marks>
+                        <mark type="keyword">internet</mark>
+                        <mark type="keyword">internal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 2.6: Safety -->
+        <question type="extended-answer" id="1000">
+            <body>What is the difference between safety and security?</body>
+            <answers>
+                <answer>
+                    <body>Safety ("Betriebssicherheit") is concerned with protecting the environment from the system
+                        while security ("Angriffssicherheit") is concerned with protecting the system from the
+                        environment.
+                    </body>
+                    <marks>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">environment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1001">
+            <body>What is the goal of the safety threshold concept?</body>
+            <answers>
+                <answer>
+                    <body>The goal is to determine how safe is 'safe enough' without over- or under-engineering a
+                        product.
+                    </body>
+                    <marks>
+                        <mark type="keyword">determine</mark>
+                        <mark type="keyword">safe enough</mark>
+                        <mark type="regex">over.*engineering</mark>
+                        <mark type="regex">under.*engineering</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1002">
+            <body>What is risk?</body>
+            <answers>
+                <answer>
+                    <body>Risk is the combination of the probability of occurrence of harm and the severity of that
+                        harm.
+                    </body>
+                    <marks>
+                        <mark type="keyword">combination</mark>
+                        <mark type="keyword">probability</mark>
+                        <mark type="keyword">severity</mark>
+                        <mark type="keyword">harm</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1003">
+            <body>What is risk aversion?</body>
+            <answers>
+                <answer>
+                    <body>The reluctance of people to accept a bargain with an uncertain payoff rather than another
+                        bargain with more certain, but possibly lower, expected payoff.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reluctance</mark>
+                        <mark type="keyword">accept</mark>
+                        <mark type="keyword">uncertain</mark>
+                        <mark type="keyword">certain</mark>
+                        <mark type="keyword">payoff</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1004">
+            <body>What is scale aversion?</body>
+            <answers>
+                <answer>
+                    <body>The tendency to want greater protection where consequences are high.</body>
+                    <marks>
+                        <mark type="keyword">tendency</mark>
+                        <mark type="keyword">protection</mark>
+                        <mark type="keyword">consequences</mark>
+                        <mark type="keyword">high</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1005">
+            <body>What is the ALARP principle?</body>
+            <answers>
+                <answer>
+                    <body>The "As Low As is Reasonably Practical" principle defines three risk regions: intolerable
+                        region, tolerable/ALARP region, and the broadly acceptable region.
+                    </body>
+                    <marks>
+                        <mark type="keyword">As Low As is Reasonably Practical</mark>
+                        <mark type="keyword">intolerable region</mark>
+                        <mark type="regex" regex-flags="i">tolerable region|ALARP region</mark>
+                        <mark type="keyword">broadly acceptable region</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1006">
+            <body>What is the goal of risk reduction?</body>
+            <answers>
+                <answer>
+                    <body>The goal is to reduce risk to a tolerable level by combining multiple methods/means (not to
+                        zero).
+                    </body>
+                    <marks>
+                        <mark type="keyword">reduce</mark>
+                        <mark type="keyword">tolerable level</mark>
+                        <mark type="keyword">combining</mark>
+                        <mark type="regex" regex-flags="i">methods|means</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1007">
+            <body>What is the definition of safety?</body>
+            <answers>
+                <answer>
+                    <body>The absence of unacceptable/unreasonable risk.</body>
+                    <marks>
+                        <mark type="keyword">absence</mark>
+                        <mark type="regex" regex-flags="i">unacceptable|unreasonable</mark>
+                        <mark type="keyword">risk</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1008">
+            <body>How are faults, errors, and failures connected?</body>
+            <answers>
+                <answer>
+                    <body>Faults manifest as an error and an error ultimately may cause a failure.</body>
+                    <marks>
+                        <mark type="keyword">manifest</mark>
+                        <mark type="keyword">may</mark>
+                        <mark type="keyword">cause</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1009">
+            <body>What is a fault?</body>
+            <answers>
+                <answer>
+                    <body>A fault is an abnormal condition that can cause an element or an item to fail.</body>
+                    <marks>
+                        <mark type="keyword">abnormal condition</mark>
+                        <mark type="keyword">cause</mark>
+                        <mark type="keyword">fail</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1010">
+            <body>What is an error?</body>
+            <answers>
+                <answer>
+                    <body>An error is the discrepancy between a computed, observed or measured value or condition and
+                        the true, specified or theoretically correct value or condition.
+                    </body>
+                    <marks>
+                        <mark type="keyword">discrepancy</mark>
+                        <mark type="regex" regex-flags="i">value|condition</mark>
+                        <mark type="regex" regex-flags="i">specified|theoretically correct</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1011">
+            <body>What is a failure?</body>
+            <answers>
+                <answer>
+                    <body>A failure is the termination of the ability of an element, to perform a function as required.
+                    </body>
+                    <marks>
+                        <mark type="keyword">termination</mark>
+                        <mark type="keyword">ability</mark>
+                        <mark type="keyword">element</mark>
+                        <mark type="keyword">perform</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">required</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1012">
+            <body>What is the difference between systematic and random issues?</body>
+            <answers>
+                <answer>
+                    <body>A random issue is caused by physical processes such as damage or fatigue, while a systematic
+                        issue
+                        is caused by specification or design issues, or hardware wear-out.
+                    </body>
+                    <marks>
+                        <mark type="keyword">physical processes</mark>
+                        <mark type="keyword">specification</mark>
+                        <mark type="keyword">design</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1013">
+            <body>What is a cascading failure?</body>
+            <answers>
+                <answer>
+                    <body>A failure of an element causing another element of the same item to fail.</body>
+                    <marks>
+                        <mark type="keyword">failure</mark>
+                        <mark type="keyword">element</mark>
+                        <mark type="keyword">another</mark>
+                        <mark type="keyword">same item</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1014">
+            <body>What is a common cause failure?</body>
+            <answers>
+                <answer>
+                    <body>A failure of two or more elements resulting form a single specific event or root cause.</body>
+                    <marks>
+                        <mark type="keyword">two or more</mark>
+                        <mark type="keyword">elements</mark>
+                        <mark type="keyword">root cause</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1015">
+            <body>What does functional safety cover?</body>
+            <answers>
+                <answer>
+                    <body>Functional safety focuses on the hazards and risks originating from the function of an (E/E)
+                        system.
+                    </body>
+                    <marks>
+                        <mark type="keyword">hazard</mark>
+                        <mark type="keyword">risk</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1016">
+            <body>What is the lifecycle approach to functional safety?</body>
+            <answers>
+                <answer>
+                    <body>The various life cycle activities and defenses against systematic failures that are necessary
+                        to achieve functional safety occurring at different stages in the design and operation of the
+                        system.
+                    </body>
+                    <marks>
+                        <mark type="keyword">life cycle activities</mark>
+                        <mark type="keyword">defense</mark>
+                        <mark type="keyword">systematic failure</mark>
+                        <mark type="keyword">stages</mark>
+                        <mark type="keyword">design</mark>
+                        <mark type="keyword">operation</mark>
+                        <mark type="keyword">system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1017">
+            <body>What does the lifecycle approach to functional safety emphasize?</body>
+            <answers>
+                <answer>
+                    <body>Integration of safety into the design; Systematic hazard identification and analysis;
+                        Addressing the entire system in addition to the subsystems and components; Using protection
+                        layers for risk reduction; Qualitative and quantitative approaches
+                    </body>
+                    <marks>
+                        <mark type="keyword">integration</mark>
+                        <mark type="keyword">systematic</mark>
+                        <mark type="keyword">entire system</mark>
+                        <mark type="keyword">protection layer</mark>
+                        <mark type="keyword">qualitative</mark>
+                        <mark type="keyword">quantitative</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1018">
+            <body>What are the two safety concepts in the lifecycle approach to functional safety?</body>
+            <answers>
+                <answer>
+                    <body>The functional safety concept is a statement of the functionality to achieve the safety goal.
+                        The
+                        technical safety concept is a statement of how this functionality is implemented in hardware or
+                        software.
+                    </body>
+                    <marks>
+                        <mark type="keyword">functional</mark>
+                        <mark type="keyword">statement</mark>
+                        <mark type="keyword">functionality</mark>
+                        <mark type="keyword">technical</mark>
+                        <mark type="keyword">implement</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1019">
+            <body>What are the objectives of safety analysis?</body>
+            <answers>
+                <answer>
+                    <body>The objectives are:
+                        ...to examine consequences of faults and failures on functions, behavior and design of
+                        items/elements.
+                        ...to provide information on conditions/causes that could lead to violation of a safety goal or
+                        safety requirement.
+                        ...to contribute to identification of new functional or non-functional hazards not previously
+                        identified during the hazard analysis and risk assessment.
+                    </body>
+                    <marks>
+                        <mark type="keyword">examine consequences</mark>
+                        <mark type="keyword">provide information</mark>
+                        <mark type="keyword">identification</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1020">
+            <body>What are the differences between qualitative and quantitative safety analysis methods?</body>
+            <answers>
+                <answer>
+                    <body>Qualitative methods require knowledge of relevant fault models and can identify failures.
+                        Quantitative methods also require knowledge about relevant fault models and additionally about
+                        quantitative hardware failure rates. They can complement qualitative analyses and are able to
+                        predict the frequency of random hardware failures. Thus they are used to verify hardware
+                        designs.
+                    </body>
+                    <marks>
+                        <mark type="keyword">knowledge</mark>
+                        <mark type="keyword">fault model</mark>
+                        <mark type="keyword">identify failure</mark>
+                        <mark type="keyword">failure rate</mark>
+                        <mark type="keyword">predict</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1021">
+            <body>What is the difference between inductive and deductive safety analysis methods?</body>
+            <answers>
+                <answer>
+                    <body>Inductive methods are bottom-up (fault to failure) methods, while deductive methods are
+                        top-down
+                        (failure to fault) methods.
+                    </body>
+                    <marks>
+                        <mark type="keyword">bottom-up</mark>
+                        <mark type="keyword">top-down</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1022">
+            <body>What is the usual relation between inductive and deductive safety analysis methods?</body>
+            <answers>
+                <answer>
+                    <body>They are usually complementary.</body>
+                    <marks>
+                        <mark type="keyword">complementary
+                        </mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1023">
+            <body>What inductive safety analysis method was discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Failure Mode and Effects Analysis (FMEA)</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">Failure Mode and Effects Analysis|FMEA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1024">
+            <body>What deductive safety analysis method was discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Fault Tree Analysis (FTA)</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">Fault Tree Analysis|FTA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1025">
+            <body>What is the most important FMEA terminology? Also briefly explain it.</body>
+            <answers>
+                <answer>
+                    <body>Failure Mode: Manner in which a component could potentially fail to meet design intent.
+                        Failure Effects: Effects of the failure mode on the function as perceived by the customer.
+                        Causes: Indications of a design weakness, the consequence of which is the failure mode.
+                        Detection/Prevention Measures: Activities which will assure the design adequacy for the failure
+                        cause under consideration.
+                    </body>
+                    <marks>
+                        <mark type="keyword">failure mode</mark>
+                        <mark type="keyword">failure effect</mark>
+                        <mark type="keyword">cause</mark>
+                        <mark type="regex" regex-flags="i">Detection Measure|Prevention Measure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1026">
+            <body>What quantitative variables does FMEA consider? Also briefly explain them.</body>
+            <answers>
+                <answer>
+                    <body>Severity: Rates the severity of a potential failure effect.
+                        Occurrence: Rates the likelihood that the failure will occur.
+                        Detection: Rates the likelihood that the problem will not be detected before it reaches the
+                        end-user.
+                        Risk Priority Number: Severity * Occurrence * Detection
+                    </body>
+                    <marks>
+                        <mark type="keyword">severity</mark>
+                        <mark type="keyword">occurrence</mark>
+                        <mark type="keyword">detection</mark>
+                        <mark type="keyword">risk priority number</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1027">
+            <body>What is the goal of FTA?</body>
+            <answers>
+                <answer>
+                    <body>The goal is to identify all conditions that lead to a system failure.</body>
+                    <marks>
+                        <mark type="keyword">identify</mark>
+                        <mark type="keyword">condition</mark>
+                        <mark type="keyword">fail</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1028">
+            <body>What is the procedure of FTA?</body>
+            <answers>
+                <answer>
+                    <body>Define the system under scrutiny. Determine undesired events (top event). Identify event or
+                        series of events that lead to the top level event.
+                    </body>
+                    <marks>
+                        <mark type="keyword">define</mark>
+                        <mark type="keyword">undesired event</mark>
+                        <mark type="keyword">identify</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 2.7: Security -->
+        <question type="extended-answer" id="1029">
+            <body>What are the CIA security properties? Explain them briefly.</body>
+            <answers>
+                <answer>
+                    <body>Confidentiality: Can non-authorized parties see data?
+                        Integrity: Has data been altered?
+                        Availability: Is data always accessible?
+                    </body>
+                    <marks>
+                        <mark type="keyword">confidentiality</mark>
+                        <mark type="keyword">integrity</mark>
+                        <mark type="keyword">availability</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1030">
+            <body>What security properties other than CIA did the lecture cover?</body>
+            <answers>
+                <answer>
+                    <body>Non-repudiation: Impossibility to inappropriately deny an action.
+                        Authenticity: An action assigned to an entity was actually performed by that entity.
+                        Auditability: Ability to reconstruct earlier states of a system.
+                        Accountability: Ability to assign responsibility for actions to an entity.
+                        Privacy: Refers to security of personal information.
+                        Anonymity: The identity of an entity is hidden; one aspect of privacy.
+                    </body>
+                    <marks>
+                        <mark type="keyword">non-repudiation</mark>
+                        <mark type="keyword">authenticity</mark>
+                        <mark type="keyword">auditability</mark>
+                        <mark type="keyword">accountability</mark>
+                        <mark type="keyword">privacy</mark>
+                        <mark type="keyword">anonymity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1031">
+            <body>What effect does increasing security usually have on usability?</body>
+            <answers>
+                <answer>
+                    <body>It decreases usability.</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">decrease|worse</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1032">
+            <body>What four kinds of factors have to be leveraged for security?</body>
+            <answers>
+                <answer>
+                    <body>Technical: e.g. cryptography
+                        Organizational: e.g. defining responsibilities
+                        People-related: e.g. education
+                        Legal: e.g. liability regulations
+                    </body>
+                    <marks>
+                        <mark type="keyword">technic</mark>
+                        <mark type="keyword">organization</mark>
+                        <mark type="keyword">people</mark>
+                        <mark type="keyword">legal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1033">
+            <body>What five design principles for designing secure systems were covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Least privilege: Every subject should not have more privileges than necessary.
+                        Complete mediation: Access to every object must be controlled in a way not circumventable.
+                        Secure, fail-safe defaults: Security mechanisms should start in a secure state and return to a
+                        secure default state in case of failures.
+                        Compartmentalization: Organize resources into groups, isolated from others except for limited,
+                        controlled means of communication.
+                        Minimum exposure: Minimize the attack surface a system presents to a potential adversary.
+                    </body>
+                    <marks>
+                        <mark type="keyword">least privilege</mark>
+                        <mark type="keyword">complete mediation</mark>
+                        <mark type="keyword">fail-safe defaults</mark>
+                        <mark type="keyword">compartmentalization</mark>
+                        <mark type="keyword">minimum exposure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1034">
+            <body>What kinds of implementation-level attacks were discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>SQL injections, cross-site scripting (XSS), and buffer-overflow attacks.</body>
+                    <marks>
+                        <mark type="keyword">SQL</mark>
+                        <mark type="keyword">XSS</mark>
+                        <mark type="keyword">overflow</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1035">
+            <body>What are the three different types of XSS?</body>
+            <answers>
+                <answer>
+                    <body>Non-persistent (or reflective) attacks: Malicious code in a link that goes to the server and
+                        back.
+                        Persistent attacks: Malicious code in server store, sent from server to client.
+                        DOM based attacks: Server web application not involved.
+                    </body>
+                    <marks>
+                        <mark type="keyword">non-persistent</mark>
+                        <mark type="regex" regex-flags="i">\bpersistent\b</mark>
+                        <mark type="keyword">dom</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1036">
+            <body>What is an attack tree and how is it used?</body>
+            <answers>
+                <answer>
+                    <body>An attack tree is a fault tree considering the role of attackers. Nodes are assigned
+                        attributes such as possibilities, probabilities, and estimated impact. This identifies the most
+                        important attacks to deploy countermeasures for.
+                    </body>
+                    <marks>
+                        <mark type="keyword">fault tree</mark>
+                        <mark type="keyword">attribute</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1037">
+            <body>What is the BSI baseline protection?</body>
+            <answers>
+                <answer>
+                    <body>It is basically a catalog of what should be done in most situations in order to secure
+                        standard
+                        infrastructure.
+                    </body>
+                    <marks>
+                        <mark type="keyword">catalog</mark>
+                        <mark type="keyword">secur</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1038">
+            <body>What is the General Data Protection Regulation (GDPR)?</body>
+            <answers>
+                <answer>
+                    <body>The GDPR applies to every organization dealing with european citizens and regulates how these
+                        organizations have to handle private data.
+                    </body>
+                    <marks>
+                        <mark type="keyword">organization</mark>
+                        <mark type="keyword">europe</mark>
+                        <mark type="keyword">private data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1038">
+            <body>With which four goals may information security interfere with?</body>
+            <answers>
+                <answer>
+                    <body>Performance, usability, time to market, and cost objectives.</body>
+                    <marks>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">usability</mark>
+                        <mark type="keyword">time</mark>
+                        <mark type="keyword">cost</mark>
                     </marks>
                 </answer>
             </answers>
