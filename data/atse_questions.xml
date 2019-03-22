@@ -1279,7 +1279,148 @@
                 </answer>
             </answers>
         </question>
-
+        <question type="extended-answer" id="84">
+            <body>What is the Interface-Segregation Principle (ISP)?</body>
+            <answers>
+                <answer>
+                    <body>Clients should not be forced to depend on interfaces they do not use (small cohesive
+                        interfaces instead of fat interfaces). Related to single responsibility principle.
+                    </body>
+                    <marks>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">use</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="85">
+            <body>What is meant by &apos;anticipate change&apos;?</body>
+            <answers>
+                <answer>
+                    <body>Build components in a way to minimize effort for potential future changes. Compromise between
+                        generality and specificity. Consider potential extensions/changes. Don&apos;t overdo it.
+                    </body>
+                    <marks>
+                        <mark type="keyword">future</mark>
+                        <mark type="keyword">change</mark>
+                        <mark type="keyword">specific</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="86">
+            <body>What is meant by &quot;don&apos;t repeat yourself&quot;?</body>
+            <answers>
+                <answer>
+                    <body>Every piece of knowledge and functionality must have a single, unambiguous, authoritative
+                        representation within a system. If there are more than one they can diverge unexpectedly, lead
+                        to redundancy, increase complexity and ambiguity.
+                    </body>
+                    <marks>
+                        <mark type="keyword">know</mark>
+                        <mark type="keyword">represent</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="87">
+            <body>What are the four types of duplication?</body>
+            <answers>
+                <answer>
+                    <body>Imposed duplication (developers feel they have no choice), inadvertent duplication (developers
+                        don&apos;t realize they are duplicating information), impatient duplication (developers get
+                        lazy), inter-developer duplication (multiple people duplicate a piece of information).
+                    </body>
+                    <marks>
+                        <mark type="keyword">imposed</mark>
+                        <mark type="keyword">inadvertent</mark>
+                        <mark type="keyword">impatient</mark>
+                        <mark type="keyword">inter</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="88">
+            <body>What is the difference between internal and external quality?</body>
+            <answers>
+                <answer>
+                    <body>Good question! It is referenced in 2.1.3/2.1.4 slide 54 but apparently defined elsewhere.
+                    </body>
+                    <marks>
+                        <mark type="manual"/>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="89">
+            <body>What are the parts of a three tier architecture?</body>
+            <answers>
+                <answer>
+                    <body>Load balancer, web/application server, data server</body>
+                    <marks>
+                        <mark type="keyword">balance</mark>
+                        <mark type="regex" regex-flags="i">web|appl</mark>
+                        <mark type="regex" regex-flags="i">data|stor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="90">
+            <body>What are some advantages/disadvantages of a three tier architecture?</body>
+            <answers>
+                <answer>
+                    <body>Effiecient, all in one hand, large attack surface (compromised web server equals compromised
+                        application)
+                    </body>
+                    <marks>
+                        <mark type="keyword">effici</mark>
+                        <mark type="keyword">attack</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="91">
+            <body>What are the parts of a four tier architecture?</body>
+            <answers>
+                <answer>
+                    <body>Load balancer, web server, application server, data server</body>
+                    <marks>
+                        <mark type="keyword">balance</mark>
+                        <mark type="keyword">web</mark>
+                        <mark type="keyword">appl</mark>
+                        <mark type="regex" regex-flags="i">data|stor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="92">
+            <body>What are the benefits and drawbacks of four tier over three tier?</body>
+            <answers>
+                <answer>
+                    <body>Reduced attack surface (web/application servers separated). However, need to run more
+                        servers.
+                    </body>
+                    <marks>
+                        <mark type="keyword">attack</mark>
+                        <mark type="keyword">server</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="93">
+            <body>What s a demilitarized zone?</body>
+            <answers>
+                <answer>
+                    <body>An intermediate zone between the hostile internet and the internal network used for public
+                        servers. Compromising a public server does not gain access to the internal network.
+                    </body>
+                    <marks>
+                        <mark type="keyword">internet</mark>
+                        <mark type="keyword">internal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
