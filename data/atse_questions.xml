@@ -1708,6 +1708,84 @@
             </answers>
         </question>
 
+        <!-- Chapter 2.7: Reuse -->
+        <question type="extended-answer" id="111">
+            <body>What are some technical reasons why reuse often does not work?</body>
+            <answers>
+                <answer>
+                    <body>Often done in-the-small/at code level, with limited scope, and unsystematicaly. Often, the
+                        consideration of non functional requirements, quality characteristics, dependencies, correctness
+                        and completeness are unclear or unfulfilled.
+                    </body>
+                    <marks>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">dependenc</mark>
+                        <mark type="keyword">complet</mark>
+                        <mark type="keyword">correct</mark>
+                        <mark type="keyword">scope</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="112">
+            <body>What are some organizational reasons why reuse often does not work?</body>
+            <answers>
+                <answer>
+                    <body>Reuse rarely planned or done too late, lack of motivation/incentive (NIH), lack of defined
+                        interfaces or system/requirement knowledge, lack of marketplaces and standards.
+                    </body>
+                    <marks>
+                        <mark type="keyword">plan</mark>
+                        <mark type="regex" regex-flags="i">motiv|incent</mark>
+                        <mark type="keyword">interfac</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">standard</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="113">
+            <body>What is a tradeoff conflict in reuse?</body>
+            <answers>
+                <answer>
+                    <body>Flexibility/Stability: Too flexible requires expensive adaptations, too inflexible improves
+                        stability but prevents reuse.
+                    </body>
+                    <marks>
+                        <mark type="keyword">flex</mark>
+                        <mark type="keyword">stab</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="114">
+            <body>What are some architectural principles that help support reuse?</body>
+            <answers>
+                <answer>
+                    <body>Modularity, loose coupling/high cohesion, information hiding, separation of concerns.</body>
+                    <marks>
+                        <mark type="keyword">modul</mark>
+                        <mark type="keyword">coupl</mark>
+                        <mark type="keyword">cohes</mark>
+                        <mark type="keyword">hiding</mark>
+                        <mark type="keyword">concern</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="115">
+            <body>What types of reuse are there?</body>
+            <answers>
+                <answer>
+                    <body>Opportunistic (ad-hoc) reuse, planned (structured) reuse.</body>
+                    <marks>
+                        <mark type="keyword">opport</mark>
+                        <mark type="regex">plan</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
             <body>What is the difference between safety and security?</body>
