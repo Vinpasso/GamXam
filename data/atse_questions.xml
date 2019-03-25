@@ -1708,6 +1708,612 @@
             </answers>
         </question>
 
+        <!-- Chapter 2.7: Reuse -->
+        <question type="extended-answer" id="111">
+            <body>What are some technical reasons why reuse often does not work?</body>
+            <answers>
+                <answer>
+                    <body>Often done in-the-small/at code level, with limited scope, and unsystematicaly. Often, the
+                        consideration of non functional requirements, quality characteristics, dependencies, correctness
+                        and completeness are unclear or unfulfilled.
+                    </body>
+                    <marks>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">dependenc</mark>
+                        <mark type="keyword">complet</mark>
+                        <mark type="keyword">correct</mark>
+                        <mark type="keyword">scope</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="112">
+            <body>What are some organizational reasons why reuse often does not work?</body>
+            <answers>
+                <answer>
+                    <body>Reuse rarely planned or done too late, lack of motivation/incentive (NIH), lack of defined
+                        interfaces or system/requirement knowledge, lack of marketplaces and standards.
+                    </body>
+                    <marks>
+                        <mark type="keyword">plan</mark>
+                        <mark type="regex" regex-flags="i">motiv|incent</mark>
+                        <mark type="keyword">interfac</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">standard</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="113">
+            <body>What is a tradeoff conflict in reuse?</body>
+            <answers>
+                <answer>
+                    <body>Flexibility/Stability: Too flexible requires expensive adaptations, too inflexible improves
+                        stability but prevents reuse.
+                    </body>
+                    <marks>
+                        <mark type="keyword">flex</mark>
+                        <mark type="keyword">stab</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="114">
+            <body>What are some architectural principles that help support reuse?</body>
+            <answers>
+                <answer>
+                    <body>Modularity, loose coupling/high cohesion, information hiding, separation of concerns.</body>
+                    <marks>
+                        <mark type="keyword">modul</mark>
+                        <mark type="keyword">coupl</mark>
+                        <mark type="keyword">cohes</mark>
+                        <mark type="keyword">hiding</mark>
+                        <mark type="keyword">concern</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="115">
+            <body>What types of reuse are there?</body>
+            <answers>
+                <answer>
+                    <body>Opportunistic (ad-hoc) reuse, planned (structured) reuse.</body>
+                    <marks>
+                        <mark type="keyword">opport</mark>
+                        <mark type="keyword">plan</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="116">
+            <body>What is meant by clone-and-own?</body>
+            <answers>
+                <answer>
+                    <body>A common reuse practice that involves cloning some existing component/code and developing it
+                        independently from there on.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reus</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="117">
+            <body>What are some problems with ad-hoc reuse?</body>
+            <answers>
+                <answer>
+                    <body>It does not scale due to lack of organization and management. Significant effort goes into
+                        search, evaluation, adaptation, integration, clone detection, maintenance.
+                    </body>
+                    <marks>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">maint</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="118">
+            <body>What types of structured reuse are there?</body>
+            <answers>
+                <answer>
+                    <body>Configurable software solutions (essential functionality parameterized, no code changes),
+                        software product lines (construction kits), software frameworks (reusable libraries of
+                        artifacts, not standalone).
+                    </body>
+                    <marks>
+                        <mark type="keyword">solution</mark>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">framework</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="119">
+            <body>What are variability subjects/objects?</body>
+            <answers>
+                <answer>
+                    <body>Subject: Variable item of real world or variable property of item. Object: A particular
+                        instance of variability subject.
+                    </body>
+                    <marks>
+                        <mark type="keyword">item</mark>
+                        <mark type="keyword">instan</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="120">
+            <body>What is internal/external variability?</body>
+            <answers>
+                <answer>
+                    <body>Internal: Variability of domain artifacts that is invisible to customers. External:
+                        Variability of domain artifacts that is visible to customers.
+                    </body>
+                    <marks>
+                        <mark type="keyword">visible</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="121">
+            <body>What is the binding time converning variability?</body>
+            <answers>
+                <answer>
+                    <body>The moment that variability is resolved.</body>
+                    <marks>
+                        <mark type="keyword">resol</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="122">
+            <body>What is meant by managed variability?</body>
+            <answers>
+                <answer>
+                    <body>Defining variability, managing variable artifacts, resolving variability, maintaining trace
+                        information.
+                    </body>
+                    <marks>
+                        <mark type="keyword">defin</mark>
+                        <mark type="keyword">artifact</mark>
+                        <mark type="keyword">resol</mark>
+                        <mark type="keyword">info</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="123">
+            <body>What are some shortcomings of modeling variability in traditional software development models?</body>
+            <answers>
+                <answer>
+                    <body>Hard to keep information consistent, hard to determine relation in variable requirements to
+                        variable design, realization, test, overloading of existing models, different concepts in
+                        different tools.
+                    </body>
+                    <marks>
+                        <mark type="keyword">consisten</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">overload</mark>
+                        <mark type="keyword">tool</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="124">
+            <body>What is an orthogonal variability model?</body>
+            <answers>
+                <answer>
+                    <body>Defines variability of software product line. Relates to variability defined in other
+                        models.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">line</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="125">
+            <body>What type of diagram is used to model variability?</body>
+            <answers>
+                <answer>
+                    <body>A feature diagram</body>
+                    <marks>
+                        <mark type="keyword">feature</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="126">
+            <body>What is a variation point/variant?</body>
+            <answers>
+                <answer>
+                    <body>Variation point: Representation of variability subject, including domain artifacts and
+                        contextual information. Variant is representation of variability objects within domain
+                        artifacts.
+                    </body>
+                    <marks>
+                        <mark type="keyword">subject</mark>
+                        <mark type="keyword">object</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="127">
+            <body>Label the numbered items in the feature diagram:
+                <p/>
+                <img src="res/127_feature_diagram.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>1: Mandatory 2: Optional 3: Alternative 4: Or 5: Requires 6: Excludes</body>
+                    <marks>
+                        <mark type="keyword">mandat</mark>
+                        <mark type="keyword">option</mark>
+                        <mark type="keyword">alternat</mark>
+                        <mark type="keyword">or</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">exclude</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="128">
+            <body>Whatprogramming paradigms can support variability at code level?</body>
+            <answers>
+                <answer>
+                    <body>Conditional compilation, polymorphism, aspect-oriented programming</body>
+                    <marks>
+                        <mark type="keyword">condition</mark>
+                        <mark type="keyword">polymorph</mark>
+                        <mark type="keyword">aspect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="129">
+            <body>What is a product line architecture?</body>
+            <answers>
+                <answer>
+                    <body>A generic software architecture for a product line, containing the architecture for all line
+                        members.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">arch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="130">
+            <body>What is the difference between a normal architecture and a product line architecture?</body>
+            <answers>
+                <answer>
+                    <body>The product line architecture covers additional conerns: common/variable parts, specific
+                        instances, how is support ensured for all members?
+                    </body>
+                    <marks>
+                        <mark type="keyword">concern</mark>
+                        <mark type="keyword">instance</mark>
+                        <mark type="keyword">member</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="131">
+            <body>What is a software product line?</body>
+            <answers>
+                <answer>
+                    <body>A software product line is a set of applications with a common architecture and shared
+                        components, with each application specialized to reflect different requirements.
+                    </body>
+                    <marks>
+                        <mark type="keyword">applicat</mark>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">require</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="132">
+            <body>What is Software Product Line Engineering?</body>
+            <answers>
+                <answer>
+                    <body>The adoption of traditional product line approaches for building applications for mass
+                        customization through managed variability to systematically model commonalities and the
+                        differences in software applications.
+                    </body>
+                    <marks>
+                        <mark type="keyword">manage</mark>
+                        <mark type="keyword">variable</mark>
+                        <mark type="keyword">custom</mark>
+                        <mark type="keyword">model</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="133">
+            <body>What types of specialization exist for a software product line?</body>
+            <answers>
+                <answer>
+                    <body>Platform specialization (OS, etc.), environment specialization (operating environment, e.g.
+                        communication equipment), functional specialization
+                        (different customer requirements), process specialization (different business process)
+                    </body>
+                    <marks>
+                        <mark type="keyword">platform</mark>
+                        <mark type="keyword">environ</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="134">
+            <body>What are some reasong for product line engineering?</body>
+            <answers>
+                <answer>
+                    <body>Cost, quality, time to market (special emphasis), focus on functionality (by application
+                        development based on pre-built configurable components) instead of technology.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">function</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="135">
+            <body>What are the rules of thumb for cost reduction with PLE?</body>
+            <answers>
+                <answer>
+                    <body>Investment: 1x-2x system cost (Cost for 1st system: 2x-3x). Saving begins between 2nd/3rd
+                        product.
+                    </body>
+                    <marks>
+                        <mark type="keyword">invest</mark>
+                        <mark type="keyword">sav</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="136">
+            <body>What problem is tackled by PLE?</body>
+            <answers>
+                <answer>
+                    <body>Software companies develop multiple products in business area, that grow over time, are
+                        similar but not identical, where from scratch development is unproductive.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">time</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="137">
+            <body>What is an advantage of PLE when it comes to change?</body>
+            <answers>
+                <answer>
+                    <body>Changes can propagate within the product or across multiple products.</body>
+                    <marks>
+                        <mark type="keyword">propagat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="138">
+            <body>Fill in the blanks:
+                <p/>
+                <img src="res/138_ple.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>1: Application engineering, 2: Family engineering, 3: feed-forward, 4: feedback</body>
+                    <marks>
+                        <mark type="keyword">app</mark>
+                        <mark type="keyword">family</mark>
+                        <mark type="keyword">feed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="139">
+            <body>What is family/domain engineering?</body>
+            <answers>
+                <answer>
+                    <body>Identification of commonalities, definition and construction of reusable artifacts considering
+                        economically viable variability, definition of set of applications (scope) of the software
+                        product line.
+                    </body>
+                    <marks>
+                        <mark type="keyword">common</mark>
+                        <mark type="keyword">artifact</mark>
+                        <mark type="keyword">variab</mark>
+                        <mark type="keyword">scope</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="140">
+            <body>What is application engineering?</body>
+            <answers>
+                <answer>
+                    <body>Development of individual products based on PL artifact base, instantiating varibilities
+                        according to requirements.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">develop</mark>
+                        <mark type="keyword">variab</mark>
+                        <mark type="keyword">require</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="141">
+            <body>What is the product line artifact base?</body>
+            <answers>
+                <answer>
+                    <body>Capture characteristics of PL artifact, contains product model, process model, resources
+                    </body>
+                    <marks>
+                        <mark type="keyword">character</mark>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="142">
+            <body>What is scoping in relation to PLE?</body>
+            <answers>
+                <answer>
+                    <body>The process of identifying and bounding areas (subdomains, existing assets) and capabilities
+                        (features) of the product line where investment into reuse is economically viable and beneficial
+                        to development.
+                    </body>
+                    <marks>
+                        <mark type="keyword">ident</mark>
+                        <mark type="regex" regex-flags="i">area|domain</mark>
+                        <mark type="regex" regex-flags="i">capabilit|feature</mark>
+                        <mark type="keyword">econ</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="143">
+            <body>Which aspects need to be considered in PLE scoping?</body>
+            <answers>
+                <answer>
+                    <body>Products, domains, featuers, assets?</body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">feature</mark>
+                        <mark type="keyword">asset</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="144">
+            <body>What is the product feature matrix?</body>
+            <answers>
+                <answer>
+                    <body>A matrix showing features in subdomains and the products supported by it.</body>
+                    <marks>
+                        <mark type="keyword">feature</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">product</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="145">
+            <body>What are some arguments for/against PLE?</body>
+            <answers>
+                <answer>
+                    <body>+: Reduced cost, increased quality, decreased time to market, better understanding of domain,
+                        economic structured reuse. -: high up-front investment, scoping needs strong domain knowledge,
+                        limited success in practice.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">market</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">reuse</mark>
+                        <mark type="keyword">invest</mark>
+                        <mark type="keyword">scop</mark>
+                        <mark type="keyword">practic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="146">
+            <body>What is a software framework?</body>
+            <answers>
+                <answer>
+                    <body>Conventions, principles, and practices for the description of architectures established within
+                        a specific domain of application and/or community of stakeholders.
+                    </body>
+                    <marks>
+                        <mark type="keyword">convent</mark>
+                        <mark type="keyword">princip</mark>
+                        <mark type="keyword">practic</mark>
+                        <mark type="keyword">architect</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">stakeholder</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="147">
+            <body>Find _. A _ provides support for generic features that are likely to be used in all applications of a
+                similar type as well as reuse of specific classes. A _ supports design reuse, it provides a skeleton
+                architecture. A _ is language specific.
+            </body>
+            <answers>
+                <answer>
+                    <body>Framework</body>
+                    <marks>
+                        <mark type="keyword">framework</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="148">
+            <body>What is the difference between software libraries and frameworks in relation to their extension
+                points?
+            </body>
+            <answers>
+                <answer>
+                    <body>Class libraries use the call-down principle (user code calls library). Framworks use the
+                        call-back principle (framework calls user code).
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">call.*down</mark>
+                        <mark type="regex" regex-flags="i">call.*back</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="149">
+            <body>What is a reference architecture?</body>
+            <answers>
+                <answer>
+                    <body>An abstract software architecture for a specific application area, defining structures and
+                        types of software elements, their interactions and responsibilities applicable for all systems
+                        of a domain.
+                    </body>
+                    <marks>
+                        <mark type="keyword">applicat</mark>
+                        <mark type="keyword">structure</mark>
+                        <mark type="keyword">element</mark>
+                        <mark type="keyword">interact</mark>
+                        <mark type="keyword">respons</mark>
+                        <mark type="keyword">domain</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="150">
+            <body>What are the types of reference architectures?</body>
+            <answers>
+                <answer>
+                    <body>Functional (structure functionality throughout functional areas), logical (defines
+                        layers/components), technical (defines language/infrastructure).
+                    </body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">logic</mark>
+                        <mark type="keyword">technic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
             <body>What is the difference between safety and security?</body>
