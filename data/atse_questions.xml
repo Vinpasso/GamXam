@@ -1940,7 +1940,10 @@
             </answers>
         </question>
         <question type="extended-answer" id="127">
-            <body>Label the numbered items in the feature diagram:<p/><img src="res/127_feature_diagram.png"/></body>
+            <body>Label the numbered items in the feature diagram:
+                <p/>
+                <img src="res/127_feature_diagram.png"/>
+            </body>
             <answers>
                 <answer>
                     <body>1: Mandatory 2: Optional 3: Alternative 4: Or 5: Requires 6: Excludes</body>
@@ -1993,6 +1996,255 @@
                         <mark type="keyword">concern</mark>
                         <mark type="keyword">instance</mark>
                         <mark type="keyword">member</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="131">
+            <body>What is a software product line?</body>
+            <answers>
+                <answer>
+                    <body>A software product line is a set of applications with a common architecture and shared
+                        components, with each application specialized to reflect different requirements.
+                    </body>
+                    <marks>
+                        <mark type="keyword">applicat</mark>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">require</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="132">
+            <body>What is Software Product Line Engineering?</body>
+            <answers>
+                <answer>
+                    <body>The adoption of traditional product line approaches for building applications for mass
+                        customization through managed variability to systematically model commonalities and the
+                        differences in software applications.
+                    </body>
+                    <marks>
+                        <mark type="keyword">manage</mark>
+                        <mark type="keyword">variable</mark>
+                        <mark type="keyword">custom</mark>
+                        <mark type="keyword">model</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="133">
+            <body>What types of specialization exist for a software product line?</body>
+            <answers>
+                <answer>
+                    <body>Platform specialization (OS, etc.), environment specialization (operating environment, e.g.
+                        communication equipment), functional specialization
+                        (different customer requirements), process specialization (different business process)
+                    </body>
+                    <marks>
+                        <mark type="keyword">platform</mark>
+                        <mark type="keyword">environ</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="134">
+            <body>What are some reasong for product line engineering?</body>
+            <answers>
+                <answer>
+                    <body>Cost, quality, time to market (special emphasis), focus on functionality (by application
+                        development based on pre-built configurable components) instead of technology.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">function</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="135">
+            <body>What are the rules of thumb for cost reduction with PLE?</body>
+            <answers>
+                <answer>
+                    <body>Investment: 1x-2x system cost (Cost for 1st system: 2x-3x). Saving begins between 2nd/3rd
+                        product.
+                    </body>
+                    <marks>
+                        <mark type="keyword">invest</mark>
+                        <mark type="keyword">sav</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="136">
+            <body>What problem is tackled by PLE?</body>
+            <answers>
+                <answer>
+                    <body>Software companies develop multiple products in business area, that grow over time, are
+                        similar but not identical, where from scratch development is unproductive.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">time</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="137">
+            <body>What is an advantage of PLE when it comes to change?</body>
+            <answers>
+                <answer>
+                    <body>Changes can propagate within the product or across multiple products.</body>
+                    <marks>
+                        <mark type="keyword">propagat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="138">
+            <body>Fill in the blanks:
+                <p/>
+                <img src="res/138_ple.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>1: Application engineering, 2: Family engineering, 3: feed-forward, 4: feedback</body>
+                    <marks>
+                        <mark type="keyword">app</mark>
+                        <mark type="keyword">family</mark>
+                        <mark type="keyword">feed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="139">
+            <body>What is family/domain engineering?</body>
+            <answers>
+                <answer>
+                    <body>Identification of commonalities, definition and construction of reusable artifacts considering
+                        economically viable variability, definition of set of applications (scope) of the software
+                        product line.
+                    </body>
+                    <marks>
+                        <mark type="keyword">common</mark>
+                        <mark type="keyword">artifact</mark>
+                        <mark type="keyword">variab</mark>
+                        <mark type="keyword">scope</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="140">
+            <body>What is application engineering?</body>
+            <answers>
+                <answer>
+                    <body>Development of individual products based on PL artifact base, instantiating varibilities
+                        according to requirements.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">develop</mark>
+                        <mark type="keyword">variab</mark>
+                        <mark type="keyword">require</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="141">
+            <body>What is the product line artifact base?</body>
+            <answers>
+                <answer>
+                    <body>Capture characteristics of PL artifact, contains product model, process model, resources
+                    </body>
+                    <marks>
+                        <mark type="keyword">character</mark>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="142">
+            <body>What is scoping in relation to PLE?</body>
+            <answers>
+                <answer>
+                    <body>The process of identifying and bounding areas (subdomains, existing assets) and capabilities
+                        (features) of the product line where investment into reuse is economically viable and beneficial
+                        to development.
+                    </body>
+                    <marks>
+                        <mark type="keyword">ident</mark>
+                        <mark type="regex" regex-flags="i">area|domain</mark>
+                        <mark type="regex" regex-flags="i">capabilit|feature</mark>
+                        <mark type="keyword">econ</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="143">
+            <body>Which aspects need to be considered in PLE scoping?</body>
+            <answers>
+                <answer>
+                    <body>Products, domains, featuers, assets?</body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">feature</mark>
+                        <mark type="keyword">asset</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="144">
+            <body>What is the product feature matrix?</body>
+            <answers>
+                <answer>
+                    <body>A matrix showing features in subdomains and the products supported by it.</body>
+                    <marks>
+                        <mark type="keyword">feature</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">product</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="145">
+            <body>What are some arguments for/against PLE?</body>
+            <answers>
+                <answer>
+                    <body>+: Reduced cost, increased quality, decreased time to market, better understanding of domain,
+                        economic structured reuse. -: high up-front investment, scoping needs strong domain knowledge,
+                        limited success in practice.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">market</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">reuse</mark>
+                        <mark type="keyword">invest</mark>
+                        <mark type="keyword">scop</mark>
+                        <mark type="keyword">practic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="146">
+            <body>What is a software framework?</body>
+            <answers>
+                <answer>
+                    <body>Conventions, principles, and practices for the description of architectures established within
+                        a specific domain of application and/or community of stakeholders.
+                    </body>
+                    <marks>
+                        <mark type="keyword">convent</mark>
+                        <mark type="keyword">princip</mark>
+                        <mark type="keyword">practic</mark>
+                        <mark type="keyword">architect</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">stakeholder</mark>
                     </marks>
                 </answer>
             </answers>
