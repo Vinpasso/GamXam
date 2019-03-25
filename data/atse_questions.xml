@@ -1780,11 +1780,195 @@
                     <body>Opportunistic (ad-hoc) reuse, planned (structured) reuse.</body>
                     <marks>
                         <mark type="keyword">opport</mark>
-                        <mark type="regex">plan</mark>
+                        <mark type="keyword">plan</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="116">
+            <body>What is meant by clone-and-own?</body>
+            <answers>
+                <answer>
+                    <body>A common reuse practice that involves cloning some existing component/code and developing it
+                        independently from there on.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reus</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="117">
+            <body>What are some problems with ad-hoc reuse?</body>
+            <answers>
+                <answer>
+                    <body>It does not scale due to lack of organization and management. Significant effort goes into
+                        search, evaluation, adaptation, integration, clone detection, maintenance.
+                    </body>
+                    <marks>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">maint</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="118">
+            <body>What types of structured reuse are there?</body>
+            <answers>
+                <answer>
+                    <body>Configurable software solutions (essential functionality parameterized, no code changes),
+                        software product lines (construction kits), software frameworks (reusable libraries of
+                        artifacts, not standalone).
+                    </body>
+                    <marks>
+                        <mark type="keyword">solution</mark>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">framework</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="119">
+            <body>What are variability subjects/objects?</body>
+            <answers>
+                <answer>
+                    <body>Subject: Variable item of real world or variable property of item. Object: A particular
+                        instance of variability subject.
+                    </body>
+                    <marks>
+                        <mark type="keyword">item</mark>
+                        <mark type="keyword">instan</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="120">
+            <body>What is internal/external variability?</body>
+            <answers>
+                <answer>
+                    <body>Internal: Variability of domain artifacts that is invisible to customers. External:
+                        Variability of domain artifacts that is visible to customers.
+                    </body>
+                    <marks>
+                        <mark type="keyword">visible</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="121">
+            <body>What is the binding time converning variability?</body>
+            <answers>
+                <answer>
+                    <body>The moment that variability is resolved.</body>
+                    <marks>
+                        <mark type="keyword">resol</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="122">
+            <body>What is meant by managed variability?</body>
+            <answers>
+                <answer>
+                    <body>Defining variability, managing variable artifacts, resolving variability, maintaining trace
+                        information.
+                    </body>
+                    <marks>
+                        <mark type="keyword">defin</mark>
+                        <mark type="keyword">artifact</mark>
+                        <mark type="keyword">resol</mark>
+                        <mark type="keyword">info</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="123">
+            <body>What are some shortcomings of modeling variability in traditional software development models?</body>
+            <answers>
+                <answer>
+                    <body>Hard to keep information consistent, hard to determine relation in variable requirements to
+                        variable design, realization, test, overloading of existing models, different concepts in
+                        different tools.
+                    </body>
+                    <marks>
+                        <mark type="keyword">consisten</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">overload</mark>
+                        <mark type="keyword">tool</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="124">
+            <body>What is an orthogonal variability model?</body>
+            <answers>
+                <answer>
+                    <body>Defines variability of software product line. Relates to variability defined in other
+                        models.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">line</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="125">
+            <body>What type of diagram is used to model variability?</body>
+            <answers>
+                <answer>
+                    <body>A feature diagram</body>
+                    <marks>
+                        <mark type="keyword">feature</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="126">
+            <body>What is a variation point/variant?</body>
+            <answers>
+                <answer>
+                    <body>Variation point: Representation of variability subject, including domain artifacts and
+                        contextual information. Variant is representation of variability objects within domain
+                        artifacts.
+                    </body>
+                    <marks>
+                        <mark type="keyword">subject</mark>
+                        <mark type="keyword">object</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="127">
+            <body>Label the numbered items in the feature diagram:<p/><img src="res/127_feature_diagram.png"/></body>
+            <answers>
+                <answer>
+                    <body>1: Mandatory 2: Optional 3: Alternative 4: Or 5: Requires 6: Excludes</body>
+                    <marks>
+                        <mark type="keyword">mandat</mark>
+                        <mark type="keyword">option</mark>
+                        <mark type="keyword">alternat</mark>
+                        <mark type="keyword">or</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">exclude</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="128">
+            <body>Whatprogramming paradigms can support variability at code level?</body>
+            <answers>
+                <answer>
+                    <body>Conditional compilation, polymorphism, aspect-oriented programming</body>
+                    <marks>
+                        <mark type="keyword">condition</mark>
+                        <mark type="keyword">polymorph</mark>
+                        <mark type="keyword">aspect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
 
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
