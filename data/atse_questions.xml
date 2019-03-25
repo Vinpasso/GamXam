@@ -1968,7 +1968,35 @@
                 </answer>
             </answers>
         </question>
-
+        <question type="extended-answer" id="129">
+            <body>What is a product line architecture?</body>
+            <answers>
+                <answer>
+                    <body>A generic software architecture for a product line, containing the architecture for all line
+                        members.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">arch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="130">
+            <body>What is the difference between a normal architecture and a product line architecture?</body>
+            <answers>
+                <answer>
+                    <body>The product line architecture covers additional conerns: common/variable parts, specific
+                        instances, how is support ensured for all members?
+                    </body>
+                    <marks>
+                        <mark type="keyword">concern</mark>
+                        <mark type="keyword">instance</mark>
+                        <mark type="keyword">member</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
