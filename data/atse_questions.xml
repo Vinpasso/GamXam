@@ -2249,6 +2249,70 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="147">
+            <body>Find _. A _ provides support for generic features that are likely to be used in all applications of a
+                similar type as well as reuse of specific classes. A _ supports design reuse, it provides a skeleton
+                architecture. A _ is language specific.
+            </body>
+            <answers>
+                <answer>
+                    <body>Framework</body>
+                    <marks>
+                        <mark type="keyword">framework</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="148">
+            <body>What is the difference between software libraries and frameworks in relation to their extension
+                points?
+            </body>
+            <answers>
+                <answer>
+                    <body>Class libraries use the call-down principle (user code calls library). Framworks use the
+                        call-back principle (framework calls user code).
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">call.*down</mark>
+                        <mark type="regex" regex-flags="i">call.*back</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="149">
+            <body>What is a reference architecture?</body>
+            <answers>
+                <answer>
+                    <body>An abstract software architecture for a specific application area, defining structures and
+                        types of software elements, their interactions and responsibilities applicable for all systems
+                        of a domain.
+                    </body>
+                    <marks>
+                        <mark type="keyword">applicat</mark>
+                        <mark type="keyword">structure</mark>
+                        <mark type="keyword">element</mark>
+                        <mark type="keyword">interact</mark>
+                        <mark type="keyword">respons</mark>
+                        <mark type="keyword">domain</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="150">
+            <body>What are the types of reference architectures?</body>
+            <answers>
+                <answer>
+                    <body>Functional (structure functionality throughout functional areas), logical (defines
+                        layers/components), technical (defines language/infrastructure).
+                    </body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">logic</mark>
+                        <mark type="keyword">technic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
