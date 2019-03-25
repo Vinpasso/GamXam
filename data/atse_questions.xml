@@ -2420,5 +2420,346 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Chapter 2.7: Security -->
+        <question type="extended-answer" id="1039">
+            <body>What is a distributed system?</body>
+            <answers>
+                <answer>
+                    <body>A distributed system consists of physically disjoint compute resources, interconnected by a
+                        network.
+                    </body>
+                    <marks>
+                        <mark type="keyword">disjoint</mark>
+                        <mark type="keyword">connected</mark>
+                        <mark type="keyword">network</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1040">
+            <body>What are a five of the characteristics of distributed systems covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Reliability, Availability, Heterogeneity, Openness, Security, Scalability, Fault-tolerance and
+                        failure handling, Concurrency, Transparency, Predictable performance
+                    </body>
+                    <marks>
+                        <mark type="keyword">reliability</mark>
+                        <mark type="keyword">availability</mark>
+                        <mark type="keyword">heterogeneity</mark>
+                        <mark type="keyword">openness</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">fault-tolerance</mark>
+                        <mark type="keyword">concurrency</mark>
+                        <mark type="keyword">transparency</mark>
+                        <mark type="keyword">predictable performance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1041">
+            <body>How are reliability and availability of a system related?</body>
+            <answers>
+                <answer>
+                    <body>A reliable system has high availability but an available system may or may not be reliable.
+                    </body>
+                    <marks>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">but</mark>
+                        <mark type="keyword">not</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1042">
+            <body>What are four of the aspects, that overall transparency depends on?</body>
+            <answers>
+                <answer>
+                    <body>Access: Hide differences in data representation.
+                        Location: Hide where a resource is located.
+                        Migration: Hide that a resource may move to another location.
+                        Relocation: Hide that a resource may be moved to another location while in use.
+                        Replication Hide that a resource is replicated.
+                        Concurrency: Hide that a resource may be shared by several competitive users.
+                        Failure: Hide the failure and recovery of a resource.
+                    </body>
+                    <marks>
+                        <mark type="keyword">access</mark>
+                        <mark type="keyword">location</mark>
+                        <mark type="keyword">migration</mark>
+                        <mark type="keyword">relocation</mark>
+                        <mark type="keyword">replication</mark>
+                        <mark type="keyword">concurrency</mark>
+                        <mark type="keyword">failure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1043">
+            <body>What is middleware?</body>
+            <answers>
+                <answer>
+                    <body>Middleware comprises services and abstractions that facilitate design, development and
+                        deployment of distributed applications in heterogeneous, networked environments.
+                    </body>
+                    <marks>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">abstract</mark>
+                        <mark type="keyword">design</mark>
+                        <mark type="keyword">develop</mark>
+                        <mark type="keyword">deploy</mark>
+                        <mark type="keyword">distributed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1044">
+            <body>What does middleware deal with?</body>
+            <answers>
+                <answer>
+                    <body>Capturing common functionalities (like message passing), interoperability, and system
+                        integration.
+                    </body>
+                    <marks>
+                        <mark type="keyword">common function</mark>
+                        <mark type="keyword">interoperability</mark>
+                        <mark type="keyword">integration</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1045">
+            <body>What are the three layers of the middleware stack?</body>
+            <answers>
+                <answer>
+                    <body>Application layer; Middleware layer; IT infrastructure
+                    </body>
+                    <marks>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">middleware</mark>
+                        <mark type="keyword">infrastructure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1045">
+            <body>What is the main purpose of database-centric architectures?</body>
+            <answers>
+                <answer>
+                    <body>The purpose is to handle data access and update.</body>
+                    <marks>
+                        <mark type="keyword">access</mark>
+                        <mark type="keyword">update</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1046">
+            <body>What is a typical mainframe model?</body>
+            <answers>
+                <answer>
+                    <body>The mainframe model uses the mainframe as a central repository for information as well as
+                        processing for every application. Terminals enable input/output into the applications. All
+                        administration takes place on the mainframe itself.
+                    </body>
+                    <marks>
+                        <mark type="keyword">central</mark>
+                        <mark type="keyword">information</mark>
+                        <mark type="keyword">processing</mark>
+                        <mark type="keyword">terminal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1047">
+            <body>What are some advantages of a typical mainframe model?</body>
+            <answers>
+                <answer>
+                    <body>Hardware maintenance cost reduction; Single point of administration; One type of
+                        administrative skill set; Simple architecture and low bandwidth requirements
+                    </body>
+                    <marks>
+                        <mark type="keyword">maintenance</mark>
+                        <mark type="keyword">admin</mark>
+                        <mark type="keyword">simple architecture</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1048">
+            <body>What are some disadvantages of a typical mainframe model?</body>
+            <answers>
+                <answer>
+                    <body>Single point of failure; Character-based application only; Bottlenecks due to time-sharing
+                        systems
+                    </body>
+                    <marks>
+                        <mark type="keyword">single point of failure</mark>
+                        <mark type="keyword">character-based</mark>
+                        <mark type="keyword">bottleneck</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1049">
+            <body>What layers does a typical three-layered client/server architecture consist of?</body>
+            <answers>
+                <answer>
+                    <body>Client, Web server, and Data sources.</body>
+                    <marks>
+                        <mark type="keyword">client</mark>
+                        <mark type="keyword">server</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1050">
+            <body>What are some advantages of a typical three-layered client/server architecture?</body>
+            <answers>
+                <answer>
+                    <body>Reduced hardware costs; No single point of failure; Flexibility; Scalable architecture
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">no single point of failure</mark>
+                        <mark type="keyword">flexib</mark>
+                        <mark type="keyword">scalab</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1051">
+            <body>What are some disadvantages of a typical three-layered client/server architecture?</body>
+            <answers>
+                <answer>
+                    <body>Heightened administrative costs; Increased security risk; Lack of centralized backup
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">backup</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1052">
+            <body>What is a database view?</body>
+            <answers>
+                <answer>
+                    <body>A view is a virtual relation (e.g. table) that does not actually exist in the database but is
+                        produced upon request, at the time of request.
+                    </body>
+                    <marks>
+                        <mark type="keyword">virtual</mark>
+                        <mark type="keyword">produced</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1053">
+            <body>What purposes can a database view fulfill?</body>
+            <answers>
+                <answer>
+                    <body>Provides a powerful and flexible security mechanism by hiding parts; Permits customized data
+                        access; Can simplify complex operations on base relations; Complex queries can be reused;
+                        Logical data independence (view instantly incorporates changes in base relation)
+                    </body>
+                    <marks>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">custom</mark>
+                        <mark type="keyword">simpl</mark>
+                        <mark type="keyword">reuse</mark>
+                        <mark type="keyword">logical data independence</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1054">
+            <body>What are some advantages of database views?</body>
+            <answers>
+                <answer>
+                    <body>Data independence; Improved security; Reduced complexity; Convenience; Customization; Data
+                        integrity
+                    </body>
+                    <marks>
+                        <mark type="keyword">data independence</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">complexity</mark>
+                        <mark type="keyword">convenience</mark>
+                        <mark type="keyword">customization</mark>
+                        <mark type="keyword">data integrity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1055">
+            <body>What are some disadvantages of database views?</body>
+            <answers>
+                <answer>
+                    <body>- Update restriction
+                        - Structure restriction
+                        - Performance
+                    </body>
+                    <marks>
+                        <mark type="keyword">update</mark>
+                        <mark type="keyword">structure</mark>
+                        <mark type="keyword">performance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1056">
+            <body>What is the difference between a (stored) procedure and a function in a database-centric
+                architecture?
+            </body>
+            <answers>
+                <answer>
+                    <body>Procedures and functions are identical except that functions always return a value while
+                        procedures do not.
+                    </body>
+                    <marks>
+                        <mark type="keyword">identical</mark>
+                        <mark type="keyword">return</mark>
+                        <mark type="keyword">value</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1057">
+            <body>What are some advantages of procedures (and functions) in a database-centric architecture?</body>
+            <answers>
+                <answer>
+                    <body>Extensibility; Reusability; Maintainability; Aid abstraction; Improved testability; Improved
+                        performance; Improved security
+                    </body>
+                    <marks>
+                        <mark type="keyword">extensibility</mark>
+                        <mark type="keyword">reusability</mark>
+                        <mark type="keyword">maintainability</mark>
+                        <mark type="keyword">aid abstraction</mark>
+                        <mark type="keyword">testability</mark>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">security</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1058">
+            <body>What are some disadvantages of procedures (and functions) in a database-centric architecture?</body>
+            <answers>
+                <answer>
+                    <body>Limited coding functionality; Portability issues; Reduced flexibility and agility</body>
+                    <marks>
+                        <mark type="keyword">limited</mark>
+                        <mark type="keyword">functionality</mark>
+                        <mark type="keyword">portability</mark>
+                        <mark type="keyword">flexibility</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
