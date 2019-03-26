@@ -2314,6 +2314,56 @@
             </answers>
         </question>
 
+        <!-- Chapter 2.5 Testability -->
+        <!-- TODO: Where was the original introduction to diagram seen on slide 2? Iso diagram -->
+        <question type="extended-answer" id="151">
+            <body>What defines a good test case?</body>
+            <answers>
+                <answer>
+                    <body>One that finds a potential bug with cost effectiveness (design, execution, evaluation,
+                        localization, fix)
+                    </body>
+                    <marks>
+                        <mark type="keyword">bug</mark>
+                        <mark type="keyword">cost</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="152">
+            <body>What are some difficult systems to test any why?</body>
+            <answers>
+                <answer>
+                    <body>GUIs (how can a test observe and control?), systems with databases (underlying state changes),
+                        cloud-based systems (distribution, differences to development environment), non-deterministic
+                        systems (same input different output)
+                    </body>
+                    <marks>
+                        <mark type="keyword">gui</mark>
+                        <mark type="keyword">database</mark>
+                        <mark type="keyword">cloud</mark>
+                        <mark type="keyword">determin</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="153">
+            <body>What is observability and controllability?</body>
+            <answers>
+                <answer>
+                    <body>Observability: Can everything relevant (internal state, diagnosis log, etc.) be observed by
+                        the tester? Controllability: Can the state of the program be modified to facilitate the test
+                        easily?
+                    </body>
+                    <marks>
+                        <mark type="keyword">state</mark>
+                        <mark type="keyword">observ</mark>
+                        <mark type="keyword">modif</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
             <body>What is the difference between safety and security?</body>
