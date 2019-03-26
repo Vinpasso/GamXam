@@ -3533,5 +3533,356 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="1075">
+            <body>What is big data?</body>
+            <answers>
+                <answer>
+                    <body>Big data refers to datasets whose size is beyond the ability of typical database software
+                        tools to capture, store, manage, and analyze.
+                    </body>
+                    <marks>
+                        <mark type="keyword">dataset</mark>
+                        <mark type="keyword">size</mark>
+                        <mark type="keyword">beyond</mark>
+                        <mark type="keyword">ability</mark>
+                        <mark type="keyword">manage</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1076">
+            <body>What is scalability?</body>
+            <answers>
+                <answer>
+                    <body>Scalability is the ability of a system, network, or process to handle a growing amount of work
+                        in a capable manner or its ability to be enlarged to accommodate that growth.
+                    </body>
+                    <marks>
+                        <mark type="keyword">ability</mark>
+                        <mark type="keyword">grow</mark>
+                        <mark type="keyword">work</mark>
+                        <mark type="keyword">capable</mark>
+                        <mark type="keyword">enlarged</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1077">
+            <body>What are the two types of scaling and how do they differ?</body>
+            <answers>
+                <answer>
+                    <body>Vertical scaling means replacing an existing IT resource with another with higher or lower
+                        capacity. Horizontal scaling means allocating or releasing IT resources that are of the same
+                        type.
+                    </body>
+                    <marks>
+                        <mark type="keyword">vertical</mark>
+                        <mark type="keyword">replac</mark>
+                        <mark type="keyword">horizontal</mark>
+                        <mark type="keyword">allocat</mark>
+                        <mark type="keyword">releas</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1078">
+            <body>What are some advantages of horizontal and vertical scaling?</body>
+            <answers>
+                <answer>
+                    <body>Horizontal scaling is less expensive, fully automates scaling, and is not limited by maximum
+                        hardware capacity. Vertical scaling does not require additional IT resources.
+                    </body>
+                    <marks>
+                        <mark type="keyword">expensive</mark>
+                        <mark type="keyword">automat</mark>
+                        <mark type="keyword">hardware capacity</mark>
+                        <mark type="keyword">additional IT resources</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1079">
+            <body>What is another name for horizontal partitioning?</body>
+            <answers>
+                <answer>
+                    <body>Sharding</body>
+                    <marks>
+                        <mark type="keyword">sharding</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1080">
+            <body>What is sharding in the context of big data?</body>
+            <answers>
+                <answer>
+                    <body>The data store is partitioned into shards having the same schema by some primary field. Each
+                        shard is placed on a separate node in a cluster that spreads the read and write operations.
+                    </body>
+                    <marks>
+                        <mark type="keyword">shards</mark>
+                        <mark type="keyword">same schema</mark>
+                        <mark type="keyword">primary field</mark>
+                        <mark type="keyword">separate node</mark>
+                        <mark type="keyword">cluster</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1081">
+            <body>What are the three sharding strategies?</body>
+            <answers>
+                <answer>
+                    <body>The lookup strategy uses a map that routes a request to the shard that contains that data by
+                        using
+                        the shard key. The range strategy groups related items together in the same shard and orders
+                        them by
+                        shard key. The hash strategy treats the shards as hash buckets in order to reduce the chance of
+                        hotspots in the data.
+                    </body>
+                    <marks>
+                        <mark type="keyword">lookup strategy</mark>
+                        <mark type="keyword">range strategy</mark>
+                        <mark type="keyword">hash strategy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1082">
+            <body>What are NoSQL databases?</body>
+            <answers>
+                <answer>
+                    <body>Next generation databases mostly addressing some of the points: being non-relational,
+                        distributed,
+                        open-source and horizontally scalable.
+                    </body>
+                    <marks>
+                        <mark type="keyword">non-relational</mark>
+                        <mark type="keyword">distributed</mark>
+                        <mark type="keyword">open-source</mark>
+                        <mark type="keyword">horizontally scalable</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1083">
+            <body>What does NoSQL stand for?</body>
+            <answers>
+                <answer>
+                    <body>Not only SQL</body>
+                    <marks>
+                        <mark type="keyword">not only</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1084">
+            <body>What is a key-value store?</body>
+            <answers>
+                <answer>
+                    <body>Data is stored in unstructured records consisting of a key and the values associated with that
+                        record.
+                    </body>
+                    <marks>
+                        <mark type="keyword">unstructured</mark>
+                        <mark type="keyword">key</mark>
+                        <mark type="keyword">value</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1085">
+            <body>In what case do key-value stores have poor performance and how can this limitation be overcome?</body>
+            <answers>
+                <answer>
+                    <body>Key-value stores have poor to cases that require processing key ranges. Ordered key-value
+                        stores can overcome this limitation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">key range</mark>
+                        <mark type="keyword">ordered</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1086">
+            <body>What is Bigtable?</body>
+            <answers>
+                <answer>
+                    <body>Bigtable is a distributed storage system for managing structured data that is designed to
+                        scale to a very large size by Google. It maps two arbitrary string values (row and column key)
+                        and a timestamp into an associated arbitrary byte array.
+                    </body>
+                    <marks>
+                        <mark type="keyword">distributed</mark>
+                        <mark type="keyword">storage system</mark>
+                        <mark type="keyword">structured</mark>
+                        <mark type="keyword">scale</mark>
+                        <mark type="keyword">string</mark>
+                        <mark type="keyword">timestamp</mark>
+                        <mark type="keyword">byte array</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1087">
+            <body>What are some advantages of Bigtable?</body>
+            <answers>
+                <answer>
+                    <body>Performance, Scalability, Availability, Flexibility, High speed retrieval, Data reliability,
+                        Storage size, Versioning, Suitability for many data additions
+                    </body>
+                    <marks>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">availability</mark>
+                        <mark type="keyword">flexibility</mark>
+                        <mark type="keyword">high speed retrieval</mark>
+                        <mark type="keyword">data reliability</mark>
+                        <mark type="keyword">storage size</mark>
+                        <mark type="keyword">versioning</mark>
+                        <mark type="keyword">data additions</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1088">
+            <body>What are some disadvantages of Bigtable?</body>
+            <answers>
+                <answer>
+                    <body>No support for multi-row transactions; No join functionality; Not suitable for many data
+                        modifications
+                    </body>
+                    <marks>
+                        <mark type="keyword">multi-row</mark>
+                        <mark type="keyword">join</mark>
+                        <mark type="keyword">modification</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1089">
+            <body>What is a document-oriented database?</body>
+            <answers>
+                <answer>
+                    <body>It is a database not enforcing a schema. Each record and its associated data is thought of as
+                        a document.
+                    </body>
+                    <marks>
+                        <mark type="keyword">schema</mark>
+                        <mark type="keyword">record</mark>
+                        <mark type="keyword">document</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1090">
+            <body>What are some advantages of document-oriented databases?</body>
+            <answers>
+                <answer>
+                    <body>Improved performance by using sequential read (because all data regarding an object is at the
+                        same position on the disk); Easier application logic (because object models can be turned into
+                        documents)
+                    </body>
+                    <marks>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">application logic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1091">
+            <body>What is a graph database?</body>
+            <answers>
+                <answer>
+                    <body>A graph database stores connections as first class citizens, readily available for any
+                        “join-like” navigation operation. Accessing those already persistent connections is an
+                        efficient, constant-time operation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">connection</mark>
+                        <mark type="keyword">first class citizen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1092">
+            <body>What is the core consistency rule in a graph database?</body>
+            <answers>
+                <answer>
+                    <body>No broken links.</body>
+                    <marks>
+                        <mark type="keyword">no broken links</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1093">
+            <body>What are some advantages of graph databases?</body>
+            <answers>
+                <answer>
+                    <body>No penalties for complex runtime queries; Efficient scale-up and billions of nodes in one
+                        database
+                        on moderate hardware
+                    </body>
+                    <marks>
+                        <mark type="keyword">complex</mark>
+                        <mark type="keyword">queries</mark>
+                        <mark type="keyword">scale</mark>
+                        <mark type="keyword">moderate hardware</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1094">
+            <body>What are some issues with NoSQL?</body>
+            <answers>
+                <answer>
+                    <body>Data is generally duplicated; No standardized schema; No standard format for queries; No
+                        standard
+                        query language; Application layer needs to enforce data integrity
+                    </body>
+                    <marks>
+                        <mark type="keyword">duplicat</mark>
+                        <mark type="keyword">schema</mark>
+                        <mark type="keyword">quer</mark>
+                        <mark type="keyword">language</mark>
+                        <mark type="keyword">integrity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1095">
+            <body>What three properties can no distributed data system achieve at the same time?</body>
+            <answers>
+                <answer>
+                    <body>Consistency, Availability, and Partition Tolerance.</body>
+                    <marks>
+                        <mark type="keyword">consistency</mark>
+                        <mark type="keyword">availability</mark>
+                        <mark type="keyword">partition tolerance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1096">
+            <body>What is MapReduce?</body>
+            <answers>
+                <answer>
+                    <body>MapReduce is an algorithm used to process large data amounts in parallel. The map function
+                        iterates over records and extracts something of interest from each, creating key-value pairs.
+                        The reduce function then aggregates the key-value pairs by key, producing a final output.
+                    </body>
+                    <marks>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">parallel</mark>
+                        <mark type="keyword">extract</mark>
+                        <mark type="keyword">key-value</mark>
+                        <mark type="keyword">aggregat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
