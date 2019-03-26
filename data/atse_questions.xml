@@ -2363,6 +2363,115 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="154">
+            <body>What is the definition of testability and to what concepts of software engineering is it applied?
+            </body>
+            <answers>
+                <answer>
+                    <body>Degree to which a system/component/requirement facilitates establishment of test criteria and
+                        performance of tests to determine whether they have been met.
+                    </body>
+                    <marks>
+                        <mark type="keyword">criter</mark>
+                        <mark type="keyword">perform</mark>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">requirement</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="155">
+            <body>What is the black-box/white-box approach to measuring testability?</body>
+            <answers>
+                <answer>
+                    <body>Black box: difficulty developing a test suite for some test selection criterion C. White box:
+                        difficulty developing a test suite for a program P and test selection criterion C.
+                    </body>
+                    <marks>
+                        <mark type="keyword">test</mark>
+                        <mark type="keyword">criter</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="156">
+            <body>What is the probabilistic definition of testability in relation to finding bugs?</body>
+            <answers>
+                <answer>
+                    <body>Testability is the likelihood of a program to fail with the next test if software includes a
+                        bug (this is also influenced by the quality of the test cases, not just by the system).
+                    </body>
+                    <marks>
+                        <mark type="keyword">fail</mark>
+                        <mark type="keyword">bug</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="157">
+            <body>What other verification and validation techniques are there when the system/module shows poor
+                testability?
+            </body>
+            <answers>
+                <answer>
+                    <body>Review and formal verification</body>
+                    <marks>
+                        <mark type="keyword">review</mark>
+                        <mark type="keyword">formal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="158">
+            <body>What are the two types of information loss and what is the problem of information loss with
+                testability?
+            </body>
+            <answers>
+                <answer>
+                    <body>Implicit loss: many input values lead to the same output value. Explicit loss: Internal state
+                        is not verified after execution of a module. This loss leads to a decreased probability of
+                        finding a bug, as it is not propagated to the output. The domain/range ratio (|input
+                        domain|/|output domain|) correlates with implicit losses.
+                    </body>
+                    <marks>
+                        <mark type="keyword">input</mark>
+                        <mark type="keyword">output</mark>
+                        <mark type="keyword">bug</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="159">
+            <body>What is the tradeoff between testability and modularity?</body>
+            <answers>
+                <answer>
+                    <body>Testable systems need to be able to access the inner state of the system under test (or
+                        otherwise observe it well), while modularity wants to hide as much internal information as
+                        possible (information hiding).
+                    </body>
+                    <marks>
+                        <mark type="keyword">hide</mark>
+                        <mark type="keyword">informat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="160">
+            <body>How can a program be modified to measure testability of a system and or the quality of a test suite?
+            </body>
+            <answers>
+                <answer>
+                    <body>A defect that changes the program&apos;s inner state can be injected into the program and the
+                        test suit executed. The likelihood that the output is changed/caught by the test suite
+                        correlates with testability.
+                    </body>
+                    <marks>
+                        <mark type="keyword">state</mark>
+                        <mark type="keyword">output</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
