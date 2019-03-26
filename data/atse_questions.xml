@@ -1708,6 +1708,612 @@
             </answers>
         </question>
 
+        <!-- Chapter 2.7: Reuse -->
+        <question type="extended-answer" id="111">
+            <body>What are some technical reasons why reuse often does not work?</body>
+            <answers>
+                <answer>
+                    <body>Often done in-the-small/at code level, with limited scope, and unsystematicaly. Often, the
+                        consideration of non functional requirements, quality characteristics, dependencies, correctness
+                        and completeness are unclear or unfulfilled.
+                    </body>
+                    <marks>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">dependenc</mark>
+                        <mark type="keyword">complet</mark>
+                        <mark type="keyword">correct</mark>
+                        <mark type="keyword">scope</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="112">
+            <body>What are some organizational reasons why reuse often does not work?</body>
+            <answers>
+                <answer>
+                    <body>Reuse rarely planned or done too late, lack of motivation/incentive (NIH), lack of defined
+                        interfaces or system/requirement knowledge, lack of marketplaces and standards.
+                    </body>
+                    <marks>
+                        <mark type="keyword">plan</mark>
+                        <mark type="regex" regex-flags="i">motiv|incent</mark>
+                        <mark type="keyword">interfac</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">standard</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="113">
+            <body>What is a tradeoff conflict in reuse?</body>
+            <answers>
+                <answer>
+                    <body>Flexibility/Stability: Too flexible requires expensive adaptations, too inflexible improves
+                        stability but prevents reuse.
+                    </body>
+                    <marks>
+                        <mark type="keyword">flex</mark>
+                        <mark type="keyword">stab</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="114">
+            <body>What are some architectural principles that help support reuse?</body>
+            <answers>
+                <answer>
+                    <body>Modularity, loose coupling/high cohesion, information hiding, separation of concerns.</body>
+                    <marks>
+                        <mark type="keyword">modul</mark>
+                        <mark type="keyword">coupl</mark>
+                        <mark type="keyword">cohes</mark>
+                        <mark type="keyword">hiding</mark>
+                        <mark type="keyword">concern</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="115">
+            <body>What types of reuse are there?</body>
+            <answers>
+                <answer>
+                    <body>Opportunistic (ad-hoc) reuse, planned (structured) reuse.</body>
+                    <marks>
+                        <mark type="keyword">opport</mark>
+                        <mark type="keyword">plan</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="116">
+            <body>What is meant by clone-and-own?</body>
+            <answers>
+                <answer>
+                    <body>A common reuse practice that involves cloning some existing component/code and developing it
+                        independently from there on.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reus</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="117">
+            <body>What are some problems with ad-hoc reuse?</body>
+            <answers>
+                <answer>
+                    <body>It does not scale due to lack of organization and management. Significant effort goes into
+                        search, evaluation, adaptation, integration, clone detection, maintenance.
+                    </body>
+                    <marks>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">maint</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="118">
+            <body>What types of structured reuse are there?</body>
+            <answers>
+                <answer>
+                    <body>Configurable software solutions (essential functionality parameterized, no code changes),
+                        software product lines (construction kits), software frameworks (reusable libraries of
+                        artifacts, not standalone).
+                    </body>
+                    <marks>
+                        <mark type="keyword">solution</mark>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">framework</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="119">
+            <body>What are variability subjects/objects?</body>
+            <answers>
+                <answer>
+                    <body>Subject: Variable item of real world or variable property of item. Object: A particular
+                        instance of variability subject.
+                    </body>
+                    <marks>
+                        <mark type="keyword">item</mark>
+                        <mark type="keyword">instan</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="120">
+            <body>What is internal/external variability?</body>
+            <answers>
+                <answer>
+                    <body>Internal: Variability of domain artifacts that is invisible to customers. External:
+                        Variability of domain artifacts that is visible to customers.
+                    </body>
+                    <marks>
+                        <mark type="keyword">visible</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="121">
+            <body>What is the binding time converning variability?</body>
+            <answers>
+                <answer>
+                    <body>The moment that variability is resolved.</body>
+                    <marks>
+                        <mark type="keyword">resol</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="122">
+            <body>What is meant by managed variability?</body>
+            <answers>
+                <answer>
+                    <body>Defining variability, managing variable artifacts, resolving variability, maintaining trace
+                        information.
+                    </body>
+                    <marks>
+                        <mark type="keyword">defin</mark>
+                        <mark type="keyword">artifact</mark>
+                        <mark type="keyword">resol</mark>
+                        <mark type="keyword">info</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="123">
+            <body>What are some shortcomings of modeling variability in traditional software development models?</body>
+            <answers>
+                <answer>
+                    <body>Hard to keep information consistent, hard to determine relation in variable requirements to
+                        variable design, realization, test, overloading of existing models, different concepts in
+                        different tools.
+                    </body>
+                    <marks>
+                        <mark type="keyword">consisten</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">overload</mark>
+                        <mark type="keyword">tool</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="124">
+            <body>What is an orthogonal variability model?</body>
+            <answers>
+                <answer>
+                    <body>Defines variability of software product line. Relates to variability defined in other
+                        models.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">line</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="125">
+            <body>What type of diagram is used to model variability?</body>
+            <answers>
+                <answer>
+                    <body>A feature diagram</body>
+                    <marks>
+                        <mark type="keyword">feature</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="126">
+            <body>What is a variation point/variant?</body>
+            <answers>
+                <answer>
+                    <body>Variation point: Representation of variability subject, including domain artifacts and
+                        contextual information. Variant is representation of variability objects within domain
+                        artifacts.
+                    </body>
+                    <marks>
+                        <mark type="keyword">subject</mark>
+                        <mark type="keyword">object</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="127">
+            <body>Label the numbered items in the feature diagram:
+                <p/>
+                <img src="res/127_feature_diagram.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>1: Mandatory 2: Optional 3: Alternative 4: Or 5: Requires 6: Excludes</body>
+                    <marks>
+                        <mark type="keyword">mandat</mark>
+                        <mark type="keyword">option</mark>
+                        <mark type="keyword">alternat</mark>
+                        <mark type="keyword">or</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">exclude</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="128">
+            <body>Whatprogramming paradigms can support variability at code level?</body>
+            <answers>
+                <answer>
+                    <body>Conditional compilation, polymorphism, aspect-oriented programming</body>
+                    <marks>
+                        <mark type="keyword">condition</mark>
+                        <mark type="keyword">polymorph</mark>
+                        <mark type="keyword">aspect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="129">
+            <body>What is a product line architecture?</body>
+            <answers>
+                <answer>
+                    <body>A generic software architecture for a product line, containing the architecture for all line
+                        members.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">arch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="130">
+            <body>What is the difference between a normal architecture and a product line architecture?</body>
+            <answers>
+                <answer>
+                    <body>The product line architecture covers additional conerns: common/variable parts, specific
+                        instances, how is support ensured for all members?
+                    </body>
+                    <marks>
+                        <mark type="keyword">concern</mark>
+                        <mark type="keyword">instance</mark>
+                        <mark type="keyword">member</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="131">
+            <body>What is a software product line?</body>
+            <answers>
+                <answer>
+                    <body>A software product line is a set of applications with a common architecture and shared
+                        components, with each application specialized to reflect different requirements.
+                    </body>
+                    <marks>
+                        <mark type="keyword">applicat</mark>
+                        <mark type="keyword">component</mark>
+                        <mark type="keyword">require</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="132">
+            <body>What is Software Product Line Engineering?</body>
+            <answers>
+                <answer>
+                    <body>The adoption of traditional product line approaches for building applications for mass
+                        customization through managed variability to systematically model commonalities and the
+                        differences in software applications.
+                    </body>
+                    <marks>
+                        <mark type="keyword">manage</mark>
+                        <mark type="keyword">variable</mark>
+                        <mark type="keyword">custom</mark>
+                        <mark type="keyword">model</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="133">
+            <body>What types of specialization exist for a software product line?</body>
+            <answers>
+                <answer>
+                    <body>Platform specialization (OS, etc.), environment specialization (operating environment, e.g.
+                        communication equipment), functional specialization
+                        (different customer requirements), process specialization (different business process)
+                    </body>
+                    <marks>
+                        <mark type="keyword">platform</mark>
+                        <mark type="keyword">environ</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="134">
+            <body>What are some reasong for product line engineering?</body>
+            <answers>
+                <answer>
+                    <body>Cost, quality, time to market (special emphasis), focus on functionality (by application
+                        development based on pre-built configurable components) instead of technology.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">function</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="135">
+            <body>What are the rules of thumb for cost reduction with PLE?</body>
+            <answers>
+                <answer>
+                    <body>Investment: 1x-2x system cost (Cost for 1st system: 2x-3x). Saving begins between 2nd/3rd
+                        product.
+                    </body>
+                    <marks>
+                        <mark type="keyword">invest</mark>
+                        <mark type="keyword">sav</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="136">
+            <body>What problem is tackled by PLE?</body>
+            <answers>
+                <answer>
+                    <body>Software companies develop multiple products in business area, that grow over time, are
+                        similar but not identical, where from scratch development is unproductive.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">time</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="137">
+            <body>What is an advantage of PLE when it comes to change?</body>
+            <answers>
+                <answer>
+                    <body>Changes can propagate within the product or across multiple products.</body>
+                    <marks>
+                        <mark type="keyword">propagat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="138">
+            <body>Fill in the blanks:
+                <p/>
+                <img src="res/138_ple.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>1: Application engineering, 2: Family engineering, 3: feed-forward, 4: feedback</body>
+                    <marks>
+                        <mark type="keyword">app</mark>
+                        <mark type="keyword">family</mark>
+                        <mark type="keyword">feed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="139">
+            <body>What is family/domain engineering?</body>
+            <answers>
+                <answer>
+                    <body>Identification of commonalities, definition and construction of reusable artifacts considering
+                        economically viable variability, definition of set of applications (scope) of the software
+                        product line.
+                    </body>
+                    <marks>
+                        <mark type="keyword">common</mark>
+                        <mark type="keyword">artifact</mark>
+                        <mark type="keyword">variab</mark>
+                        <mark type="keyword">scope</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="140">
+            <body>What is application engineering?</body>
+            <answers>
+                <answer>
+                    <body>Development of individual products based on PL artifact base, instantiating varibilities
+                        according to requirements.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">develop</mark>
+                        <mark type="keyword">variab</mark>
+                        <mark type="keyword">require</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="141">
+            <body>What is the product line artifact base?</body>
+            <answers>
+                <answer>
+                    <body>Capture characteristics of PL artifact, contains product model, process model, resources
+                    </body>
+                    <marks>
+                        <mark type="keyword">character</mark>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="142">
+            <body>What is scoping in relation to PLE?</body>
+            <answers>
+                <answer>
+                    <body>The process of identifying and bounding areas (subdomains, existing assets) and capabilities
+                        (features) of the product line where investment into reuse is economically viable and beneficial
+                        to development.
+                    </body>
+                    <marks>
+                        <mark type="keyword">ident</mark>
+                        <mark type="regex" regex-flags="i">area|domain</mark>
+                        <mark type="regex" regex-flags="i">capabilit|feature</mark>
+                        <mark type="keyword">econ</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="143">
+            <body>Which aspects need to be considered in PLE scoping?</body>
+            <answers>
+                <answer>
+                    <body>Products, domains, featuers, assets?</body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">feature</mark>
+                        <mark type="keyword">asset</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="144">
+            <body>What is the product feature matrix?</body>
+            <answers>
+                <answer>
+                    <body>A matrix showing features in subdomains and the products supported by it.</body>
+                    <marks>
+                        <mark type="keyword">feature</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">product</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="145">
+            <body>What are some arguments for/against PLE?</body>
+            <answers>
+                <answer>
+                    <body>+: Reduced cost, increased quality, decreased time to market, better understanding of domain,
+                        economic structured reuse. -: high up-front investment, scoping needs strong domain knowledge,
+                        limited success in practice.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">market</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">reuse</mark>
+                        <mark type="keyword">invest</mark>
+                        <mark type="keyword">scop</mark>
+                        <mark type="keyword">practic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="146">
+            <body>What is a software framework?</body>
+            <answers>
+                <answer>
+                    <body>Conventions, principles, and practices for the description of architectures established within
+                        a specific domain of application and/or community of stakeholders.
+                    </body>
+                    <marks>
+                        <mark type="keyword">convent</mark>
+                        <mark type="keyword">princip</mark>
+                        <mark type="keyword">practic</mark>
+                        <mark type="keyword">architect</mark>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">stakeholder</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="147">
+            <body>Find _. A _ provides support for generic features that are likely to be used in all applications of a
+                similar type as well as reuse of specific classes. A _ supports design reuse, it provides a skeleton
+                architecture. A _ is language specific.
+            </body>
+            <answers>
+                <answer>
+                    <body>Framework</body>
+                    <marks>
+                        <mark type="keyword">framework</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="148">
+            <body>What is the difference between software libraries and frameworks in relation to their extension
+                points?
+            </body>
+            <answers>
+                <answer>
+                    <body>Class libraries use the call-down principle (user code calls library). Framworks use the
+                        call-back principle (framework calls user code).
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">call.*down</mark>
+                        <mark type="regex" regex-flags="i">call.*back</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="149">
+            <body>What is a reference architecture?</body>
+            <answers>
+                <answer>
+                    <body>An abstract software architecture for a specific application area, defining structures and
+                        types of software elements, their interactions and responsibilities applicable for all systems
+                        of a domain.
+                    </body>
+                    <marks>
+                        <mark type="keyword">applicat</mark>
+                        <mark type="keyword">structure</mark>
+                        <mark type="keyword">element</mark>
+                        <mark type="keyword">interact</mark>
+                        <mark type="keyword">respons</mark>
+                        <mark type="keyword">domain</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="150">
+            <body>What are the types of reference architectures?</body>
+            <answers>
+                <answer>
+                    <body>Functional (structure functionality throughout functional areas), logical (defines
+                        layers/components), technical (defines language/infrastructure).
+                    </body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">logic</mark>
+                        <mark type="keyword">technic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
             <body>What is the difference between safety and security?</body>
@@ -2338,6 +2944,591 @@
                         <mark type="keyword">usability</mark>
                         <mark type="keyword">time</mark>
                         <mark type="keyword">cost</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 2.7: Security -->
+        <question type="extended-answer" id="1039">
+            <body>What is a distributed system?</body>
+            <answers>
+                <answer>
+                    <body>A distributed system consists of physically disjoint compute resources, interconnected by a
+                        network.
+                    </body>
+                    <marks>
+                        <mark type="keyword">disjoint</mark>
+                        <mark type="keyword">connected</mark>
+                        <mark type="keyword">network</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1040">
+            <body>What are a five of the characteristics of distributed systems covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Reliability, Availability, Heterogeneity, Openness, Security, Scalability, Fault-tolerance and
+                        failure handling, Concurrency, Transparency, Predictable performance
+                    </body>
+                    <marks>
+                        <mark type="keyword">reliability</mark>
+                        <mark type="keyword">availability</mark>
+                        <mark type="keyword">heterogeneity</mark>
+                        <mark type="keyword">openness</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">fault-tolerance</mark>
+                        <mark type="keyword">concurrency</mark>
+                        <mark type="keyword">transparency</mark>
+                        <mark type="keyword">predictable performance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1041">
+            <body>How are reliability and availability of a system related?</body>
+            <answers>
+                <answer>
+                    <body>A reliable system has high availability but an available system may or may not be reliable.
+                    </body>
+                    <marks>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">but</mark>
+                        <mark type="keyword">not</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1042">
+            <body>What are four of the aspects, that overall transparency depends on?</body>
+            <answers>
+                <answer>
+                    <body>Access: Hide differences in data representation.
+                        Location: Hide where a resource is located.
+                        Migration: Hide that a resource may move to another location.
+                        Relocation: Hide that a resource may be moved to another location while in use.
+                        Replication Hide that a resource is replicated.
+                        Concurrency: Hide that a resource may be shared by several competitive users.
+                        Failure: Hide the failure and recovery of a resource.
+                    </body>
+                    <marks>
+                        <mark type="keyword">access</mark>
+                        <mark type="keyword">location</mark>
+                        <mark type="keyword">migration</mark>
+                        <mark type="keyword">relocation</mark>
+                        <mark type="keyword">replication</mark>
+                        <mark type="keyword">concurrency</mark>
+                        <mark type="keyword">failure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1043">
+            <body>What is middleware?</body>
+            <answers>
+                <answer>
+                    <body>Middleware comprises services and abstractions that facilitate design, development and
+                        deployment of distributed applications in heterogeneous, networked environments.
+                    </body>
+                    <marks>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">abstract</mark>
+                        <mark type="keyword">design</mark>
+                        <mark type="keyword">develop</mark>
+                        <mark type="keyword">deploy</mark>
+                        <mark type="keyword">distributed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1044">
+            <body>What does middleware deal with?</body>
+            <answers>
+                <answer>
+                    <body>Capturing common functionalities (like message passing), interoperability, and system
+                        integration.
+                    </body>
+                    <marks>
+                        <mark type="keyword">common function</mark>
+                        <mark type="keyword">interoperability</mark>
+                        <mark type="keyword">integration</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1045">
+            <body>What are the three layers of the middleware stack?</body>
+            <answers>
+                <answer>
+                    <body>Application layer; Middleware layer; IT infrastructure
+                    </body>
+                    <marks>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">middleware</mark>
+                        <mark type="keyword">infrastructure</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1045">
+            <body>What is the main purpose of database-centric architectures?</body>
+            <answers>
+                <answer>
+                    <body>The purpose is to handle data access and update.</body>
+                    <marks>
+                        <mark type="keyword">access</mark>
+                        <mark type="keyword">update</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1046">
+            <body>What is a typical mainframe model?</body>
+            <answers>
+                <answer>
+                    <body>The mainframe model uses the mainframe as a central repository for information as well as
+                        processing for every application. Terminals enable input/output into the applications. All
+                        administration takes place on the mainframe itself.
+                    </body>
+                    <marks>
+                        <mark type="keyword">central</mark>
+                        <mark type="keyword">information</mark>
+                        <mark type="keyword">processing</mark>
+                        <mark type="keyword">terminal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1047">
+            <body>What are some advantages of a typical mainframe model?</body>
+            <answers>
+                <answer>
+                    <body>Hardware maintenance cost reduction; Single point of administration; One type of
+                        administrative skill set; Simple architecture and low bandwidth requirements
+                    </body>
+                    <marks>
+                        <mark type="keyword">maintenance</mark>
+                        <mark type="keyword">admin</mark>
+                        <mark type="keyword">simple architecture</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1048">
+            <body>What are some disadvantages of a typical mainframe model?</body>
+            <answers>
+                <answer>
+                    <body>Single point of failure; Character-based application only; Bottlenecks due to time-sharing
+                        systems
+                    </body>
+                    <marks>
+                        <mark type="keyword">single point of failure</mark>
+                        <mark type="keyword">character-based</mark>
+                        <mark type="keyword">bottleneck</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1049">
+            <body>What layers does a typical three-layered client/server architecture consist of?</body>
+            <answers>
+                <answer>
+                    <body>Client, Web server, and Data sources.</body>
+                    <marks>
+                        <mark type="keyword">client</mark>
+                        <mark type="keyword">server</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1050">
+            <body>What are some advantages of a typical three-layered client/server architecture?</body>
+            <answers>
+                <answer>
+                    <body>Reduced hardware costs; No single point of failure; Flexibility; Scalable architecture
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">no single point of failure</mark>
+                        <mark type="keyword">flexib</mark>
+                        <mark type="keyword">scalab</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1051">
+            <body>What are some disadvantages of a typical three-layered client/server architecture?</body>
+            <answers>
+                <answer>
+                    <body>Heightened administrative costs; Increased security risk; Lack of centralized backup
+                    </body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">backup</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1052">
+            <body>What is a database view?</body>
+            <answers>
+                <answer>
+                    <body>A view is a virtual relation (e.g. table) that does not actually exist in the database but is
+                        produced upon request, at the time of request.
+                    </body>
+                    <marks>
+                        <mark type="keyword">virtual</mark>
+                        <mark type="keyword">produced</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1053">
+            <body>What purposes can a database view fulfill?</body>
+            <answers>
+                <answer>
+                    <body>Provides a powerful and flexible security mechanism by hiding parts; Permits customized data
+                        access; Can simplify complex operations on base relations; Complex queries can be reused;
+                        Logical data independence (view instantly incorporates changes in base relation)
+                    </body>
+                    <marks>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">custom</mark>
+                        <mark type="keyword">simpl</mark>
+                        <mark type="keyword">reuse</mark>
+                        <mark type="keyword">logical data independence</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1054">
+            <body>What are some advantages of database views?</body>
+            <answers>
+                <answer>
+                    <body>Data independence; Improved security; Reduced complexity; Convenience; Customization; Data
+                        integrity
+                    </body>
+                    <marks>
+                        <mark type="keyword">data independence</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">complexity</mark>
+                        <mark type="keyword">convenience</mark>
+                        <mark type="keyword">customization</mark>
+                        <mark type="keyword">data integrity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1055">
+            <body>What are some disadvantages of database views?</body>
+            <answers>
+                <answer>
+                    <body>- Update restriction
+                        - Structure restriction
+                        - Performance
+                    </body>
+                    <marks>
+                        <mark type="keyword">update</mark>
+                        <mark type="keyword">structure</mark>
+                        <mark type="keyword">performance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1056">
+            <body>What is the difference between a (stored) procedure and a function in a database-centric
+                architecture?
+            </body>
+            <answers>
+                <answer>
+                    <body>Procedures and functions are identical except that functions always return a value while
+                        procedures do not.
+                    </body>
+                    <marks>
+                        <mark type="keyword">identical</mark>
+                        <mark type="keyword">return</mark>
+                        <mark type="keyword">value</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1057">
+            <body>What are some advantages of procedures (and functions) in a database-centric architecture?</body>
+            <answers>
+                <answer>
+                    <body>Extensibility; Reusability; Maintainability; Aid abstraction; Improved testability; Improved
+                        performance; Improved security
+                    </body>
+                    <marks>
+                        <mark type="keyword">extensibility</mark>
+                        <mark type="keyword">reusability</mark>
+                        <mark type="keyword">maintainability</mark>
+                        <mark type="keyword">aid abstraction</mark>
+                        <mark type="keyword">testability</mark>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">security</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1058">
+            <body>What are some disadvantages of procedures (and functions) in a database-centric architecture?</body>
+            <answers>
+                <answer>
+                    <body>Limited coding functionality; Portability issues; Reduced flexibility and agility</body>
+                    <marks>
+                        <mark type="keyword">limited</mark>
+                        <mark type="keyword">functionality</mark>
+                        <mark type="keyword">portability</mark>
+                        <mark type="keyword">flexibility</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1059">
+            <body>What is data warehousing?</body>
+            <answers>
+                <answer>
+                    <body>It is a collection of methods, techniques and tools which is used to support knowledge workers
+                        such as senior managers, directors, managers, and business analysts to conduct data analyses
+                        that help with performing decision-making processes and improving information resources.
+                    </body>
+                    <marks>
+                        <mark type="keyword">collection</mark>
+                        <mark type="keyword">method</mark>
+                        <mark type="keyword">technique</mark>
+                        <mark type="keyword">tool</mark>
+                        <mark type="keyword">knowledge worker</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1060">
+            <body>What are the three features of a data warehouse?</body>
+            <answers>
+                <answer>
+                    <body>It is subject-oriented, integrated and consistent, and shows its evolution over time and it is
+                        non-volatile.
+                    </body>
+                    <marks>
+                        <mark type="keyword">subject</mark>
+                        <mark type="keyword">consistent</mark>
+                        <mark type="keyword">non-volatile</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1061">
+            <body>How is data from operational systems prepared for a data warehouse?</body>
+            <answers>
+                <answer>
+                    <body>It is extracted, cleansed, transformed and aggregated before it is loaded into the data
+                        warehouse.
+                    </body>
+                    <marks>
+                        <mark type="keyword">extract</mark>
+                        <mark type="keyword">cleanse</mark>
+                        <mark type="keyword">transform</mark>
+                        <mark type="keyword">aggregate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1062">
+            <body>What is a data mart?</body>
+            <answers>
+                <answer>
+                    <body>It is a subset or an aggregation of the data stored to a primary data warehouse. It includes
+                        information relevant to a specific business area, corporate department, or category of users.
+                    </body>
+                    <marks>
+                        <mark type="keyword">subset</mark>
+                        <mark type="keyword">aggregat</mark>
+                        <mark type="keyword">warehouse</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1063">
+            <body>How do top-down and bottom-up approaches to data warehousing differ?</body>
+            <answers>
+                <answer>
+                    <body>Top-down approaches start by designing the data warehouse first, then the data marts.
+                        Bottom-up
+                        approaches start by designing the data marts. Then the data marts may be integrated into a data
+                        warehouse or no warehouse is created at all.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data warehouse</mark>
+                        <mark type="keyword">data mart</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1064">
+            <body>What does OLAP stand for?</body>
+            <answers>
+                <answer>
+                    <body>Online analytical processing</body>
+                    <marks>
+                        <mark type="keyword">online analytical processing</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1065">
+            <body>What does OLTP stand for?</body>
+            <answers>
+                <answer>
+                    <body>Online transaction processing</body>
+                    <marks>
+                        <mark type="keyword">online transaction processing</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1066">
+            <body>What are some essential differences between OLTP and OLAP?</body>
+            <answers>
+                <answer>
+                    <body>OLTP is application-oriented current isolated data and used in day to day operations by lots
+                        of IT professionals. OLAP is lots of subject-oriented historical consolidated data used by
+                        knowledge workers for decision support.
+                    </body>
+                    <marks>
+                        <mark type="keyword">application-oriented</mark>
+                        <mark type="keyword">subject-oriented</mark>
+                        <mark type="keyword">current</mark>
+                        <mark type="keyword">historic</mark>
+                        <mark type="keyword">isolated</mark>
+                        <mark type="keyword">consolidated</mark>
+                        <mark type="keyword">IT professional</mark>
+                        <mark type="keyword">knowledge worker</mark>
+                        <mark type="keyword">day to day</mark>
+                        <mark type="keyword">decision</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1067">
+            <body>What is an OLAP data cube?</body>
+            <answers>
+                <answer>
+                    <body>It is a data analysis tool in OLAP allowing to use generalized GROUP BY queries and
+                        to aggregate facts based on chosen dimensions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">analysis</mark>
+                        <mark type="keyword">tool</mark>
+                        <mark type="keyword">generaliz</mark>
+                        <mark type="keyword">aggregat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1068">
+            <body>What are the four interactive OLAP operations?</body>
+            <answers>
+                <answer>
+                    <body>Slice, Dice, Drill down/up, Aggregation</body>
+                    <marks>
+                        <mark type="keyword">slice</mark>
+                        <mark type="keyword">dice</mark>
+                        <mark type="keyword">drill</mark>
+                        <mark type="keyword">aggregat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1069">
+            <body>What are some advantages of a data cube?</body>
+            <answers>
+                <answer>
+                    <body>They are good for visualization, multidimensional and intuitive.</body>
+                    <marks>
+                        <mark type="keyword">visualiz</mark>
+                        <mark type="keyword">multidimensional</mark>
+                        <mark type="keyword">intuitive</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1070">
+            <body>What are the three data warehouse architectures covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Central architecture, Federated architecture, and Tiered architecture.</body>
+                    <marks>
+                        <mark type="keyword">central</mark>
+                        <mark type="keyword">federated</mark>
+                        <mark type="keyword">tiered</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1071">
+            <body>What characterizes a central data warehouse architecture?</body>
+            <answers>
+                <answer>
+                    <body>All data is in one, central data warehouse that is directly accessed. This is easy to
+                        manage.
+                    </body>
+                    <marks>
+                        <mark type="keyword">one</mark>
+                        <mark type="keyword">direct</mark>
+                        <mark type="keyword">easy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1072">
+            <body>What characterizes a federated data warehouse architecture?</body>
+            <answers>
+                <answer>
+                    <body>Data is stored in separate data marts, aimed at special departments. The data warehouse is
+                        logical (i.e. virtual) and the clients access the data marts. Performance is increased due to
+                        distribution.
+                    </body>
+                    <marks>
+                        <mark type="keyword">separate</mark>
+                        <mark type="keyword">logical</mark>
+                        <mark type="keyword">performance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1073">
+            <body>What characterizes a tiered data warehouse architecture?</body>
+            <answers>
+                <answer>
+                    <body>The central data warehouse is materialized and data is distributed to data marts in one or
+                        more tiers, being aggregated/reduced as it moves through tiers. Clients access the data marts.
+                        The This ensures great performance but is complex to manage.
+                    </body>
+                    <marks>
+                        <mark type="keyword">central</mark>
+                        <mark type="keyword">materialized</mark>
+                        <mark type="keyword">distributed</mark>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">complex</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1074">
+            <body>What are some issues with data warehousing?</body>
+            <answers>
+                <answer>
+                    <body>Metadata management; DW project management; High HW+SW cost; Ethical issues</body>
+                    <marks>
+                        <mark type="keyword">metadata</mark>
+                        <mark type="keyword">project</mark>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">ethical</mark>
                     </marks>
                 </answer>
             </answers>
