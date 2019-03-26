@@ -3448,5 +3448,249 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="1059">
+            <body>What is data warehousing?</body>
+            <answers>
+                <answer>
+                    <body>It is a collection of methods, techniques and tools which is used to support knowledge workers
+                        such as senior managers, directors, managers, and business analysts to conduct data analyses
+                        that help with performing decision-making processes and improving information resources.
+                    </body>
+                    <marks>
+                        <mark type="keyword">collection</mark>
+                        <mark type="keyword">method</mark>
+                        <mark type="keyword">technique</mark>
+                        <mark type="keyword">tool</mark>
+                        <mark type="keyword">knowledge worker</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1060">
+            <body>What are the three features of a data warehouse?</body>
+            <answers>
+                <answer>
+                    <body>It is subject-oriented, integrated and consistent, and shows its evolution over time and it is
+                        non-volatile.
+                    </body>
+                    <marks>
+                        <mark type="keyword">subject</mark>
+                        <mark type="keyword">consistent</mark>
+                        <mark type="keyword">non-volatile</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1061">
+            <body>How is data from operational systems prepared for a data warehouse?</body>
+            <answers>
+                <answer>
+                    <body>It is extracted, cleansed, transformed and aggregated before it is loaded into the data
+                        warehouse.
+                    </body>
+                    <marks>
+                        <mark type="keyword">extract</mark>
+                        <mark type="keyword">cleanse</mark>
+                        <mark type="keyword">transform</mark>
+                        <mark type="keyword">aggregate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1062">
+            <body>What is a data mart?</body>
+            <answers>
+                <answer>
+                    <body>It is a subset or an aggregation of the data stored to a primary data warehouse. It includes
+                        information relevant to a specific business area, corporate department, or category of users.
+                    </body>
+                    <marks>
+                        <mark type="keyword">subset</mark>
+                        <mark type="keyword">aggregat</mark>
+                        <mark type="keyword">warehouse</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1063">
+            <body>How do top-down and bottom-up approaches to data warehousing differ?</body>
+            <answers>
+                <answer>
+                    <body>Top-down approaches start by designing the data warehouse first, then the data marts.
+                        Bottom-up
+                        approaches start by designing the data marts. Then the data marts may be integrated into a data
+                        warehouse or no warehouse is created at all.
+                    </body>
+                    <marks>
+                        <mark type="keyword">data warehouse</mark>
+                        <mark type="keyword">data mart</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1064">
+            <body>What does OLAP stand for?</body>
+            <answers>
+                <answer>
+                    <body>Online analytical processing</body>
+                    <marks>
+                        <mark type="keyword">online analytical processing</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1065">
+            <body>What does OLTP stand for?</body>
+            <answers>
+                <answer>
+                    <body>Online transaction processing</body>
+                    <marks>
+                        <mark type="keyword">online transaction processing</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1066">
+            <body>What are some essential differences between OLTP and OLAP?</body>
+            <answers>
+                <answer>
+                    <body>OLTP is application-oriented current isolated data and used in day to day operations by lots
+                        of IT professionals. OLAP is lots of subject-oriented historical consolidated data used by
+                        knowledge workers for decision support.
+                    </body>
+                    <marks>
+                        <mark type="keyword">application-oriented</mark>
+                        <mark type="keyword">subject-oriented</mark>
+                        <mark type="keyword">current</mark>
+                        <mark type="keyword">historic</mark>
+                        <mark type="keyword">isolated</mark>
+                        <mark type="keyword">consolidated</mark>
+                        <mark type="keyword">IT professional</mark>
+                        <mark type="keyword">knowledge worker</mark>
+                        <mark type="keyword">day to day</mark>
+                        <mark type="keyword">decision</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1067">
+            <body>What is an OLAP data cube?</body>
+            <answers>
+                <answer>
+                    <body>It is a data analysis tool in OLAP allowing to use generalized GROUP BY queries and
+                        to aggregate facts based on chosen dimensions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">analysis</mark>
+                        <mark type="keyword">tool</mark>
+                        <mark type="keyword">generaliz</mark>
+                        <mark type="keyword">aggregat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1068">
+            <body>What are the four interactive OLAP operations?</body>
+            <answers>
+                <answer>
+                    <body>Slice, Dice, Drill down/up, Aggregation</body>
+                    <marks>
+                        <mark type="keyword">slice</mark>
+                        <mark type="keyword">dice</mark>
+                        <mark type="keyword">drill</mark>
+                        <mark type="keyword">aggregat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1069">
+            <body>What are some advantages of a data cube?</body>
+            <answers>
+                <answer>
+                    <body>They are good for visualization, multidimensional and intuitive.</body>
+                    <marks>
+                        <mark type="keyword">visualiz</mark>
+                        <mark type="keyword">multidimensional</mark>
+                        <mark type="keyword">intuitive</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1070">
+            <body>What are the three data warehouse architectures covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Central architecture, Federated architecture, and Tiered architecture.</body>
+                    <marks>
+                        <mark type="keyword">central</mark>
+                        <mark type="keyword">federated</mark>
+                        <mark type="keyword">tiered</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1071">
+            <body>What characterizes a central data warehouse architecture?</body>
+            <answers>
+                <answer>
+                    <body>All data is in one, central data warehouse that is directly accessed. This is easy to
+                        manage.
+                    </body>
+                    <marks>
+                        <mark type="keyword">one</mark>
+                        <mark type="keyword">direct</mark>
+                        <mark type="keyword">easy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1072">
+            <body>What characterizes a federated data warehouse architecture?</body>
+            <answers>
+                <answer>
+                    <body>Data is stored in separate data marts, aimed at special departments. The data warehouse is
+                        logical (i.e. virtual) and the clients access the data marts. Performance is increased due to
+                        distribution.
+                    </body>
+                    <marks>
+                        <mark type="keyword">separate</mark>
+                        <mark type="keyword">logical</mark>
+                        <mark type="keyword">performance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1073">
+            <body>What characterizes a tiered data warehouse architecture?</body>
+            <answers>
+                <answer>
+                    <body>The central data warehouse is materialized and data is distributed to data marts in one or
+                        more tiers, being aggregated/reduced as it moves through tiers. Clients access the data marts.
+                        The This ensures great performance but is complex to manage.
+                    </body>
+                    <marks>
+                        <mark type="keyword">central</mark>
+                        <mark type="keyword">materialized</mark>
+                        <mark type="keyword">distributed</mark>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">complex</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1074">
+            <body>What are some issues with data warehousing?</body>
+            <answers>
+                <answer>
+                    <body>Metadata management; DW project management; High HW+SW cost; Ethical issues</body>
+                    <marks>
+                        <mark type="keyword">metadata</mark>
+                        <mark type="keyword">project</mark>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">ethical</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
