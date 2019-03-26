@@ -2473,6 +2473,309 @@
             </answers>
         </question>
 
+        <!-- Chapter 4: From source code to physical deployment -->
+        <question type="extended-answer" id="161">
+            <body>What types of version control are there?</body>
+            <answers>
+                <answer>
+                    <body>Local, centralized, distributed</body>
+                    <marks>
+                        <mark type="keyword">local</mark>
+                        <mark type="keyword">centralized</mark>
+                        <mark type="keyword">distributed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="162">
+            <body>What are some of the advantages of centralized version control and distributed version control?</body>
+            <answers>
+                <answer>
+                    <body>Centralized: easy to maintain single server. Distributed: no single point of control, private
+                        version control possible
+                    </body>
+                    <marks>
+                        <mark type="keyword">server</mark>
+                        <mark type="keyword">point</mark>
+                        <mark type="keyword">private</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="163">
+            <body>What differences are there in how svn/git store changes?</body>
+            <answers>
+                <answer>
+                    <body>SVN stores a list of file-based delta. Git stores snapshots of a directory tree.</body>
+                    <marks>
+                        <mark type="keyword">delta</mark>
+                        <mark type="keyword">snapshot</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="164">
+            <body>What three stages for files does git have?</body>
+            <answers>
+                <answer>
+                    <body>Modified (unstaged), staged, committed</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">modif|unstage</mark>
+                        <mark type="keyword">stage</mark>
+                        <mark type="keyword">commit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="165">
+            <body>What is a branch in git?</body>
+            <answers>
+                <answer>
+                    <body>A named pointer to a commit using its hash</body>
+                    <marks>
+                        <mark type="keyword">point</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="166">
+            <body>What is continuous integration?</body>
+            <answers>
+                <answer>
+                    <body>A fully automated and reproducible build, including testing, that runs many times a day to
+                        integrate changes often.
+                    </body>
+                    <marks>
+                        <mark type="keyword">automat</mark>
+                        <mark type="keyword">reproduc</mark>
+                        <mark type="keyword">test</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="167">
+            <body>What are some reasons to use continuous integration?</body>
+            <answers>
+                <answer>
+                    <body>Reduced risk, integrated quality assurance, rapid feedback, availability of stable release
+                    </body>
+                    <marks>
+                        <mark type="keyword">risk</mark>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">feedback</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="168">
+            <body>What is continuous delivery?</body>
+            <answers>
+                <answer>
+                    <body>A software engineering approach in which teams produce valuable software in short cycles that
+                        can be reliably released at any time.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cycle</mark>
+                        <mark type="keyword">release</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="169">
+            <body>What are some benefits of continuous delivery?</body>
+            <answers>
+                <answer>
+                    <body>Time to market, customer satisfaction, productivity and efficiency, building the right
+                        product, reliable release
+                    </body>
+                    <marks>
+                        <mark type="keyword">market</mark>
+                        <mark type="keyword">satis</mark>
+                        <mark type="keyword">efficien</mark>
+                        <mark type="keyword">reliab</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="170">
+            <body>What is the difference between continuous delivery and continuous deployment?</body>
+            <answers>
+                <answer>
+                    <body>In continuous deployment, the deploy step is triggered automatically. Every change therefore
+                        automatically gets put into production, resulting in many deployments per day. In continuous
+                        deliver, this step happens manually.
+                    </body>
+                    <marks>
+                        <mark type="keyword">prod</mark>
+                        <mark type="keyword">auto</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="171">
+            <body>What is a deployment pipeline?</body>
+            <answers>
+                <answer>
+                    <body>An automated manifestation of your process for getting software from version control to
+                        users.
+                    </body>
+                    <marks>
+                        <mark type="keyword">auto</mark>
+                        <mark type="keyword">version</mark>
+                        <mark type="keyword">user</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="172">
+            <body>What is a smoke test?</body>
+            <answers>
+                <answer>
+                    <body>Smoke testing is preliminary testing to reveal simple failures severe enough to reject a
+                        prospective software release.
+                    </body>
+                    <marks>
+                        <mark type="keyword">fail</mark>
+                        <mark type="keyword">release</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="173">
+            <body>What eight deployment automation patterns were covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Repository (version control all relevant files for reproducability), scripted deployment (all
+                        deployment is automated), single command (a single command generates working software for
+                        users), externalized configuration (variable values externalized into build-time properties),
+                        tokenize configuration (token values in config files are replaced during scripted deployment by
+                        values from the externalized configuration), template verifier (single template file for all
+                        target environments), unified deployment (single deployment script for all platforms and
+                        environments), remote deployment (centralized machine for deploying to multiple target
+                        environments).
+                    </body>
+                    <marks>
+                        <mark type="keyword">deploy</mark>
+                        <mark type="keyword">remote</mark>
+                        <mark type="keyword">script</mark>
+                        <mark type="keyword">command</mark>
+                        <mark type="keyword">repository</mark>
+                        <mark type="keyword">token</mark>
+                        <mark type="keyword">config</mark>
+                        <mark type="keyword">templat</mark>
+                        <mark type="keyword">unif</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="174">
+            <body>What is blue-green deployment?</body>
+            <answers>
+                <answer>
+                    <body>A technique where two live environments are used. The second (offline) environment is deployed
+                        to, then the online/offline environments are switched.
+                    </body>
+                    <marks>
+                        <mark type="keyword">env</mark>
+                        <mark type="keyword">deploy</mark>
+                        <mark type="keyword">switch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="175">
+            <body>What is virtualization?</body>
+            <answers>
+                <answer>
+                    <body>A combination of software/hardware engineering that creates virtual machines, an abstraction
+                        that allows a single machine to act as if it were multiple machines.
+                    </body>
+                    <marks>
+                        <mark type="keyword">machine</mark>
+                        <mark type="keyword">abstraction</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="176">
+            <body>What are some advantages of virtual machines?</body>
+            <answers>
+                <answer>
+                    <body>Increased software compatibility, isolation, consolidation, and resource pooling.</body>
+                    <marks>
+                        <mark type="keyword">compat</mark>
+                        <mark type="keyword">isol</mark>
+                        <mark type="keyword">consol</mark>
+                        <mark type="keyword">resourc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="177">
+            <body>What is the N x N compatibility nightmare? How is it solved?</body>
+            <answers>
+                <answer>
+                    <body>Multiplicity of software stacks and multiplicity of hardware environments causes compatibility
+                        issues. Containers (docker) can help deploy anything into any environment.
+                    </body>
+                    <marks>
+                        <mark type="keyword">software</mark>
+                        <mark type="keyword">hardware</mark>
+                        <mark type="keyword">container</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="178">
+            <body>What is cloud computing?</body>
+            <answers>
+                <answer>
+                    <body>A specialized form of distributed computing that introduces utilization models for remotely
+                        provisioning scalable and measured resources.
+                    </body>
+                    <marks>
+                        <mark type="keyword">distribut</mark>
+                        <mark type="keyword">provision</mark>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">measur</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="179">
+            <body>What are some goals of cloud computing?</body>
+            <answers>
+                <answer>
+                    <body>Increased availability, reliability, reduced investments, proportional costs, increased
+                        scalability
+                    </body>
+                    <marks>
+                        <mark type="keyword">availab</mark>
+                        <mark type="keyword">reliab</mark>
+                        <mark type="keyword">invest</mark>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">scal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="180">
+            <body>What are the actors in the cloud reference architecture?</body>
+            <answers>
+                <answer>
+                    <body>Cloud consumer, provider, auditor, broker, carrier (ISP)</body>
+                    <marks>
+                        <mark type="keyword">consum</mark>
+                        <mark type="keyword">provid</mark>
+                        <mark type="keyword">audit</mark>
+                        <mark type="keyword">broker</mark>
+                        <mark type="keyword">carrier</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
             <body>What is the difference between safety and security?</body>
