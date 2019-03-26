@@ -152,7 +152,7 @@ function saveProgress() {
     xml.push("</progress>");
 
     let text = xml.join("");
-    let blob = new Blob([text], { type: 'text/xml' });
+    let blob = new Blob([text], {type: 'text/xml'});
     let anchor = document.createElement('a');
 
     anchor.download = "progress_" + examFileName + ".xml";
@@ -357,8 +357,17 @@ function postRandomQuestion() {
 $(document).on('keydown', function (e) {
     // Catch the newline CTRL-Enter -> check question
     if ((e.metaKey || e.ctrlKey) && !e.shiftKey && (e.which === 13)) {
-        if ($("#question-ui").css("display").localeCompare("block") == 0) {
+        if ($("#answer-ui").css("display").localeCompare("block") == 0) {
             $("#response-submit-button")[0].onclick();
+        } else if ($("#solution-ui").css("display").localeCompare("block") == 0) {
+            $("#response-submit-button")[0].onclick();
+            if ($("#grading-incorrect-button").hasClass("btn-primary")) {
+                gradeResponse("incorrect");
+            } else if ($("#grading-partially-button").hasClass("btn-primary")) {
+                gradeResponse("partially");
+            } else if ($("#grading-correct-button").hasClass("btn-primary")) {
+                gradeResponse("correct");
+            }
         }
     }
 });
