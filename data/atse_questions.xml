@@ -2774,7 +2774,129 @@
                 </answer>
             </answers>
         </question>
-
+        <question type="extended-answer" id="181">
+            <body>What are the essential characterstics of cloud computing?</body>
+            <answers>
+                <answer>
+                    <body>On-demand self-service, broad network access, resource pooling, rapid elasticity, measured
+                        service
+                    </body>
+                    <marks>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">network</mark>
+                        <mark type="keyword">resource</mark>
+                        <mark type="keyword">elastic</mark>
+                        <mark type="keyword">measur</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="182">
+            <body>What is software as a service?</body>
+            <answers>
+                <answer>
+                    <body>The ability for a consumer to use the provider&apos;s applications running on cloud
+                        infrastructure.
+                    </body>
+                    <marks>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">cloud</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="193">
+            <body>What is Platform as a Service?</body>
+            <answers>
+                <answer>
+                    <body>The ability for a consumer to deploy consumer-created/acquired applications to cloud
+                        infrastructure using programming languages, libraries, services, and tools supported by the
+                        provider.
+                    </body>
+                    <marks>
+                        <mark type="keyword">deploy</mark>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">cloud</mark>
+                        <mark type="keyword">support</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="194">
+            <body>What is Infrastructure as a Service?</body>
+            <answers>
+                <answer>
+                    <body>The ability for a consumer to provision computing resources (storage, network, etc) where the
+                        consumer can deploy and run arbitrary software on cloud infrastructure.
+                    </body>
+                    <marks>
+                        <mark type="keyword">resource</mark>
+                        <mark type="keyword">software</mark>
+                        <mark type="keyword">cloud</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="195">
+            <body>What deployment models are there for cloud infrastructure?</body>
+            <answers>
+                <answer>
+                    <body>Public (cloud open for use by general public), private (single organization use, owned and
+                        managed by organization, on-site/off-site), outsourced private (single organization use, owned
+                        and managed by third-party, on-site/off-site), community (multi organization use), and hybrid
+                        (composition of multiple models) cloud.
+                    </body>
+                    <marks>
+                        <mark type="keyword">public</mark>
+                        <mark type="keyword">private</mark>
+                        <mark type="keyword">outsourced</mark>
+                        <mark type="keyword">community</mark>
+                        <mark type="keyword">hybrid</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="196">
+            <body>Which fundamental cloud architecture exists?</body>
+            <answers>
+                <answer>
+                    <body>Workload distribution architecture (horizontal scaling, balancer), resource pooling
+                        architecture (group identical resources), dynamic scalability (horizontal/vertical/relocation)
+                        (dynamic allocation from resource pools for variable utilization), service load balancing
+                        architecture (like workload distribution architecture, specifically for scaling cloud service
+                        implementations)
+                    </body>
+                    <marks>
+                        <mark type="keyword">workload</mark>
+                        <mark type="keyword">resource</mark>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">balanc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="197">
+            <body>What are some challenges in cloud architectures?</body>
+            <answers>
+                <answer>
+                    <body>Confidentiality, integrity, availability, privacy, increased attack surface, auditability,
+                        forensics, legal issues, trust issues.
+                    </body>
+                    <marks>
+                        <mark type="keyword">confident</mark>
+                        <mark type="keyword">integrit</mark>
+                        <mark type="keyword">availab</mark>
+                        <mark type="keyword">priva</mark>
+                        <mark type="keyword">attack</mark>
+                        <mark type="keyword">audit</mark>
+                        <mark type="keyword">forensic</mark>
+                        <mark type="keyword">legal</mark>
+                        <mark type="keyword">trust</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
         <!-- Chapter 2.6: Safety -->
         <question type="extended-answer" id="1000">
