@@ -3533,7 +3533,7 @@
             </answers>
         </question>
 
-        <!-- Chapter 2.7: Security -->
+        <!-- Chapter 3.1: Introduction to distributed systems and middleware -->
         <question type="extended-answer" id="1039">
             <body>What is a distributed system?</body>
             <answers>
@@ -3656,6 +3656,8 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Chapter 3.2: Database-centric architectures -->
         <question type="extended-answer" id="1045">
             <body>What is the main purpose of database-centric architectures?</body>
             <answers>
@@ -3811,9 +3813,7 @@
             <body>What are some disadvantages of database views?</body>
             <answers>
                 <answer>
-                    <body>- Update restriction
-                        - Structure restriction
-                        - Performance
+                    <body>Update restriction; Structure restriction; Performance
                     </body>
                     <marks>
                         <mark type="keyword">update</mark>
@@ -4468,5 +4468,231 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Chapter 3.3: Message-oriented architectures -->
+        <question type="extended-answer" id="1097">
+            <body>What are the three possible intents of a middleware message?</body>
+            <answers>
+                <answer>
+                    <body>Command message: The sender tells the receiver what code to run.
+                        Document message: The sender transmits one of its data structures to the receiver.
+                        Event message: Notifying the receiver of a change in the sender.
+                    </body>
+                    <marks>
+                        <mark type="keyword">command</mark>
+                        <mark type="keyword">document</mark>
+                        <mark type="keyword">event</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1098">
+            <body>What are the three patterns of message queues?</body>
+            <answers>
+                <answer>
+                    <body>Point-to-point pattern: It ensures that only one receiver consumes any given message.
+                        Publish-subscribe pattern: Routes messages from publisher (source) to subscribers (sinks).
+                        Datatype pattern: Uses separate datatype queues for each datatype.
+                    </body>
+                    <marks>
+                        <mark type="keyword">point-to-point</mark>
+                        <mark type="keyword">publish-subscribe</mark>
+                        <mark type="keyword">datatype</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1099">
+            <body>What are some advantages of message queues?</body>
+            <answers>
+                <answer>
+                    <body>Give recipient control of when to process messages; More robust to failures (because
+                        recipients do
+                        not need to be up and running when a message is sent); Messages may have an expiration date;
+                        Queues
+                        can be shared among multiple applications
+                    </body>
+                    <marks>
+                        <mark type="keyword">when</mark>
+                        <mark type="keyword">robust</mark>
+                        <mark type="keyword">expir</mark>
+                        <mark type="keyword">share</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1100">
+            <body>What are some advantages of message-oriented middleware?</body>
+            <answers>
+                <answer>
+                    <body>Remote communication; Decoupling of systems; Platform/application integration; Asynchronous
+                        communication protocol; Solves issue of throttling
+                    </body>
+                    <marks>
+                        <mark type="keyword">remote</mark>
+                        <mark type="keyword">decoupl</mark>
+                        <mark type="keyword">integrat</mark>
+                        <mark type="keyword">asynchronous</mark>
+                        <mark type="keyword">throttling</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1101">
+            <body>What re some disadvantages of message-oriented middleware?</body>
+            <answers>
+                <answer>
+                    <body>Some scenarios require synchronous solutions; Message sequence issues (queues do not guarantee
+                        when a message will be delivered)
+                    </body>
+                    <marks>
+                        <mark type="keyword">synchronous</mark>
+                        <mark type="keyword">sequence</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1102">
+            <body>What is the purpose of Enterprise Application Integration (EAI)?</body>
+            <answers>
+                <answer>
+                    <body>EAI is intended to integrate services provided by different middlewares.</body>
+                    <marks>
+                        <mark type="keyword">integrat</mark>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">middleware</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1103">
+            <body>What is a message broker?</body>
+            <answers>
+                <answer>
+                    <body>Message brokers act as a broker among system entities. This factors the message routing logic
+                        out
+                        of the senders and places it into the middleware. Applications publish their messages to the
+                        middleware and the middleware sends a copy of the message to every subscribed application.
+                    </body>
+                    <marks>
+                        <mark type="keyword">routing</mark>
+                        <mark type="keyword">middleware</mark>
+                        <mark type="keyword">publish</mark>
+                        <mark type="keyword">subscribe</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1104">
+            <body>What are some challenges concerning messages brokers?</body>
+            <answers>
+                <answer>
+                    <body>Scalability; Security: Growing number of SSL certificates has to be managed.; Monitoring and
+                        debugging; Maintenance: Broker cannot be updated without affecting the clients.
+                    </body>
+                    <marks>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">monitoring</mark>
+                        <mark type="keyword">maintenance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1105">
+            <body>What are the characteristics of a reactive system?</body>
+            <answers>
+                <answer>
+                    <body>Responsive; Resilient; Elastic; Message-driven</body>
+                    <marks>
+                        <mark type="keyword">responsive</mark>
+                        <mark type="keyword">resilien</mark>
+                        <mark type="keyword">elastic</mark>
+                        <mark type="keyword">message</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1106">
+            <body>What is the actor model?</body>
+            <answers>
+                <answer>
+                    <body>The actor model represents objects and their interactions, resembling human organizations and
+                        built upon the laws of physics.
+                    </body>
+                    <marks>
+                        <mark type="keyword">represent</mark>
+                        <mark type="keyword">object</mark>
+                        <mark type="keyword">interaction</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1107">
+            <body>What does the actor model embody?</body>
+            <answers>
+                <answer>
+                    <body>It embodies processing, storage, and communication.</body>
+                    <marks>
+                        <mark type="keyword">processing</mark>
+                        <mark type="keyword">storage</mark>
+                        <mark type="keyword">communication</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1108">
+            <body>What are the axioms of the actor model?</body>
+            <answers>
+                <answer>
+                    <body>When an actor receives a message it can: Make local decisions, create new actors, send
+                        messages to actors it knows, or designate how it should handle the next message it receives.
+                    </body>
+                    <marks>
+                        <mark type="keyword">decision</mark>
+                        <mark type="keyword">create</mark>
+                        <mark type="keyword">send</mark>
+                        <mark type="keyword">designate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1109">
+            <body>What are some advantages of the actor model?</body>
+            <answers>
+                <answer>
+                    <body>Message-driven approach is intuitive; Directly applicable for distributed programming;
+                        Type-safe
+                        systems; Separation of concerns; Ensures loose coupling
+                    </body>
+                    <marks>
+                        <mark type="keyword">intuitive</mark>
+                        <mark type="keyword">distributed</mark>
+                        <mark type="keyword">type-safe</mark>
+                        <mark type="keyword">separation of concerns</mark>
+                        <mark type="keyword">loose coupling</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1110">
+            <body>What are some disadvantages of the actor model?</body>
+            <answers>
+                <answer>
+                    <body>Message-passing is slower; Actors do not work well when synchronous shared-state behavior is
+                        required; Steep learning curve; Dealing when an actor crashes, a message is lost, or an external
+                        message is introduced
+                    </body>
+                    <marks>
+                        <mark type="keyword">passing</mark>
+                        <mark type="keyword">shared</mark>
+                        <mark type="keyword">learning</mark>
+                        <mark type="keyword">dealing</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 3.4: Object-oriented architectures -->
     </body>
 </exam>
