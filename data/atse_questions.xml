@@ -4694,5 +4694,252 @@
         </question>
 
         <!-- Chapter 3.4: Object-oriented architectures -->
+        <question type="extended-answer" id="1111">
+            <body>What is an object broker?</body>
+            <answers>
+                <answer>
+                    <body>It is an extended Remote Procedure Call (RPC) paradigm for the object-oriented world.</body>
+                    <marks>
+                        <mark type="keyword">extend</mark>
+                        <mark type="keyword">Remote Procedure Call</mark>
+                        <mark type="keyword">object</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1112">
+            <body>What is CORBA?</body>
+            <answers>
+                <answer>
+                    <body>Common Object Request Broker Architecture is a standardized specification of an object broker.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Common Object Request Broker Architecture</mark>
+                        <mark type="keyword">specification</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 3.5: Component-based architectures -->
+        <question type="extended-answer" id="1113">
+            <body>What are the tiers of the Java EE multi-tier architecture (and where are they run)?</body>
+            <answers>
+                <answer>
+                    <body>Client tier (on client), web tier (on JEE server), business tier (on JEE server), and
+                        enterprise information system tier (on database server).
+                    </body>
+                    <marks>
+                        <mark type="keyword">client</mark>
+                        <mark type="keyword">web</mark>
+                        <mark type="keyword">business</mark>
+                        <mark type="keyword">enterprise information system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1114">
+            <body>What are the kinds of containers used in the Java EE multi-tier architecture (and where are they run)?
+            </body>
+            <answers>
+                <answer>
+                    <body>Application client container (on client), EJB container (on JEE server), and web container (on
+                        JEE server).
+                    </body>
+                    <marks>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">EJB</mark>
+                        <mark type="keyword">web</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1115">
+            <body>What is an EJB?</body>
+            <answers>
+                <answer>
+                    <body>An Enterprise Java Bean realizes business logic and is deployed within EJB containers.</body>
+                    <marks>
+                        <mark type="keyword">enterprise java bean</mark>
+                        <mark type="keyword">business logic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1116">
+            <body>What are the different type of EJB?</body>
+            <answers>
+                <answer>
+                    <body>Session beans: Only one per client and live for just one session.
+                        Message-driven beans: For asynchronous processing of messages.
+                        Entity beans: Deprecated.
+                    </body>
+                    <marks>
+                        <mark type="keyword">session</mark>
+                        <mark type="keyword">message</mark>
+                        <mark type="keyword">entity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1117">
+            <body>What are the contents of an EJB?</body>
+            <answers>
+                <answer>
+                    <body>Enterprise bean class: Implements the business methods and any lifecycle callback methods.
+                        Business interfaces: Define the business methods implemented by the enterprise bean class.
+                        Helper classes: Other required utility classes.
+                    </body>
+                    <marks>
+                        <mark type="keyword">enterprise bean class</mark>
+                        <mark type="keyword">business interface</mark>
+                        <mark type="keyword">helper class</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1118">
+            <body>How can EJBs be accessed?</body>
+            <answers>
+                <answer>
+                    <body>No-interface view: Exposes the public methods to clients.
+                        Business interface: Standard Java interface that contains the business methods of the EJB.
+                    </body>
+                    <marks>
+                        <mark type="keyword">no-interface</mark>
+                        <mark type="keyword">business interface</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1119">
+            <body>What is the role of the Java Persistence API (JPA)?</body>
+            <answers>
+                <answer>
+                    <body>It allows persistent deployment of POJOs to relational databases. Replaces entity beans.
+                    </body>
+                    <marks>
+                        <mark type="keyword">POJO</mark>
+                        <mark type="keyword">database</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1120">
+            <body>What is the JMS?</body>
+            <answers>
+                <answer>
+                    <body>Java Message Service is a message-oriented middleware for Java.</body>
+                    <marks>
+                        <mark type="keyword">middleware</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1121">
+            <body>What does a JMS message consist of?</body>
+            <answers>
+                <answer>
+                    <body>Header, Properties (optional), and Body.</body>
+                    <marks>
+                        <mark type="keyword">header</mark>
+                        <mark type="keyword">properties</mark>
+                        <mark type="keyword">body</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1122">
+            <body>What Java Web Components were discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Java Servlet: Process HTTP requests and generate replies.
+                        JavaServer Page: Text-based documents with special JSP tags that contain java code (deprecated).
+                        JavaServer Face: MVC pattern based web framework.
+                    </body>
+                    <marks>
+                        <mark type="keyword">java servlet</mark>
+                        <mark type="keyword">javaserver page</mark>
+                        <mark type="keyword">javaserver face</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1123">
+            <body>What is the difference between a tier and a layer?</body>
+            <answers>
+                <answer>
+                    <body>A layer is a logical structuring for software elements, while a tier is a physical structuring
+                        mechanism for system infrastructure.
+                    </body>
+                    <marks>
+                        <mark type="keyword">logical</mark>
+                        <mark type="keyword">physical</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1124">
+            <body>What deployment strategies did the lecture name?</body>
+            <answers><answer>
+                <body>Non-distributed deployment, distributed deployment, load balanced cluster, and failover cluster.
+                </body>
+                <marks>
+                    <mark type="keyword">non-distributed</mark>
+                    <mark type="keyword">distributed</mark>
+                    <mark type="keyword">load balanced</mark>
+                    <mark type="keyword">failover</mark>
+                </marks>
+            </answer></answers>
+        </question>
+        <question type="extended-answer" id="1125">
+            <body>What are some advantages of non-distributed deployment?</body>
+            <answers><answer>
+                <body>Fewer physical servers; Reduced communication overhead (between multiple physical servers);
+                    Advantage of simplicity and manageability
+                </body>
+                <marks>
+                    <mark type="keyword">physical server</mark>
+                    <mark type="keyword">communication overhead</mark>
+                    <mark type="keyword">simpl</mark>
+                </marks>
+            </answer></answers>
+        </question>
+        <question type="extended-answer" id="1126">
+            <body>What are some disadvantages of non-distributed deployment?</body>
+            <answers><answer>
+                <body>All layers share the same physical hardware; Reduces the overall scalability; Security</body>
+                <marks>
+                    <mark type="keyword">physical</mark>
+                    <mark type="keyword">scalability</mark>
+                    <mark type="keyword">security</mark>
+                </marks>
+            </answer></answers>
+        </question>
+        <question type="extended-answer" id="1127">
+            <body>What are some advantages of distributed deployment?</body>
+            <answers><answer>
+                <body>More flexible environment; Easy to scale out or up; Allows specific security policies for
+                    different tiers; Better Security with DMZs
+                </body>
+                <marks>
+                    <mark type="keyword">flexible</mark>
+                    <mark type="keyword">scal</mark>
+                    <mark type="keyword">polic</mark>
+                    <mark type="keyword">DMZ</mark>
+                </marks>
+            </answer></answers>
+        </question>
+        <question type="extended-answer" id="1128">
+            <body>What are some disadvantages of distributed deployment?</body>
+            <answers><answer>
+                <body>Adding more tiers increases complexity, development effort and cost.</body>
+                <marks>
+                    <mark type="keyword">complex</mark>
+                    <mark type="keyword">development</mark>
+                    <mark type="keyword">cost</mark>
+                </marks>
+            </answer></answers>
+        </question>
     </body>
 </exam>
