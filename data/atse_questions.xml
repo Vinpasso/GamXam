@@ -132,6 +132,406 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="508">
+            <body>What is a cyber-physical system?</body>
+            <answers>
+                <answer>
+                    <body>A socio-technical system that integrates information systems, embedded systems, and humans.
+                    </body>
+                    <marks>
+                        <mark type="keyword">socio</mark>
+                        <mark type="keyword">technical</mark>
+                        <mark type="keyword">embed</mark>
+                        <mark type="keyword">info</mark>
+                        <mark type="keyword">human</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="509">
+            <body>What is software engineering?</body>
+            <answers>
+                <answer>
+                    <body>A collection of techniques, methodologies and tools that aid the product of a high quality
+                        software system with a given budget before a given deadline while change occurs.
+                    </body>
+                    <marks>
+                        <mark type="keyword">tecnique</mark>
+                        <mark type="keyword">method</mark>
+                        <mark type="keyword">tool</mark>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">budget</mark>
+                        <mark type="keyword">deadline</mark>
+                        <mark type="keyword">change</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="510">
+            <body>What is a process model?</body>
+            <answers>
+                <answer>
+                    <body>It describes the systematic, engineering-based, and quantifiable approach to solve a
+                        particular
+                        class of repeatable problems. It is an abstract representation of the software process.
+                    </body>
+                    <marks>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">engineer</mark>
+                        <mark type="keyword">quantif</mark>
+                        <mark type="keyword">class</mark>
+                        <mark type="keyword">problem</mark>
+                        <mark type="keyword">abstract</mark>
+                        <mark type="keyword">represent</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="511">
+            <body>What process models are covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Waterfall model, V-model, spiral-model, unified process, scrum</body>
+                    <marks>
+                        <mark type="keyword">waterfall</mark>
+                        <mark type="keyword">v</mark>
+                        <mark type="keyword">spiral</mark>
+                        <mark type="keyword">unified</mark>
+                        <mark type="keyword">scrum</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="512">
+            <body>What are two problems with the waterfall model?</body>
+            <answers>
+                <answer>
+                    <body>It is inflexible due to the strictly sequential process and it is risky because it detects
+                        problems late.
+                    </body>
+                    <marks>
+                        <mark type="keyword">flex</mark>
+                        <mark type="keyword">risk</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="513">
+            <body>What are the concepts behind the spiral model and what is the aim?</body>
+            <answers>
+                <answer>
+                    <body>Incremental, iterative development and evolutionary models to minimize risk.</body>
+                    <marks>
+                        <mark type="keyword">increment</mark>
+                        <mark type="keyword">iter</mark>
+                        <mark type="keyword">evolut</mark>
+                        <mark type="keyword">risk</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="514">
+            <body>What is emphasized in the unified process and what are the essential components?</body>
+            <answers>
+                <answer>
+                    <body>Places emphasis on construction of architecture and early demonstrations. Has 4 phases
+                        (inception, elaboration, construction, transition), 7 workflows (management, environment,
+                        requirements, design, implementation, assessment, deployment), and 5 artifact sets (management
+                        set, requirements set, design set, implementation set, deployment set). Based on iteration.
+                    </body>
+                    <marks>
+                        <mark type="keyword">architect</mark>
+                        <mark type="keyword">demonstrat</mark>
+                        <mark type="keyword">phase</mark>
+                        <mark type="keyword">workflow</mark>
+                        <mark type="keyword">artifact</mark>
+                        <mark type="keyword">iterat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="515">
+            <body>What are the four paradigms of agile development?</body>
+            <answers>
+                <answer>
+                    <body>Individuals and interactions over processes and tools. Working software over comprehensive
+                        documentation, customer collaboration over contract negotiation. Responding to change over
+                        following a plan.
+                    </body>
+                    <marks>
+                        <mark type="keyword">individual</mark>
+                        <mark type="keyword">interact</mark>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">tool</mark>
+                        <mark type="keyword">software</mark>
+                        <mark type="keyword">document</mark>
+                        <mark type="keyword">customer</mark>
+                        <mark type="keyword">contract</mark>
+                        <mark type="keyword">change</mark>
+                        <mark type="keyword">plan</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="516">
+            <body>What are the essential components of scrum?
+            </body>
+            <answers>
+                <answer>
+                    <body>Product requirements are collected in the product backlog. Development is divided into sprints
+                        with
+                        sprint planning and retrospective meetings. Daily standup meetings are held. There are three
+                        roles:
+                        product owner, development team, and scum master
+                    </body>
+                    <marks>
+                        <mark type="keyword">backlog</mark>
+                        <mark type="keyword">sprint</mark>
+                        <mark type="keyword">planning</mark>
+                        <mark type="keyword">retrospective</mark>
+                        <mark type="keyword">standup</mark>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">develop</mark>
+                        <mark type="keyword">master</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="517">
+            <body>What are some issues with the agile approach?</body>
+            <answers>
+                <answer>
+                    <body>Scalability, feature interaction, maintainability, technical debt.</body>
+                    <marks>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">interact</mark>
+                        <mark type="keyword">maintain</mark>
+                        <mark type="keyword">debt</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="518">
+            <body>What are some artifacts generated in requirements engineering?</body>
+            <answers>
+                <answer>
+                    <body>Feasibility report, system models, user and system requirements, requirements document</body>
+                    <marks>
+                        <mark type="keyword">feasib</mark>
+                        <mark type="keyword">model</mark>
+                        <mark type="keyword">requirement</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="519">
+            <body>What are some input/output artifacts in software design?</body>
+            <answers>
+                <answer>
+                    <body>Input: Platform information, requirements specification, data description. Output: System
+                        architecture, database specification, interface specification, component specification.
+                    </body>
+                    <marks>
+                        <mark type="keyword">platform</mark>
+                        <mark type="keyword">requirement</mark>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">architect</mark>
+                        <mark type="keyword">database</mark>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">component</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="520">
+            <body>What are some artifacts generated in testing?</body>
+            <answers>
+                <answer>
+                    <body>Acceptance test plan, system integration test plan, sub-system integration test plan.</body>
+                    <marks>
+                        <mark type="keyword">accept</mark>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">integrat</mark>
+                        <mark type="keyword">sub-system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="521">
+            <body>What is software quality?</body>
+            <answers>
+                <answer>
+                    <body>All characteristics of a software product that influence its ability to fulfill specified
+                        requirements and stakeholder expectations (can refer to both process and product).
+                    </body>
+                    <marks>
+                        <mark type="keyword">characteristic</mark>
+                        <mark type="keyword">influenc</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">stakeholder</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="522">
+            <body>What is the difference between quality and non-functional requirements?</body>
+            <answers>
+                <answer>
+                    <body>Quality = Process Quality + Product Quality (NFRs)</body>
+                    <marks>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">product</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="523">
+            <body>What types of interdependencies between quality aspects exist? Which one is problematic?</body>
+            <answers>
+                <answer>
+                    <body>Positive: improving one aspects improves another. Negative: improving one aspect interferes
+                        with the other. The negative correlation causes issues that need to be solved in tradeoffs.
+                    </body>
+                    <marks>
+                        <mark type="keyword">positive</mark>
+                        <mark type="keyword">negative</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="522">
+            <body>What are some intrinsic quality aspects according to ISO 9126?</body>
+            <answers>
+                <answer>
+                    <body>Correctness and completeness.</body>
+                    <marks>
+                        <mark type="keyword">correct</mark>
+                        <mark type="keyword">complete</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="523">
+            <body>What are some design-time quality aspects according to ISO 9126?</body>
+            <answers>
+                <answer>
+                    <body>Portability (adaptability, installability, co-existence, replaceability) and maintainability
+                        (analyzability, learnability, changeability, reusability, stability, testability).
+                    </body>
+                    <marks>
+                        <mark type="keyword">port</mark>
+                        <mark type="keyword">maintain</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="524">
+            <body>What are some run-time quality aspects according tot ISO 9126?</body>
+            <answers>
+                <answer>
+                    <body>Usability, reliability, efficiency, functionality</body>
+                    <marks>
+                        <mark type="keyword">usabil</mark>
+                        <mark type="keyword">reliab</mark>
+                        <mark type="keyword">effic</mark>
+                        <mark type="keyword">function</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="525">
+            <body>What are the categories of quality in the ISO 9126 model, what type of quality do they refer to and
+                from which perspective can they be analyzed?
+            </body>
+            <answers>
+                <answer>
+                    <body>Intrinsic, design-time, run-time. Refers to both external/internal quality and can be analyzed
+                        from black/white-box perspective.
+                    </body>
+                    <marks>
+                        <mark type="keyword">intrinsic</mark>
+                        <mark type="keyword">design</mark>
+                        <mark type="keyword">run</mark>
+                        <mark type="keyword">extern</mark>
+                        <mark type="keyword">intern</mark>
+                        <mark type="keyword">black</mark>
+                        <mark type="keyword">white</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="526">
+            <body>Which four factors influence product quality?</body>
+            <answers>
+                <answer>
+                    <body>Process quality, development technology, cost-, time- and schedule constraints, people
+                        quality.
+                    </body>
+                    <marks>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">dev</mark>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">people</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="527">
+            <body>What problem can be encountered when assessing quality?</body>
+            <answers>
+                <answer>
+                    <body>Many quality attributes are hard to measure directly.</body>
+                    <marks>
+                        <mark type="keyword">measur</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="528">
+            <body>What two types of quality standards are there?</body>
+            <answers>
+                <answer>
+                    <body>Product standards: characteristics present in all components. Process standards: define how
+                        software process should be enacted.
+                    </body>
+                    <marks>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="529">
+            <body>What is required for an organization to be ISO 9001 conformant?</body>
+            <answers>
+                <answer>
+                    <body>It needs to document how its processes relate to the nine core processes (product delivery
+                        processes and supporting processes).
+                    </body>
+                    <marks>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="530">
+            <body>What are some problems with the ISO 9001 quality standard?</body>
+            <answers>
+                <answer>
+                    <body>Certification does not imply increased software quality. Standard focuses on ensuring quality
+                        management procedures are in place, not that they work. ISO 9001 defines quality by conformance
+                        to standards, not taking into account quality as experienced by the users.
+                    </body>
+                    <marks>
+                        <mark type="keyword">quality</mark>
+                        <mark type="keyword">manage</mark>
+                        <mark type="keyword">user</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
         <!-- Chapter 1: Embedded Systems (Guest Lecture) !-->
         <question type="extended-answer" id="1">
