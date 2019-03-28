@@ -5003,65 +5003,740 @@
         </question>
         <question type="extended-answer" id="1124">
             <body>What deployment strategies did the lecture name?</body>
-            <answers><answer>
-                <body>Non-distributed deployment, distributed deployment, load balanced cluster, and failover cluster.
-                </body>
-                <marks>
-                    <mark type="keyword">non-distributed</mark>
-                    <mark type="keyword">distributed</mark>
-                    <mark type="keyword">load balanced</mark>
-                    <mark type="keyword">failover</mark>
-                </marks>
-            </answer></answers>
+            <answers>
+                <answer>
+                    <body>Non-distributed deployment, distributed deployment, load balanced cluster, and failover
+                        cluster.
+                    </body>
+                    <marks>
+                        <mark type="keyword">non-distributed</mark>
+                        <mark type="keyword">distributed</mark>
+                        <mark type="keyword">load balanced</mark>
+                        <mark type="keyword">failover</mark>
+                    </marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="1125">
             <body>What are some advantages of non-distributed deployment?</body>
-            <answers><answer>
-                <body>Fewer physical servers; Reduced communication overhead (between multiple physical servers);
-                    Advantage of simplicity and manageability
-                </body>
-                <marks>
-                    <mark type="keyword">physical server</mark>
-                    <mark type="keyword">communication overhead</mark>
-                    <mark type="keyword">simpl</mark>
-                </marks>
-            </answer></answers>
+            <answers>
+                <answer>
+                    <body>Fewer physical servers; Reduced communication overhead (between multiple physical servers);
+                        Advantage of simplicity and manageability
+                    </body>
+                    <marks>
+                        <mark type="keyword">physical server</mark>
+                        <mark type="keyword">communication overhead</mark>
+                        <mark type="keyword">simpl</mark>
+                    </marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="1126">
             <body>What are some disadvantages of non-distributed deployment?</body>
-            <answers><answer>
-                <body>All layers share the same physical hardware; Reduces the overall scalability; Security</body>
-                <marks>
-                    <mark type="keyword">physical</mark>
-                    <mark type="keyword">scalability</mark>
-                    <mark type="keyword">security</mark>
-                </marks>
-            </answer></answers>
+            <answers>
+                <answer>
+                    <body>All layers share the same physical hardware; Reduces the overall scalability; Security</body>
+                    <marks>
+                        <mark type="keyword">physical</mark>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">security</mark>
+                    </marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="1127">
             <body>What are some advantages of distributed deployment?</body>
-            <answers><answer>
-                <body>More flexible environment; Easy to scale out or up; Allows specific security policies for
-                    different tiers; Better Security with DMZs
-                </body>
-                <marks>
-                    <mark type="keyword">flexible</mark>
-                    <mark type="keyword">scal</mark>
-                    <mark type="keyword">polic</mark>
-                    <mark type="keyword">DMZ</mark>
-                </marks>
-            </answer></answers>
+            <answers>
+                <answer>
+                    <body>More flexible environment; Easy to scale out or up; Allows specific security policies for
+                        different tiers; Better Security with DMZs
+                    </body>
+                    <marks>
+                        <mark type="keyword">flexible</mark>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">polic</mark>
+                        <mark type="keyword">DMZ</mark>
+                    </marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="1128">
             <body>What are some disadvantages of distributed deployment?</body>
-            <answers><answer>
-                <body>Adding more tiers increases complexity, development effort and cost.</body>
-                <marks>
-                    <mark type="keyword">complex</mark>
-                    <mark type="keyword">development</mark>
-                    <mark type="keyword">cost</mark>
-                </marks>
-            </answer></answers>
+            <answers>
+                <answer>
+                    <body>Adding more tiers increases complexity, development effort and cost.</body>
+                    <marks>
+                        <mark type="keyword">complex</mark>
+                        <mark type="keyword">development</mark>
+                        <mark type="keyword">cost</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1129">
+            <body>What is AUTOSAR?</body>
+            <answers>
+                <answer>
+                    <body>The AUTomotive Open System Architecture is a component-based, standardized automotive
+                        reference architecture.
+                    </body>
+                    <marks>
+                        <mark type="keyword">automotive open system architecture</mark>
+                        <mark type="keyword">component-based</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1130">
+            <body>What are the layers of the AUTOSAR module view?</body>
+            <answers>
+                <answer>
+                    <body>Application layer: Components developed against platform-independent RTE.
+                        AUTOSAR RTE layer: Defined interfaces to Basic Software standard library functions.
+                        Basic Software layer: Contains operating system and offers variety of services.
+                        Microcontroller Abstraction layer: Abstraction from I/O and communication with microcontroller.
+                    </body>
+                    <marks>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">autosar rte</mark>
+                        <mark type="keyword">basic software</mark>
+                        <mark type="keyword">microcontroller</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1131">
+            <body>What are the layers of a typical 4/5 layer architecture on Android?</body>
+            <answers>
+                <answer>
+                    <body>Application layer, framework layer, library layer, runtime layer, and kernel layer.</body>
+                    <marks>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">framework</mark>
+                        <mark type="keyword">library</mark>
+                        <mark type="keyword">runtime</mark>
+                        <mark type="keyword">kernel</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1132">
+            <body>What are the advantages of a typical 4/5 layer architecture on Android?</body>
+            <answers>
+                <answer>
+                    <body>High extensibility and high information hiding.</body>
+                    <marks>
+                        <mark type="keyword">extensibility</mark>
+                        <mark type="keyword">information hiding</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1133">
+            <body>What is OSGi?</body>
+            <answers>
+                <answer>
+                    <body>The Open Services Gateway initiative (OSGi) technology is a set of specifications that define
+                        a dynamic component system for Java. These specifications enable a development model where
+                        applications are (dynamically) composed of many different (reusable) components.
+                    </body>
+                    <marks>
+                        <mark type="keyword">open services gateway initiative</mark>
+                        <mark type="keyword">set</mark>
+                        <mark type="keyword">specification</mark>
+                        <mark type="keyword">dynamic</mark>
+                        <mark type="keyword">component system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1134">
+            <body>What are the OSGi components?</body>
+            <answers>
+                <answer>
+                    <body>Bundles: Components made by developers.
+                        Services: The services layer connects bundles in a dynamic way by offering a publish-find-bind
+                        model for plain old Java objects.
+                        Life-Cycle: The API to install, start, stop, update, and uninstall bundles.
+                        Modules: The layer that defines how a bundle can import and export code.
+                        Security: The layer that handles the security aspects.
+                        Execution Environment: Defines what methods and classes are available in a specific platform.
+                    </body>
+                    <marks>
+                        <mark type="keyword">bundle</mark>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">life-cycle</mark>
+                        <mark type="keyword">modules</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">execution environment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1135">
+            <body>What are the differences between the OSGi bundle runtime environment and Java application servers.
+            </body>
+            <answers>
+                <answer>
+                    <body>OSGi does not use containers. Bundles run in the same VM and can actually share code. Another
+                        difference is that the management of the OSGi framework is standardized.
+                    </body>
+                    <marks>
+                        <mark type="keyword">container</mark>
+                        <mark type="keyword">standardized</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1136">
+            <body>What are some of the advantages of OSGi?</body>
+            <answers>
+                <answer>
+                    <body>Reduced Complexity, Reuse, Easy Deployment, Dynamic Updates, Adaptive, Transparency,
+                        Versioning, Simple, Small, Fast, Lazy, Secure, Humble, Non Intrusive, Runs Everywhere, and
+                        Widely Used.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reduced complexity</mark>
+                        <mark type="keyword">reuse</mark>
+                        <mark type="keyword">easy deployment</mark>
+                        <mark type="keyword">dynamic updates</mark>
+                        <mark type="keyword">adaptive</mark>
+                        <mark type="keyword">transparency</mark>
+                        <mark type="keyword">versioning</mark>
+                        <mark type="keyword">simple</mark>
+                        <mark type="keyword">small</mark>
+                        <mark type="keyword">fast</mark>
+                        <mark type="keyword">lazy</mark>
+                        <mark type="keyword">secure</mark>
+                        <mark type="keyword">humble</mark>
+                        <mark type="keyword">non intrusive</mark>
+                        <mark type="keyword">runs everywhere</mark>
+                        <mark type="keyword">widely used</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1137">
+            <body>What are some problems that service-oriented architectures try to solve?</body>
+            <answers>
+                <answer>
+                    <body>Multiple implementation languages; Multi-governance; Interoperability via standard;
+                        Independent of vendor or technology; Loosely coupled.
+                    </body>
+                    <marks>
+                        <mark type="keyword">language</mark>
+                        <mark type="keyword">multi-governance</mark>
+                        <mark type="keyword">interoperability</mark>
+                        <mark type="keyword">indepneden</mark>
+                        <mark type="keyword">coupl</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1138">
+            <body>What are some drawbacks of service-oriented architectures?</body>
+            <answers>
+                <answer>
+                    <body>No service ecosystem; Scalability; Unfunctional browsing; High complexity of ecosystem; Reduce
+                        agility through hard-coding and dependencies
+                    </body>
+                    <marks>
+                        <mark type="keyword">no service ecosystem</mark>
+                        <mark type="keyword">scal</mark>
+                        <mark type="keyword">unfunctional browsing</mark>
+                        <mark type="keyword">complex</mark>
+                        <mark type="keyword">agility</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1139">
+            <body>What is a service-oriented architecture (SOA)?</body>
+            <answers>
+                <answer>
+                    <body>A Service-Oriented Architecture (SOA) is a software architecture that is based on the key
+                        concepts of an application frontend, service, service repository, and service bus. A service
+                        consists of a contract, one or more interfaces, and an implementation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">frontend</mark>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">repository</mark>
+                        <mark type="keyword">bus</mark>
+                        <mark type="keyword">contract</mark>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">implementation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1140">
+            <body>What are the roles existing in a SOA?</body>
+            <answers>
+                <answer>
+                    <body>Service consumer: Application that requires a service.
+                        Service provider: Network-addressable entity that accepts and executes requests from service
+                        consumers.
+                        Service registry: Is the enabler for service discovery.
+                    </body>
+                    <marks>
+                        <mark type="keyword">consumer</mark>
+                        <mark type="keyword">provider</mark>
+                        <mark type="keyword">registry</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1141">
+            <body>What are some of the principles of SOA?</body>
+            <answers>
+                <answer>
+                    <body>Loose Coupling, Modularization, Service Contract, Discoverability, Abstraction and autonomy,
+                        Reusability, Composability, and Stateless.
+                    </body>
+                    <marks>
+                        <mark type="keyword">loose coupling</mark>
+                        <mark type="keyword">modularization</mark>
+                        <mark type="keyword">service contract</mark>
+                        <mark type="keyword">discoverability</mark>
+                        <mark type="keyword">abstraction</mark>
+                        <mark type="keyword">reusability</mark>
+                        <mark type="keyword">composability</mark>
+                        <mark type="keyword">stateless</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1142">
+            <body>What are the parts of a service?</body>
+            <answers>
+                <answer>
+                    <body>Service description, service interface, business logic, implementation, and data.</body>
+                    <marks>
+                        <mark type="keyword">description</mark>
+                        <mark type="keyword">interface</mark>
+                        <mark type="keyword">logic</mark>
+                        <mark type="keyword">implementation</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1143">
+            <body>What is a Web service?</body>
+            <answers>
+                <answer>
+                    <body>A self-contained, modular business application that has open, Internet-oriented,
+                        standards-based interfaces.
+                    </body>
+                    <marks>
+                        <mark type="keyword">self-contained</mark>
+                        <mark type="keyword">modular</mark>
+                        <mark type="keyword">business application</mark>
+                        <mark type="keyword">open</mark>
+                        <mark type="keyword">Internet</mark>
+                        <mark type="keyword">standard</mark>
+                        <mark type="keyword">interface</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1144">
+            <body>What are the two main styles of Web services?</body>
+            <answers>
+                <answer>
+                    <body>Simple Object Access Protocol (SOAP) web services and Representational State Transfer (REST)
+                        web services.
+                    </body>
+                    <marks>
+                        <mark type="keyword">simple object access protocol</mark>
+                        <mark type="keyword">representational state transfer</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1145">
+            <body>What are some advantages of SOAP?</body>
+            <answers>
+                <answer>
+                    <body>Foundation layer of web service stack; Extensibility; Technology agnostic; Multi-language
+                    </body>
+                    <marks>
+                        <mark type="keyword">foundation</mark>
+                        <mark type="keyword">extensibility</mark>
+                        <mark type="keyword">agnostic</mark>
+                        <mark type="keyword">multi-language</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1146">
+            <body>What are some disadvantages of SOAP?</body>
+            <answers>
+                <answer>
+                    <body>Big XML messages; Extensibility leads to fragmentation of capabilities; Verbose messages and
+                        conversations
+                    </body>
+                    <marks>
+                        <mark type="keyword">big XML</mark>
+                        <mark type="keyword">fragmentation</mark>
+                        <mark type="keyword">verbose</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1147">
+            <body>What are the two SOAP interaction styles?</body>
+            <answers>
+                <answer>
+                    <body>Document-style: Interacting applications agree upon the structure of documents exchanged
+                        between
+                        them.
+                        RPC-style: One message encapsulates the request while another message encapsulates the response.
+                    </body>
+                    <marks>
+                        <mark type="keyword">document</mark>
+                        <mark type="keyword">rpc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1148">
+            <body>What is the basic structure of a SOAP message?</body>
+            <answers>
+                <answer>
+                    <body>The envelope contains a header and a body, each containig a header block and body block
+                        respectively.
+                    </body>
+                    <marks>
+                        <mark type="keyword">envelope</mark>
+                        <mark type="keyword">header</mark>
+                        <mark type="keyword">body</mark>
+                        <mark type="keyword">block</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1149">
+            <body>What is WSDL?</body>
+            <answers>
+                <answer>
+                    <body>The Web Service Description Language describes web service interfaces via XML documents.
+                    </body>
+                    <marks>
+                        <mark type="keyword">web service description language</mark>
+                        <mark type="keyword">XML</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1150">
+            <body>What is a significant difference of WSDL with respect to conventional middleware?</body>
+            <answers>
+                <answer>
+                    <body>WSDL also needs to define the mechanisms to access the Web service (e.g. HTTP, FTP, SMTP).
+                    </body>
+                    <marks>
+                        <mark type="keyword">mechanism</mark>
+                        <mark type="keyword">access</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1151">
+            <body>What are the parts of a WSDL interface?</body>
+            <answers>
+                <answer>
+                    <body>Abstract part: Contains port type definitions (analogous to interfaces in traditional
+                        middleware IDLs).
+                        Concrete part: Defines protocol binding and other information.
+                    </body>
+                    <marks>
+                        <mark type="keyword">abstract</mark>
+                        <mark type="keyword">concrete</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1152">
+            <body>At what three levels is SOA governance important?</body>
+            <answers>
+                <answer>
+                    <body>Strategic level: Management of company defines which role SOA should play.
+                        Operational level: Decisions which may cross departments, but do not have influence on the whole
+                        organization.
+                        Technical level: Tools help to ensure technical integrity.
+                    </body>
+                    <marks>
+                        <mark type="keyword">strategic</mark>
+                        <mark type="keyword">operational</mark>
+                        <mark type="keyword">technical</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1153">
+            <body>What are some of the NFRs that REST addresses?</body>
+            <answers>
+                <answer>
+                    <body>Performance of component interactions; Scalability of the ecosystem; Simplicity of interfaces;
+                        Visibility; Language agnostic; URIs; Designed for the Internet
+                    </body>
+                    <marks>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">simplicity</mark>
+                        <mark type="keyword">visibility</mark>
+                        <mark type="keyword">language agnostic</mark>
+                        <mark type="keyword">URI</mark>
+                        <mark type="keyword">Internet</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1154">
+            <body>What are some of the disadvantages of REST?</body>
+            <answers>
+                <answer>
+                    <body>Bloated protocol (HTTP); HTTP is not RPC; No semantic descriptions</body>
+                    <marks>
+                        <mark type="keyword">bloated protocol</mark>
+                        <mark type="keyword">not RPC</mark>
+                        <mark type="keyword">semantic description</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1155">
+            <body>What are the architectural styles of REST?</body>
+            <answers>
+                <answer>
+                    <body>Null style: Empty set of constraints that describes a system in which there are no
+                        distinguished boundaries between components and is the starting point.
+                        Client-server: Separates the user interface concerns from the data storage concerns.
+                        Stateless: Communication must be stateless in nature.
+                        Cacheable: Requires that the data within a response to a request is implicitly or explicitly
+                        labeled as chacheable or non-cacheable.
+                        Uniform interfaces: Emphasis on a uniform interface between components (i.e. uniform
+                        identification scheme and representation of information exchanged).
+                        Layered system: Constrains component beavior such that each component cannot see beyond the
+                        immediate layer with which they are interacting.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Null style</mark>
+                        <mark type="keyword">Client-server</mark>
+                        <mark type="keyword">stateless</mark>
+                        <mark type="keyword">cacheable</mark>
+                        <mark type="keyword">uniform interfaces</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1156">
+            <body>What is an example a REST application following the Null style?</body>
+            <answers>
+                <answer>
+                    <body>Mainframe application, desktop application, or a closed distributed system.</body>
+                    <marks>
+                        <mark type="regex">mainframe application|desktop application|closed distributed system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1157">
+            <body>What is the central feature that distinguishes REST form other network-based styles?</body>
+            <answers>
+                <answer>
+                    <body>Uniform interfaces</body>
+                    <marks>
+                        <mark type="keyword">uniform interfaces</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1158">
+            <body>What are the two types of URI?</body>
+            <answers>
+                <answer>
+                    <body>Uniform Resource Name (URN): Identification of objects by name for the purpose of persistent
+                        labeling.
+                        Uniform Resource Locator (URL): Identification via the primary access mechanism.
+                    </body>
+                    <marks>
+                        <mark type="keyword">uniform resource name</mark>
+                        <mark type="keyword">uniform resource locator</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1159">
+            <body>What are the parts of a URI?</body>
+            <answers>
+                <answer>
+                    <body>Scheme: Defines how the URI should be interpreted.
+                        Authority: Has structure userinfo@host:port .
+                        Path: Looks like the path on a file system.
+                        Query: The spec describes the query part as being a non-hierarchical part of the URI.
+                        Fragment: Used to identify a second resource.
+                    </body>
+                    <marks>
+                        <mark type="keyword">scheme</mark>
+                        <mark type="keyword">authority</mark>
+                        <mark type="keyword">path</mark>
+                        <mark type="keyword">query</mark>
+                        <mark type="keyword">fragment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1160">
+            <body>What are the main problem domains of REST (i.e. REST triangle)?</body>
+            <answers>
+                <answer>
+                    <body>Nouns (unconstrained): Things that exist.
+                        Verbs (constrained): Things you can do to the nouns.
+                        Content Types (constrained): Information you can transfer as part of an operation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">nouns</mark>
+                        <mark type="keyword">verbs</mark>
+                        <mark type="keyword">content type</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1161">
+            <body>What are the minimum methods of REST?</body>
+            <answers>
+                <answer>
+                    <body>GET: Transfers a representation from resource to client.
+                        PUT: Transfers state from a client to a resource.
+                        POST: Create a resource or add to it, if it already exists.
+                        DELETE: Requests the resource state being destroyed.
+                    </body>
+                    <marks>
+                        <mark type="keyword">get</mark>
+                        <mark type="keyword">put</mark>
+                        <mark type="keyword">post</mark>
+                        <mark type="keyword">delete</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1162">
+            <body>What are the two web service compositions?</body>
+            <answers>
+                <answer>
+                    <body>Orchestration: A single centralized executable business process coordinates the interaction
+                        among
+                        different services.
+                        Choreography: Decentralized approach to service interaction.
+                    </body>
+                    <marks>
+                        <mark type="keyword">orchestration</mark>
+                        <mark type="keyword">choreography</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1163">
+            <body>What is microservice architecture?</body>
+            <answers>
+                <answer>
+                    <body>The term “Microservice Architecture” has sprung up over the last few years to describe a
+                        particular way of designing software applications as suites of independently deployable
+                        services.
+                    </body>
+                    <marks>
+                        <mark type="keyword">application</mark>
+                        <mark type="keyword">suite</mark>
+                        <mark type="keyword">independent</mark>
+                        <mark type="keyword">service</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1164">
+            <body>What is the difference between a monolith and a microservice?</body>
+            <answers>
+                <answer>
+                    <body>A monolith application puts all its functionality into a single process and scales by
+                        replicating
+                        the monolith on multiple servers. A microservice puts each elements of functionality into a
+                        separate
+                        service and scales by distributing these services across servers, replicating as needed.
+                    </body>
+                    <marks>
+                        <mark type="keyword">functionality</mark>
+                        <mark type="keyword">single process</mark>
+                        <mark type="keyword">separate service</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1165">
+            <body>What are some of the characteristics of microservices?</body>
+            <answers>
+                <answer>
+                    <body>Products not projets: A team should own a product over its full lifetime.
+                        Smart endpoints and dump pipes: As decoupled and as cohesive as possible.
+                        Decentralized governance: Avoids standardization on a single technology platform.
+                        Decentralized data management: Each service manages its own database.
+                        Infrastructure automation: Lots of automated tests and automated deployment.
+                        Design for failure: It is important to be able to detect failures quickly and, if possible,
+                        automatically restore services.
+                        Evolutionary design: Independent replacement and upgradeability.
+                        Organized around business capabilities: Teams are cross-functional.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Products not projets</mark>
+                        <mark type="keyword">Smart endpoints and dump pipes</mark>
+                        <mark type="keyword">Decentralized governance</mark>
+                        <mark type="keyword">Decentralized data management</mark>
+                        <mark type="keyword">Infrastructure automation</mark>
+                        <mark type="keyword">Design for failure</mark>
+                        <mark type="keyword">Evolutionary design</mark>
+                        <mark type="keyword">Organized around business capabilities</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1166">
+            <body>What is important when modeling microservices?</body>
+            <answers>
+                <answer>
+                    <body>Think of business capabilities, not data models. An application domain consists of multiple
+                        bounded contexts. Residing within each bounded context are models that do not need to be shared
+                        outside, as well as other models that are shared externally.
+                    </body>
+                    <marks>
+                        <mark type="keyword">business capabilities</mark>
+                        <mark type="keyword">application domain</mark>
+                        <mark type="keyword">bounded context</mark>
+                        <mark type="keyword">model</mark>
+                        <mark type="keyword">share</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1167">
+            <body>What are some challenges in microservices?</body>
+            <answers>
+                <answer>
+                    <body>Forces developers to deal with the added complexity of a distributed system; How to partition
+                        the system into microservices; How to manage microservice orchestration; Security: large attack
+                        surface, malicious insiders, integrity
+                    </body>
+                    <marks>
+                        <mark type="keyword">distributed</mark>
+                        <mark type="keyword">partition</mark>
+                        <mark type="keyword">orchestration</mark>
+                        <mark type="keyword">security</mark>
+                    </marks>
+                </answer>
+            </answers>
         </question>
     </body>
 </exam>
