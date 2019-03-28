@@ -10,6 +10,128 @@
     </head>
     <body>
         <!-- TODO: Chapter Introduction -->
+        <question type="extended-answer" id="500">
+            <body>What are the four application domains?</body>
+            <answers>
+                <answer>
+                    <body>Embedded systems, scientific software systems, cyber-physical systems, information systems
+                    </body>
+                    <marks>
+                        <mark type="keyword">embed</mark>
+                        <mark type="keyword">scien</mark>
+                        <mark type="keyword">cyber-physic</mark>
+                        <mark type="keyword">informat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="501">
+            <body>What is an embedded system?</body>
+            <answers>
+                <answer>
+                    <body>A computer system part of a larger system performing some requirements of the system.</body>
+                    <marks>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">large</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="502">
+            <body>What are some characteristics of embedded systems?</body>
+            <answers>
+                <answer>
+                    <body>Processing: ability to process analog/digital signals. Communication: transfer information
+                        from/to outside world. Storage: Ability to preserve temporary information. User interfaces:
+                        ability to communicate with the user.
+                    </body>
+                    <marks>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">stor</mark>
+                        <mark type="keyword">interface</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="503">
+            <body>What are three important quality attributes of (real-time) embedded systems?</body>
+            <answers>
+                <answer>
+                    <body>Dependability, efficiency, real-time</body>
+                    <marks>
+                        <mark type="keyword">depend</mark>
+                        <mark type="keyword">efficien</mark>
+                        <mark type="keyword">tim</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="504">
+            <body>What type of constraint ist added in a real time system? What aspect is important?</body>
+            <answers>
+                <answer>
+                    <body>Timing constraints. Predictability is very important.</body>
+                    <marks>
+                        <mark type="keyword">tim</mark>
+                        <mark type="keyword">predict</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="505">
+            <body>What is a reactive system?</body>
+            <answers>
+                <answer>
+                    <body>A reactive system is one which is in continual interaction with its environment and executes
+                        at a pace determined by the environment (typically ES are also reactive).
+                    </body>
+                    <marks>
+                        <mark type="keyword">interact</mark>
+                        <mark type="keyword">environment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="506">
+            <body>What is an information system?</body>
+            <answers>
+                <answer>
+                    <body>An integrated set of components for collecting, storing, processing data and for delivering
+                        information, knowledge, digital products.
+                    </body>
+                    <marks>
+                        <mark type="keyword">collect</mark>
+                        <mark type="keyword">stor</mark>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">inform</mark>
+                        <mark type="keyword">know</mark>
+                        <mark type="keyword">product</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="507">
+            <body>What type of information systems are there?</body>
+            <answers>
+                <answer>
+                    <body>Transaction processing systems (repetitive, high-volume tasks), management information systems
+                        (support routine decision making in functional areas), decision support (complex non-routine
+                        decision making support), end-user computing (systems for use by users such as analysts,
+                        managers, other professionals), office automation systems (automate office tasks), intelligent
+                        support systems (expert systems), knowledge management systems, data warehousing, enterprise
+                        resource planning, mobile computing, e-business and e-commerce.
+                    </body>
+                    <marks>
+                        <mark type="keyword">transaction</mark>
+                        <mark type="keyword">decision support</mark>
+                        <mark type="keyword">office</mark>
+                        <mark type="keyword">enterprise resource planning</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
         <!-- Chapter 1: Embedded Systems (Guest Lecture) !-->
         <question type="extended-answer" id="1">
