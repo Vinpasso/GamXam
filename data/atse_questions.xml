@@ -6138,5 +6138,131 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Chapter 3.7: Blockchain-based architectures -->
+        <question type="extended-answer" id="1168">
+            <body>What is a blockchain?</body>
+            <answers>
+                <answer>
+                    <body>A blockchain is a distributed database that maintains a continuously growing list of ordered
+                        records called blocks. Each block contains a timestamp and a link to a previous block. By design
+                        blockchains are inherently resistant to modification of the data: once recorded, the data in a
+                        block cannot be altered retroactively.
+                    </body>
+                    <marks>
+                        <mark type="keyword">distributed</mark>
+                        <mark type="keyword">continuously</mark>
+                        <mark type="keyword">ordered</mark>
+                        <mark type="keyword">block</mark>
+                        <mark type="keyword">timestamp</mark>
+                        <mark type="keyword">link</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1169">
+            <body>What is the structure of a block in a blockchain?</body>
+            <answers>
+                <answer>
+                    <body>A block consists of one header and multiple transactions. The block contains at least a
+                        timestamp, the hash of the previous block, and the hash of its own transactions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">header</mark>
+                        <mark type="keyword">transaction</mark>
+                        <mark type="keyword">timestamp</mark>
+                        <mark type="keyword">hash</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1170">
+            <body>How is consensus over the current state of a blockchain reached in case of a fork?</body>
+            <answers>
+                <answer>
+                    <body>The longest chain wins.</body>
+                    <marks>
+                        <mark type="keyword">longest</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1171">
+            <body>What are the constraints for blockchain consensus mechanisms stated in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Keep the network fully decentralized; Avoid a 51% attack; Avoid a 25% economic attack</body>
+                    <marks>
+                        <mark type="keyword">decentraliz</mark>
+                        <mark type="keyword">51%</mark>
+                        <mark type="keyword">25%</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1172">
+            <body>What are the two approaches to consensus mechanisms for blockchain found in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Proof of work: Increase cost/difficulty of creating new blocks.
+                        Proof of stake: Increase cost of creating invalid blocks.
+                    </body>
+                    <marks>
+                        <mark type="keyword">proof of work</mark>
+                        <mark type="keyword">proof of stake</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1173">
+            <body>What are some advantages of blockchain?</body>
+            <answers>
+                <answer>
+                    <body>Decentralized management; Transparency of all transactions; Traceability of the complete
+                        transaction history; Pseudonymity of the wallet owners; Built-in financial incentives for early
+                        adopters and network growth
+                    </body>
+                    <marks>
+                        <mark type="keyword">decentraliz</mark>
+                        <mark type="keyword">transparency</mark>
+                        <mark type="keyword">traceability</mark>
+                        <mark type="keyword">pseudonymity</mark>
+                        <mark type="keyword">financial incentive</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1174">
+            <body>What is a smart contract?</body>
+            <answers>
+                <answer>
+                    <body>It is a cryptographically secured program run on top of a blockchain that is used by wallet
+                        owners
+                        to interact with each other.
+                    </body>
+                    <marks>
+                        <mark type="keyword">crypto</mark>
+                        <mark type="keyword">program</mark>
+                        <mark type="keyword">blockchain</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1175">
+            <body>What are some characteristic properties of smart contracts?</body>
+            <answers>
+                <answer>
+                    <body>Deterministic execution; Terminating execution; Isolated execution; Limited use of third-party
+                        library code
+                    </body>
+                    <marks>
+                        <mark type="keyword">deterministic</mark>
+                        <mark type="keyword">terminating</mark>
+                        <mark type="keyword">isolated</mark>
+                        <mark type="keyword">librar</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
