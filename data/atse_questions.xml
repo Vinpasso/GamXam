@@ -6144,18 +6144,15 @@
             <body>What is a blockchain?</body>
             <answers>
                 <answer>
-                    <body>A blockchain is a distributed database that maintains a continuously growing list of ordered
-                        records called blocks. Each block contains a timestamp and a link to a previous block. By design
-                        blockchains are inherently resistant to modification of the data: once recorded, the data in a
-                        block cannot be altered retroactively.
+                    <body>A blockchain is an immutable distributed database that maintains a continuously growing list
+                        of ordered records called blocks.
                     </body>
                     <marks>
                         <mark type="keyword">distributed</mark>
+                        <mark type="keyword">immutable</mark>
                         <mark type="keyword">continuously</mark>
                         <mark type="keyword">ordered</mark>
                         <mark type="keyword">block</mark>
-                        <mark type="keyword">timestamp</mark>
-                        <mark type="keyword">link</mark>
                     </marks>
                 </answer>
             </answers>
