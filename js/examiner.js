@@ -41,7 +41,7 @@ function initializeProgressStages() {
 
     cooldownDates = {};
 
-    history = []
+    history = [];
     refreshHistoryUI();
 }
 
@@ -75,8 +75,7 @@ function loadProgress(file) {
     let reader = new FileReader();
     reader.onload = function (e) {
         let xmlStr = reader.result;
-        let domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
-        handleProgress(domxml);
+        handleProgress(xmlStr);
     };
     reader.readAsText(file);
 }
@@ -85,16 +84,17 @@ function loadLocalProgress() {
     handleProgress(window.localStorage.getItem(local_storage_tag))
 }
 
-function handleProgress(xmlEncodedProgress) {
+function handleProgress(xmlString) {
+    let domxml = new DOMParser().parseFromString(xmlString, "text/xml");
     progressStages = [[], [], [], [], [], []];
     for (let i = 0; i < progressStages.length; i++) {
-        $(xmlEncodedProgress).find("stage[id='" + i + "']").children("question").each(function (questionIndex) {
+        $(domxml).find("stage[id='" + i + "']").children("question").each(function (questionIndex) {
             progressStages[i].push(this.innerHTML);
         });
     }
 
     cooldownDates = {};
-    $(xmlEncodedProgress).find("cooldown").each(function (cooldownIndex) {
+    $(domxml).find("cooldown").each(function (cooldownIndex) {
         cooldownDates[this.getAttribute("question")] = parseInt(this.innerHTML);
     });
 
@@ -106,7 +106,7 @@ function handleProgress(xmlEncodedProgress) {
             }
         }
     }
-    let killKeys = []
+    let killKeys = [];
     for (let key in cooldownDates) {
         if ($(exam).find("question[id='" + key + "']") === undefined) {
             killKeys.push(key);
@@ -148,16 +148,15 @@ function exportProgressToXML() {
     }
     xml.push("</stages>");
 
-    xml.push("<cooldowns>")
+    xml.push("<cooldowns>");
     for (var key in cooldownDates) {
         xml.push("<cooldown question=\"" + key + "\">" + cooldownDates[key] + "</cooldown>");
     }
-    xml.push("</cooldowns>")
+    xml.push("</cooldowns>");
 
     xml.push("</progress>");
 
-    let text = xml.join("");
-    return text;
+    return xml.join("");
 }
 
 function saveProgress() {
