@@ -5289,7 +5289,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="1116">
-            <body>What are the different type of EJB?</body>
+            <body>What are the different types of EJB?</body>
             <answers>
                 <answer>
                     <body>Session beans: Only one per client and live for just one session.
