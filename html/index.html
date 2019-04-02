@@ -24,7 +24,7 @@
     <script src="../js/tooltips.js"></script>
 </head>
 
-</body>
+<body>
 <header id="titlebar">
     <div class="d-flex flex-column flex-md-row align-items-center border-bottom shadow-sm drag-region">
         <h5 class="p-2 my-0 mr-md-auto font-weight-normal">GamXam</h5>
@@ -79,8 +79,16 @@
                         <label class="custom-file-label text-left" for="progress-file">Load progress file</label>
                     </div>
                 </div>
+                <button type="button" class="btn btn-primary px-3" id="load-local-button"
+                        onclick="loadLocalProgress()">Load Progress from Browser
+                </button>
                 <button type="button" class="btn btn-primary px-3" id="save-button"
-                                onclick="saveProgress()">Save Progress</button>
+                        onclick="saveProgress()">Save Progress
+                </button>
+                <button type="button" class="btn btn-primary px-3" id="save-local-button"
+                        onclick="saveLocalProgress()">Save Progress to Browser
+                </button>
+
                 <!-- ui section -->
                 <!-- information ui section -->
                 <div class="container-fluid" id="header-ui" style="display: none">
