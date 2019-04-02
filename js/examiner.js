@@ -7,6 +7,8 @@ let progressStages;
 let cooldownDates;
 let history;
 
+const local_storage_tag = "progress_xml";
+
 function loadExam(file) {
     examFileName = file.name.substring(0, file.name.length - 4);
     let reader = new FileReader();
@@ -82,6 +84,10 @@ function loadProgress(file) {
     reader.readAsText(file);
 }
 
+function loadLocalProgress() {
+    handleProgress(window.localStorage.getItem(local_storage_tag))
+}
+
 function handleProgress(xmlEncodedProgress) {
     progressStages = [[], [], [], [], [], []];
     for (i = 0; i < progressStages.length; i++) {
@@ -124,7 +130,7 @@ function handleProgress(xmlEncodedProgress) {
     postRandomQuestion();
 }
 
-function saveProgress() {
+function exportProgressToXML() {
     let xml = ["<?xml version=\"1.0\" encoding=\"UTF-8\" ?>", "<progress>"];
 
     xml.push("<head>");
@@ -152,6 +158,11 @@ function saveProgress() {
     xml.push("</progress>");
 
     let text = xml.join("");
+    return text;
+}
+
+function saveProgress() {
+    let text = exportProgressToXML();
     let blob = new Blob([text], { type: 'text/xml' });
     let anchor = document.createElement('a');
 
@@ -161,6 +172,12 @@ function saveProgress() {
     anchor.click();
 
     window.URL.revokeObjectURL(blob);
+}
+
+
+function saveLocalProgress() {
+    let text = exportProgressToXML();
+    window.localStorage.setItem(local_storage_tag, text);
 }
 
 function postQuestion(index, newQuestion) {
