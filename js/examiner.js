@@ -46,11 +46,15 @@ function initializeProgressStages() {
 }
 
 function refreshProgressUI() {
+    let learningProgressTooltip = "Learning progress:<p/>";
     for (i = 0; i < progressStages.length; i++) {
         let percentage = parseFloat(progressStages[i].length) / parseFloat(examLength) * parseFloat(100);
-        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).attr("aria-valuenow", percentage.toString())
-        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).css("width", percentage.toString() + "%")
+        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).attr("aria-valuenow", percentage.toString());
+        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).css("width", percentage.toString() + "%");
+        learningProgressTooltip += "Stage " + (i + 1) + ": " + progressStages[i].length + "<p/>";
     }
+    // Remove the superfluous last two characters
+    $("#progress-ui").attr("data-original-title", learningProgressTooltip.trim());
 }
 
 function refreshHistoryUI() {

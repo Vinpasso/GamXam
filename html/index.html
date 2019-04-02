@@ -8,16 +8,16 @@
     <meta name="author" content="Jan Felix Hoops">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
     <script src="../js/window_controls.js"></script>
     <script src="../js/tab_controls.js"></script>
     <script src="../js/examiner.js"></script>
@@ -49,13 +49,13 @@
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 px-0">
         <div class="list-group list-hard">
             <a class="list-group-item text-center noselect tab-link active" onclick="openTab(event, 'training')">
-                <i class="fas fa-graduation-cap"></i><br />Training
+                <i class="fas fa-graduation-cap"></i><br/>Training
             </a>
             <a class="list-group-item text-center noselect tab-link" onclick="openTab(event, 'adventure')">
-                <i class="fas fa-book"></i><br />Adventure Training
+                <i class="fas fa-book"></i><br/>Adventure Training
             </a>
             <a class="list-group-item text-center noselect tab-link" onclick="openTab(event, 'editor')">
-                <i class="fas fa-pen"></i><br />Editor
+                <i class="fas fa-pen"></i><br/>Editor
             </a>
             <div class="list-group-item inactive-item">
             </div>
@@ -102,21 +102,21 @@
                     </div>
                     <div class="card mb-4">
                         <div class="row">
-                            <div class="col-sm py-2 px-4" data-toggle="tooltip" title="Learning Progress"
-                                id="progress-ui">
+                            <div class="col-sm py-2 px-4" data-toggle="tooltip" data-html="true"
+                                 title="Learning Progress" id="progress-ui">
                                 <div class="progress">
                                     <div class="progress-bar bg-stage-1" role="progressbar" style="width: 20%"
-                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                     <div class="progress-bar bg-stage-2" role="progressbar" style="width: 16%"
-                                        aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                                         aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                                     <div class="progress-bar bg-stage-3" role="progressbar" style="width: 16%"
-                                        aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                                         aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                                     <div class="progress-bar bg-stage-4" role="progressbar" style="width: 16%"
-                                        aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                                         aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                                     <div class="progress-bar bg-stage-5" role="progressbar" style="width: 16%"
-                                        aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                                         aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                                     <div class="progress-bar bg-stage-6" role="progressbar" style="width: 16%"
-                                        aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                                         aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +155,8 @@
                         <div class="card-body">
                             <textarea class="form-control mb-4" id="response" rows="3"></textarea>
                             <button type="button" class="btn btn-primary" id="response-submit-button"
-                                onclick="autoGradeResponse($('#response').val())">Submit (ctrl-return)</button>
+                                    onclick="autoGradeResponse($('#response').val())">Submit (ctrl-return)
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -167,7 +168,8 @@
                         </div>
                         <div class="card-body">
                             <button type="button" class="btn btn-primary" onclick="postRandomQuestion()">Next
-                                Question</button>
+                                Question
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -191,11 +193,14 @@
                         </div>
                         <div class="card-body" id="question-card">
                             <button type="button" class="btn btn-primary" id="grading-incorrect-button"
-                                onclick="gradeResponse('incorrect')">Incorrect</button>
+                                    onclick="gradeResponse('incorrect')">Incorrect
+                            </button>
                             <button type="button" class="btn btn-primary" id="grading-partially-button"
-                                onclick="gradeResponse('partially')">Partially Correct</button>
+                                    onclick="gradeResponse('partially')">Partially Correct
+                            </button>
                             <button type="button" class="btn btn-primary" id="grading-correct-button"
-                                onclick="gradeResponse('correct')">Correct</button>
+                                    onclick="gradeResponse('correct')">Correct
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -216,6 +221,6 @@
             </div>
         </div>
     </div>
-    </body>
+</body>
 
 </html>
