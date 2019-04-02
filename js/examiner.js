@@ -46,11 +46,15 @@ function initializeProgressStages() {
 }
 
 function refreshProgressUI() {
+    let learningProgressTooltip = "Learning progress:<p/>";
     for (i = 0; i < progressStages.length; i++) {
         let percentage = parseFloat(progressStages[i].length) / parseFloat(examLength) * parseFloat(100);
-        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).attr("aria-valuenow", percentage.toString())
-        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).css("width", percentage.toString() + "%")
+        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).attr("aria-valuenow", percentage.toString());
+        $("#progress-ui > .progress > .bg-stage-" + (i + 1)).css("width", percentage.toString() + "%");
+        learningProgressTooltip += "Stage " + (i + 1) + ": " + progressStages[i].length + "<p/>";
     }
+    // Remove the superfluous last two characters
+    $("#progress-ui").attr("data-original-title", learningProgressTooltip.trim());
 }
 
 function refreshHistoryUI() {
@@ -85,11 +89,13 @@ function loadLocalProgress() {
 }
 
 function handleProgress(xmlString) {
+    let numImported = 0;
     let domxml = new DOMParser().parseFromString(xmlString, "text/xml");
     progressStages = [[], [], [], [], [], []];
     for (let i = 0; i < progressStages.length; i++) {
         $(domxml).find("stage[id='" + i + "']").children("question").each(function (questionIndex) {
             progressStages[i].push(this.innerHTML);
+            numImported++;
         });
     }
 
@@ -127,9 +133,20 @@ function handleProgress(xmlString) {
 
     refreshProgressUI();
     postRandomQuestion();
+    showAlert("Successfully imported " + numImported + " progress save elements.");
+}
+
+function showAlert(content) {
+    $("#alerts").append("<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\" id=\"alert-box\">\n" +
+        "                        <span id=\"alert-box-content\">" + content + "</span>\n" +
+        "                        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n" +
+        "                            <span aria-hidden=\"true\">&times;</span>\n" +
+        "                        </button>\n" +
+        "                    </div>\n");
 }
 
 function exportProgressToXML() {
+    let exportedElements = 0;
     let xml = ["<?xml version=\"1.0\" encoding=\"UTF-8\" ?>", "<progress>"];
 
     xml.push("<head>");
@@ -143,6 +160,7 @@ function exportProgressToXML() {
         xml.push("<stage id=\"" + i + "\">");
         for (j = 0; j < progressStages[i].length; j++) {
             xml.push("<question>" + progressStages[i][j] + "</question>");
+            exportedElements++;
         }
         xml.push("</stage>");
     }
@@ -156,6 +174,7 @@ function exportProgressToXML() {
 
     xml.push("</progress>");
 
+    showAlert("Successfully exported " + exportedElements + " progress elements.");
     return xml.join("");
 }
 
