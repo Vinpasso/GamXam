@@ -69,9 +69,6 @@ function refreshHistoryUI() {
             $("#history-ui")[0].innerHTML = "<span class=\"filled-circle correct-circle\"></span>" + $("#history-ui")[0].innerHTML;
         }
     }
-    for (i = history.length; i < 20; i++) {
-
-    }
 }
 
 function loadProgress(file) {
@@ -90,7 +87,7 @@ function loadLocalProgress() {
 
 function handleProgress(xmlEncodedProgress) {
     progressStages = [[], [], [], [], [], []];
-    for (i = 0; i < progressStages.length; i++) {
+    for (let i = 0; i < progressStages.length; i++) {
         $(xmlEncodedProgress).find("stage[id='" + i + "']").children("question").each(function (questionIndex) {
             progressStages[i].push(this.innerHTML);
         });
@@ -102,8 +99,8 @@ function handleProgress(xmlEncodedProgress) {
     });
 
     // handle removed questions
-    for (i = 0; i < progressStages.length; i++) {
-        for (j = 0; j < progressStages[i].length; j++) {
+    for (let i = 0; i < progressStages.length; i++) {
+        for (let j = 0; j < progressStages[i].length; j++) {
             if ($(exam).find("question[id='" + progressStages[i][j] + "']") === undefined) {
                 progressStages[i].splice(j, 1);
             }
@@ -118,8 +115,10 @@ function handleProgress(xmlEncodedProgress) {
     for (key of killKeys) {
         delete cooldownDates[key];
     }
+
     // handle new questions
-    for (i = 0; i < examLength; i++) {
+    for (let i = 0; i < examLength; i++) {
+        console.log(i);
         let q = exam.getElementsByTagName("question")[i];
         if (getStageOfQuestion(q.getAttribute("id")) === null) {
             progressStages[0].push(q.getAttribute("id"));
