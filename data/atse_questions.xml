@@ -60,7 +60,7 @@
                 <answer>
                     <body>Dependability, efficiency, real-time</body>
                     <marks>
-                        <mark type="keyword">depend</mark>
+                        <mark type="regex" regex-flags="i">depend|reliab</mark>
                         <mark type="keyword">efficien</mark>
                         <mark type="keyword">tim</mark>
                     </marks>
@@ -428,7 +428,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="524">
-            <body>What are some run-time quality aspects according tot ISO 9126?</body>
+            <body>What are some run-time quality aspects according to ISO 9126?</body>
             <answers>
                 <answer>
                     <body>Usability, reliability, efficiency, functionality</body>
@@ -658,7 +658,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="9">
-            <body>What is a concern in relation to software architecture?</body>
+            <body>What is a concern in relation to software architecture? What are some typical concerns?</body>
             <answers>
                 <answer>
                     <body>An interest which pertains to the system's development, its operation, or any other aspect
@@ -670,6 +670,7 @@
                         <mark type="keyword">dev</mark>
                         <mark type="keyword">operat</mark>
                         <mark type="keyword">stakeholder</mark>
+                        <mark type="keyword">security</mark>
                     </marks>
                 </answer>
             </answers>
@@ -978,6 +979,7 @@
                     </body>
                     <marks>
                         <mark type="regex">application.*domain</mark>
+                        <mark type="keyword">spread</mark>
                         <mark type="regex">understand|maintain</mark>
                     </marks>
                 </answer>
@@ -1074,6 +1076,9 @@
                     </body>
                     <marks>
                         <mark type="keyword">reuse</mark>
+                        <mark type="keyword">entit</mark>
+                        <mark type="keyword">interfac</mark>
+                        <mark type="keyword">executab</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1694,8 +1699,8 @@
                         <mark type="keyword">proof</mark>
                         <mark type="keyword">propagat</mark>
                         <mark type="keyword">reus</mark>
-                        <mark type="keyword">comprehen</mark>
-                        <mark type="keyword">overdo</mark>
+                        <mark type="regex" regex-flags="i">comprehen|understand</mark>
+                        <mark type="keyword">over</mark>
                     </marks>
                 </answer>
             </answers>
