@@ -60,7 +60,7 @@
                 <answer>
                     <body>Dependability, efficiency, real-time</body>
                     <marks>
-                        <mark type="keyword">depend</mark>
+                        <mark type="regex" regex-flags="i">depend|reliab</mark>
                         <mark type="keyword">efficien</mark>
                         <mark type="keyword">tim</mark>
                     </marks>
@@ -428,7 +428,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="524">
-            <body>What are some run-time quality aspects according tot ISO 9126?</body>
+            <body>What are some run-time quality aspects according to ISO 9126?</body>
             <answers>
                 <answer>
                     <body>Usability, reliability, efficiency, functionality</body>
@@ -658,7 +658,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="9">
-            <body>What is a concern in relation to software architecture?</body>
+            <body>What is a concern in relation to software architecture? What are some typical concerns?</body>
             <answers>
                 <answer>
                     <body>An interest which pertains to the system's development, its operation, or any other aspect
@@ -670,6 +670,7 @@
                         <mark type="keyword">dev</mark>
                         <mark type="keyword">operat</mark>
                         <mark type="keyword">stakeholder</mark>
+                        <mark type="keyword">security</mark>
                     </marks>
                 </answer>
             </answers>
@@ -978,6 +979,7 @@
                     </body>
                     <marks>
                         <mark type="regex">application.*domain</mark>
+                        <mark type="keyword">spread</mark>
                         <mark type="regex">understand|maintain</mark>
                     </marks>
                 </answer>
@@ -1074,6 +1076,9 @@
                     </body>
                     <marks>
                         <mark type="keyword">reuse</mark>
+                        <mark type="keyword">entit</mark>
+                        <mark type="keyword">interfac</mark>
+                        <mark type="keyword">executab</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1133,7 +1138,7 @@
                         interfaces. Hierarchical composition: One component hooks into the exposed interface of another
                         component. Adaptive composition: A wrapper surrounds the internal components and wraps around
                         the incoming and outgoing dependencies.
-                        <img src="res/39_composition.png"/>
+                        <img src="../data/res/39_composition.png"/>
                     </body>
                     <marks>
                         <mark type="keyword">sequen</mark>
@@ -1694,8 +1699,8 @@
                         <mark type="keyword">proof</mark>
                         <mark type="keyword">propagat</mark>
                         <mark type="keyword">reus</mark>
-                        <mark type="keyword">comprehen</mark>
-                        <mark type="keyword">overdo</mark>
+                        <mark type="regex" regex-flags="i">comprehen|understand</mark>
+                        <mark type="keyword">over</mark>
                     </marks>
                 </answer>
             </answers>
@@ -2464,7 +2469,7 @@
         <question type="extended-answer" id="127">
             <body>Label the numbered items in the feature diagram:
                 <p/>
-                <img src="res/127_feature_diagram.png"/>
+                <img src="../data/res/127_feature_diagram.png"/>
             </body>
             <answers>
                 <answer>
@@ -2628,7 +2633,7 @@
         <question type="extended-answer" id="138">
             <body>Fill in the blanks:
                 <p/>
-                <img src="res/138_ple.png"/>
+                <img src="../data/res/138_ple.png"/>
             </body>
             <answers>
                 <answer>
@@ -5289,7 +5294,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="1116">
-            <body>What are the different type of EJB?</body>
+            <body>What are the different types of EJB?</body>
             <answers>
                 <answer>
                     <body>Session beans: Only one per client and live for just one session.
@@ -6261,5 +6266,1115 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Exercises -->
+        <question type="extended-answer" id="11000">
+            <body>What is the difference between commit and push?</body>
+            <answers>
+                <answer>
+                    <body>A commit puts files in the &quot;staged&quot; status and transfers them into the &quot;committed&quot;
+                        status, where their state is preserved in the form of a snapshot (commit). A push attempts to
+                        update the remote HEAD of a branch to the local head, transferring commits as necessary. (User
+                        contributed answer).
+                    </body>
+                    <marks>
+                        <mark type="keyword">stage</mark>
+                        <mark type="keyword">commit</mark>
+                        <mark type="keyword">branch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11001">
+            <body>How does the revision graph change after a commit?</body>
+            <answers>
+                <answer>
+                    <body>The current branch log gets a new entry at the head, corresponding to the commit.</body>
+                    <marks>
+                        <mark type="keyword">branch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12000">
+            <body>Name and briefly explain one example for an agile and a rigid development process. (Exercise 2.1.1)
+            </body>
+            <answers>
+                <answer>
+                    <body>Two of the following: Agile: Scrum, Kanban. Rigid: Waterfall, V-Model, Spiral, Unified
+                        Process.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">scrum|kanban</mark>
+                        <mark type="regex" regex-flags="i">waterfall|v-model|spiral|unified</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12001">
+            <body>What are the main characteristics of agile and rigid software development?</body>
+            <answers>
+                <answer>
+                    <body>TODO from solution</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12002">
+            <body>When does it make sense and when does it not make sense to implement agile/rigid software
+                development.
+            </body>
+            <answers>
+                <answer>
+                    <body>TODO from solution</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12003">
+            <body>Discuss and provide rationale for a suitable development process in the following scenario:
+                Crusader Tours wants to develop a Smartphone App for its new Crusader 50 shuttle service. The apps hould
+                encompass trip planning, ticket purchase, and customer notification functionality. The front-end of the
+                App should be developed by an external contractor while the back-end will be developed in-house. To keep
+                the development effort lean, the CT management decided to reuse artifacts from the already existing CT
+                Mobility App.
+            </body>
+            <answers>
+                <answer>
+                    <body>TODO from solution</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12004">
+            <body>Discuss and provide rationale for a suitable development process in the following scenario:
+                Bokanovsky and Podsnap, a small start-up that specialized in planning private childcare, wants to
+                develop a new web platform to allow parents to look for and students to offer private child care. The
+                service is new and up to now there are no comparable web platforms available. As the start-up is rather
+                young and the business model is not fully fixed yet, it is likely that a lot of the web platform
+                features will have to be added or changed over time.
+            </body>
+            <answers>
+                <answer>
+                    <body>Probably an agile development process, since the company expects significant change occurring
+                        over the process of development. Another reason for agile is that there is not much need for
+                        reformation of existing organization structure in a small startup.
+                    </body>
+                    <marks>
+                        <mark type="keyword">agile</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12005">
+            <body>Discuss and provide rationale for a suitable development process in the following scenario:
+                Spinner, a big car manufacturer, now finally wants to take the next big technological step and
+                from scratch create a autonomous driving software component to be incorporated in the next-gen
+                premium line vehicles. As the company still lacks expertise in some key technologies like sensor fusion,
+                a small sensor software development company was recently purchased. The release of the first
+                working prototype is under severe time pressure as competing car manufacturers are known to work on
+                a similar car model.
+            </body>
+            <answers>
+                <answer>
+                    <body>Another agile process is likely suitable here, since there is extreme time pressure (agile
+                        places emphasis on quick delivery of minimum viable products) and knowledge from the small
+                        company needs to be integrated, probably causing changes in the project staff over time.
+                        However, it is also likely that the big car manufacturer might not have a suitable organization
+                        structure for agile development.
+                    </body>
+                    <marks>
+                        <mark type="keyword">agile</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12006">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                1. All information concerning maintenance and utilization of the ATM must not be accessible to
+                people other than service technicians.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12007">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                2. The ATM must be operational at least 360 days a year.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12008">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                3. The image of the controller software running on the ATM must not be bigger than 10KByte.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12009">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                4. The ATM graphical user interface has to be localized for at least the five most common languages.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12010">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                5. All sensors within the ATM need to be able to communicate with each other.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12010">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                6. The mechanical and electrical component of the ATM must comply to the ISO 26262 safety standard.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12010">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                7. The software of the ATM must also be installable on the next-generation X78-B ATM hardware platform.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12011">
+            <body>What potential tradeoffs need to be considered in the following requirements?
+                1. All information concerning maintenance and utilization of the ATM must not be accessible to
+                people other than service technicians.
+                2. The ATM must be operational at least 360 days a year.
+                3. The image of the controller software running on the ATM must not be bigger than 10KByte.
+                4. The ATM graphical user interface has to be localized for at least the five most common languages.
+                5. All sensors within the ATM need to be able to communicate with each other.
+                6. The mechanical and electrical component of the ATM must comply to the ISO 26262 safety standard.
+                7. The software of the ATM must also be installable on the next-generation X78-B ATM hardware platform.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12012">
+            <body>How does one add a dependency to a Maven project?</body>
+            <answers>
+                <answer>
+                    <body>By adding the dependency&quot;s group-id, artifact-id and version to the POM xml file, and
+                        specifying a repository as required.
+                    </body>
+                    <marks>
+                        <mark type="keyword">pom</mark>
+                        <mark type="keyword">group</mark>
+                        <mark type="keyword">artifact</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12013">
+            <body>How does one add a repository to a Maven project?</body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12014">
+            <body>Where on the filesystem do you have to create the source file for the
+                class de.tum.in.www22.example.Main in a Maven project?
+            </body>
+            <answers>
+                <answer>
+                    <body>In src/main/java/de/tum/in/www22/example/Main.java</body>
+                    <marks>
+                        <mark type="keyword">src</mark>
+                        <mark type="keyword">main</mark>
+                        <mark type="keyword">java</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12015">
+            <body>Which maven command do you need to use to generate a jar file?</body>
+            <answers>
+                <answer>
+                    <body>mvn package</body>
+                    <marks>
+                        <mark type="keyword">package</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="13000">
+            <body>Consider the advantages and disadvantages of different hardware platforms listed below. Give a short
+                rationale regarding what platform would you choose in a certain situation. Consider non-functional
+                requirements like security, privacy, ease of use and cost.
+                <p/>
+                Alternatives for data storage system:
+                <p/>
+                1. Central server (farm) with or without an off-site standby system
+                <p/>
+                2. Cloud deployment
+                <p/>
+                3. Distributed P2P architecture
+                <p/>
+                Application alternatives:
+                <p/>
+                1. Web application
+                <p/>
+                2. Desktop application
+                <p/>
+                3. Mobile application
+                <p/>
+                4. Custom build handset (e.g. based on something like a Raspberry Pi with a screen in a 3D printed
+                case).
+            </body>
+            <answers>
+                <answer>
+                    <body>Web application:
+                        Desktop application:
+                        Mobile application:
+                        Custom built handset:
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="13001">
+            <body>What is structured, semi-structured, unstructured data? Compare SQL, JSON, XML, photographs, audio
+                recordings.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="13002">
+            <body>Which technology (structured, semi-structured, unstructured data) is applicable to the following
+                applications?
+                • Store accounting information.
+                • Exchange data between a database backend and a JavaScript web
+                application frontend.
+                • Exchange customer records between different customer relation systems.
+                • To make audio recordings of meetings.
+                • An information system where documents are stored and can reference each other. In this system it shall
+                be possible for third parties to easily connect their own systems to existing systems.
+                • A sensor network that has to transmit sensor data (e.g. temperature and humidity) to a central data
+                store.
+                • Compare the price lists obtained from different data sources at client side.
+                • Store and process the communication meta-data of different social networks in a central repository.
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Practice Exam -->
+        <question type="extended-answer" id="30000">
+            <body>1. Name 4 characteristics of distributed systems.</body>
+            <answers>
+                <answer>
+                    <body>•Reliability •Availability •Security •Scalability</body>
+                    <marks>
+                        <mark type="keyword">reliab</mark>
+                        <mark type="keyword">availa</mark>
+                        <mark type="keyword">securit</mark>
+                        <mark type="keyword">scal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30001">
+            <body>2. Briefly explain the differences between horizontal and vertical scaling.</body>
+            <answers>
+                <answer>
+                    <body>•Horizontal — Add more machines •Vertical – Add more hardware</body>
+                    <marks>
+                        <mark type="keyword">hardware</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30002">
+            <body>3. Briefly explain the MapReduce algorithm and translate the following SQL statement to a MapReduce
+                function:
+                SELECT employee FROM employees WHERE salary_level > 3
+            </body>
+            <answers>
+                <answer>
+                    <body>A MapReduce program is composed of a map procedure (or method), which performs filtering and
+                        sorting (such as sorting students by first name into queues, one queue for each name), and a
+                        reduce method, which performs a summary operation (such as counting the number of students in
+                        each queue, yielding name frequencies) (Model-Solution, Wikipedia).
+                        <p/>
+                        map(key, record):
+                        <p/>
+                        if(record.salary_level > 3)
+                        <p/>
+                        selection = &lt;record.employee&gt;<p/>
+                        collect(key, selection)
+                    </body>
+                    <marks>
+                        <mark type="keyword">filter</mark>
+                        <mark type="keyword">sort</mark>
+                        <mark type="regex" regex-flags="i">summary|aggregat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30003">
+            <body>4. Briefly explain the differences between Data Marts and Data Cubes.</body>
+            <answers>
+                <answer>
+                    <body>A data mart (DM) is a subset or an aggregation of the data stored to primary warehouse. Data
+                        cubes are aggregated facts based on chosen dimensions. Data cubes are three dimensional data
+                        structures.
+                    </body>
+                    <marks>
+                        <mark type="keyword">subset</mark>
+                        <mark type="keyword">aggregat</mark>
+                        <mark type="keyword">dimension</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30004">
+            <body>1. Briefly describe the difference between Security and Safety in software systems.</body>
+            <answers>
+                <answer>
+                    <body>Security — Protection of systems (products, devices) from external hazards.
+                        •Safety — Protection against hazards and risks originating from the operation of a
+                        system(product, device).
+                    </body>
+                    <marks>
+                        <mark type="keyword">extern</mark>
+                        <mark type="keyword">operat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30005">
+            <body>2. Briefly explain the least privilege principle and give an example for it.</body>
+            <answers>
+                <answer>
+                    <body>Every subject should not have more privileges than necessary to complete its (approved) job.
+                        Keys/locks in an office building are mechanism for implementing least privilege: office workers
+                        working regular hours only need keys to own office. The janitor has keys to all doors apart from
+                        safes.
+                    </body>
+                    <marks>
+                        <mark type="keyword">privilege</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30006">
+            <body>3. Below you’ll find an illustration of a potential attack tree. State the paths for the most
+                expensive and the cheapest attack for opening the the save and state how costly each of the paths is.
+                <img src="../data/res/30006_attack_tree.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>Cheapest — Cut Open Safe (10K) •Most expensive — Blackmail (100k) LEADS TO Get Combo From
+                        Target LEADS TO Open Safe OR Install Improperly LEADS TO Open Safe
+                    </body>
+                    <marks>
+                        <mark type="keyword">cut</mark>
+                        <mark type="keyword">blackmail</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30007">
+            <body>4. You were hired by a local software development company as security consultant. As a first task, you
+                should analyze the following programme:
+                <pre>
+                    1
+                    2 public class UserCount {
+                    4 public static boolean duplicateUser(String username) throws Exception {
+                    6 //...
+                    7 String sqlStatement = "SELECT COUNT(*) FROM user_table where username = " + username;
+                    8 // ...
+                    9 int count = jdbcConnection.execute(sqlStatement);
+                    10 if(count &lt;= 1) {
+                    11 return true;
+                    12 }
+                    13 return true;
+                    14 }
+                    15 }
+                    17 public class Main {
+                    19 public void doSomething() {
+                    20 // ...
+                    21 // POST("ATTRIBUTE_NAME") receives unfiltered HTTP post request from the client
+                    22 String username = POST("username")
+                    23 UserCount.duplicateUser(username);
+                    24 //..
+                    25 }
+                    27 }
+                </pre>
+                <pre>
+                    (a) Name the vulnerability and briefly describe how an attacker can potentially exploit the code
+                    above.
+                    (b) Briefly explain how the vulnerability can be fixed.
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>SQL Injection •An attack can inject some SQL statement into the POST(”username”) variable. For
+                        example, ’ ABB” OR 1=1’ –; Use prepared statements or escape the user inputs properly before
+                        creating the SQL statement string.
+                    </body>
+                    <marks>
+                        <mark type="keyword">sql</mark>
+                        <mark type="keyword">prepared</mark>
+                        <mark type="keyword">escape</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30008">
+            <body>1. What are the ”7 deadly sins” in software practice? Name three of them and describe each with one
+                sentence.
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            •Haste — Solutions based on hasty decisions (”time is most important”) lead to compromises
+                            in software quality
+                            •Apathy — Not caring about a problem, followed by unwillingness to attempt a solution
+                            •Narrow-mindedness — The refusal to use solutions that are widely known (”Why reuse?I only
+                            have to solve one problem”)
+                            •Sloth — Making poor decisions based on ”easy” answers
+                            •Avarice — No use of abstractions, excessive modeling of details
+                            •Ignorance — Failure to seek understanding
+                            •Pride — Not invented here (NIH): Not willing to adopt anything from the outside
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">
+                            ((haste|apathy|narrow-minded|sloth|avarice|ignor|pride).*){3}
+                        </mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30009">
+            <body>2. Analyse the following UML class diagram for an exam management system.
+                <img src="../data/res/30009_uml_diagram.png"/>
+                Which of the anti-patterns discussed in the lecture can you identify? Justify your answer.
+            </body>
+            <answers>
+                <answer>
+                    <body>The Blob.</body>
+                    <marks>
+                        <mark type="regex">blob</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30010">
+            <body>2. Analyse the following UML class diagram for an exam management system.
+                <img src="../data/res/30009_uml_diagram.png"/>
+                Re-factor the design of the system and draw the new UML class diagram without the anti-pattern.
+            </body>
+            <answers>
+                <answer>
+                    <body>Model solution:
+                        <img src="30010_uml_solution.png"/>
+                    </body>
+                    <marks>
+                        <mark type="manual"/>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30011">
+            <body>2. Analyse the following UML class diagram for an exam management system.
+                <img src="../data/res/30009_uml_diagram.png"/>
+                (c) Name three typical causes for the anti-pattern you identified in (a).
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            •Lack of an object-oriented architecture. The designers may not have an adequate
+                            understanding of object-oriented principles.
+                            •Lack of (any) architecture. The absence of definition of the system components, their
+                            interactions, and the specific use of the selected programming languages.
+                            •Lack of architecture enforcement. Sometimes this Antipattern grows accidentally, even after
+                            a reasonable architecture was planned. This may be the result of inadequate architectural
+                            review as development takes place.
+                            •Too limited intervention. In iterative projects, developers tend to add little pieces of
+                            functionality to existing working classes, rather than add new classes, or revise the class
+                            hierarchy for more effective allocation of responsibilities.
+                            •Specified disaster. Sometimes the Blob results from the way requirements are specified. If
+                            the requirements dictate a procedural solution, then architectural commitments may be made
+                            during requirements analysis that are difficult to change.
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">object-orient|architect|enforce|intervent|disaster</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30012">
+            <body>Name two characteristics of smart contract platforms.</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            •Focus on the precise, algorithmic descriptions of the rights and obligations of the
+                            contracting parties based on a shared state
+                            •Trackability of all transactions
+                            •Use of cryptographic methods
+                            •Domain-specific languages
+                            •Decentralized peer-to-peer execution environment
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="regex">((obligat|track|crypto|domain|decentral).*){2}</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30013">
+            <body>2. Describe the role of a wallet owner in a blockchain network as described in the lecture.</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            •has private key to unspent transactions
+                            •owns the money
+                            •sends money by signing and publishing new transactions
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">private</mark>
+                        <mark type="keyword">money</mark>
+                        <mark type="keyword">sign</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30014">
+            <body>3. Name two advantages and two disadvantages of blockchain-based systems compared to centralized
+                platforms.
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            Advantages:
+                            •Transparency
+                            •Traceability
+                            •Trust-free
+                            •Decentralised and redundant
+                            •...
+                            Disadvantages:
+                            •Transaction costs
+                            •Governance
+                            •Complexity
+                            •...
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="regex">((trans|trace|trust|decentral|redund).*){2}</mark>
+                        <mark type="regex">((transact|govern|complex).*){2}</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30015">
+            <body>1. What is the Dependency Structure Matrix?</body>
+            <answers>
+                <answer>
+                    <body>Dependency Structure Matrix (DSM) is a compact way to express dependencies in a
+                        software project. It helps developers to understand components that belong together and suggests
+                        a way to partition a program.
+                    </body>
+                    <marks>
+                        <mark type="keyword">compact</mark>
+                        <mark type="keyword">depend</mark>
+                        <mark type="keyword">partit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30016">
+            <body>2. Given the following java class.
+                <pre>
+                    1 public boolean transferMoney(Account sourceAccount, Account targetAccount,BigDecimal moneyAmount)
+                    {
+                    2 sourceAccount.transfer(targetAccount, moneyAmount);
+                    3 return true;
+                    4 }
+                </pre>
+                Under what circumstances might this function fail? Write suitable two pre-conditions and one post-
+                condition for this Java function.
+            </body>
+            <answers>
+                <answer>
+                    <body>If the amount of the transferred money is less than zero, or the source account has no money
+                        at all, or after the transfer the source account will be negative.
+                        <pre>
+                            assert (moneyAmount.compareTo(BigDecimal.ZERO) &lt;= 0;
+                            assert (sourceAccount.getBalance().compareTo(BigDecimal.ZERO) &lt;= 0);
+                            sourceAccount.transfer(targetAccount, moneyAmount);
+                            assert (sourceAccount.getBalance().compareTo(BigDecimal.ZERO) &lt;= 0);
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">zero|negative</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30017">
+            <body>3. You are working as a software developer in GameForLife company. They are developing a new
+                multiplayer online role-playing game (MMORPG) based on real life birds. Your colleague developed the
+                following interface as a base for birds:
+                <pre>
+                    1 public interface Bird {
+                    2 public boolean eat(){}
+                    3 public boolean fly(){}
+                    4 public boolean breed(){}
+                    5 }
+                </pre>
+                Afterwards you finished your implementation for both eagle and penguin and submit it as follows:
+                <pre>
+                    1 public class Eagle implements Bird {
+                    2 public boolean eat() {
+                    3 ....
+                    4 // Some code
+                    5 ....
+                    6 }
+                    7 public boolean fly() {
+                    8 ....
+                    9 // Some code
+                    10 ....
+                    11 }
+                    12 public boolean breed(){
+                    13 ....
+                    14 // Some code
+                    15 ....
+                    16 }
+                    17}
+                    18
+                    19public class Penguin implements Bird {
+                    20 public boolean eat(){
+                    21 ....
+                    22 // Some code
+                    23 ....
+                    24 }
+                    25 public boolean fly(){
+                    26 ....
+                    27 // Some code
+                    28 ....
+                    29 }
+                    30 public boolean breed(){
+                    31 ....
+                    32 // Some code
+                    33 ....
+                    34}
+                    35}
+                </pre>
+                Later on your boss came and asked you the following questions:
+                <pre>
+                    (a) Is Eagle and Penguin a valid Java implementation ofBird? Why/why not?
+                    (b) Is the implementation consistent with Liskov’s substitution principle?
+                    If yes, why?
+                    If not, how would you make it consistent by writing a correct java implementation.
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>Yes, it is a valid implementation. Because it implements all the methods of the interface
+                        Bird.
+                        No, it violates LSP. LSP states that a user should be able to use an
+                        implementation transparently. However, Penguins can’t fly. Solution:Remove fly from the Bird
+                        interface. Extend the interface to FlyBird and NonFlyBirds.
+                    </body>
+                    <marks>
+                        <mark type="keyword">implement</mark>
+                        <mark type="keyword">transparent</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30019">
+            <body>Explain briefly what is the testability of a program.</body>
+            <answers>
+                <answer>
+                    <body>We will accept definitions from slide 10 or 12 of chapter 2.4:
+                        <p/>
+                        The degree to which a system or
+                        component facilitates the establishment of test criteria and the performance of tests to
+                        determine whether those criteria have been met. The degree to which a requirement is stated in
+                        therms that permit establishment of test criteria and performance of tests to determine whether
+                        those criteria have been met.
+                        <p/>
+                        Alternative: Testability is the likelihood of a program to fail with the next test (given a
+                        particular assumed input distribution) if the software includes a bug.
+                    </body>
+                    <marks>
+                        <mark type="keyword">criter</mark>
+                        <mark type="keyword">require</mark>
+                        <mark type="keyword">bug</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30020">
+            <body>The Storage-For-You company provides storage renting rooms for customers in various locations in
+                Germany. As a tester for the company you are given the task of testing their storage processing system.
+                Assume that a storage room record looks like this:
+                <pre>
+                    •ID: int from 1 - 10000.
+                    •address: String [a-zA-Z0-9\s] with exactly 30 characters.
+                    •price: float, that varies form 5 euro per day to 20 euro per day. Rates are multiples of 0.5 euro.
+                    •size: float, that ranges from 1 to 30 meter squares. Sizes are multiples of 1 meter squares.
+                </pre>
+                (a) How many possible types of records (and thus test cases) are there?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            ID: 10000
+                            •address: 6330characters
+                            •price: 31 daily rates
+                            •size: 30 possible sizes
+                            In total we have:10000×6330×31×30≈8.89×10^60
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">8.89</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30021">
+            <body>The Storage-For-You company provides storage renting rooms for customers in various locations in
+                Germany. As a tester for the company you are given the task of testing their storage processing system.
+                Assume that a storage room record looks like this:
+                <pre>
+                    •ID: int from 1 - 10000.
+                    •address: String [a-zA-Z0-9\s] with exactly 30 characters.
+                    •price: float, that varies form 5 euro per day to 20 euro per day. Rates are multiples of 0.5 euro.
+                    •size: float, that ranges from 1 to 30 meter squares. Sizes are multiples of 1 meter squares.
+                </pre>
+                (b) Assume the execution of each test case takes 2ms,
+                i. Is it feasible to completely test this program? Justify your answer!
+                ii. How could you reduce the input space test the program without having issues later? If you have a
+                continues integration server that runs all test cases every night (assume a night lasts 11 hours) can
+                you test all your test cases or do you need more servers?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            No. As the high number of possibilities for the address has the biggest impact, it
+                            makes sense to reduce that number. String handling works in general pretty well, so it
+                            usu-ally does not matter if the name is “street” or “str.”. It does however make sense
+                            to test the border cases: Empty String, String with maximum length, String with maxlength+1
+                            as well as an “average” string. So we could reduce the test set to these 4 testcases: “”,
+                            “aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa”, ‘aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaz”and “Arcisstraße 21”. We,
+                            however, have to assume that these Strings are indeed equivalent. If the program somehow
+                            uses
+                            the address for calculations we might have to change our tests.
+                            This gives us:10000×4×31×30 = 37200000 test cases.
+                            In 11 hours we can run(11×60×60×1000)÷2 = 19800000) test cases. As 19800000 is smaller than
+                            37200000 by almost half. We need 2 servers to fully test all test cases. 2 servers will be
+                            able to execute 39600000 test cases.
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">address</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30022">
+            <body>
+                3. Consider the following Java code to find the factorial of a number.
+                <pre>
+                    1 static int factorial(int n){
+                    2 if (n == 0)
+                    3 return 1;
+                    4 else
+                    5 return(n * factorial(n-1));
+                    6 }
+                </pre>
+                (a) Write the JUnit tests for it, assuming it should return 0 if there is an error. (2 points)
+                <p/>
+                (b) Did the code pass all your tests or not ? If yes, why? If no, explain possible fail cases? (1
+                points)
+                <p/>
+                (c) Can you completely test this factorial function ? Justify your answer.
+                <p/>
+                (d) Re-write the factorial function to solve the previous issues, if any issue exist, assuming a normal
+                computer can only calculate at maximum factorial of 1000.
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            1 @Test
+                            2 public void testFactorial(){
+                            3 assertEquals(1, factorial(0)); // Zero Case
+                            4 assertEquals(120, factorial(5)); // Normal Case
+                            5 assertEquals(0, factorial(-2)); // Negative Case
+                            6 assertEquals(0, factorial(Integer.MAX_VALUE)); // Overflaw Case
+                            7 }
+                        </pre>
+                        <pre>
+                            b) No, because the developer didn’t take into consideration:
+                            i. Over-flaw problem when the input is integer but the output might need a long variable.
+                            ii. Negative values. There is no factorial for negative values.
+
+                            c) In theory you could test all values from 0 to Integer.MAXVALUE. In practice this is just
+                            not feasible, because recursion function is time consuming process and we can’t execute all
+                            of these checks in reasonable amount of time.
+                        </pre>
+                        <pre>
+                            1 static int factorial(int n) {
+                            2 if (n &lt; 0 || n &gt; 1000)
+                            3 return 0;
+                            4 if (n == 0)
+                            5 return 1;
+                            6 else
+                            7 return(n * factorial(n-1));
+                            8 }
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">assert</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30023">
+            <body>1. Fill in the missing artifacts in the schema of the Scrum Agile Methodology process. (6 points)
+                <img src="../data/res/30023_scrum.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>Product backlog, sprint backlog, deliverable product increment.</body>
+                    <marks>
+                        <mark type="keyword">backlog</mark>
+                        <mark type="keyword">product</mark>
+                        <mark type="keyword">sprint</mark>
+                        <mark type="keyword">increment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30024">
+            <body>2. Name and briefly explain the scrum roles.</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            •The product owner specifies firmly the common goal and prioritizes the tasks in the product
+                            backlog
+                            •The team / team members estimates the efforts and benefits of the tasks in the backlog
+                            and chooses what it wants to achieve by the end of the next sprint.
+                            •The scrum master is responsible for the scrum process. He is neither a member of the team
+                            nor the product owner. He oversees the division of roles and the rights of other
+                            stakeholders. His goal is to achieve a smooth process.
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">own</mark>
+                        <mark type="keyword">team</mark>
+                        <mark type="keyword">master</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30025">
+            <body>3. Name and explain four software quality factors.</body>
+            <answers>
+                <answer>
+                    <body>
+                        <img src="../data/res/30025_software_quality_factors.png"/>
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">((function|reliab|usab|portab|maint|effic).*){4}</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30026">
+            <body>1. Explain the difference between coupling and cohesion.</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            •coupling: Measures the dependencies between subsystems
+                            •cohesion: Measures the dependencies among classes within a subsystem
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">depend</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30027">
+            <body>2. Explain the relationship of coupling and cohesion of a bad system architecture.</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            •Low cohesion and high coupling
+                            •The subsystems are not independent of each other. The subsystems contain classes that do
+                            not depend on each other.
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">depend</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30028">
+            <body>3. Consider you are a software architect in a car manufacturing company. Look at the design of a car
+                driving behavior analyzer,iCarBehave, and its related components in Fig. 4.
+                <img src="../data/res/30028_car.png"/>
+                <pre>
+                    (a) What is the coupling factor of this system? Assume α= 0.1
+                    (b) List at-least 4 changes that you can make in this system’s design to decrease the coupling
+                    factor.
+                    (c) Name and explain the architecture principle that is violated on this example.
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            Components with same parents –ef,ij,im,il,ik,ih,pq.
+                            Components with different parents –ab,cb,dm,jg,hg,lq,kn,po.
+                            Amount of components – 14
+                            coupling_factor=0.564
+
+                            Examples of changes
+                            i. Remove dm
+                            ii. Connect dc
+                            iii. Remove kn
+                            iv. Remove lq
+                            v. Connect lk
+
+                            Information hiding: A calling module (class, subsystem) does not need to know anything
+                            about the internals of the called module.
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">0.5</mark>
+                        <mark type="keyword">hid</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30029">
+            <body>T/F: An embedded system is an information system integrated into a physical thing.</body>
+            <answers>
+                <answer>
+                    <body>T</body>
+                    <marks>
+                        <mark type="keyword">T</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30030">
+            <body>T/F: Product Line Engineering increases development costs..</body>
+            <answers>
+                <answer>
+                    <body>F</body>
+                    <marks>
+                        <mark type="keyword">F</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30031">
+            <body>T/F: Continuous integration makes it more difficult to detect integration bugs..</body>
+            <answers>
+                <answer>
+                    <body>F</body>
+                    <marks>
+                        <mark type="keyword">F</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30032">
+            <body>T/F: Stateless EJBs persist over multiple sessions.</body>
+            <answers>
+                <answer>
+                    <body>F</body>
+                    <marks>
+                        <mark type="keyword">F</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30033">
+            <body>T/F: REST is language agnostic.</body>
+            <answers>
+                <answer>
+                    <body>T</body>
+                    <marks>
+                        <mark type="keyword">T</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
