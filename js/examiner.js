@@ -24,7 +24,7 @@ function loadExamFromURL(url) {
     let xmlHTTPRequest = new XMLHttpRequest();
     xmlHTTPRequest.open("GET", url, false);
     xmlHTTPRequest.onload = function (e) {
-        handleProgress(xmlHTTPRequest.responseXML);
+        handleExam(xmlHTTPRequest.responseXML);
     };
     xmlHTTPRequest.send();
 }
