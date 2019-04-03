@@ -20,6 +20,15 @@ function loadExam(file) {
     reader.readAsText(file);
 }
 
+function loadExamFromURL(url) {
+    let xmlHTTPRequest = new XMLHttpRequest();
+    xmlHTTPRequest.open("GET", url, false);
+    xmlHTTPRequest.onload = function (e) {
+        handleProgress(xmlHTTPRequest.responseXML);
+    };
+    xmlHTTPRequest.send();
+}
+
 function handleExam(xmlEncodedExam) {
     exam = xmlEncodedExam;
     examLength = exam.getElementsByTagName("question").length;
