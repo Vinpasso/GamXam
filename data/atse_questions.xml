@@ -1138,7 +1138,7 @@
                         interfaces. Hierarchical composition: One component hooks into the exposed interface of another
                         component. Adaptive composition: A wrapper surrounds the internal components and wraps around
                         the incoming and outgoing dependencies.
-                        <img src="res/39_composition.png"/>
+                        <img src="../data/res/39_composition.png"/>
                     </body>
                     <marks>
                         <mark type="keyword">sequen</mark>
@@ -2469,7 +2469,7 @@
         <question type="extended-answer" id="127">
             <body>Label the numbered items in the feature diagram:
                 <p/>
-                <img src="res/127_feature_diagram.png"/>
+                <img src="../data/res/127_feature_diagram.png"/>
             </body>
             <answers>
                 <answer>
@@ -2633,7 +2633,7 @@
         <question type="extended-answer" id="138">
             <body>Fill in the blanks:
                 <p/>
-                <img src="res/138_ple.png"/>
+                <img src="../data/res/138_ple.png"/>
             </body>
             <answers>
                 <answer>
@@ -6713,7 +6713,7 @@
         <question type="extended-answer" id="30006">
             <body>3. Below you’ll find an illustration of a potential attack tree. State the paths for the most
                 expensive and the cheapest attack for opening the the save and state how costly each of the paths is.
-                <img src="res/30006_attack_tree.png"/>
+                <img src="../data/res/30006_attack_tree.png"/>
             </body>
             <answers>
                 <answer>
@@ -6803,7 +6803,7 @@
         </question>
         <question type="extended-answer" id="30009">
             <body>2. Analyse the following UML class diagram for an exam management system.
-                <img src="res/30009_uml_diagram.png"/>
+                <img src="../data/res/30009_uml_diagram.png"/>
                 Which of the anti-patterns discussed in the lecture can you identify? Justify your answer.
             </body>
             <answers>
@@ -6817,7 +6817,7 @@
         </question>
         <question type="extended-answer" id="30010">
             <body>2. Analyse the following UML class diagram for an exam management system.
-                <img src="res/30009_uml_diagram.png"/>
+                <img src="../data/res/30009_uml_diagram.png"/>
                 Re-factor the design of the system and draw the new UML class diagram without the anti-pattern.
             </body>
             <answers>
@@ -6833,7 +6833,7 @@
         </question>
         <question type="extended-answer" id="30011">
             <body>2. Analyse the following UML class diagram for an exam management system.
-                <img src="res/30009_uml_diagram.png"/>
+                <img src="../data/res/30009_uml_diagram.png"/>
                 (c) Name three typical causes for the anti-pattern you identified in (a).
             </body>
             <answers>
@@ -7199,7 +7199,7 @@
         </question>
         <question type="extended-answer" id="30023">
             <body>1. Fill in the missing artifacts in the schema of the Scrum Agile Methodology process. (6 points)
-                <img src="res/30023_scrum.png"/>
+                <img src="../data/res/30023_scrum.png"/>
             </body>
             <answers>
                 <answer>
@@ -7241,7 +7241,7 @@
             <answers>
                 <answer>
                     <body>
-                        <img src="res/30025_software_quality_factors.png"/>
+                        <img src="../data/res/30025_software_quality_factors.png"/>
                     </body>
                     <marks>
                         <mark type="regex" regex-flags="i">((function|reliab|usab|portab|maint|effic).*){4}</mark>
@@ -7285,7 +7285,7 @@
         <question type="extended-answer" id="30028">
             <body>3. Consider you are a software architect in a car manufacturing company. Look at the design of a car
                 driving behavior analyzer,iCarBehave, and its related components in Fig. 4.
-                <img src="res/30028_car.png"/>
+                <img src="../data/res/30028_car.png"/>
                 <pre>
                     (a) What is the coupling factor of this system? Assume α= 0.1
                     (b) List at-least 4 changes that you can make in this system’s design to decrease the coupling
