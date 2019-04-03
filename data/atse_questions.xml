@@ -6266,5 +6266,35 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Exercises -->
+        <question type="extended-answer" id="11000">
+            <body>What is the difference between commit and push?</body>
+            <answers>
+                <answer>
+                    <body>A commit puts files in the &quot;staged&quot; status and transfers them into the &quot;committed&quot;
+                        status, where their state is preserved in the form of a snapshot (commit). A push attempts to
+                        update the remote HEAD of a branch to the local head, transferring commits as necessary. (User
+                        contributed answer).
+                    </body>
+                    <marks>
+                        <mark type="keyword">stage</mark>
+                        <mark type="keyword">commit</mark>
+                        <mark type="keyword">branch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11001">
+            <body>How does the revision graph change after a commit?</body>
+            <answers>
+                <answer>
+                    <body>The current branch log gets a new entry at the head, corresponding to the commit.</body>
+                    <marks>
+                        <mark type="keyword">branch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
