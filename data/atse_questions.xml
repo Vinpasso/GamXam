@@ -6296,5 +6296,217 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="12000">
+            <body>Name and briefly explain one example for an agile and a rigid development process. (Exercise 2.1.1)
+            </body>
+            <answers>
+                <answer>
+                    <body>Two of the following: Agile: Scrum, Kanban. Rigid: Waterfall, V-Model, Spiral, Unified
+                        Process.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">scrum|kanban</mark>
+                        <mark type="regex" regex-flags="i">waterfall|v-model|spiral|unified</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12001">
+            <body>What are the main characteristics of agile and rigid software development?</body>
+            <answers>
+                <answer>
+                    <body>TODO from solution</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12002">
+            <body>When does it make sense and when does it not make sense to implement agile/rigid software
+                development.
+            </body>
+            <answers>
+                <answer>
+                    <body>TODO from solution</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12003">
+            <body>Discuss and provide rationale for a suitable development process in the following scenario:
+                Crusader Tours wants to develop a Smartphone App for its new Crusader 50 shuttle service. The apps hould
+                encompass trip planning, ticket purchase, and customer notification functionality. The front-end of the
+                App should be developed by an external contractor while the back-end will be developed in-house. To keep
+                the development effort lean, the CT management decided to reuse artifacts from the already existing CT
+                Mobility App.
+            </body>
+            <answers>
+                <answer>
+                    <body>TODO from solution</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12004">
+            <body>Discuss and provide rationale for a suitable development process in the following scenario:
+                Bokanovsky and Podsnap, a small start-up that specialized in planning private childcare, wants to
+                develop a new web platform to allow parents to look for and students to offer private child care. The
+                service is new and up to now there are no comparable web platforms available. As the start-up is rather
+                young and the business model is not fully fixed yet, it is likely that a lot of the web platform
+                features will have to be added or changed over time.
+            </body>
+            <answers>
+                <answer>
+                    <body>Probably an agile development process, since the company expects significant change occurring
+                        over the process of development. Another reason for agile is that there is not much need for
+                        reformation of existing organization structure in a small startup.
+                    </body>
+                    <marks>
+                        <mark type="keyword">agile</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12005">
+            <body>Discuss and provide rationale for a suitable development process in the following scenario:
+                Spinner, a big car manufacturer, now finally wants to take the next big technological step and
+                from scratch create a autonomous driving software component to be incorporated in the next-gen
+                premium line vehicles. As the company still lacks expertise in some key technologies like sensor fusion,
+                a small sensor software development company was recently purchased. The release of the first
+                working prototype is under severe time pressure as competing car manufacturers are known to work on
+                a similar car model.
+            </body>
+            <answers>
+                <answer>
+                    <body>Another agile process is likely suitable here, since there is extreme time pressure (agile
+                        places emphasis on quick delivery of minimum viable products) and knowledge from the small
+                        company needs to be integrated, probably causing changes in the project staff over time.
+                        However, it is also likely that the big car manufacturer might not have a suitable organization
+                        structure for agile development.
+                    </body>
+                    <marks>
+                        <mark type="keyword">agile</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12006">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                1. All information concerning maintenance and utilization of the ATM must not be accessible to
+                people other than service technicians.
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12007">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                2. The ATM must be operational at least 360 days a year.
+            </body>
+            <answers></answers>
+        </question>
+        <question type="extended-answer" id="12008">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                3. The image of the controller software running on the ATM must not be bigger than 10KByte.
+            </body>
+            <answers></answers>
+        </question>
+        <question type="extended-answer" id="12009">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                4. The ATM graphical user interface has to be localized for at least the five most common languages.
+            </body>
+            <answers></answers>
+        </question>
+        <question type="extended-answer" id="12010">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                5. All sensors within the ATM need to be able to communicate with each other.
+            </body>
+            <answers></answers>
+        </question>
+        <question type="extended-answer" id="12010">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                6. The mechanical and electrical component of the ATM must comply to the ISO 26262 safety standard.
+            </body>
+            <answers></answers>
+        </question>
+        <question type="extended-answer" id="12010">
+            <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
+                measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
+                7. The software of the ATM must also be installable on the next-generation X78-B ATM hardware platform.
+            </body>
+            <answers></answers>
+        </question>
+        <question type="extended-answer" id="12011">
+            <body>What potential tradeoffs need to be considered in the following requirements?
+                1. All information concerning maintenance and utilization of the ATM must not be accessible to
+                people other than service technicians.
+                2. The ATM must be operational at least 360 days a year.
+                3. The image of the controller software running on the ATM must not be bigger than 10KByte.
+                4. The ATM graphical user interface has to be localized for at least the five most common languages.
+                5. All sensors within the ATM need to be able to communicate with each other.
+                6. The mechanical and electrical component of the ATM must comply to the ISO 26262 safety standard.
+                7. The software of the ATM must also be installable on the next-generation X78-B ATM hardware platform.
+            </body>
+            <answers></answers>
+        </question>
+        <question type="extended-answer" id="12012">
+            <body>How does one add a dependency to a Maven project?</body>
+            <answers>
+                <answer>
+                    <body>By adding the dependency&quot;s group-id, artifact-id and version to the POM xml file, and
+                        specifying a repository as required.
+                    </body>
+                    <marks>
+                        <mark type="keyword">pom</mark>
+                        <mark type="keyword">group</mark>
+                        <mark type="keyword">artifact</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12013">
+            <body>How does one add a repository to a Maven project?</body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12014">
+            <body>Where on the filesystem do you have to create the source file for the
+                class de.tum.in.www22.example.Main in a Maven project?
+            </body>
+            <answers>
+                <answer>
+                    <body>In src/main/java/de/tum/in/www22/example/Main.java</body>
+                    <marks>
+                        <mark type="keyword">src</mark>
+                        <mark type="keyword">main</mark>
+                        <mark type="keyword">java</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12015">
+            <body>Which maven command do you need to use to generate a jar file?</body>
+            <answers>
+                <answer>
+                    <body>mvn package</body>
+                    <marks>
+                        <mark type="keyword">package</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
