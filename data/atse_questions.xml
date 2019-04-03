@@ -6397,8 +6397,7 @@
             </body>
             <answers>
                 <answer>
-                    <body>
-                    </body>
+                    <body></body>
                     <marks></marks>
                 </answer>
             </answers>
@@ -6408,42 +6407,72 @@
                 measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
                 2. The ATM must be operational at least 360 days a year.
             </body>
-            <answers></answers>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="12008">
             <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
                 measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
                 3. The image of the controller software running on the ATM must not be bigger than 10KByte.
             </body>
-            <answers></answers>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="12009">
             <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
                 measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
                 4. The ATM graphical user interface has to be localized for at least the five most common languages.
             </body>
-            <answers></answers>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="12010">
             <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
                 measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
                 5. All sensors within the ATM need to be able to communicate with each other.
             </body>
-            <answers></answers>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="12010">
             <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
                 measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
                 6. The mechanical and electrical component of the ATM must comply to the ISO 26262 safety standard.
             </body>
-            <answers></answers>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="12010">
             <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
                 measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
                 7. The software of the ATM must also be installable on the next-generation X78-B ATM hardware platform.
             </body>
-            <answers></answers>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="12011">
             <body>What potential tradeoffs need to be considered in the following requirements?
@@ -6456,7 +6485,12 @@
                 6. The mechanical and electrical component of the ATM must comply to the ISO 26262 safety standard.
                 7. The software of the ATM must also be installable on the next-generation X78-B ATM hardware platform.
             </body>
-            <answers></answers>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
         </question>
         <question type="extended-answer" id="12012">
             <body>How does one add a dependency to a Maven project?</body>
