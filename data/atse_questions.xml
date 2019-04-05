@@ -938,7 +938,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="27">
-            <body>What are some of the benefity of modularity?</body>
+            <body>What are some of the benefits of modularity?</body>
             <answers>
                 <answer>
                     <body>Easier maintenance, reusability, understandability, reduced complexity, allows for work
@@ -2359,8 +2359,9 @@
             <body>What are variability subjects/objects?</body>
             <answers>
                 <answer>
-                    <body>Subject: Variable item of real world or variable property of item. Object: A particular
-                        instance of variability subject.
+                    <body>Subject: Variable item of real world or variable property of item (a set of possibilities).
+                        <p/>
+                        Object: A particular instance of variability subject (a possibility).
                     </body>
                     <marks>
                         <mark type="keyword">item</mark>
@@ -2383,7 +2384,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="121">
-            <body>What is the binding time converning variability?</body>
+            <body>What is the binding time concerning variability?</body>
             <answers>
                 <answer>
                     <body>The moment that variability is resolved.</body>
@@ -2896,7 +2897,8 @@
             <answers>
                 <answer>
                     <body>Degree to which a system/component/requirement facilitates establishment of test criteria and
-                        performance of tests to determine whether they have been met.
+                        performance of tests to determine whether they have been met. Testable entities include systems,
+                        components, requirements.
                     </body>
                     <marks>
                         <mark type="keyword">criter</mark>
@@ -3384,7 +3386,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="196">
-            <body>Which fundamental cloud architecture exists?</body>
+            <body>Which fundamental cloud architectures exist?</body>
             <answers>
                 <answer>
                     <body>Workload distribution architecture (horizontal scaling, balancer), resource pooling
