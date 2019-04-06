@@ -7218,6 +7218,279 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="17002">
+            <body>In this assignment we will discuss the strengths and weaknesses of model-driven
+                development,software product lines, and agile development on the basis of a couple of stereotypical case
+                studies. For each of the following case studies you should thus decide which development methodology you
+                would adopt and justify your choice. In case you propose to adopt a model-driven development approach
+                you should furthermore discuss the concrete type of model that you would use here and reason about
+                the relationship between model and deployed system. In case you propose to implement a software product
+                line you should discuss what would be the the stable platform, what would be the variability points, and
+                at which point you would expect the break-even point.
+                <p/>
+                1. Imagine that you recently joined Pied Piper, a young start-up that specialized in the development
+                highly sophisticated data compression algorithms and approaches. Having already successfully
+                deployed their patented compression algorithm for desktop and server environments, Pied Piper now wants
+                to
+                make the next step and also conquer the mobile system market. To this end, the CEO, Richard Hendricks,
+                asked you to come up with a new concept to align the desktop- and mobile application development
+                efforts.
+                Richards is in particular fond of the idea of reusing as much of the code and development artifacts as
+                possible to ensure an early market penetration. However, during a brief chat with the lead architect of
+                the desktop development team during lunch you got to know that most of the desktop platform codebase was
+                written in the obscure Erlang programming language – being not aware of any mobile implementation of the
+                Erlang runtime environment you are now a bit concerned that the amount of achievable reuse probably
+                would
+                not be too high.
+            </body>
+            <answers>
+                <answer>
+                    <body>It would be possible to extract a model out of the existing Erlang implementation and
+                        reimplement the model in another language, reusing the structure of the system. This would imply
+                        model-driven development. The indication of time pressure would lend itself to agile
+                        development.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">model|agile</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17003">
+            <body>In this assignment we will discuss the strengths and weaknesses of model-driven
+                development,software product lines, and agile development on the basis of a couple of stereotypical case
+                studies. For each of the following case studies you should thus decide which development methodology you
+                would adopt and justify your choice. In case you propose to adopt a model-driven development approach
+                you should furthermore discuss the concrete type of model that you would use here and reason about
+                the relationship between model and deployed system. In case you propose to implement a software product
+                line you should discuss what would be the the stable platform, what would be the variability points, and
+                at which point you would expect the break-even point.
+                <p/>
+                2. You are working for the Popolus Vehiculum (PV) cooperation one of the world’s biggest manufacturers
+                of automobiles. Your division is in charge of the control code of their diesel engines. This code
+                determines how much fuel is injected and at what temperatures it is burned. A super national body has
+                agreed to impose stricter emission standards and your team is tasked with writing the control code for
+                the next generations of engines. The code will be reviewed by independent auditors and has to be
+                certified according to the new regulations. To cut costs, there will only be three different types of
+                engines. As this is a completely new line-up of engine they will be in use for quite some time. So ease
+                of maintenance and understandability is imperative.
+            </body>
+            <answers>
+                <answer>
+                    <body>Software product line. The typical payoff lies somewhere between the second and third system,
+                        with the option of cheaply supporting further engines down the line if necessary (even though
+                        they are not planned).
+                        <p/>
+                        Model driven development could model the engine and its control,
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">line|model</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17004">
+            <body>In this assignment we will discuss the strengths and weaknesses of model-driven
+                development,software product lines, and agile development on the basis of a couple of stereotypical case
+                studies. For each of the following case studies you should thus decide which development methodology you
+                would adopt and justify your choice. In case you propose to adopt a model-driven development approach
+                you should furthermore discuss the concrete type of model that you would use here and reason about
+                the relationship between model and deployed system. In case you propose to implement a software product
+                line you should discuss what would be the the stable platform, what would be the variability points, and
+                at which point you would expect the break-even point.
+                <p/>
+                3.Mockia, a rising star in the highly competitive smartphone market, recently introduced there
+                new flagship smartphone the MeiOlaiddl. The MeiOlaiddl is the first smartphone that allows almost
+                full customization of the hardware configuration – the user can order a highly customized
+                smartphone online by simply filling in a questionnaire about his usage profile. Mockia then promises to
+                configure and ship a customized smartphone that perfectly fits the customer’s needs within 3 working
+                days. Although the new concepts already found wide reception and pre-orders by far exceed the
+                immediate production capabilities, the CTO of Mockia during the last internal developer conference
+                raised concerns about the flexibility of their current development approach. Currently the entire
+                software stack of Mockia’s current smartphone portfolio is custom build; reuse is, if at all, entirely
+                done opportunistically. Looking at the enormous mass of configuration possibilities, the currently
+                practiced development approach is clearly not anymore able to keep up with the high number of
+                pre-orders. Currently the user can choose between 3 different camera modules, 4 CPU models, 6 persistent
+                memory modules, and 2 GPS chips. A closer look at the pre-order data revealed that more than 92% of the
+                customers pre-ordered a configuration that included the cheapest CPU and the second-smallest memory
+                module. The remaining parts where arbitrarily combined with no apparent pattern in customer preferences.
+                Hopelessly lost in technical details, the CTO of Mockia hired you, an experienced software development
+                consultant, to propose a new development concept to better cope with the high number of different
+                configurations and make the software development more efficient. From old smartphone development
+                projects
+                you know that developing a new controller software for a CPU takes about 6PM, for a memory module 2PM,
+                for a camera module 4PM, and for a GPS chip 2PM. From your experience you know that writing a solid
+                platform that a-priori is designed for reuse typically yields 3 times the effort of the normal
+                development effort of the respective components.
+            </body>
+            <answers>
+                <answer>
+                    <body>Software product line. The typical payoff lies somewhere between the second and third system,
+                        with the option of cheaply supporting further smartphones down the line. Before the third
+                        system, model-driven development is cheaper.
+                        <p/>
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">line|model</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17005">
+            <body>1. Why, despite the fact that we have full code coverage and the test case passes,
+                might findFactors still fail for some inputs? Name at least one fault that is not covered by the test
+                case.
+                <p/>
+                2. Write a better test case that also covers the missing faults.
+                <p/>
+                3. Can you completely test this method? Justify your answer.
+                <pre>
+                    Your first task is to look at the findFactors method:
+                    1 /**
+                    2 *Returns an ArrayList of all the factors of an integer
+                    3 *
+                    4 * @param number to factor
+                    5 * @return ArrayList of factors
+                    6 * @author hg
+                    7 */
+                    8 public static ArrayList&lt;Integer> findFactors(long input){
+                    9 // 2015/11/25 es: changed to handle longs, unit tests still work, we still have full coverage
+                    10 // 2010/02/24 hg: simple method to factor numbers. Simple, but enough for our use case
+                    11 ArrayList &lt;Integer> factors =newArrayList&lt;Integer>();
+                    12 int i = 1;
+                    13 while( i&lt;= input) {
+                    14 if(input % i == 0){
+                    15 factors.add(i);
+                    16 }
+                    17 i++;
+                    18 }
+                    19 return factors;
+                    20}
+                    Here are the current JUnit tests for it:
+                    1 // hg: added test cases. We should not get numbers much larger than that
+                    2 @Test
+                    3 public void testFindFactors() {
+                    4 ArrayList &lt;Integer> exp120 =new ArrayList&lt;Integer>();
+                    5 exp120.add(1);
+                    6 exp120.add(2);
+                    7 exp120.add(3);
+                    8 exp120.add(4);
+                    9 exp120.add(5);
+                    10 exp120.add(6);
+                    11 exp120.add(8);
+                    12 exp120.add(10);
+                    13 exp120.add(12);
+                    14 exp120.add(15);
+                    15 exp120.add(20);
+                    16 exp120.add(24);
+                    17 exp120.add(30);
+                    18 exp120.add(40);
+                    19 exp120.add(60);
+                    20 exp120.add(120);
+                    21
+                    22 assertEquals(exp120,SuperMath.findFactors(120));
+                    23 ArrayList&lt;Integer> exp1 =new ArrayList&lt;Integer>();
+                    24 exp1.add(1);
+                    25 assertEquals(exp1,SuperMath.findFactors(1));
+                    26 }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Doesn't test negative input, doesn't test zero input, doesn't test for overflow.
+                        <p/>
+                        This method would take 2 pow 32 test cases to test completely, which is unrealistic even if the
+                        test runs only milliseconds.
+                    </body>
+                    <marks>
+                        <mark type="keyword">negativ</mark>
+                        <mark type="keyword">zero</mark>
+                        <mark type="keyword">overflow</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17006">
+            <body>Next, take a look at the fullAdder method:
+                <pre>
+                    1 /**
+                    2 *Full adder.
+                    3 *See:
+                    4 *https://en.wikipedia.org/wiki/Adder_%28electronics%29#Full_adder
+                    5 *
+                    6 *@param a first input bit
+                    7 *@param b second input bit
+                    8 *@param c carry
+                    9 *@return Array that contains [result,carry]
+                    10 *@author hg
+                    11 */
+                    12 public staticBoolean[] fullAdder(Boolean a, Boolean b, Boolean c){
+                    13 Boolean s,tmp;
+                    14 tmp = a != b;
+                    15 s = c != tmp;
+                    16 c = (a &amp;&amp; b) || (tmp &amp;&amp; c);
+                    17 return newBoolean[]{s,c};
+                    18 }
+                </pre>
+                1. This method is simple enough to be completely tested. How many test cases do you need?
+                <p/>
+                2. Implement all necessary JUnit test cases to completely test this method.
+            </body>
+            <answers>
+                <answer>
+                    <body>2 pow 3 = 8 cases needed for complete test.</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">8|eight</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17007">
+            <body>Finally take a look at the method BinaryAddition:
+                <pre>
+                    1 /**
+                    2 *Adds binary numbers of arbitrary, but equal, size.
+                    3 *The numbers have to be represented as a boolean array.
+                    4 *@param a first number
+                    5 *@param b second number
+                    6 *@return result array. It will be a.length + 17 */
+                    8 public staticBoolean[] BinaryAddition(Boolean[] a, Boolean[] b){
+                    9 assert(a.length == b.length);
+                    10 Boolean[] result =newBoolean[a.length + 1];
+                    11 Boolean carry =false;
+                    12 int i;
+                    13 for(i = 0; i&lt; a.length; i++){
+                    14 Boolean[] tmp = fullAdder(a[i],b[i],carry);
+                    15 result[i] = tmp[0];
+                    16 carry = tmp[1];
+                    17 }
+                    18 result[i] = carry;
+                    19
+                    20 return result;
+                    21 }
+                </pre>
+                1. Can BinaryAddition be tested completely?
+                <p/>
+                2. Think about at least five good test cases for this method and implement them in JUnit. Try to cover
+                as much code as possible. Justify your choice of inputs.
+            </body>
+            <answers>
+                <answer>
+                    <body>Arrays can contain many thousands of elements, each of which is a bit. Testing a combination
+                        of 2 numbers with at least 1000 bit length is nowhere near possible.
+                        Some possible test cases include: Testing arrays with max value, arrays of different length,
+                        null inputs, some normal case, zero case.
+                    </body>
+                    <marks>
+                        <mark type="keyword">null</mark>
+                        <mark type="keyword">zero</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Exercise 8 -->
 
 
         <!-- Practice Exam -->
