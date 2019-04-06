@@ -35,10 +35,21 @@ function handleExam(xmlEncodedExam) {
     $("#exam-info").html("<h5>Exam: " +
         $(exam).find("title")[0].innerHTML + "</h5><hr><h5>" +
         examLength + " Questions</h5>");
+    sanityCheckExam();
     initializeProgressStages();
     postRandomQuestion();
     $("#header-ui").css("display", "block");
     $("#progress-file").removeAttr("disabled");
+}
+
+function sanityCheckExam() {
+    let idSet = new Set();
+    $(exam).find("question").each(function (index) {
+        idSet.add(this.getAttribute("id"));
+    });
+    if (idSet.length != examLength) {
+        console.error("Exam has duplicate ids.");
+    }
 }
 
 function initializeProgressStages() {
