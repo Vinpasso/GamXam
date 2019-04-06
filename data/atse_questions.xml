@@ -1824,7 +1824,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="85">
-            <body>What is meant by &apos;anticipate change&apos;?</body>
+            <body>What are the consequences of &apos;anticipating change&apos;?</body>
             <answers>
                 <answer>
                     <body>Build components in a way to minimize effort for potential future changes. Compromise between
