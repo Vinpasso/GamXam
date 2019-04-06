@@ -1065,7 +1065,8 @@
             </answers>
         </question>
         <question type="extended-answer" id="35">
-            <body>What is component-based software engineering? What shortcoming of object-orientation does it fix? What ist a component?
+            <body>What is component-based software engineering? What shortcoming of object-orientation does it fix? What
+                ist a component?
             </body>
             <answers>
                 <answer>
@@ -6328,8 +6329,13 @@
             </body>
             <answers>
                 <answer>
-                    <body>TODO from solution</body>
-                    <marks></marks>
+                    <body>Agile makes sense when there is much uncertainty or frequent change. Rigid is well suited to
+                        low uncertainty low change environments. (User solution)
+                    </body>
+                    <marks>
+                        <mark type="keyword">uncertain</mark>
+                        <mark type="keyword">change</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6343,8 +6349,16 @@
             </body>
             <answers>
                 <answer>
-                    <body>TODO from solution</body>
-                    <marks></marks>
+                    <body>Lean development suggests use for agile, as well as the frequent need for communication with a
+                        client. However, if the client implements a rigid development process, using an agile one
+                        may/may not make sense. Possible options include scrum, kanban, unified process, spiral. (User
+                        generated solution)
+                    </body>
+                    <marks>
+                        <mark type="keyword">lean</mark>
+                        <mark type="keyword">client</mark>
+                        <mark type="keyword">communicat</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6399,8 +6413,17 @@
             </body>
             <answers>
                 <answer>
-                    <body></body>
-                    <marks></marks>
+                    <body>Security (Functionality, Run-time) and potentially Analyzability (Maintainability,
+                        Design-time). Can be tested by letting penetration testers attempt to obtain
+                        maintenance/utilization information without service technician access. Whether issues are found
+                        will depend on the amount of effort put into penetration testing. It can be expensive,
+                        especially if the test is conducted multiple times.
+                    </body>
+                    <marks>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">penetrat</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6411,8 +6434,15 @@
             </body>
             <answers>
                 <answer>
-                    <body></body>
-                    <marks></marks>
+                    <body>Availability (Reliability, Run-time), related to Fault-Tolerance, Recoverability,
+                        Degradability (Reliability, Runtime), stability (maintainability, Design-time). Can be measured
+                        in practice throughout a year, or extrapolated from a shorter test if time constraints are
+                        tight. The test should reflect at least regular expected usage patterns, or a higher load.
+                    </body>
+                    <marks>
+                        <mark type="keyword">avail</mark>
+                        <mark type="keyword">reliab</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6423,8 +6453,14 @@
             </body>
             <answers>
                 <answer>
-                    <body></body>
-                    <marks></marks>
+                    <body>Installability (portability, design-time), adaptability (portability, design-time). Can be
+                        automatically tested in continuous integration by measuring the size of the artifact.
+                    </body>
+                    <marks>
+                        <mark type="keyword">instal</mark>
+                        <mark type="keyword">port</mark>
+                        <mark type="keyword">auto</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
