@@ -401,7 +401,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="522">
+        <question type="extended-answer" id="9008">
             <body>What are some intrinsic quality aspects according to ISO 9126?</body>
             <answers>
                 <answer>
@@ -413,7 +413,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="523">
+        <question type="extended-answer" id="9009">
             <body>What are some design-time quality aspects according to ISO 9126?</body>
             <answers>
                 <answer>
@@ -1065,7 +1065,8 @@
             </answers>
         </question>
         <question type="extended-answer" id="35">
-            <body>What is component-based software engineering? What shortcoming of object-orientation does it fix? What ist a component?
+            <body>What is component-based software engineering? What shortcoming of object-orientation does it fix? What
+                ist a component?
             </body>
             <answers>
                 <answer>
@@ -1253,7 +1254,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="46">
+        <question type="extended-answer" id="9003">
             <body>What is the difference between defensive programming and design by contract?</body>
             <answers>
                 <answer>
@@ -4047,7 +4048,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="1038">
+        <question type="extended-answer" id="9004">
             <body>With which four goals may information security interfere with?</body>
             <answers>
                 <answer>
@@ -4187,7 +4188,7 @@
         </question>
 
         <!-- Chapter 3.2: Database-centric architectures -->
-        <question type="extended-answer" id="1045">
+        <question type="extended-answer" id="9005">
             <body>What is the main purpose of database-centric architectures?</body>
             <answers>
                 <answer>
@@ -6328,8 +6329,13 @@
             </body>
             <answers>
                 <answer>
-                    <body>TODO from solution</body>
-                    <marks></marks>
+                    <body>Agile makes sense when there is much uncertainty or frequent change. Rigid is well suited to
+                        low uncertainty low change environments. (User solution)
+                    </body>
+                    <marks>
+                        <mark type="keyword">uncertain</mark>
+                        <mark type="keyword">change</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6343,8 +6349,16 @@
             </body>
             <answers>
                 <answer>
-                    <body>TODO from solution</body>
-                    <marks></marks>
+                    <body>Lean development suggests use for agile, as well as the frequent need for communication with a
+                        client. However, if the client implements a rigid development process, using an agile one
+                        may/may not make sense. Possible options include scrum, kanban, unified process, spiral. (User
+                        generated solution)
+                    </body>
+                    <marks>
+                        <mark type="keyword">lean</mark>
+                        <mark type="keyword">client</mark>
+                        <mark type="keyword">communicat</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6399,8 +6413,17 @@
             </body>
             <answers>
                 <answer>
-                    <body></body>
-                    <marks></marks>
+                    <body>Security (Functionality, Run-time) and potentially Analyzability (Maintainability,
+                        Design-time). Can be tested by letting penetration testers attempt to obtain
+                        maintenance/utilization information without service technician access. Whether issues are found
+                        will depend on the amount of effort put into penetration testing. It can be expensive,
+                        especially if the test is conducted multiple times.
+                    </body>
+                    <marks>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">penetrat</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6411,8 +6434,15 @@
             </body>
             <answers>
                 <answer>
-                    <body></body>
-                    <marks></marks>
+                    <body>Availability (Reliability, Run-time), related to Fault-Tolerance, Recoverability,
+                        Degradability (Reliability, Runtime), stability (maintainability, Design-time). Can be measured
+                        in practice throughout a year, or extrapolated from a shorter test if time constraints are
+                        tight. The test should reflect at least regular expected usage patterns, or a higher load.
+                    </body>
+                    <marks>
+                        <mark type="keyword">avail</mark>
+                        <mark type="keyword">reliab</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6423,8 +6453,14 @@
             </body>
             <answers>
                 <answer>
-                    <body></body>
-                    <marks></marks>
+                    <body>Installability (portability, design-time), adaptability (portability, design-time). Can be
+                        automatically tested in continuous integration by measuring the size of the artifact.
+                    </body>
+                    <marks>
+                        <mark type="keyword">instal</mark>
+                        <mark type="keyword">port</mark>
+                        <mark type="keyword">auto</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -6452,7 +6488,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="12010">
+        <question type="extended-answer" id="9006">
             <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
                 measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
                 6. The mechanical and electrical component of the ATM must comply to the ISO 26262 safety standard.
@@ -6464,7 +6500,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="12010">
+        <question type="extended-answer" id="9007">
             <body>Which ISO 9126 quality attribute is tackled by the following requirement and how can it be
                 measured/enforced? Discuss potential issues with proposed evaluation criteria or methods.
                 7. The software of the ATM must also be installable on the next-generation X78-B ATM hardware platform.
@@ -6609,6 +6645,151 @@
                 <answer>
                     <body></body>
                     <marks></marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Exercise 5 -->
+        <question type="extended-answer" id="15000">
+            <body>1. Create a Dependency Structure Matrix for your program in Exercise 1 (display greetings from
+                guestbook on raspberry pi) above. What components can you identify?
+            </body>
+            <answers>
+                <answer>
+                    <body>Components: Data fetcher (web), XML parser, button listener, output module
+                        <img src="../data/res/15000_dsm.png"/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">parse</mark>
+                        <mark type="keyword">button</mark>
+                        <mark type="keyword">output</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15001">
+            <body>6. Compare your standalone and your pipes and filters solution (raspberry pi display greetings).
+                Consider attributes like testability, modularity, performance and maintainability. Why and in what
+                contexts would you prefer one over the other?
+            </body>
+            <answers>
+                <answer>
+                    <body>Testability: Each of the modules are well decoupled. This allows easy insertion of
+                        mock-implementations of interfaces that each module relies on, making it easier to test the
+                        module in isolation. An added benefit is that there exist compatible implementations for some of
+                        these modules already, allowing us to test against them as well. After the isolated testing,
+                        sets of modules can be tested in integration testing. This is harder on the original
+                        implementation, since the system cannot easily be tested in parts due to more internal
+                        dependencies.
+                        <p/>
+                        Modularity: The second approach is evidently the more modular, since the only coupling that
+                        exists is between the output of one module and the input of the next. However, it may not always
+                        be preferable since there will be cases where the dependency structure cannot be broken down
+                        into a list or a tree. Creating appropriate input and output interfaces can become challenging
+                        if multiple components need different data from one component and there are cycles in the
+                        dependency graph. This approach is also less suitable when there isn't data traversing a
+                        sequence of steps.
+                        <p/>
+                        Performance: The performance isn't great when each pipeline stage needs to take its input as a
+                        serialized form (a string) and provide it again in serialized form to the next component, as
+                        this involves a lot of parsing and string formatting. It would be preferable if the data could
+                        pass the module boundaries without need to change its representation, which could also be
+                        implemented with pipes and filters.
+                        <p/>
+                        Maintainability: The very loose coupling has large benefits for maintaining, since changes in
+                        one module are less likely to cause changes in the other modules.
+                    </body>
+                    <marks>
+                        <mark type="keyword">coup</mark>
+                        <mark type="keyword">modular</mark>
+                        <mark type="keyword">maintain</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15002">
+            <body>Liskov’s Substitution Principle states that if a program module is using a Base class, then the
+                reference to the Base class can be replaced with a Derived class without affecting the functionality of
+                the program module.
+                Rent-a-vehicle is a company offering their services to customers who need to temporarily rent a vehicle
+                in order to transport people or goods on land. The company gives a brochure to their customers, where
+                they can check all vehicles’ features:
+                <pre>
+                    1 public interface Vehicle {
+                    2 public void drive();
+                    3 public void addLuggage();
+                    4 public void playRadio();
+                    5 public void openFourDoors();
+                    6 }
+                </pre>
+                Additionally, the company policy regarding renting a vehicle is the following: the customers don’t have
+                a right to choose the vehicle, but they get the next vehicle that becomes available:
+                <pre>
+                    2 public classVehicleHireService {
+                    3 public Vehicle hireVehicle () {
+                    4 return availableVehiclePool.getNextVehicle();
+                    5 }
+                    6 }
+                </pre>
+                You are their customer and currently on a holiday in a foreign country and want to rent a vehicle for
+                you and your family.
+                a) On delivery day, you are getting a Lamborghini Car. Create a class Lamborghini Car that implements
+                the Vehicle interface. Does this violate the Liskov Substitution Principle? If yes explain, why?
+            </body>
+            <answers>
+                <answer>
+                    <body>Yes, it violates the Liskov Substitution Principle. Since the LamborghiniCar implements the
+                        Vehicle interface, all uses of vehicle should be replaceable by LamborghiniCar without affecting
+                        the functionality of the program module. Since the LamborghiniCar does not have the ability to
+                        openFourDoors or addLuggage but the Vehicle class requires it, this is not fulfilled.
+                    </body>
+                    <marks>
+                        <mark type="keyword">violat</mark>
+                        <mark type="keyword">door</mark>
+                        <mark type="keyword">luggage</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15003">
+            <body>Liskov’s Substitution Principle states that if a program module is using a Base class, then the
+                reference to the Base class can be replaced with a Derived class without affecting the functionality of
+                the program module.
+                Rent-a-vehicle is a company offering their services to customers who need to temporarily rent a vehicle
+                in order to transport people or goods on land. The company gives a brochure to their customers, where
+                they can check all vehicles’ features:
+                <pre>
+                    1 public interface Vehicle {
+                    2 public void drive();
+                    3 public void addLuggage();
+                    4 public void playRadio();
+                    5 public void openFourDoors();
+                    6 }
+                </pre>
+                Additionally, the company policy regarding renting a vehicle is the following: the customers don’t have
+                a right to choose the vehicle, but they get the next vehicle that becomes available:
+                <pre>
+                    2 public classVehicleHireService {
+                    3 public Vehicle hireVehicle () {
+                    4 return availableVehiclePool.getNextVehicle();
+                    5 }
+                    6 }
+                </pre>
+                You are their customer and currently on a holiday in a foreign country and want to rent a vehicle for
+                you and your family.
+                b) On delivery day, you are getting a BMW X1 Series Car. Create a class BMWX1Car that implements the
+                Vehicle interface. Does this violate the Liskov Substitution Principle? If yes explain, why?
+            </body>
+            <answers>
+                <answer>
+                    <body>No, this does not violate Liskov's substitution principle, as the BMW X1 implements all the
+                        functionality required by Vehicle and can therefore be substituted without affecting the
+                        module's functionality. It also does not require a caller to know that it is a X1 series car.
+                    </body>
+                    <marks>
+                        <mark type="keyword">substitut</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
