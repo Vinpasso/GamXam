@@ -9,7 +9,7 @@
         <id>404</id>
     </head>
     <body>
-        <!-- TODO: Chapter Introduction -->
+        <!-- Chapter Introduction -->
         <question type="extended-answer" id="500">
             <body>What are the four application domains?</body>
             <answers>
@@ -548,6 +548,74 @@
                         <mark type="keyword">memory</mark>
                         <mark type="regex" regex-flags="i">information.*system</mark>
                         <mark type="keyword">integrate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="541">
+            <body>What are some requirements for an engine control unit?</body>
+            <answers>
+                <answer>
+                    <body>Real-time constraints (ignition spark), functional safety (no self-acceleration),
+                        environmental conditions, quality.
+                    </body>
+                    <marks>
+                        <mark type="keyword">tim</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">environ</mark>
+                        <mark type="keyword">quality</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="542">
+            <body>What are some interfaces that an engine control unit must interact with?</body>
+            <answers>
+                <answer>
+                    <body>Sensors, actuators, CAN/FlexRay transport, interfaces to other units, APIs to implement
+                        (AUTOSAR etc.)
+                    </body>
+                    <marks>
+                        <mark type="keyword">sens</mark>
+                        <mark type="keyword">actuat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="543">
+            <body>What are some non-functional requirements for building an engine control unit?</body>
+            <answers>
+                <answer>
+                    <body>Minimize costs (unit/development), manage variants</body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">varia</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="544">
+            <body>What is SIL/HIL?</body>
+            <answers>
+                <answer>
+                    <body>Software in the loop/hardware in the loop (virtual vehicles).</body>
+                    <marks>
+                        <mark type="keyword">loop</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="545">
+            <body>What is the 3-level monitoring concept in a functional safety architecture?</body>
+            <answers>
+                <answer>
+                    <body>Level 1: plausibility checks of sensor/actuator values. Level 2: redundant calculation. Level
+                        3: Monitoring of controller with watchdog.
+                    </body>
+                    <marks>
+                        <mark type="keyword">check</mark>
+                        <mark type="keyword">redundan</mark>
+                        <mark type="keyword">monitor</mark>
                     </marks>
                 </answer>
             </answers>
