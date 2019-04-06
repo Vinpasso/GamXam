@@ -930,7 +930,7 @@
             <body>Draw the UML diagram of the IEEE 471 standard.</body>
             <answers>
                 <answer>
-                    <body>See Chapter 2.1.1 slide 6</body>
+                    <body><img src="../data/res/26_ieee_471.png"/></body>
                     <marks>
                         <mark type="manual"/>
                     </marks>
@@ -6793,6 +6793,106 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="16000">
+            <body>In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
+                want to give you an introduction to language level anti-patterns. You can find more information
+                here: http://www.odi.ch/prog/design/newbies.php. Take a look at the following Java source code examples.
+                These examples are syntactically correct, but exhibit slight problems. Try to relate these problems to
+                the seven deadly sins from the lectures and provide an improved solution:
+                <p/>
+                1. A junior developer is tasked with parsing a guestbook and outputting all greetings (sounds
+                familiar?). At the end of the business day
+                he proudly presents you his solution:
+                <pre>
+                    1 int start = xml.indexOf("&lt;content>") + "&lt;content>".length();
+                    2 int end = xml.indexOf("&lt;/content>");
+                    3 String content = xml.substring(start, end);
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>Pride/ignorance.
+                        From website: XML parsers are for sissies
+                    </body>
+                    <marks>
+                        <mark type="keyword">pride</mark>
+                        <mark type="keyword">ignorance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16000">
+            <body>In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
+                want to give you an introduction to language level anti-patterns. You can find more information
+                here: http://www.odi.ch/prog/design/newbies.php. Take a look at the following Java source code examples.
+                These examples are syntactically correct, but exhibit slight problems. Try to relate these problems to
+                the seven deadly sins from the lectures and provide an improved solution:
+                <p/>
+                1. A junior developer is tasked with parsing a guestbook and outputting all greetings (sounds
+                familiar?). At the end of the business day
+                he proudly presents you his solution:
+                <pre>
+                    1 int start = xml.indexOf("&lt;content>") + "&lt;content>".length();
+                    2 int end = xml.indexOf("&lt;/content>");
+                    3 String content = xml.substring(start, end);
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>Pride/ignorance.
+                        From website: XML parsers are for sissies
+                    </body>
+                    <marks>
+                        <mark type="keyword">pride</mark>
+                        <mark type="keyword">ignorance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16001">
+            <body>In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
+                want to give you an introduction to language level anti-patterns. You can find more information
+                here: http://www.odi.ch/prog/design/newbies.php. Take a look at the following Java source code examples.
+                These examples are syntactically correct, but exhibit slight problems. Try to relate these problems to
+                the seven deadly sins from the lectures and provide an improved solution:
+                <p/>
+                2. Browsing your companie’s code base you come across these lines:
+                <pre>
+                    1 File tmp =newFile("C:\\Temp\\1.tmp");
+                    2 File exp =newFile("export-2013-02-01T12:30.txt");
+                    3 File f =newFile(path +’/’+ filename);
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>Apathy/haste</body>
+                    <marks>
+                        <mark type="keyword">apathy</mark>
+                        <mark type="keyword">haste</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16002">
+            <body>3. An experienced programmer gives you a prototype implementation that you have to improve. It
+                contains this try-catch block:
+                <pre>
+                    1 Query q = ...2Person p;
+                    3 try{
+                    4  p = (Person) q.getSingleResult();
+                    5 } catch(Exception e) {
+                    6  p =null;
+                    7 }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+
 
         <!-- Practice Exam -->
         <question type="extended-answer" id="30000">
