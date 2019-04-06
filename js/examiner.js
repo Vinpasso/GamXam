@@ -142,11 +142,11 @@ function handleProgress(xmlString) {
 
     refreshProgressUI();
     postRandomQuestion();
-    showAlert("Successfully imported " + numImported + " progress save elements.");
+    showAlert("Successfully imported " + numImported + " progress save elements.", "alert-success");
 }
 
-function showAlert(content) {
-    $("#alerts").append("<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\" id=\"alert-box\">\n" +
+function showAlert(content, type = 'alert-primary') {
+    $("#alerts").append("<div class=\"alert " + type + " alert-dismissible fade show\" role=\"alert\" id=\"alert-box\">\n" +
         "                        <span id=\"alert-box-content\">" + content + "</span>\n" +
         "                        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n" +
         "                            <span aria-hidden=\"true\">&times;</span>\n" +
@@ -183,7 +183,7 @@ function exportProgressToXML() {
 
     xml.push("</progress>");
 
-    showAlert("Successfully exported " + exportedElements + " progress elements.");
+    showAlert("Successfully exported " + exportedElements + " progress elements.", "alert-success");
     return xml.join("");
 }
 
