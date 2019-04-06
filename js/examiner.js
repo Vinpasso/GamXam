@@ -49,6 +49,7 @@ function sanityCheckExam() {
     });
     if (idSet.length != examLength) {
         console.error("Exam has duplicate ids.");
+        showAlert("Exam has duplicate question ids. Progress may not work correctly.", "alert-danger");
     }
 }
 
