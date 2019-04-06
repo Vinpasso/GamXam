@@ -195,7 +195,9 @@ function saveProgress() {
     anchor.download = "progress_" + examFileName + ".xml";
     anchor.href = window.URL.createObjectURL(blob);
     anchor.dataset.downloadurl = ['text/xml', anchor.download, anchor.href].join(':');
+    document.body.appendChild(anchor);
     anchor.click();
+    document.body.removeChild(anchor);
 
     window.URL.revokeObjectURL(blob);
 }
