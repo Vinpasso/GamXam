@@ -930,7 +930,9 @@
             <body>Draw the UML diagram of the IEEE 471 standard.</body>
             <answers>
                 <answer>
-                    <body><img src="../data/res/26_ieee_471.png"/></body>
+                    <body>
+                        <img src="../data/res/26_ieee_471.png"/>
+                    </body>
                     <marks>
                         <mark type="manual"/>
                     </marks>
@@ -1707,7 +1709,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="77">
-            <body>What is the single responsibility principle?</body>
+            <body>What is the single responsibility principle? What should its use lead to?</body>
             <answers>
                 <answer>
                     <body>A class should only ever have one reason to change. If there are more, split the
@@ -2838,6 +2840,40 @@
                         <mark type="keyword">function</mark>
                         <mark type="keyword">logic</mark>
                         <mark type="keyword">technic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 2.4 Model-based Information Systems -->
+        <question type="extended-answer" id="531">
+            <body>What is Model-Based Software Engineering (MBSE)?</body>
+            <answers>
+                <answer>
+                    <body>The formalized application of different kinds of models to support and document the software
+                        engineering process in different phases, e.g requirements engineering, software architecture
+                        design, software development.<p/>
+                        Models are part of the SE process
+                    </body>
+                    <marks>
+                        <mark type="keyword">support</mark>
+                        <mark type="keyword">document</mark>
+                        <mark type="keyword">process</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="532">
+            <body>What is a model-based information system (MBIS)?</body>
+            <answers>
+                <answer>
+                    <body>Business applications with an explicit (logical) model layer which serves as an abstraction to
+                        e.g. business-case specific datastructures (data models), business-case specific views/user
+                        interfaces (UI models), business-case specific processes/workflows (process models).<p/>
+                        Models are part of the information system.
+                    </body>
+                    <marks>
+                        <mark type="keyword"></mark>
                     </marks>
                 </answer>
             </answers>
@@ -6821,34 +6857,6 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="16000">
-            <body>In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
-                want to give you an introduction to language level anti-patterns. You can find more information
-                here: http://www.odi.ch/prog/design/newbies.php. Take a look at the following Java source code examples.
-                These examples are syntactically correct, but exhibit slight problems. Try to relate these problems to
-                the seven deadly sins from the lectures and provide an improved solution:
-                <p/>
-                1. A junior developer is tasked with parsing a guestbook and outputting all greetings (sounds
-                familiar?). At the end of the business day
-                he proudly presents you his solution:
-                <pre>
-                    1 int start = xml.indexOf("&lt;content>") + "&lt;content>".length();
-                    2 int end = xml.indexOf("&lt;/content>");
-                    3 String content = xml.substring(start, end);
-                </pre>
-            </body>
-            <answers>
-                <answer>
-                    <body>Pride/ignorance.
-                        From website: XML parsers are for sissies
-                    </body>
-                    <marks>
-                        <mark type="keyword">pride</mark>
-                        <mark type="keyword">ignorance</mark>
-                    </marks>
-                </answer>
-            </answers>
-        </question>
         <question type="extended-answer" id="16001">
             <body>In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
                 want to give you an introduction to language level anti-patterns. You can find more information
@@ -6874,21 +6882,180 @@
             </answers>
         </question>
         <question type="extended-answer" id="16002">
-            <body>3. An experienced programmer gives you a prototype implementation that you have to improve. It
+            <body>
+                In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
+                want to give you an introduction to language level anti-patterns. You can find more information
+                here: http://www.odi.ch/prog/design/newbies.php. Take a look at the following Java source code examples.
+                These examples are syntactically correct, but exhibit slight problems. Try to relate these problems to
+                the seven deadly sins from the lectures and provide an improved solution:
+                <p/>
+                3. An experienced programmer gives you a prototype implementation that you have to improve. It
                 contains this try-catch block:
                 <pre>
-                    1 Query q = ...2Person p;
+                    1 Query q = ...
+                    2 Person p;
                     3 try{
-                    4  p = (Person) q.getSingleResult();
+                    4 p = (Person) q.getSingleResult();
                     5 } catch(Exception e) {
-                    6  p =null;
+                    6 p =null;
                     7 }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>Apathy, haste (No-Ans)</body>
+                    <marks>
+                        <mark type="keyword">apathy, haste</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16003">
+            <body>In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
+                want to give you an introduction to language level anti-patterns. You can find more information
+                here: http://www.odi.ch/prog/design/newbies.php. Take a look at the following Java source code examples.
+                These examples are syntactically correct, but exhibit slight problems. Try to relate these problems to
+                the seven deadly sins from the lectures and provide an improved solution:
+                <p/>
+                4. A network application that you maintain sometimes crashes silently. You already spend hours trying
+                tofind the cause. Suddenly you spy these lines of code and want to kill the original
+                author.
+                <pre>
+                    1 try{
+                    2 ...do risky stuff...
+                    3 } catch(SomeException e) {
+                    4 // never happens
+                    5 }
+                    6 ...do some more ...
                 </pre>
             </body>
             <answers>
                 <answer>
                     <body></body>
                     <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16004">
+            <body>In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
+                want to give you an introduction to language level anti-patterns. You can find more information
+                here: http://www.odi.ch/prog/design/newbies.php. Take a look at the following Java source code examples.
+                These examples are syntactically correct, but exhibit slight problems. Try to relate these problems to
+                the seven deadly sins from the lectures and provide an improved solution:
+                <p/>
+                5. Your intern is writing a single-threaded program that retrieves guest book entires, processes them
+                and stores the entries in a database. Her code is perfect, you cannot find anything wrong with it. Yet
+                your task is to find something, anything, to criticize. Then you read it again and find this innocent
+                line:
+                <pre>
+                    1 Collection l =newVector();
+                    2 for(...) {
+                    3 l.add(object);
+                    4 }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16005">
+            <body>In the lecture you learned about high level anti-patterns like Blob or Design by Committee. We now
+                want to give you an introduction to language level anti-patterns. You can find more information
+                here: http://www.odi.ch/prog/design/newbies.php. Take a look at the following Java source code examples.
+                These examples are syntactically correct, but exhibit slight problems. Try to relate these problems to
+                the seven deadly sins from the lectures and provide an improved solution:
+                <p/>
+                6. Maintaining an e-commerce website you receive an angry call from a customer. He just just sold
+                100 different chewinggums for 0.30 each and the bill to the buyer totalled to only €29.999971 instead
+                of €30. After inspecting the code you start to write a letter of apology to your customer.
+                <pre>
+                    1 float total = 0.0f;
+                    2 for(OrderLine line : lines) {
+                    3 total += line.price * line.count;
+                    4 }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+
+        <question type="extended-answer" id="16006">
+            <body>In this assignment we will discuss the strengths and weaknesses of model-driven
+                development,software product lines, and agile development on the basis of a couple of stereotypical case
+                studies. For each of the following case studies you should thus decide which development methodology you
+                would adopt and justify your choice. In case you propose to adopt a model-driven development approach
+                you should furthermore discuss the concrete type of model that you would use here and reason about
+                the relationship between model and deployed system. In case you propose to implement a software product
+                line you should discuss what would be the the stable platform, what would be the variability points, and
+                at which point you would expect the break-even point.
+                TODO:
+            </body>
+            <answers></answers>
+        </question>
+
+        <!-- Exercise 7 -->
+        <question type="extended-answer" id="17000">
+            <body>As a tester for Weyland-Yutani corp you are given the task of testing their payroll processing system.
+                It takes an employee record as input and computes the weekly salary. Assume that an employee record
+                looks
+                like this:
+                <pre>
+                    • ID: int from 1 - 999
+                    • name: String [a-zA-Z\s]with at most 20 characters
+                    • rate: float, that varies from €5 per hour to €10 per hour. Rates are multiples of €0.25.
+                    • hoursWorked int, that ranges from 0 to 60.
+                </pre>
+                1. How many possible types of records (and thus test cases) are there?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <img src="../data/res/17000_possibilities.png"/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">40</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17001">
+            <body>As a tester for Weyland-Yutani corp you are given the task of testing their payroll processing system.
+                It takes an employee record as input and computes the weekly salary. Assume that an employee record
+                looks
+                like this:
+                <pre>
+                    • ID: int from 1 - 999
+                    • name: String [a-zA-Z\s]with at most 20 characters
+                    • rate: float, that varies from €5 per hour to €10 per hour. Rates are multiples of €0.25.
+                    • hoursWorked int, that ranges from 0 to 60.
+                </pre>
+                There are approximately 3.98*10&#94;40
+                2. Assume the execution of each test case takes 5ms,
+                <p/>
+                a) Is it feasible to completely test this program?
+                <p/>
+                b) How could you reduce the input space to best test the program on a continues integration server that
+                runs all test cases every night (assume a night lasts 8 hours)? What assumptions do you need to make?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        □ ~20∗10&#94;37 s to test the entire program
+                        □ Keep the edge cases
+                        □ Keep some normal cases
+                        □ Reduce rest of test space so that it fits inside 28800 seconds, or approximately by 6,94*
+                        (10)&#94;33
+                    </body>
+                    <marks>
+                        <mark type="keyword">edge</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
