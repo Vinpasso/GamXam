@@ -1724,7 +1724,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="78">
-            <body>What is responsability?</body>
+            <body>What is responsibility?</body>
             <answers>
                 <answer>
                     <body>A family of functions that serves one particular actor. It describes the core functionality of
@@ -2852,7 +2852,8 @@
                 <answer>
                     <body>The formalized application of different kinds of models to support and document the software
                         engineering process in different phases, e.g requirements engineering, software architecture
-                        design, software development.<p/>
+                        design, software development.
+                        <p/>
                         Models are part of the SE process
                     </body>
                     <marks>
@@ -2869,15 +2870,105 @@
                 <answer>
                     <body>Business applications with an explicit (logical) model layer which serves as an abstraction to
                         e.g. business-case specific datastructures (data models), business-case specific views/user
-                        interfaces (UI models), business-case specific processes/workflows (process models).<p/>
+                        interfaces (UI models), business-case specific processes/workflows (process models).
+                        <p/>
                         Models are part of the information system.
                     </body>
                     <marks>
-                        <mark type="keyword"></mark>
+                        <mark type="keyword">layer</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="533">
+            <body>What is a meta model?</body>
+            <answers>
+                <answer>
+                    <body>A meta-model defines the means by which users define models.</body>
+                    <marks>
+                        <mark type="keyword">user</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="534">
+            <body>What is a meta-model based information system and what does it enable users to do?</body>
+            <answers>
+                <answer>
+                    <body>It bases its functionality on the meta-model, empowering end-users to define and adapt the
+                        actual model at run-time.
+                    </body>
+                    <marks>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">run</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="535">
+            <body>What is the tradeoff that occurs in meta-models?</body>
+            <answers>
+                <answer>
+                    <body>Expressiveness (ability to support many business cases well) vs Understandability (As simple
+                        as possible so users can learn how to model).
+                    </body>
+                    <marks>
+                        <mark type="keyword">express</mark>
+                        <mark type="keyword">understand</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="538">
+            <body>What are some advantages of model-based information systems?</body>
+            <answers>
+                <answer>
+                    <body>Advantages: Independence during development, wide applicability in similar business cases.
+                        Disadvantages: Restricted field of view, decreased performance.
+                    </body>
+                    <marks>
+                        <mark type="keyword">independen</mark>
+                        <mark type="keyword">applicab</mark>
+                        <mark type="keyword">view</mark>
+                        <mark type="keyword">perform</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="539">
+            <body>What are the two ways to handle derived attributes and what advantages/disadvantages are there?</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            Virtual (dynamic recompute).
+                            + No need to care about when recompute is necessary.
+                            - Limited analysis/query capabilities (also performance).
+                            Materialized (stored as any other value).
+                            + Full functionality for analysis/querying (better performance).
+                            - Complex mechanism needed to determine recompute.
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">virtual</mark>
+                        <mark type="keyword">material</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="540">
+            <body>What are the ways of editing data in a model-based information system?</body>
+            <answers>
+                <answer>
+                    <body>In-place, mass edit, convenience features</body>
+                    <marks>
+                        <mark type="keyword">place</mark>
+                        <mark type="keyword">mass</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
 
         <!-- Chapter 2.5 Testability -->
         <!-- TODO: Where was the original introduction to diagram seen on slide 2? Iso diagram -->
