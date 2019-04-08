@@ -7491,6 +7491,364 @@
         </question>
 
         <!-- Exercise 8 -->
+        <question type="extended-answer" id="18000">
+            <body>Imagine you are living in Hintertupfingen close to Munich and every day you have to commute by car to
+                your working place. On the countryside road to Munich there is this annoying railroad crossing that most
+                of the time you have to wait for the regional train to Passau to pass until you can continue your
+                journey. One day that you are once again waiting at the crossing for the gates to open again you start
+                to
+                question yourself how high the risk for you getting killed while crossing the tracks might probably be.
+                Concerned about the seemingly not too good condition of the technical infrastructure (see Figure 1) that
+                seems to control the gates at the crossing and the obstructed view on the railroad you start to do some
+                internet research and make a phone calls to a friend that works at the Bavarian ministry of traffic and
+                infrastructure. With your phone calls and your internet research you were able to gather the following
+                information:
+                <pre>
+                    • After a train passes theSwitch 1a signal is sent to the Controller that then simultaneously
+                    closes Gate 1 and Gate 2. After the train has passed Switch 2, a signal is again sent to the
+                    Controller which then in turn opens Gate 1 and Gate 2 again.
+                    • The controller has some built-in fail-safe functionality and recognizes if one of the two switches
+                    is broken, in which case it permanently closes both gates to prevent potential accidents.
+                    Unfortunately,the fail-safe mechanism can not cope with two switches breaking at the same time and
+                    in this case cannot prevent the gates to, in the worst case, remain constantly open.
+                    • From your internet research you learned that the Switch model used in the crossing
+                    infrastructure at average fails once every 2 years. However, the Controller has a slightly higher
+                    reliability and at average only fails once every 5 years.
+                    • Your friend at the ministry of traffic and infrastructure told you that at average 1 in 100
+                    situations where a car passes a railroad crossing while the gates are permanently open due to such
+                    an error leads to a deadly accident.
+                    • Furthermore, he told you that at average, the maintenance personnel takes about 1 day to realize
+                    that a crossing infrastructure is in such a failed state and then usually instantly fixes the issue.
+                    • At average you take the crossing 300 times a year and it takes you about 5 seconds to pass it.
+                </pre>
+                a) With this information you now start to calculate your individual yearly risk to get killed passing
+                the crossing. Considering that an average German 13-years old boy has an inevitable basic death risk of
+                2∗10 pow −4 deaths/year, would you say you are in extraordinary danger (T/F)?
+                <p/>
+                b) Your internet research furthermore revealed that, with only a bit of additional investment, the
+                ministry of traffic and infrastructure could either
+                <p/>
+                i) substitute the Controller by a new model that is capable of going into a fail-safe state even when
+                two Switches fail at the same time, or
+                <p/>
+                ii) improve the maintenance process to fix failed crossing infrastructures within half a day instead of
+                one day.
+                <p/>
+                Which of the two options would you recommend your friend and why?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            § Pr[2 switch failures]=0.5∗0.5=0.25
+                            § Pr[Controller Failure]=0.2
+                            § Pr[2 switch failures∨ controller failure]=0.25+0.2−0.25∗0.2=0.5
+                            § Time repair: 1/365 years
+                            § Crossing time 5/(3600∗24∗365) years
+                            § 300 passes/year
+                            § Pr[Death|Failed open state]=0.01
+                            § P[death]=300∗0.4∗0.01∗5/(3600∗24∗365)∗1/365=5,21∗10^(−10)
+                        </pre>
+                        The system seems to be safe enough.
+                        <p/>
+                        Improving the controller for double switch failure detection halves the probability of death.
+                        Fixing problems within half a day also halves the probability. Either suggestions therefore work
+                        equally well.
+                    </body>
+                    <marks>
+                        <mark type="keyword">F</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="18001">
+            <body>
+                You are working for Mobquet Inc., the company that designs and produces the famous Swoop Bikes that are
+                the
+                standard imperial personal transport vehicles for storm trooper scouting missions. Considering
+                recently reported fatal accidents due to faulty lighting systems of the bikes on a mission to Endor,
+                your
+                superior, Mr. Mobquet himself, asked you to perform a FMEA on the design of the current Swoop Bike model
+                to identify potential safety issues and make recommendations for their mitigation. For your analysis he
+                gave you the schematic blueprint of the bike’s design, depicted in Figure 2. You further got provided
+                with the following information:
+                <pre>
+                    • Each front- or back-light system (Components A1 and A2) of the bike consists of the following
+                    parts:
+                    –Housing
+                    –Bulb
+                    –Bulb socket
+                    –Reflector
+                    • The lights are connected to a switch (Component B) on the handlebar to turn them on and off.
+                    The power provisioning system consists of the following parts:
+                    –Wire
+                    –Frame mount
+                    –Battery
+                    From reading the field report from the Endor mission you furthermore know that:
+                    • Endor is almost entirely covered by a thick rainforest, with an average humidity of 89%.
+                    • The rich fauna blocks most of the daylight which yields the underwood to be pretty shady all day.
+                    • Failing lights in most cases lead to fatal accidents due to the high speed of the bikes and bad
+                    sight in Endor.
+                    • If maintained properly, batteries, reflectors, and sockets seldom break by themselves.
+                    • Due to cost pressure, most of the wiring of the Swoop Bike up to now was done with cheap
+                    non-corrosion-proof materials.
+                    • The empire uses more than 30 differently powerful and robust light bulbs for their vehicles with 5
+                    of them sharing the same socket type.
+                    • Due to cost reasons the Empire these days exclusively uses normal light bulbs that at average burn
+                    every 600 hours of
+                    operation instead of more robust LEDs.
+                    • Directed shots at light reflectors with laser weapons can impair their reflection effectiveness.
+                    • The bike maintenance is mainly done by imprisoned Ewoks that, with only four fingers, have severe
+                    troubles in producing clean soldering joints.
+                    • Especially in emergency situations, easily scared maintenance personnel often forget to properly
+                    tighten screws.
+                    • Many stormtroopers, although they were told not to do so, occasionally misuse the bike’s battery
+                    to charge their phones. As the battery was not designed for such a scenario it empties
+                    substantially faster than under normal use.
+                    • Once a month each bike is subject to a full maintenance check where the functionality of each part
+                    of the bike is checked separately.
+                </pre>
+                1. Perform a thorough FMEA for the lights of the Swoop Bike, using the provided template.
+                <p/>
+                2. Come up with realistic estimated for severity (S), occurrence probability (O), and probability of
+                non-detection (D), and calculate the associated risk priority numbers (RPN), based on the provided
+                background information.
+                <p/>
+                3. You only have time and budget to focus on two failure causes – which ones would you focus on?
+                <p/>
+                4. What would be your suggestions for corrective measures?
+                <p/>
+                <img src="../data/res/18001_template.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Exercise 8 -->
+        <question type="extended-answer" id="19000">
+            <body>The owners of the popular, but controversial, file sharing website Mos Filesley noticed that their
+                website is under constant cyber attacks from unknown perpetrators. “Since last Monday we are being
+                hacked
+                on a daily basis, why would anyone do that? We are a legitimate business trying to turn in a profit”,
+                says an anonymous source in the company. They decided to hire you to improve their defenses. Use your
+                past experiences as a hacker to describe the security of the system against varying attacks. The best
+                tool to illustrate your findings areAttack Trees.
+                <p/>
+                1. Identify at least three possible attack goals (Hint: You might want to consider the tasks of Exercise
+                1). Each goal is the root node of an attack tree. Trees can share nodes and subtrees.
+                <p/>
+                2. Try to think of all attacks against a goal and build the tree.
+                <p/>
+                3. Think about attacks that do not involve the web application. Think of attack goals like: SSH
+                shell access, attacks against the apache web server, or even physically accessing (even stealing) the
+                server.
+                <p/>
+                4. Annotate your tree with the severity of the attack.
+                <p/>
+                In the real world, vulnerabilities are scored with
+                the Common Vulnerability Scoring System (CVSS). It uses different properties (e.g. can the attack be
+                exploited over the network, does the attacker need a valid user account on the system or how much
+                information can the attacker access) to rate vulnerabilities. To rate the severity of an attack, use a
+                heavily simplified version of CVSS. Classify your attacks according to these dimensions (feel free to
+                think of other metrics if your attack does not fit):
+                <img src="../data/res/19000_cvss.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>Three possible attack goals: Obtain other users private files, prevent other users from using
+                        the system, upload files that appear to come from another user.
+                        <p/>
+                        Some attacks against a goal: Obtain access to the restricted section of the website (using SQL
+                        injection). Obtain access to files (upload and execute malicious files containing code). Obtain
+                        access to other user private data (download the database). Spy on network communication. Steal
+                        or physically access the servers.
+                        <img src="../data/res/19000_attack_tree.png"/>
+                        <img src="../data/res/19000_cvss_assessment.png"/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">file</mark>
+                        <mark type="keyword">sql</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Exercise 10 -->
+        <question type="extended-answer" id="20000">
+            <body>1. What are the differences between horizontal and vertical scaling? What are the main benefits
+                and shortcomings?
+            </body>
+            <answers>
+                <answer>
+                    <body>Horizontal scaling adds more resources of the same type (lower investment, distributed
+                        deployment needed, very heterogeneous environment possible), vertical scaling replaces the
+                        resource by a larger/smaller resource (no code support, higher investment).
+                        <p/>
+                        ○ Horizontal scaling makes use of adding more of the same hardware resource to the existing
+                        resources, such as increasing the computing capacity of a server cluster by adding more servers
+                        of the same type to the cluster. This can help reduce the necessary investment, as resources are
+                        only expanded instead of replaced. However, it can be more difficult to administer, as your
+                        computing cluster can become heterogeneous. It also cannot avoid the need to eventually replace
+                        hardware that is growing too outdated. Finally, it requires software support (mostly in form of
+                        multi-threading) to make use of the parallel computing resources. Additionally, it supports
+                        scaling back as well, since any computing resources can easily be decommissioned again.
+                        <p/>
+                        Vertical scaling relies on replacing the computing resource by an improved version, such as
+                        replacing a server running at its capacity with a server with higher capacity. It is easier to
+                        implement since it does not explicitly require software support to make use of, for example, a
+                        CPU with a higher clock rate or additional memory (as this is usually administered by the
+                        operating system). However, it can be more costly to iteratively replace hardware when demand
+                        grows and there are physical limits as to how far you can raise, for example, the clock rate of
+                        a processor.
+                    </body>
+                    <marks>
+                        <mark type="keyword">resource</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Missing -->
+        <question type="extended-answer" id="20006">
+            <body>
+                As you learned in class, map reduce is used to analyze big data sets. In this exercise we will provide
+                you with some SQL queries for which you should implement corresponding map reduce functions. To
+                familiarize yourself with the syntax of map reduce functions refer to the following examples:
+                <pre>
+                    1 Table Employees:
+                    2 ID Employee base_salary salary_level bonus
+                    3 1 Alice 50000 4 3000
+                    4 2 Bob 40000 2 500
+                    5 3 Carry 55000 8 6000
+                    6 4 Dorian 45000 3 1000
+
+                    1. SELECT employee FROM employees WHERE salary_level > 3
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            1 function map(key, record):
+                            2 if(record.salary_level > 3) {
+                            3 selection = &lt;record.employee>
+                            4 collect(key, selection);
+                            5 }
+                            6 }
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">map</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20007">
+            <body>
+                As you learned in class, map reduce is used to analyze big data sets. In this exercise we will provide
+                you with some SQL queries for which you should implement corresponding map reduce functions. To
+                familiarize yourself with the syntax of map reduce functions refer to the following examples:
+                <pre>
+                    1 Table Employees:
+                    2 ID Employee base_salary salary_level bonus
+                    3 1 Alice 50000 4 3000
+                    4 2 Bob 40000 2 500
+                    5 3 Carry 55000 8 6000
+                    6 4 Dorian 45000 3 1000
+
+                    2. SELECT AVG(base_salary) FROM employees
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            1 function map(key, record) {
+                            2 selection = &lt;record.base_salary>;
+                            3 collect(key, selection);
+                            4 }
+                            5 function reduce(v, list&lt;selection>) {
+                            6 int sum = 0;
+                            7 for(selection : list&lt;selection>) {
+                            8 sum += selection.salary;
+                            9 }
+                            10 sum = sum / length(list);
+                            11 store(v, sum);
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">map</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20008">
+            <body>
+                As you learned in class, map reduce is used to analyze big data sets. In this exercise we will provide
+                you with some SQL queries for which you should implement corresponding map reduce functions. To
+                familiarize yourself with the syntax of map reduce functions refer to the following examples:
+                <pre>
+                    1 Table Employees:
+                    2 ID Employee base_salary salary_level bonus
+                    3 1 Alice 50000 4 3000
+                    4 2 Bob 40000 2 500
+                    5 3 Carry 55000 8 6000
+                    6 4 Dorian 45000 3 1000
+
+                    1. SELECT * From Attendance WHERE ScanTime > 1.1.2017
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            1 function map(key, record) {
+                            2 if(record.ScanTime > new Date(2017, 1, 1)) {
+                            3 selection = &lt;record>;
+                            4 collect(key, record);
+                            5 }
+                            6 }
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">map</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20009">
+            <body>
+                As you learned in class, map reduce is used to analyze big data sets. In this exercise we will provide
+                you with some SQL queries for which you should implement corresponding map reduce functions. To
+                familiarize yourself with the syntax of map reduce functions refer to the following examples:
+                <pre>
+                    1 Table Employees:
+                    2 ID Employee base_salary salary_level bonus
+                    3 1 Alice 50000 4 3000
+                    4 2 Bob 40000 2 500
+                    5 3 Carry 55000 8 6000
+                    6 4 Dorian 45000 3 1000
+
+                    2. SELECT AVG(COUNT(*)) FROM Attendance GROUP BY StudentID
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            function map(key, record) {
+
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">map</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
 
         <!-- Practice Exam -->
