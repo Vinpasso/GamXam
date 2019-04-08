@@ -7218,6 +7218,637 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="17002">
+            <body>In this assignment we will discuss the strengths and weaknesses of model-driven
+                development,software product lines, and agile development on the basis of a couple of stereotypical case
+                studies. For each of the following case studies you should thus decide which development methodology you
+                would adopt and justify your choice. In case you propose to adopt a model-driven development approach
+                you should furthermore discuss the concrete type of model that you would use here and reason about
+                the relationship between model and deployed system. In case you propose to implement a software product
+                line you should discuss what would be the the stable platform, what would be the variability points, and
+                at which point you would expect the break-even point.
+                <p/>
+                1. Imagine that you recently joined Pied Piper, a young start-up that specialized in the development
+                highly sophisticated data compression algorithms and approaches. Having already successfully
+                deployed their patented compression algorithm for desktop and server environments, Pied Piper now wants
+                to
+                make the next step and also conquer the mobile system market. To this end, the CEO, Richard Hendricks,
+                asked you to come up with a new concept to align the desktop- and mobile application development
+                efforts.
+                Richards is in particular fond of the idea of reusing as much of the code and development artifacts as
+                possible to ensure an early market penetration. However, during a brief chat with the lead architect of
+                the desktop development team during lunch you got to know that most of the desktop platform codebase was
+                written in the obscure Erlang programming language – being not aware of any mobile implementation of the
+                Erlang runtime environment you are now a bit concerned that the amount of achievable reuse probably
+                would
+                not be too high.
+            </body>
+            <answers>
+                <answer>
+                    <body>It would be possible to extract a model out of the existing Erlang implementation and
+                        reimplement the model in another language, reusing the structure of the system. This would imply
+                        model-driven development. The indication of time pressure would lend itself to agile
+                        development.
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">model|agile</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17003">
+            <body>In this assignment we will discuss the strengths and weaknesses of model-driven
+                development,software product lines, and agile development on the basis of a couple of stereotypical case
+                studies. For each of the following case studies you should thus decide which development methodology you
+                would adopt and justify your choice. In case you propose to adopt a model-driven development approach
+                you should furthermore discuss the concrete type of model that you would use here and reason about
+                the relationship between model and deployed system. In case you propose to implement a software product
+                line you should discuss what would be the the stable platform, what would be the variability points, and
+                at which point you would expect the break-even point.
+                <p/>
+                2. You are working for the Popolus Vehiculum (PV) cooperation one of the world’s biggest manufacturers
+                of automobiles. Your division is in charge of the control code of their diesel engines. This code
+                determines how much fuel is injected and at what temperatures it is burned. A super national body has
+                agreed to impose stricter emission standards and your team is tasked with writing the control code for
+                the next generations of engines. The code will be reviewed by independent auditors and has to be
+                certified according to the new regulations. To cut costs, there will only be three different types of
+                engines. As this is a completely new line-up of engine they will be in use for quite some time. So ease
+                of maintenance and understandability is imperative.
+            </body>
+            <answers>
+                <answer>
+                    <body>Software product line. The typical payoff lies somewhere between the second and third system,
+                        with the option of cheaply supporting further engines down the line if necessary (even though
+                        they are not planned).
+                        <p/>
+                        Model driven development could model the engine and its control,
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">line|model</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17004">
+            <body>In this assignment we will discuss the strengths and weaknesses of model-driven
+                development,software product lines, and agile development on the basis of a couple of stereotypical case
+                studies. For each of the following case studies you should thus decide which development methodology you
+                would adopt and justify your choice. In case you propose to adopt a model-driven development approach
+                you should furthermore discuss the concrete type of model that you would use here and reason about
+                the relationship between model and deployed system. In case you propose to implement a software product
+                line you should discuss what would be the the stable platform, what would be the variability points, and
+                at which point you would expect the break-even point.
+                <p/>
+                3.Mockia, a rising star in the highly competitive smartphone market, recently introduced there
+                new flagship smartphone the MeiOlaiddl. The MeiOlaiddl is the first smartphone that allows almost
+                full customization of the hardware configuration – the user can order a highly customized
+                smartphone online by simply filling in a questionnaire about his usage profile. Mockia then promises to
+                configure and ship a customized smartphone that perfectly fits the customer’s needs within 3 working
+                days. Although the new concepts already found wide reception and pre-orders by far exceed the
+                immediate production capabilities, the CTO of Mockia during the last internal developer conference
+                raised concerns about the flexibility of their current development approach. Currently the entire
+                software stack of Mockia’s current smartphone portfolio is custom build; reuse is, if at all, entirely
+                done opportunistically. Looking at the enormous mass of configuration possibilities, the currently
+                practiced development approach is clearly not anymore able to keep up with the high number of
+                pre-orders. Currently the user can choose between 3 different camera modules, 4 CPU models, 6 persistent
+                memory modules, and 2 GPS chips. A closer look at the pre-order data revealed that more than 92% of the
+                customers pre-ordered a configuration that included the cheapest CPU and the second-smallest memory
+                module. The remaining parts where arbitrarily combined with no apparent pattern in customer preferences.
+                Hopelessly lost in technical details, the CTO of Mockia hired you, an experienced software development
+                consultant, to propose a new development concept to better cope with the high number of different
+                configurations and make the software development more efficient. From old smartphone development
+                projects
+                you know that developing a new controller software for a CPU takes about 6PM, for a memory module 2PM,
+                for a camera module 4PM, and for a GPS chip 2PM. From your experience you know that writing a solid
+                platform that a-priori is designed for reuse typically yields 3 times the effort of the normal
+                development effort of the respective components.
+            </body>
+            <answers>
+                <answer>
+                    <body>Software product line. The typical payoff lies somewhere between the second and third system,
+                        with the option of cheaply supporting further smartphones down the line. Before the third
+                        system, model-driven development is cheaper.
+                        <p/>
+                    </body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">line|model</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17005">
+            <body>1. Why, despite the fact that we have full code coverage and the test case passes,
+                might findFactors still fail for some inputs? Name at least one fault that is not covered by the test
+                case.
+                <p/>
+                2. Write a better test case that also covers the missing faults.
+                <p/>
+                3. Can you completely test this method? Justify your answer.
+                <pre>
+                    Your first task is to look at the findFactors method:
+                    1 /**
+                    2 *Returns an ArrayList of all the factors of an integer
+                    3 *
+                    4 * @param number to factor
+                    5 * @return ArrayList of factors
+                    6 * @author hg
+                    7 */
+                    8 public static ArrayList&lt;Integer> findFactors(long input){
+                    9 // 2015/11/25 es: changed to handle longs, unit tests still work, we still have full coverage
+                    10 // 2010/02/24 hg: simple method to factor numbers. Simple, but enough for our use case
+                    11 ArrayList &lt;Integer> factors =newArrayList&lt;Integer>();
+                    12 int i = 1;
+                    13 while( i&lt;= input) {
+                    14 if(input % i == 0){
+                    15 factors.add(i);
+                    16 }
+                    17 i++;
+                    18 }
+                    19 return factors;
+                    20}
+                    Here are the current JUnit tests for it:
+                    1 // hg: added test cases. We should not get numbers much larger than that
+                    2 @Test
+                    3 public void testFindFactors() {
+                    4 ArrayList &lt;Integer> exp120 =new ArrayList&lt;Integer>();
+                    5 exp120.add(1);
+                    6 exp120.add(2);
+                    7 exp120.add(3);
+                    8 exp120.add(4);
+                    9 exp120.add(5);
+                    10 exp120.add(6);
+                    11 exp120.add(8);
+                    12 exp120.add(10);
+                    13 exp120.add(12);
+                    14 exp120.add(15);
+                    15 exp120.add(20);
+                    16 exp120.add(24);
+                    17 exp120.add(30);
+                    18 exp120.add(40);
+                    19 exp120.add(60);
+                    20 exp120.add(120);
+                    21
+                    22 assertEquals(exp120,SuperMath.findFactors(120));
+                    23 ArrayList&lt;Integer> exp1 =new ArrayList&lt;Integer>();
+                    24 exp1.add(1);
+                    25 assertEquals(exp1,SuperMath.findFactors(1));
+                    26 }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Doesn't test negative input, doesn't test zero input, doesn't test for overflow.
+                        <p/>
+                        This method would take 2 pow 32 test cases to test completely, which is unrealistic even if the
+                        test runs only milliseconds.
+                    </body>
+                    <marks>
+                        <mark type="keyword">negativ</mark>
+                        <mark type="keyword">zero</mark>
+                        <mark type="keyword">overflow</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17006">
+            <body>Next, take a look at the fullAdder method:
+                <pre>
+                    1 /**
+                    2 *Full adder.
+                    3 *See:
+                    4 *https://en.wikipedia.org/wiki/Adder_%28electronics%29#Full_adder
+                    5 *
+                    6 *@param a first input bit
+                    7 *@param b second input bit
+                    8 *@param c carry
+                    9 *@return Array that contains [result,carry]
+                    10 *@author hg
+                    11 */
+                    12 public staticBoolean[] fullAdder(Boolean a, Boolean b, Boolean c){
+                    13 Boolean s,tmp;
+                    14 tmp = a != b;
+                    15 s = c != tmp;
+                    16 c = (a &amp;&amp; b) || (tmp &amp;&amp; c);
+                    17 return newBoolean[]{s,c};
+                    18 }
+                </pre>
+                1. This method is simple enough to be completely tested. How many test cases do you need?
+                <p/>
+                2. Implement all necessary JUnit test cases to completely test this method.
+            </body>
+            <answers>
+                <answer>
+                    <body>2 pow 3 = 8 cases needed for complete test.</body>
+                    <marks>
+                        <mark type="regex" regex-flags="i">8|eight</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17007">
+            <body>Finally take a look at the method BinaryAddition:
+                <pre>
+                    1 /**
+                    2 *Adds binary numbers of arbitrary, but equal, size.
+                    3 *The numbers have to be represented as a boolean array.
+                    4 *@param a first number
+                    5 *@param b second number
+                    6 *@return result array. It will be a.length + 17 */
+                    8 public staticBoolean[] BinaryAddition(Boolean[] a, Boolean[] b){
+                    9 assert(a.length == b.length);
+                    10 Boolean[] result =newBoolean[a.length + 1];
+                    11 Boolean carry =false;
+                    12 int i;
+                    13 for(i = 0; i&lt; a.length; i++){
+                    14 Boolean[] tmp = fullAdder(a[i],b[i],carry);
+                    15 result[i] = tmp[0];
+                    16 carry = tmp[1];
+                    17 }
+                    18 result[i] = carry;
+                    19
+                    20 return result;
+                    21 }
+                </pre>
+                1. Can BinaryAddition be tested completely?
+                <p/>
+                2. Think about at least five good test cases for this method and implement them in JUnit. Try to cover
+                as much code as possible. Justify your choice of inputs.
+            </body>
+            <answers>
+                <answer>
+                    <body>Arrays can contain many thousands of elements, each of which is a bit. Testing a combination
+                        of 2 numbers with at least 1000 bit length is nowhere near possible.
+                        Some possible test cases include: Testing arrays with max value, arrays of different length,
+                        null inputs, some normal case, zero case.
+                    </body>
+                    <marks>
+                        <mark type="keyword">null</mark>
+                        <mark type="keyword">zero</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Exercise 8 -->
+        <question type="extended-answer" id="18000">
+            <body>Imagine you are living in Hintertupfingen close to Munich and every day you have to commute by car to
+                your working place. On the countryside road to Munich there is this annoying railroad crossing that most
+                of the time you have to wait for the regional train to Passau to pass until you can continue your
+                journey. One day that you are once again waiting at the crossing for the gates to open again you start
+                to
+                question yourself how high the risk for you getting killed while crossing the tracks might probably be.
+                Concerned about the seemingly not too good condition of the technical infrastructure (see Figure 1) that
+                seems to control the gates at the crossing and the obstructed view on the railroad you start to do some
+                internet research and make a phone calls to a friend that works at the Bavarian ministry of traffic and
+                infrastructure. With your phone calls and your internet research you were able to gather the following
+                information:
+                <pre>
+                    • After a train passes theSwitch 1a signal is sent to the Controller that then simultaneously
+                    closes Gate 1 and Gate 2. After the train has passed Switch 2, a signal is again sent to the
+                    Controller which then in turn opens Gate 1 and Gate 2 again.
+                    • The controller has some built-in fail-safe functionality and recognizes if one of the two switches
+                    is broken, in which case it permanently closes both gates to prevent potential accidents.
+                    Unfortunately,the fail-safe mechanism can not cope with two switches breaking at the same time and
+                    in this case cannot prevent the gates to, in the worst case, remain constantly open.
+                    • From your internet research you learned that the Switch model used in the crossing
+                    infrastructure at average fails once every 2 years. However, the Controller has a slightly higher
+                    reliability and at average only fails once every 5 years.
+                    • Your friend at the ministry of traffic and infrastructure told you that at average 1 in 100
+                    situations where a car passes a railroad crossing while the gates are permanently open due to such
+                    an error leads to a deadly accident.
+                    • Furthermore, he told you that at average, the maintenance personnel takes about 1 day to realize
+                    that a crossing infrastructure is in such a failed state and then usually instantly fixes the issue.
+                    • At average you take the crossing 300 times a year and it takes you about 5 seconds to pass it.
+                </pre>
+                a) With this information you now start to calculate your individual yearly risk to get killed passing
+                the crossing. Considering that an average German 13-years old boy has an inevitable basic death risk of
+                2∗10 pow −4 deaths/year, would you say you are in extraordinary danger (T/F)?
+                <p/>
+                b) Your internet research furthermore revealed that, with only a bit of additional investment, the
+                ministry of traffic and infrastructure could either
+                <p/>
+                i) substitute the Controller by a new model that is capable of going into a fail-safe state even when
+                two Switches fail at the same time, or
+                <p/>
+                ii) improve the maintenance process to fix failed crossing infrastructures within half a day instead of
+                one day.
+                <p/>
+                Which of the two options would you recommend your friend and why?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            § Pr[2 switch failures]=0.5∗0.5=0.25
+                            § Pr[Controller Failure]=0.2
+                            § Pr[2 switch failures∨ controller failure]=0.25+0.2−0.25∗0.2=0.5
+                            § Time repair: 1/365 years
+                            § Crossing time 5/(3600∗24∗365) years
+                            § 300 passes/year
+                            § Pr[Death|Failed open state]=0.01
+                            § P[death]=300∗0.4∗0.01∗5/(3600∗24∗365)∗1/365=5,21∗10^(−10)
+                        </pre>
+                        The system seems to be safe enough.
+                        <p/>
+                        Improving the controller for double switch failure detection halves the probability of death.
+                        Fixing problems within half a day also halves the probability. Either suggestions therefore work
+                        equally well.
+                    </body>
+                    <marks>
+                        <mark type="keyword">F</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="18001">
+            <body>
+                You are working for Mobquet Inc., the company that designs and produces the famous Swoop Bikes that are
+                the
+                standard imperial personal transport vehicles for storm trooper scouting missions. Considering
+                recently reported fatal accidents due to faulty lighting systems of the bikes on a mission to Endor,
+                your
+                superior, Mr. Mobquet himself, asked you to perform a FMEA on the design of the current Swoop Bike model
+                to identify potential safety issues and make recommendations for their mitigation. For your analysis he
+                gave you the schematic blueprint of the bike’s design, depicted in Figure 2. You further got provided
+                with the following information:
+                <pre>
+                    • Each front- or back-light system (Components A1 and A2) of the bike consists of the following
+                    parts:
+                    –Housing
+                    –Bulb
+                    –Bulb socket
+                    –Reflector
+                    • The lights are connected to a switch (Component B) on the handlebar to turn them on and off.
+                    The power provisioning system consists of the following parts:
+                    –Wire
+                    –Frame mount
+                    –Battery
+                    From reading the field report from the Endor mission you furthermore know that:
+                    • Endor is almost entirely covered by a thick rainforest, with an average humidity of 89%.
+                    • The rich fauna blocks most of the daylight which yields the underwood to be pretty shady all day.
+                    • Failing lights in most cases lead to fatal accidents due to the high speed of the bikes and bad
+                    sight in Endor.
+                    • If maintained properly, batteries, reflectors, and sockets seldom break by themselves.
+                    • Due to cost pressure, most of the wiring of the Swoop Bike up to now was done with cheap
+                    non-corrosion-proof materials.
+                    • The empire uses more than 30 differently powerful and robust light bulbs for their vehicles with 5
+                    of them sharing the same socket type.
+                    • Due to cost reasons the Empire these days exclusively uses normal light bulbs that at average burn
+                    every 600 hours of
+                    operation instead of more robust LEDs.
+                    • Directed shots at light reflectors with laser weapons can impair their reflection effectiveness.
+                    • The bike maintenance is mainly done by imprisoned Ewoks that, with only four fingers, have severe
+                    troubles in producing clean soldering joints.
+                    • Especially in emergency situations, easily scared maintenance personnel often forget to properly
+                    tighten screws.
+                    • Many stormtroopers, although they were told not to do so, occasionally misuse the bike’s battery
+                    to charge their phones. As the battery was not designed for such a scenario it empties
+                    substantially faster than under normal use.
+                    • Once a month each bike is subject to a full maintenance check where the functionality of each part
+                    of the bike is checked separately.
+                </pre>
+                1. Perform a thorough FMEA for the lights of the Swoop Bike, using the provided template.
+                <p/>
+                2. Come up with realistic estimated for severity (S), occurrence probability (O), and probability of
+                non-detection (D), and calculate the associated risk priority numbers (RPN), based on the provided
+                background information.
+                <p/>
+                3. You only have time and budget to focus on two failure causes – which ones would you focus on?
+                <p/>
+                4. What would be your suggestions for corrective measures?
+                <p/>
+                <img src="../data/res/18001_template.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Exercise 8 -->
+        <question type="extended-answer" id="19000">
+            <body>The owners of the popular, but controversial, file sharing website Mos Filesley noticed that their
+                website is under constant cyber attacks from unknown perpetrators. “Since last Monday we are being
+                hacked
+                on a daily basis, why would anyone do that? We are a legitimate business trying to turn in a profit”,
+                says an anonymous source in the company. They decided to hire you to improve their defenses. Use your
+                past experiences as a hacker to describe the security of the system against varying attacks. The best
+                tool to illustrate your findings areAttack Trees.
+                <p/>
+                1. Identify at least three possible attack goals (Hint: You might want to consider the tasks of Exercise
+                1). Each goal is the root node of an attack tree. Trees can share nodes and subtrees.
+                <p/>
+                2. Try to think of all attacks against a goal and build the tree.
+                <p/>
+                3. Think about attacks that do not involve the web application. Think of attack goals like: SSH
+                shell access, attacks against the apache web server, or even physically accessing (even stealing) the
+                server.
+                <p/>
+                4. Annotate your tree with the severity of the attack.
+                <p/>
+                In the real world, vulnerabilities are scored with
+                the Common Vulnerability Scoring System (CVSS). It uses different properties (e.g. can the attack be
+                exploited over the network, does the attacker need a valid user account on the system or how much
+                information can the attacker access) to rate vulnerabilities. To rate the severity of an attack, use a
+                heavily simplified version of CVSS. Classify your attacks according to these dimensions (feel free to
+                think of other metrics if your attack does not fit):
+                <img src="../data/res/19000_cvss.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>Three possible attack goals: Obtain other users private files, prevent other users from using
+                        the system, upload files that appear to come from another user.
+                        <p/>
+                        Some attacks against a goal: Obtain access to the restricted section of the website (using SQL
+                        injection). Obtain access to files (upload and execute malicious files containing code). Obtain
+                        access to other user private data (download the database). Spy on network communication. Steal
+                        or physically access the servers.
+                        <img src="../data/res/19000_attack_tree.png"/>
+                        <img src="../data/res/19000_cvss_assessment.png"/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">file</mark>
+                        <mark type="keyword">sql</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Exercise 10 -->
+        <question type="extended-answer" id="20000">
+            <body>1. What are the differences between horizontal and vertical scaling? What are the main benefits
+                and shortcomings?
+            </body>
+            <answers>
+                <answer>
+                    <body>Horizontal scaling adds more resources of the same type (lower investment, distributed
+                        deployment needed, very heterogeneous environment possible), vertical scaling replaces the
+                        resource by a larger/smaller resource (no code support, higher investment).
+                        <p/>
+                        ○ Horizontal scaling makes use of adding more of the same hardware resource to the existing
+                        resources, such as increasing the computing capacity of a server cluster by adding more servers
+                        of the same type to the cluster. This can help reduce the necessary investment, as resources are
+                        only expanded instead of replaced. However, it can be more difficult to administer, as your
+                        computing cluster can become heterogeneous. It also cannot avoid the need to eventually replace
+                        hardware that is growing too outdated. Finally, it requires software support (mostly in form of
+                        multi-threading) to make use of the parallel computing resources. Additionally, it supports
+                        scaling back as well, since any computing resources can easily be decommissioned again.
+                        <p/>
+                        Vertical scaling relies on replacing the computing resource by an improved version, such as
+                        replacing a server running at its capacity with a server with higher capacity. It is easier to
+                        implement since it does not explicitly require software support to make use of, for example, a
+                        CPU with a higher clock rate or additional memory (as this is usually administered by the
+                        operating system). However, it can be more costly to iteratively replace hardware when demand
+                        grows and there are physical limits as to how far you can raise, for example, the clock rate of
+                        a processor.
+                    </body>
+                    <marks>
+                        <mark type="keyword">resource</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Missing -->
+        <question type="extended-answer" id="20006">
+            <body>
+                As you learned in class, map reduce is used to analyze big data sets. In this exercise we will provide
+                you with some SQL queries for which you should implement corresponding map reduce functions. To
+                familiarize yourself with the syntax of map reduce functions refer to the following examples:
+                <pre>
+                    1 Table Employees:
+                    2 ID Employee base_salary salary_level bonus
+                    3 1 Alice 50000 4 3000
+                    4 2 Bob 40000 2 500
+                    5 3 Carry 55000 8 6000
+                    6 4 Dorian 45000 3 1000
+
+                    1. SELECT employee FROM employees WHERE salary_level > 3
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            1 function map(key, record):
+                            2 if(record.salary_level > 3) {
+                            3 selection = &lt;record.employee>
+                            4 collect(key, selection);
+                            5 }
+                            6 }
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">map</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20007">
+            <body>
+                As you learned in class, map reduce is used to analyze big data sets. In this exercise we will provide
+                you with some SQL queries for which you should implement corresponding map reduce functions. To
+                familiarize yourself with the syntax of map reduce functions refer to the following examples:
+                <pre>
+                    1 Table Employees:
+                    2 ID Employee base_salary salary_level bonus
+                    3 1 Alice 50000 4 3000
+                    4 2 Bob 40000 2 500
+                    5 3 Carry 55000 8 6000
+                    6 4 Dorian 45000 3 1000
+
+                    2. SELECT AVG(base_salary) FROM employees
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            1 function map(key, record) {
+                            2 selection = &lt;record.base_salary>;
+                            3 collect(key, selection);
+                            4 }
+                            5 function reduce(v, list&lt;selection>) {
+                            6 int sum = 0;
+                            7 for(selection : list&lt;selection>) {
+                            8 sum += selection.salary;
+                            9 }
+                            10 sum = sum / length(list);
+                            11 store(v, sum);
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">map</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20008">
+            <body>
+                As you learned in class, map reduce is used to analyze big data sets. In this exercise we will provide
+                you with some SQL queries for which you should implement corresponding map reduce functions. To
+                familiarize yourself with the syntax of map reduce functions refer to the following examples:
+                <pre>
+                    1 Table Employees:
+                    2 ID Employee base_salary salary_level bonus
+                    3 1 Alice 50000 4 3000
+                    4 2 Bob 40000 2 500
+                    5 3 Carry 55000 8 6000
+                    6 4 Dorian 45000 3 1000
+
+                    1. SELECT * From Attendance WHERE ScanTime > 1.1.2017
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            1 function map(key, record) {
+                            2 if(record.ScanTime > new Date(2017, 1, 1)) {
+                            3 selection = &lt;record>;
+                            4 collect(key, record);
+                            5 }
+                            6 }
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">map</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20009">
+            <body>
+                As you learned in class, map reduce is used to analyze big data sets. In this exercise we will provide
+                you with some SQL queries for which you should implement corresponding map reduce functions. To
+                familiarize yourself with the syntax of map reduce functions refer to the following examples:
+                <pre>
+                    1 Table Employees:
+                    2 ID Employee base_salary salary_level bonus
+                    3 1 Alice 50000 4 3000
+                    4 2 Bob 40000 2 500
+                    5 3 Carry 55000 8 6000
+                    6 4 Dorian 45000 3 1000
+
+                    2. SELECT AVG(COUNT(*)) FROM Attendance GROUP BY StudentID
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            function map(key, record) {
+
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">map</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
 
         <!-- Practice Exam -->
