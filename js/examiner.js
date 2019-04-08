@@ -45,11 +45,14 @@ function handleExam(xmlEncodedExam) {
 function sanityCheckExam() {
     let idSet = new Set();
     $(exam).find("question").each(function (index) {
+        if (idSet.has(this.getAttribute("id"))) {
+            showAlert("Exam has duplicate question id: " + this.getAttribute("id") + ".", "alert-danger");
+        }
         idSet.add(this.getAttribute("id"));
     });
     if (idSet.length != examLength) {
+        showAlert("Exam has duplicate questions. Progress may not work correctly.", "alert-danger");
         console.error("Exam has duplicate ids.");
-        showAlert("Exam has duplicate question ids. Progress may not work correctly.", "alert-danger");
     }
 }
 
