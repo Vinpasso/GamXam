@@ -50,9 +50,8 @@ function sanityCheckExam() {
         }
         idSet.add(this.getAttribute("id"));
     });
-    if (idSet.length != examLength) {
+    if (idSet.size != examLength) {
         showAlert("Exam has duplicate questions. Progress may not work correctly.", "alert-danger");
-        console.error("Exam has duplicate ids.");
     }
 }
 
