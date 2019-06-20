@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exam xmlns="https://vpt1.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://vpt1.org questions.xsd">
+    <head>
+        <title>Parallel Program Engineering Questions</title>
+        <version>1.0</version>
+        <id>4224</id>
+    </head>
+    <body>
+        <!-- Terminology -->
+        <question type="extended-answer" id="-1">
+            <body>What is the difference between a node, socket, core, and a (HW) thread?</body>
+            <answers>
+                <answer>
+                    <body>A node is interconnected by network
+                        <p/>
+                        A node contains one or more physical sockets that mount the CPU
+                        <p/>
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- From Recap Handwritten Notes -->
+        <question type="extended-answer" id="0">
+            <body>What are some hardware/software reasons that running a program on identical hardware can lead to
+                different results? What is the consequence?
+            </body>
+            <answers>
+                <answer>
+                    <body>Hardware: Same chip can vary under different conditions (such as temperature/thermal
+                        throttling). A different chip of the same model can vary due to production differences in the
+                        same conditions.
+                        <p/>
+                        Software: Any resources that are shared (cpu, network, etc.) can be contended, OS-Scheduling and
+                        energy-saving features, etc.
+                        <p/>
+                        Consequence: Don't expect same performance between any 2 different runs, treat runs as a
+                        stochastic experiment. Repeat it as many times as necessary.
+                    </body>
+                    <marks>
+                        <mark type="keyword">temp</mark>
+                        <mark type="keyword">sched</mark>
+                        <mark type="keyword">experiment</mark>
+                        <mark type="keyword">rep</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1">
+            <body>How can variability be mitigated?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Work with data stochastically
+                        <p/>
+                        Conduct multiple experiments
+                        <p/>
+                        Measure variance/confidence interval
+                        <p/>
+                        Try to control as much of the environment as possible
+                        <p/>
+                        Ensure there is a good spread over uncontrollable environment influences (measure on different
+                        days, etc.)
+                        <p/>
+                        Be skeptical about results, look for unexpected changes in the environment.
+                    </body>
+                    <marks>
+                        <mark type="keyword">stochast</mark>
+                        <mark type="keyword">experiment</mark>
+                        <mark type="keyword">environment</mark>
+                        <mark type="keyword">control</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="2">
+            <body>What does Score-P do?</body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+    </body>
+</exam>
