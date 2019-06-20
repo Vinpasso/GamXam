@@ -80,8 +80,304 @@
             <body>What does Score-P do?</body>
             <answers>
                 <answer>
-                    <body></body>
+                    <body>TODO</body>
                     <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="3">
+            <body>What do you need to look out for when using Score-P?</body>
+            <answers>
+                <answer>
+                    <body>Unexpected or unintended flushes of the log file from memory to permanent storage, which cause
+                        overhead and affect code execution.
+                        <p/>
+                        Identify overhead by looking at the execution time.
+                    </body>
+                    <marks>
+                        <mark type="keyword">flush</mark>
+                        <mark type="keyword">overhead</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="4">
+            <body>What methods are available to reduce the log size in Score-P?</body>
+            <answers>
+                <answer>
+                    <body>Compile time filtering, selective region filter (user regions), switching tracing on/off.
+                    </body>
+                    <marks>
+                        <mark type="keyword">compile</mark>
+                        <mark type="keyword">region</mark>
+                        <mark type="keyword">filter</mark>
+                        <mark type="keyword">trac</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="5">
+            <body>What are selective region filters (user regions) in Score-P?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="6">
+            <body>What is the problem with runtime filtering? How can it be minimized?</body>
+            <answers>
+                <answer>
+                    <body>There still needs to be a check whether this event should be logged. Good implementations can
+                        patch this out by running an uninstrumented version of the code instead. However, some amount of
+                        overhead remains.
+                    </body>
+                    <marks>
+                        <mark type="keyword">check</mark>
+                        <mark type="keyword">patch</mark>
+                        <mark type="keyword">overhead</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="7">
+            <body>What are some pros/cons for compile time vs runtime filtering? How are these filters used?</body>
+            <answers>
+                <answer>
+                    <body>Compile time gets rids of all overhead that is unnecessary (because of filtering, etc.). It is
+                        set by passing a flag to scorep_compile with the filter file.
+                        <p/>
+                        Runtime filtering allows for easier change of the filter and does not require recompilation of
+                        the source. It is set by setting an environment variable.
+                    </body>
+                    <marks>
+                        <mark type="keyword">overhead</mark>
+                        <mark type="keyword">filter</mark>
+                        <mark type="keyword">flag</mark>
+                        <mark type="keyword">compil</mark>
+                        <mark type="keyword">variable</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="8">
+            <body>How can one estimate the memory requirements of a run through scorep? What is this useful for?</body>
+            <answers>
+                <answer>
+                    <body>Using the bundled tool scorep_score, which shows you the memory requirements and warns about
+                        potential flushes. It allows you to optimize your filters for memory requirements without
+                        actually running your instrumented code.
+                    </body>
+                    <marks>
+                        <mark type="keyword">score</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9">
+            <body>What is the difference between tracing and profiling? What are some benefits and drawbacks of each?
+            </body>
+            <answers>
+                <answer>
+                    <body>Tracing records information on every single call, while profiling only shows aggregate
+                        information (e.g. how often a function was called, etc.). Tracing can be used to inspect
+                        individual problematic calls but generally creates more overhead than profiling, which is less
+                        detailed and therefore also generates less overhead.
+                    </body>
+                    <marks>
+                        <mark type="keyword">call</mark>
+                        <mark type="keyword">aggregat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>What is sampling and instrumentation? What are some benefits and drawbacks of
+                each?
+            </body>
+            <answers>
+                <answer>
+                    <body>A sampling based approach halts the program periodically to analyze the program's current
+                        state. An instrumentation approach modifies the program to add additional code, for example at
+                        the start and end of a method, that performs measurements itself.
+                        <p/>
+                        Sampling does not require modification of the code/binary and can even be adjusted at runtime.
+                        However, it is a stochastic approach and can "miss" calls to functions and other events.
+                        Instrumentation, on the other hand, does not miss anything. However, it usually needs more
+                        fine-tuning to get the level of overhead to an acceptable level without loosing important
+                        details.
+                    </body>
+                    <marks>
+                        <mark type="keyword">measure</mark>
+                        <mark type="keyword">overhead</mark>
+                        <mark type="keyword">stochast</mark>
+                        <mark type="keyword">modif</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>How can a programmer determine the influence of the compiler on a program's performance?</body>
+            <answers>
+                <answer>
+                    <body>It is possible to run performance experiments using several different sets of compiler
+                        settings (or even several different compiler versions, vendors). For further analysis, compilers
+                        can generate an optimization report which show performed optimizations alongside the source
+                        code.
+                    </body>
+                    <marks>
+                        <mark type="regex">experiment|measure</mark>
+                        <mark type="keyword">optimiz</mark>
+                        <mark type="keyword">report</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11">
+            <body>What should you look for in a compiler's optimization report?</body>
+            <answers>
+                <answer>
+                    <body>Hints about vectorization, data dependencies and memory access patterns.</body>
+                    <marks>
+                        <mark type="keyword">vector</mark>
+                        <mark type="keyword">dependenc</mark>
+                        <mark type="keyword">access</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12">
+            <body>What is a problem that can occur with tools that only see source code and binary?</body>
+            <answers>
+                <answer>
+                    <body>The tool might not be able to correlate places in the binary with source code if there are
+                        compiler optimizations that prevent doing so.
+                    </body>
+                    <marks>
+                        <mark type="keyword">compiler</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="13">
+            <body>Give an example of how you can give hints to the compiler to allow it to optimize effectively.</body>
+            <answers>
+                <answer>
+                    <body>Using the flag -fno-alias or #pragma iv_dep, the programmer guarantees that there is no
+                        aliasing, and therefore no potential overlap of memory regions, of variables in the marked code.
+                        This allows further optimization as there are fewer dependencies.
+                    </body>
+                    <marks>
+                        <mark type="keyword">alias</mark>
+                        <mark type="keyword">overlap</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="14">
+            <body>What two surprising insights were found by the single node performance group?</body>
+            <answers>
+                <answer>
+                    <body>Switching the intel compiler version from 17 to 19 has a dramatic impact on performance using
+                        the same compiler settings.
+                        <p/>
+                        The input size to the program affected the effect of different compiler flags.
+                    </body>
+                    <marks>
+                        <mark type="keyword">version</mark>
+                        <mark type="keyword">input</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15">
+            <body>What is the difference between strong scaling and weak scaling?</body>
+            <answers>
+                <answer>
+                    <body>Strong scaling keeps the problem size constant and changes the number of processes working on
+                        the problem, while weak scaling keeps a constant problem size per process by scaling the total
+                        problem size with the number of processes.
+                    </body>
+                    <marks>
+                        <mark type="keyword">size</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16">
+            <body>What is an alternative name for weak scaling and why?</body>
+            <answers>
+                <answer>
+                    <body>Memory constrained scaling, because it makes better use of available per node memory resources
+                        such as cache and RAM that scale with the number of processes than strong scaling does.
+                    </body>
+                    <marks>
+                        <mark type="keyword">memory</mark>
+                        <mark type="keyword">constrain</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17">
+            <body>What problem can occur when setting up a weak scaling experiment?</body>
+            <answers>
+                <answer>
+                    <body>The program runtime might be non-linear with the input size. Assume you have a program that
+                        scales in O(n^3), then doubling the number of processes and the input size would result in a
+                        problem 8 times as large, or 4 times more per process.
+                    </body>
+                    <marks>
+                        <mark type="keyword">linear</mark>
+                        <mark type="keyword">size</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="18">
+            <body>What is the formula for weak scaling?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="19">
+            <body>What is an advantage of weak scaling over strong scaling?</body>
+            <answers>
+                <answer>
+                    <body>It reduces the impact that communication has for large number of processes by keeping the
+                        ratio between communication and computation constant. In strong scaling, computation decreases
+                        with number of nodes so communication starts to domniate runtime.
+                    </body>
+                    <marks>
+                        <mark type="keyword">communication</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20">
+            <body>What is the question that is typically answered with a weak scaling test?</body>
+            <answers>
+                <answer>
+                    <body>How much larger of a problem can we solve by scaling this? (This tends to be more relevant to
+                        scientific application than &quot;how much faster can I solve this problem?&quot;)
+                    </body>
+                    <marks>
+                        <mark type="keyword">size</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="21">
+            <body>What is important when dealing with strong/weak scaling and different benchmarks?</body>
+            <answers>
+                <answer>
+                    <body>Understand what you expect. Some benchmarks might adjust the problem size per node automatically (LULESH) or spawn threads for the entire node automatically (firestarter).</body>
+                    <marks>
+                        <mark type="keyword">size</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
