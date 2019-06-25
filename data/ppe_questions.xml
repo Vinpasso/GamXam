@@ -230,7 +230,7 @@
 
         <!-- Single Node Performance -->
 
-        <question type="extended-answer" id="10">
+        <question type="extended-answer" id="1000">
             <body>How can a programmer determine the influence of the compiler on a program's performance?</body>
             <answers>
                 <answer>
@@ -529,6 +529,107 @@
                 </answer>
             </answers>
         </question>
-
+        <!-- Load Balancing -->
+        <question type="extended-answer" id="31">
+            <body>Why does measurement in OpenMP require restructuring of the loop?</body>
+            <answers>
+                <answer>
+                    <body>Cannot measure implicit barriers, need to convert into explicit barriers (tools like scoreP do
+                        this automatically). Then measure waiting time at synchronization points.
+                    </body>
+                    <marks>
+                        <mark type="keyword">barrier</mark>
+                        <mark type="keyword">synchron</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="32">
+            <body>What tools are useful for measuring load balancing with OpenMP?</body>
+            <answers>
+                <answer>
+                    <body>Automatic instrumentation: ScoreP/Opari. Visualization: Ale (TODO?)</body>
+                    <marks>
+                        <mark type="keyword">instrument</mark>
+                        <mark type="keyword">visual</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="33">
+            <body>What is the formula for optimization potential?</body>
+            <answers>
+                <answer>
+                    <body>TODO?</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="34">
+            <body>What advantage/disadvantage does Vampyr offer for visualization?</body>
+            <answers>
+                <answer>
+                    <body>Tons of detail to find even small problems, but can require lots of zooming and searching to
+                        find the things you are looking for (information overload).
+                    </body>
+                    <marks>
+                        <mark type="keyword">detail</mark>
+                        <mark type="keyword">zoom</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="35">
+            <body>In general, what is a typical cause of load imbalance?</body>
+            <answers>
+                <answer>
+                    <body>Anything that causes global synchronization.</body>
+                    <marks>
+                        <mark type="keyword">sync</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- Power + Energy -->
+        <question type="extended-answer" id="36">
+            <body>Which problems lend themselves well to higher frequency?</body>
+            <answers>
+                <answer>
+                    <body>Compute intensive ones.</body>
+                    <marks>
+                        <mark type="keyword">comput</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="37">
+            <body>How does core frequency affect power/eneergy consumption?</body>
+            <answers>
+                <answer>
+                    <body>A higher core frequency implies higher power consumption, but may mean higher or lower energy
+                        consumption.
+                    </body>
+                    <marks>
+                        <mark type="keyword">power</mark>
+                        <mark type="keyword">energy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="38">
+            <body>What is static and dynamic power?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Static power: TODO?
+                        <p/>
+                        Dynamic power: P_dyn=CfV^2
+                        <p/>
+                        Maximum frequency: f \correlates (V-V_th)^(\alpha)/V
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
