@@ -23,7 +23,11 @@
                 </answer>
             </answers>
         </question>
-        <!-- From Recap Handwritten Notes -->
+
+
+        <!-- From Recap Handwritten Notes on Presentations -->
+
+        <!-- Variability -->
         <question type="extended-answer" id="0">
             <body>What are some hardware/software reasons that running a program on identical hardware can lead to
                 different results? What is the consequence?
@@ -76,6 +80,9 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Overhead and Intrusion -->
+
         <question type="extended-answer" id="2">
             <body>What does Score-P do?</body>
             <answers>
@@ -175,6 +182,9 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- More Terminology -->
+
         <question type="extended-answer" id="9">
             <body>What is the difference between tracing and profiling? What are some benefits and drawbacks of each?
             </body>
@@ -217,6 +227,9 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Single Node Performance -->
+
         <question type="extended-answer" id="10">
             <body>How can a programmer determine the influence of the compiler on a program's performance?</body>
             <answers>
@@ -291,6 +304,9 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Weak and Strong Scaling -->
+
         <question type="extended-answer" id="15">
             <body>What is the difference between strong scaling and weak scaling?</body>
             <answers>
@@ -374,8 +390,114 @@
             <body>What is important when dealing with strong/weak scaling and different benchmarks?</body>
             <answers>
                 <answer>
-                    <body>Understand what you expect. Some benchmarks might adjust the problem size per node automatically (LULESH) or spawn threads for the entire node automatically (firestarter).</body>
+                    <body>Understand what you expect. Some benchmarks might adjust the problem size per node
+                        automatically (LULESH) or spawn threads for the entire node automatically (firestarter).
+                    </body>
                     <marks>
+                        <mark type="keyword">size</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- Affinity / Mapping -->
+        <question type="extended-answer" id="22">
+            <body>What is affinity and what does granularity specify?</body>
+            <answers>
+                <answer>
+                    <body>Affinity is the distribution of software threads to hardware procs. The granularity specifies
+                        where software threads can float (fine: core, socket, spread, etc.) and is set in the
+                        KMP_Affinity variable.
+                    </body>
+                    <marks>
+                        <mark type="keyword">thread</mark>
+                        <mark type="keyword">proc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="23">
+            <body>Why is process affinity important? What needs to be considered?</body>
+            <answers>
+                <answer>
+                    <body>To make good use of the NUMA architecture (memory controllers, network interconnects, etc.).
+                        One needs to considered where data is located (and ensure it is actually located there using
+                        e.g. first touch) and who needs to communicate with whom to reduce bottlenecks.
+                    </body>
+                    <marks>
+                        <mark type="keyword">numa</mark>
+                        <mark type="keyword">touch</mark>
+                        <mark type="keyword">communicat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- MPI overhead -->
+        <question type="extended-answer" id="24">
+            <body>What is the difference between MPIP and PMPI?</body>
+            <answers>
+                <answer>
+                    <body>mpiP is a MPI-profiler that uses the profiling interface of the MPI standard (PMPI) to perform
+                        measurements on the MPI behavior of the program.
+                    </body>
+                    <marks>
+                        <mark type="keyword">profil</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="25">
+            <body>What information can you gain from analyzing your program with mpiP?</body>
+            <answers>
+                <answer>
+                    <body>mpiP generates a text report showing the relevant MPI calls (with context), the time spent and
+                        the amount of data transferred. This is available on a per node basis (for load imbalances) as
+                        well as in aggregated form.
+                    </body>
+                    <marks>
+                        <mark type="keyword">call</mark>
+                        <mark type="keyword">time</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="26">
+            <body>What mechanism does the PMPI interface use to allow profilers to link in?</body>
+            <answers>
+                <answer>
+                    <body>All MPI calls are made available as weak symbols, which can be overriden by the profiler.
+                        These can be used to wrap the necessary calls in instrumentation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">weak</mark>
+                        <mark type="keyword">symbol</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="27">
+            <body>How can a program be run with mpiP?</body>
+            <answers>
+                <answer>
+                    <body>By either linking against the profiler or using LD_Preload, which loads the profiler into the
+                        application at runtime.
+                    </body>
+                    <marks>
+                        <mark type="keyword">preload</mark>
+                        <mark type="keyword">link</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="28">
+            <body>What can you learn from profiling your code using mpiP? What is this useful for?</body>
+            <answers>
+                <answer>
+                    <body>Time and data sizes (hot code regions, also on a per node base). Useful as a first step to
+                        investigate potential problems (load imbalance, etc.)
+                    </body>
+                    <marks>
+                        <mark type="keyword">time</mark>
                         <mark type="keyword">size</mark>
                     </marks>
                 </answer>
