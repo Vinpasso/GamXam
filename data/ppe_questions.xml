@@ -617,16 +617,126 @@
             </answers>
         </question>
         <question type="extended-answer" id="38">
-            <body>What is static and dynamic power?</body>
+            <body>What is static and dynamic power? What is the relation of power consumption to frequency?</body>
             <answers>
                 <answer>
                     <body>
-                        Static power: TODO?
+                        Static power: TODO? (Something like P_static = VI_leak)
                         <p/>
                         Dynamic power: P_dyn=CfV^2
                         <p/>
                         Maximum frequency: f \correlates (V-V_th)^(\alpha)/V
+                        <p/>
+                        In general: Power increases with the cube of frequency.
                     </body>
+                    <marks>
+                        <mark type="keyword"></mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="39">
+            <body>What is important when considering power/energy consumption optimization?</body>
+            <answers>
+                <answer>
+                    <body>Think about what to optimize against and what constraints exist (cables, money spent, etc.)
+                    </body>
+                    <marks>
+                        <mark type="keyword">optim</mark>
+                        <mark type="keyword">constraint</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="40">
+            <body>What is the difference between Watt, Watt hours, and Joules?</body>
+            <answers>
+                <answer>
+                    <body>Watt is an SI Unit of Power (a rate of energy) J/s. Watt hours is a non SI measure of Energy
+                        (J/s * 3600s = 3600J). Joule is the SI measure of energy.
+                    </body>
+                    <marks>
+                        <mark type="keyword">power</mark>
+                        <mark type="keyword">energy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- Dynamism -->
+        <question type="extended-answer" id="41">
+            <body>What is dynamism?</body>
+            <answers>
+                <answer>
+                    <body>Execution behavior that varies over the run of a program, such as across iterations or through
+                        different calculation phases.
+                    </body>
+                    <marks>
+                        <mark type="keyword">vari</mark>
+                        <mark type="keyword">iterat</mark>
+                        <mark type="keyword">phase</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="42">
+            <body>How can dynamism across different phases be measured?</body>
+            <answers>
+                <answer>
+                    <body>One possibility is to introduce user regions into the source to measure the phases
+                        separately.
+                    </body>
+                    <marks>
+                        <mark type="keyword">user region</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="43">
+            <body>What are some characteristics where dynamism can occur?</body>
+            <answers>
+                <answer>
+                    <body>Execution time, cache miss rate, etc.</body>
+                    <marks>
+                        <mark type="keyword">time</mark>
+                        <mark type="keyword">cache</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="44">
+            <body>What tool is useful to track dynamism? What features are relevant?</body>
+            <answers>
+                <answer>
+                    <body>Its CUBE! Dynamic region profiling (TODO: look this up?) and parameter based profiling are
+                        relevant.
+                    </body>
+                    <marks>
+                        <mark type="keyword">CUBE</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="45">
+            <body>What is parameter based profiling? What is it useful for?</body>
+            <answers>
+                <answer>
+                    <body>A feature of CUBE that allows to aggregate data based on a parameter such as the loop
+                        iteration. It allows the user to correlate dynamism with the parameter.
+                    </body>
+                    <marks>
+                        <mark type="keyword">param</mark>
+                        <mark type="keyword">dynamism</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Miscellaneous -->
+        <question type="extended-answer" id="46">
+            <body>What is CUBE not good for?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
                     <marks></marks>
                 </answer>
             </answers>
