@@ -503,5 +503,32 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="29">
+            <body>What can you change in your application if you notice that your code hangs on some MPI calls?</body>
+            <answers>
+                <answer>
+                    <body>Change the application to support nonblocking communication (i.e. do useful computation rather
+                        than wait for communication resources).
+                    </body>
+                    <marks>
+                        <mark type="keyword">block</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30">
+            <body>You observe that in your MPI application with 4 processes, rank 1 spends 32%, rank 2 28%, rank 3 11%,
+                rank 4 31% of the total time in MPI calls. Which rank is likely to be overloaded?
+            </body>
+            <answers>
+                <answer>
+                    <body>Rank 3 (the rank which spends most time computing and little time waiting).</body>
+                    <marks>
+                        <mark type="keyword">3</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
