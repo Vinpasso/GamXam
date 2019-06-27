@@ -731,6 +731,254 @@
             </answers>
         </question>
 
+        <!-- Lectures -->
+        <!-- Introduction -->
+        <question type="extended-answer" id="46">
+            <body>What are some of the motivations for parallel architectures?</body>
+            <answers>
+                <answer>
+                    <body>Performance, energy efficiency, flexibility, throughput, fault-tolerance</body>
+                    <marks>
+                        <mark type="keyword">perform</mark>
+                        <mark type="keyword">energy</mark>
+                        <mark type="keyword">flex</mark>
+                        <mark type="keyword">throughput</mark>
+                        <mark type="keyword">fault</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="47">
+            <body>What are some usages of parallel architectures and what do they mean?</body>
+            <answers>
+                <answer>
+                    <body>Multiple user workloads (many users on one machine), multi-programming workloads, farming (run
+                        lots of sequential jobs), parallel execution.
+                    </body>
+                    <marks>
+                        <mark type="keyword">user</mark>
+                        <mark type="keyword">program</mark>
+                        <mark type="keyword">farm</mark>
+                        <mark type="keyword">execut</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="48">
+            <body>What is farming, what potential problem can arise?</body>
+            <answers>
+                <answer>
+                    <body>Running lots of sequential jobs, varying them over some parameters. It can create issues with
+                        the scheduler if thousands of jobs are spawned.
+                    </body>
+                    <marks>
+                        <mark type="keyword">sequen</mark>
+                        <mark type="keyword">schedul</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="49">
+            <body>What are some parallel programming models?</body>
+            <answers>
+                <answer>
+                    <body>Message passing, shared memory, data parallel (OpenCL, CUDA), data flow.</body>
+                    <marks>
+                        <mark type="keyword">message</mark>
+                        <mark type="keyword">shared</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="50">
+            <body>What are some reasons why parallel programming is more difficult than sequential programming?</body>
+            <answers>
+                <answer>
+                    <body>Management of threads/processes, concurrency issues (race conditions/deadlocks), less
+                        deterministic, ensuring scalability.
+                    </body>
+                    <marks>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">concurren</mark>
+                        <mark type="keyword">determin</mark>
+                        <mark type="keyword">scalab</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="51">
+            <body>What is speedup, how is it calculated? What is efficiency, how is it calculated?</body>
+            <answers>
+                <answer>
+                    <body>Speedup is a ratio of performance (performance (p processors) / performance (1 processor)).
+                        Using performance = work/time: speedup = time(1 processor)/time(p processors). Efficiency is the
+                        relation of actual speedup to ideal linear scaling: efficiency = speedup(p processors)/p.
+                    </body>
+                    <marks>
+                        <mark type="keyword">perform</mark>
+                        <mark type="keyword">time</mark>
+                        <mark type="keyword">linear</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="52">
+            <body>Which distributed model does the SuperMUC-NG conform to?</body>
+            <answers>
+                <answer>
+                    <body>Intra-Node: Shared Memory. Inter-Node: Distributed Memory (message passing).</body>
+                    <marks>
+                        <mark type="keyword">share</mark>
+                        <mark type="keyword">distribut</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="53">
+            <body>What is the difference between OmniPath and Infiniband Networks?</body>
+            <answers>
+                <answer>
+                    <body>Infiniband tries to offload as much processing as possible to the network card while OmniPath
+                        tries to onload as much as possible. Both Range near 100 Gb/s (approx.?)
+                    </body>
+                    <marks>
+                        <mark type="keyword">offload</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="54">
+            <body>What does the SuperMUC use as intra-/inter- island topology?</body>
+            <answers>
+                <answer>
+                    <body>Intra island: Non-blocking tree (Multiple pairwise communications in parallel). Inter island:
+                        pruned tree (like a fat tree, but grow bandwidth close to root slower than fat tree).
+                    </body>
+                    <marks>
+                        <mark type="keyword">block</mark>
+                        <mark type="keyword">prun</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="55">
+            <body>What is PUE and ERE?</body>
+            <answers>
+                <answer>
+                    <body>Power usage effectiveness (ratio of total facility power / power used by IT equipment!) (ideal
+                        1, lower is better). Energy reuse effectiveness: (Total facility power - reused power/IT
+                        equipment power) (ideal 0.0, range 0.0-ERE).
+                    </body>
+                    <marks>
+                        <mark type="keyword">power</mark>
+                        <mark type="keyword">usage</mark>
+                        <mark type="keyword">effective</mark>
+                        <mark type="keyword">reuse</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="56">
+            <body>What are some SuperMUC optimizations for energy savings?</body>
+            <answers>
+                <answer>
+                    <body>Water cooling (no fan per node), warm water cooling, heat reuse, energy aware scheduling.
+                    </body>
+                    <marks>
+                        <mark type="keyword">water</mark>
+                        <mark type="keyword">warm</mark>
+                        <mark type="keyword">reuse</mark>
+                        <mark type="keyword">schedul</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="57">
+            <body>What architecture does automatic parallelization work well with? Where do problems start to arise?
+            </body>
+            <answers>
+                <answer>
+                    <body>Automatic parallelization can work well on shared memory systems for specific applications. It
+                        struggles with NUMA, because its harder to place data correctly.
+                    </body>
+                    <marks>
+                        <mark type="keyword">shared</mark>
+                        <mark type="keyword">memory</mark>
+                        <mark type="keyword">NUMA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="58">
+            <body>Aside from concurrency bugs (race conditions and deadlocks), what other source of non determinism was
+                covered in the lecture?
+            </body>
+            <answers>
+                <answer>
+                    <body>Reductions on floating point values, where the result depends on the order of operations.
+                    </body>
+                    <marks>
+                        <mark type="keyword">float</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="59">
+            <body>What is the probable reason for super-linear speedup?</body>
+            <answers>
+                <answer>
+                    <body>Better cache efficiency, probably because there is more total cache or better locality.</body>
+                    <marks>
+                        <mark type="keyword">cache</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60">
+            <body>How are cores arranged on the SuperMUC Phase 2 Processors?</body>
+            <answers>
+                <answer>
+                    <body>In two rings with two interconnects.</body>
+                    <marks>
+                        <mark type="keyword">ring</mark>
+                        <mark type="keyword">connect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="61">
+            <body>What is a resource problem inherent in MPI that OpenMP does not have?</body>
+            <answers>
+                <answer>
+                    <body>In MPI (parts of) data structures and code are duplicated. This is a problem, because the
+                        trend goes toward less memory/core.
+                    </body>
+                    <marks>
+                        <mark type="keyword">duplicat</mark>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">code</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="62">
+            <body>What are the levels of thread safety that an MPI implementation can offer you?</body>
+            <answers>
+                <answer>
+                    <body>Single (No additional threads in system), funneled (MPI calls only in master thread),
+                        serialized (only one thread runs MPI calls at any time), parallel (any thread, any time)
+                    </body>
+                    <marks>
+                        <mark type="keyword">single</mark>
+                        <mark type="keyword">funnel</mark>
+                        <mark type="keyword">serial</mark>
+                        <mark type="keyword">parallel</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
         <!-- Miscellaneous -->
         <question type="extended-answer" id="46">
             <body>What is CUBE not good for?</body>
