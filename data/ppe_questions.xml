@@ -990,12 +990,325 @@
             </answers>
         </question>
 
+        <!-- Parallel Patterns -->
+        <question type="extended-answer" id="63">
+            <body>What is task decomposition and what needs to be considered?</body>
+            <answers>
+                <answer>
+                    <body>Decomposition of problem into tasks that are processed in parallel.
+                        <p/>
+                        Consider: Number, granularity, parallelism, resource contention and dependencies.
+                    </body>
+                    <marks>
+                        <mark type="keyword">granular</mark>
+                        <mark type="keyword">dependenc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="64">
+            <body>What is data decomposition and what needs to be considered?</body>
+            <answers>
+                <answer>
+                    <body>Decomposition of the problem domain into blocks that can be processed in parallel. Consider:
+                        Domain-size, load balancing, access patterns, dependencies, communication.
+                    </body>
+                    <marks>
+                        <mark type="keyword">domain</mark>
+                        <mark type="keyword">communcation</mark>
+                        <mark type="keyword">balanc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="65">
+            <body>What is independent task execution? Which decomposition does it apply to? (algorithmic structure)
+            </body>
+            <answers>
+                <answer>
+                    <body>Individual execution of tasks under consideration of dependencies and resource contention.
+                        Applies to task-based decompositions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">execut</mark>
+                        <mark type="keyword">dependen</mark>
+                        <mark type="keyword">resource</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="66">
+            <body>What is aggregation of tasks and in which context is it used? (algorithmic structure)</body>
+            <answers>
+                <answer>
+                    <body>Combining several tasks from the original decomposition into larger super-tasks to reduce the
+                        scheduling overhead. Can run into load balance problems if too coarse.
+                    </body>
+                    <marks>
+                        <mark type="keyword">combin</mark>
+                        <mark type="keyword">task</mark>
+                        <mark type="keyword">balanc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="67">
+            <body>What is the recursive tasks pattern and in what context can it be used? (algorithmic structure)</body>
+            <answers>
+                <answer>
+                    <body>A pattern that lends itself well to recursive data structures, where problems spawn
+                        subproblems which are then reduced into the output (divide and conquer). Consider a threshold
+                        below of which no further subproblems are spawned to reduce overhead.
+                    </body>
+                    <marks>
+                        <mark type="keyword">recurs</mark>
+                        <mark type="keyword">sub</mark>
+                        <mark type="keyword">thresh</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="68">
+            <body>What is static task scheduling, some advantages and disadvantages?</body>
+            <answers>
+                <answer>
+                    <body>A scheduling where all task assignments are fixed ahead of time. Works with very little
+                        communication and synchronization, but can lead to significant load imbalance if used
+                        incorrectly.
+                    </body>
+                    <marks>
+                        <mark type="keyword">fix</mark>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">balanc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="69">
+            <body>What is dynamic task scheduling, some advantages and disadvantages?</body>
+            <answers>
+                <answer>
+                    <body>A scheduling that allows changes during runtime and dynamic load balancing. Has more overhead
+                        than static task scheduling but can deal with load imbalance.
+                    </body>
+                    <marks>
+                        <mark type="keyword">overhead</mark>
+                        <mark type="keyword">balanc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- ... -->
+        <!-- Data decomposition -->
+        <question type="extended-answer" id="70">
+            <body>What are the 5 data decomposition patterns?</body>
+            <answers>
+                <answer>
+                    <body>Static, redistribution, irregular (using a partitioning algorithm based on load and
+                        adjacencies), regular, oversubscription (cannot account for number of execution units).
+                    </body>
+                    <marks>
+                        <mark type="keyword">static</mark>
+                        <mark type="keyword">redistribut</mark>
+                        <mark type="keyword">irregular</mark>
+                        <mark type="keyword">regular</mark>
+                        <mark type="keyword">oversubscri</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- ... -->
+
+        <question type="extended-answer" id="71">
+            <body>What are some typical performance problems that occur in sequential code?</body>
+            <answers>
+                <answer>
+                    <body>Lack of (automatic) vectorization. Access problems in cache, TLB, or just memory bandwidth.
+                        Contention of other resources like IO, paging, daemons or memory allocation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">vector</mark>
+                        <mark type="keyword">memory</mark>
+                        <mark type="keyword">conten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="72">
+            <body>What are some typical performance problems in shared memory systems?</body>
+            <answers>
+                <answer>
+                    <body>Load imbalance, false sharing, lock contention, thread library overhead, NUMA.</body>
+                    <marks>
+                        <mark type="keyword">balanc</mark>
+                        <mark type="keyword">shar</mark>
+                        <mark type="keyword">lock</mark>
+                        <mark type="keyword">thread</mark>
+                        <mark type="keyword">NUMA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="73">
+            <body>What are some typical performance problems in distributed memory systems?</body>
+            <answers>
+                <answer>
+                    <body>Load imbalance, excessive collectives, network contention and process placement.</body>
+                    <marks>
+                        <mark type="keyword">balanc</mark>
+                        <mark type="keyword">collectiv</mark>
+                        <mark type="keyword">net</mark>
+                        <mark type="keyword">placement</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="74">
+            <body>What are the goals of HPCToolkit?</body>
+            <answers>
+                <answer>
+                    <body>Performance analysis of application, without need for source, with full optimization support
+                        and support for sequential, OpenMP, MPI.
+                    </body>
+                    <marks>
+                        <mark type="keyword">perform</mark>
+                        <mark type="keyword">source</mark>
+                        <mark type="keyword">optimiz</mark>
+                        <mark type="keyword">opemp</mark>
+                        <mark type="keyword">mpi</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="75">
+            <body>What is the workflow with HPCToolkit?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Using optimized binary:
+                        <p/>
+                        Binary analysis: hpcstruct ...
+                        <p/>
+                        Execution with profiling: [mpi-launcher] hpcrun [hpcrun-options] app [app-arguments]
+                        <p/>
+                        Interpret profile, correlate [w/ source]: hpcprof -S app.hpcstruct -I [app-src]/’*’ \
+                        hpctoolkit-app-measurements1
+                        <p/>
+                        Inspect profile with hpcviewer.
+                    </body>
+                    <marks>
+                        <mark type="keyword">hpcstruct</mark>
+                        <mark type="keyword">hpcrun</mark>
+                        <mark type="keyword">hpcprof</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="76">
+            <body>What are ways to reduce overhead in HPCToolkit?</body>
+            <answers>
+                <answer>
+                    <body>Using flag -f 0.1 (monitor 1/10th of all processes) or using
+                        hpctoolkit_sampling_start()/stop().
+                    </body>
+                    <marks>
+                        <mark type="keyword">-f</mark>
+                        <mark type="keyword">start</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="77">
+            <body>What are the three views in HPCToolkit and what do they show?</body>
+            <answers>
+                <answer>
+                    <body>Calling context (top-down), caller (bottom-up), flat (rank by metric).</body>
+                    <marks>
+                        <mark type="keyword">call</mark>
+                        <mark type="keyword">context</mark>
+                        <mark type="keyword">flat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="78">
+            <body>How do you define derived metrics in hpcviewer?</body>
+            <answers>
+                <answer>
+                    <body>Using the formula window, which allows you to use other metrics as parameters: $1 (pointwise)
+                        or @2 (aggregated).
+                    </body>
+                    <marks>
+                        <mark type="keyword">formula</mark>
+                        <mark type="keyword">pointwise</mark>
+                        <mark type="keyword">aggregated</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- CUBE -->
+        <question type="extended-answer" id="79">
+            <body>What does CUBE stand for and what are the 3 axes of the cube?</body>
+            <answers>
+                <answer>
+                    <body>CUBE Uniform Behavioral Encoding. Performance (metric) pane, call path pane, location pane (rank, thread).</body>
+                    <marks>
+                        <mark type="keyword">CUBE Uniform Behavioral Encoding</mark>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">call</mark>
+                        <mark type="keyword">location</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="80">
+            <body>How are inclusive/exclusive values displayed in CUBE's center pane?</body>
+            <answers>
+                <answer>
+                    <body>Collapsed form displays inclusive values and expanded form displays exclusive values.</body>
+                    <marks>
+                        <mark type="keyword">collapse</mark>
+                        <mark type="keyword">expand</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="81">
+            <body>What can you analyze with Vampir but not with a profiling tool?</body>
+            <answers>
+                <answer>
+                    <body>The application timeline, individual call traces, individual communication.</body>
+                    <marks>
+                        <mark type="keyword">timeline</mark>
+                        <mark type="keyword">trace</mark>
+                        <mark type="keyword">communicat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="82">
+            <body>How does the VampirServer work?</body>
+            <answers>
+                <answer>
+                    <body>It answers queries from the vampir visualizer, allowing the analysis to run on more powerful
+                        hardware and avoiding the need to transfer large trace files.
+                    </body>
+                    <marks>
+                        <mark type="keyword">quer</mark>
+                        <mark type="keyword">hardware</mark>
+                        <mark type="keyword">file</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
         <!-- Miscellaneous -->
         <question type="extended-answer" id="46">
             <body>What is CUBE not good for?</body>
             <answers>
                 <answer>
-                    <body>TODO</body>
+                    <body>TODO. (Problem-domain based visualization).</body>
                     <marks></marks>
                 </answer>
             </answers>
