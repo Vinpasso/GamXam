@@ -1302,6 +1302,37 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="84">
+            <body>What is Scalasca used for?</body>
+            <answers>
+                <answer>
+                    <body>Automatic search for inefficient behavior according to patterns.</body>
+                    <marks>
+                        <mark type="keyword">behavior</mark>
+                        <mark type="keyword">pattern</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="85">
+            <body>If the application runs on N nodes, how many nodes does scalasca -analyze use?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="86">
+            <body>What is the late sender pattern in MPI?</body>
+            <answers>
+                <answer>
+                    <body>TODO
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
 
         <!-- Miscellaneous -->
         <question type="extended-answer" id="46">
@@ -1313,5 +1344,15 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="83">
+            <body>What tools does Score-P consist of and what are they used for?</body>
+            <answers>
+                <answer>
+                    <body>Vampir (tracing/visualization), Scalasca (CUBE?), TAU, Periscope (online measurements)</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
