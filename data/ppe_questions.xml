@@ -560,8 +560,19 @@
             <body>What is the formula for optimization potential?</body>
             <answers>
                 <answer>
-                    <body>TODO?</body>
-                    <marks></marks>
+                    <body>
+                        Imbalance time:
+                        <p/>
+                        User code: t_imbalance = t_max - t_avg
+                        <p/>
+                        Synchronization: t_imbalance = t_min - t_avg
+                        <p/>
+                        Imbalance ratio: r_imbalance = (t_imbalance / t_max) * (N / N-1)
+                    </body>
+                    <marks>
+                        <mark type="keyword">time</mark>
+                        <mark type="keyword">ratio</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
