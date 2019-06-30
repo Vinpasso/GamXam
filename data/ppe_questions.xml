@@ -968,7 +968,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="61">
-            <body>What is a resource problem inherent in MPI that OpenMP does not have?</body>
+            <body>What is a resource problem inherent in MPI that OpenMP does not have? Why is this a problem?</body>
             <answers>
                 <answer>
                     <body>In MPI (parts of) data structures and code are duplicated. This is a problem, because the
@@ -978,6 +978,7 @@
                         <mark type="keyword">duplicat</mark>
                         <mark type="keyword">data</mark>
                         <mark type="keyword">code</mark>
+                        <mark type="keyword">memory</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1063,7 +1064,9 @@
             </answers>
         </question>
         <question type="extended-answer" id="67">
-            <body>What is the recursive tasks pattern and in what context can it be used? (algorithmic structure)</body>
+            <body>What is the recursive tasks pattern and in what context can it be used? How can overhead be reduced?
+                (algorithmic structure)
+            </body>
             <answers>
                 <answer>
                     <body>A pattern that lends itself well to recursive data structures, where problems spawn
@@ -1498,6 +1501,20 @@
                 <answer>
                     <body>TODO</body>
                     <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1011">
+            <body>What is MPI?</body>
+            <answers>
+                <answer>
+                    <body>A standardized specification of an API used for message passing in parallel applications.
+                    </body>
+                    <marks>
+                        <mark type="keyword">standard</mark>
+                        <mark type="keyword">spec</mark>
+                        <mark type="keyword">api</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
