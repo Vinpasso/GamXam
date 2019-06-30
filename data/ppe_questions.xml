@@ -856,11 +856,11 @@
             </answers>
         </question>
         <question type="extended-answer" id="53">
-            <body>What is the difference between OmniPath and Infiniband Networks?</body>
+            <body>What is the difference between Infiniband and OmniPath Networks?</body>
             <answers>
                 <answer>
                     <body>Infiniband tries to offload as much processing as possible to the network card while OmniPath
-                        tries to onload as much as possible. Both Range near 100 Gb/s (approx.?)
+                        (Intel) tries to onload as much as possible. Both Range near 100 Gb/s (approx.?)
                     </body>
                     <marks>
                         <mark type="keyword">offload</mark>
@@ -1049,14 +1049,16 @@
             </answers>
         </question>
         <question type="extended-answer" id="66">
-            <body>What is aggregation of tasks and in which context is it used? (algorithmic structure)</body>
+            <body>What is aggregation of tasks and in which context is it used? What problem can arise? (algorithmic
+                structure)
+            </body>
             <answers>
                 <answer>
                     <body>Combining several tasks from the original decomposition into larger super-tasks to reduce the
                         scheduling overhead. Can run into load balance problems if too coarse.
                     </body>
                     <marks>
-                        <mark type="keyword">combin</mark>
+                        <mark type="regex">combin|collaps</mark>
                         <mark type="keyword">task</mark>
                         <mark type="keyword">balanc</mark>
                     </marks>
@@ -1346,7 +1348,7 @@
                         executed, causing the receiver to wait on the sender.
                     </body>
                     <marks>
-                        <mark type="keyword">block</mark>
+                        <mark type="regex">block|wait</mark>
                     </marks>
                 </answer>
             </answers>
