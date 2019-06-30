@@ -1252,7 +1252,9 @@
             <body>What does CUBE stand for and what are the 3 axes of the cube?</body>
             <answers>
                 <answer>
-                    <body>CUBE Uniform Behavioral Encoding. Performance (metric) pane, call path pane, location pane (rank, thread).</body>
+                    <body>CUBE Uniform Behavioral Encoding. Performance (metric) pane, call path pane, location pane
+                        (rank, thread).
+                    </body>
                     <marks>
                         <mark type="keyword">CUBE Uniform Behavioral Encoding</mark>
                         <mark type="keyword">performance</mark>
@@ -1324,12 +1326,28 @@
             </answers>
         </question>
         <question type="extended-answer" id="86">
-            <body>What is the late sender pattern in MPI?</body>
+            <body>What is the late sender antipattern in MPI?</body>
             <answers>
                 <answer>
-                    <body>TODO
+                    <body>An antipattern where a blocking receive operation is posted before the corresponding send is
+                        executed, causing the receiver to wait on the sender.
                     </body>
-                    <marks></marks>
+                    <marks>
+                        <mark type="keyword">block</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="87">
+            <body>What is the early root reduce antipattern in MPI?</body>
+            <answers>
+                <answer>
+                    <body>A waiting time that occurs in N-to-1 communication (Reduce, Gather, Gatherv, etc.) if the
+                        target (receiver) starts the operation before the senders.
+                    </body>
+                    <marks>
+                        <mark type="keyword">wait</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -1349,6 +1367,115 @@
             <answers>
                 <answer>
                     <body>Vampir (tracing/visualization), Scalasca (CUBE?), TAU, Periscope (online measurements)</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        
+        <!-- Additional questions -->
+        <question type="extended-answer" id="1000">
+            <body>What is NUMA?</body>
+            <answers>
+                <answer>
+                    <body>Non Uniform Memory Access: A type of shared memory system that allows for a non-uniform memory
+                        hierarchy. Certain memory regions can be closer to a node than other regions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Non Uniform Memory Access</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1001">
+            <body>What are the NUMA domains in the Haswell based nodes?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1002">
+            <body>What is the role of SIMD units in the SuperMUC-NG?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1003">
+            <body>What is the difference between blocking and nonblocking operations?</body>
+            <answers>
+                <answer>
+                    <body>Blocking: Wait until buffer can be reused, Non-blocking: Return as fast as possible and query
+                        for completion later.
+                    </body>
+                    <marks>
+                        <mark type="keyword">wait</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1004">
+            <body>What are differen work sharing constructs and tasking?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1005">
+            <body>What are different types of instrumentation?</body>
+            <answers>
+                <answer>
+                    <body>TODO. (Source-2-Source, Compile-time, Binary)?</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1006">
+            <body>How can you optimize for a TLB?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1007">
+            <body>What is the special challenge posed when analyzing multigrid programs?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1008">
+            <body>What is the difference between instrumentation, monitoring and analysis?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1009">
+            <body>How are threads handled in HPCToolkit in relation to OMP?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1010">
+            <body>What is computational imbalance in scalasca?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
                     <marks></marks>
                 </answer>
             </answers>
