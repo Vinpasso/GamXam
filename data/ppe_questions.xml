@@ -1430,7 +1430,9 @@
             <body>What is the role of SIMD units in the SuperMUC-NG?</body>
             <answers>
                 <answer>
-                    <body>TODO</body>
+                    <body>3 SIMD units per core in Skylake-EP. The purpsose is to execute vector instructions based on AVX (AVX-512, AVX-2) ISA so 
+                    as to increase performance (FLOPS) of the code. 
+                    </body>
                     <marks></marks>
                 </answer>
             </answers>
