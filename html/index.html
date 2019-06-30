@@ -156,7 +156,7 @@
                             <label for="response">Your Response</label>
                         </div>
                         <div class="card-body">
-                            <textarea class="form-control mb-4" id="response" rows="3"></textarea>
+                            <textarea class="form-control mb-4" id="response" rows="3" placeholder="Optional"></textarea>
                             <button type="button" class="btn btn-primary" id="response-submit-button"
                                     onclick="autoGradeResponse($('#response').val())">Submit (ctrl-return)
                             </button>
@@ -192,7 +192,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            Grading
+                            Manual Grading (ctrl-return to accept automatic grade)
                         </div>
                         <div class="card-body" id="question-card">
                             <button type="button" class="btn btn-primary" id="grading-incorrect-button"
