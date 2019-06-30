@@ -577,7 +577,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="34">
-            <body>What advantage/disadvantage does Vampyr offer for visualization?</body>
+            <body>What advantage/disadvantage does Vampir offer for visualization?</body>
             <answers>
                 <answer>
                     <body>Tons of detail to find even small problems, but can require lots of zooming and searching to
@@ -978,13 +978,14 @@
             <answers>
                 <answer>
                     <body>Single (No additional threads in system), funneled (MPI calls only in master thread),
-                        serialized (only one thread runs MPI calls at any time), parallel (any thread, any time)
+                        serialized (only one thread runs MPI calls at any time), parallel/multiple (any thread, any
+                        time)
                     </body>
                     <marks>
                         <mark type="keyword">single</mark>
                         <mark type="keyword">funnel</mark>
                         <mark type="keyword">serial</mark>
-                        <mark type="keyword">parallel</mark>
+                        <mark type="regex" regex-flags="i">parallel|multiple</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1290,7 +1291,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="82">
-            <body>How does the VampirServer work?</body>
+            <body>How does the VampirServer work? What are some advantages of using it?</body>
             <answers>
                 <answer>
                     <body>It answers queries from the vampir visualizer, allowing the analysis to run on more powerful
@@ -1371,7 +1372,7 @@
                 </answer>
             </answers>
         </question>
-        
+
         <!-- Additional questions -->
         <question type="extended-answer" id="1000">
             <body>What is NUMA?</body>
