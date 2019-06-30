@@ -622,7 +622,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="37">
-            <body>How does core frequency affect power/eneergy consumption?</body>
+            <body>How does core frequency affect power/energy consumption?</body>
             <answers>
                 <answer>
                     <body>A higher core frequency implies higher power consumption, but may mean higher or lower energy
@@ -1550,7 +1550,6 @@
                     </marks>
                 </answer>
             </answers>
-        </question>
         </question>
         <question type="extended-answer" id="2001">
             <body>What is Processor affinity?</body>
