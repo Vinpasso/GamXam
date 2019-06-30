@@ -1260,7 +1260,7 @@
                     </body>
                     <marks>
                         <mark type="keyword">CUBE Uniform Behavioral Encoding</mark>
-                        <mark type="keyword">performance</mark>
+                        <mark type="regex">performance|metric</mark>
                         <mark type="keyword">call</mark>
                         <mark type="keyword">location</mark>
                     </marks>
