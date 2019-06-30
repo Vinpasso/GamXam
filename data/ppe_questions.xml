@@ -1451,10 +1451,10 @@
             </answers>
         </question>
         <question type="extended-answer" id="1004">
-            <body>What are different work sharing constructs and tasking?</body>
+            <body>What are different work sharing constructs in OpenMP?</body>
             <answers>
                 <answer>
-                    <body>TODO</body>
+                    <body>Sections, for loops, single and master.</body>
                     <marks></marks>
                 </answer>
             </answers>
@@ -1578,5 +1578,56 @@
                 </answer>
             </answers>
         </question>
-    </body>
+        <question type="extended-answer" id="1014">
+            <body>What are the drawbacks of worksharing in OpenMP?</body>
+            <answers>
+                <answer>
+                    <body>
+                    Imbalance caused by the workload, imbalance caused by the machine (due to heterogeneity), limited programming flexibility.
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1015">
+            <body>What are tasks in OpenMP and how are they scheduled?</body>
+            <answers>
+                <answer>
+                    <body>
+                    Tasks are independent pieces of work, which are guaranteed to be executed in any order. Scheduling is done by the runtime system 
+                    using task queues.
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1016">
+            <body>What are performance considerations while using explicit tasking with OpenMP?</body>
+            <answers>
+                <answer>
+                    <body>
+                    Task Granularity, NUMA Optimization (Tasks can be executed anywhere).
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1017">
+            <body>What is the difference between MPI_Isend() and MPI_Issend()?</body>
+            <answers>
+                <answer>
+                    <body>
+                    Both the routines return immediately. The difference is when the MPI library signals to the user that the send buffer 
+                    can be reused (MPI_Wait and MPI_Test returns). In case of MPI_Isend it returns when message has been copied to the local buffer and in 
+                    case of MPI_Issend it reutrns when matching recieve has been posted.
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
 </exam>
