@@ -98,7 +98,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="3">
-            <body>What do you need to look out for when using Score-P?</body>
+            <body>What do you need to look out for when using Score-P? How can you identify this?</body>
             <answers>
                 <answer>
                     <body>Unexpected or unintended flushes of the log file from memory to permanent storage, which cause
@@ -179,7 +179,7 @@
                 <answer>
                     <body>Using the bundled tool scorep_score, which shows you the memory requirements and warns about
                         potential flushes. It allows you to optimize your filters for memory requirements without
-                        actually running your instrumented code.
+                        actually running your instrumented code (TODO: verify this is actually true).
                     </body>
                     <marks>
                         <mark type="keyword">score</mark>
@@ -704,7 +704,8 @@
                         separately.
                     </body>
                     <marks>
-                        <mark type="keyword">user region</mark>
+                        <mark type="keyword">user</mark>
+                        <mark type="keyword">region</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1374,8 +1375,18 @@
             <body>What tools does Score-P consist of and what are they used for?</body>
             <answers>
                 <answer>
-                    <body>Vampir (tracing/visualization), Scalasca (CUBE?), TAU, Periscope (online measurements)</body>
-                    <marks></marks>
+                    <body>Vampir (tracing/visualization), Scalasca for automatic antipattern detection (with CUBE?), TAU
+                        for generic instrumentation, Periscope (online measurements)
+                    </body>
+                    <marks>
+                        <mark type="keyword">vampir</mark>
+                        <mark type="keyword">visual</mark>
+                        <mark type="keyword">scalasca</mark>
+                        <mark type="keyword">TAU</mark>
+                        <mark type="keyword">instrument</mark>
+                        <mark type="keyword">periscope</mark>
+                        <mark type="keyword">online</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -1390,6 +1401,7 @@
                     </body>
                     <marks>
                         <mark type="keyword">Non Uniform Memory Access</mark>
+                        <mark type="keyword">shared</mark>
                     </marks>
                 </answer>
             </answers>
