@@ -545,12 +545,14 @@
             </answers>
         </question>
         <question type="extended-answer" id="32">
-            <body>What tools are useful for measuring load balancing with OpenMP?</body>
+            <body>What tools are useful for measuring load balancing with OpenMP and what do they do?</body>
             <answers>
                 <answer>
                     <body>Automatic instrumentation: ScoreP/Opari. Visualization: Ale (TODO?)</body>
                     <marks>
                         <mark type="keyword">instrument</mark>
+                        <mark type="keyword">score</mark>
+                        <mark type="keyword">opari</mark>
                         <mark type="keyword">visual</mark>
                     </marks>
                 </answer>
