@@ -1525,6 +1525,27 @@
                 </answer>
             </answers>
         </question>
-
+        <question type="extended-answer" id="1012">
+            <body>Advantage of using a MESH based network architecture in Skylake?</body>
+            <answers>
+                <answer>
+                    <body>More scalable as comapared to partitioned ring interconnect architecture in Haswell-EP.
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+                <question type="extended-answer" id="1013">
+            <body>What is Sub Numa Clustering (SNC)?</body>
+            <answers>
+                <answer>
+                    <body>TODO
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
