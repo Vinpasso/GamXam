@@ -331,11 +331,12 @@
             <answers>
                 <answer>
                     <body>Memory constrained scaling, because it makes better use of available per node memory resources
-                        such as cache and RAM that scale with the number of processes than strong scaling does.
+                        such as cache and memory bandwidth that scale with the number of processes than strong scaling
+                        does.
                     </body>
                     <marks>
                         <mark type="keyword">memory</mark>
-                        <mark type="keyword">constrain</mark>
+                        <mark type="keyword">resource</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1184,7 +1185,7 @@
                         <mark type="keyword">perform</mark>
                         <mark type="keyword">source</mark>
                         <mark type="keyword">optimiz</mark>
-                        <mark type="keyword">opemp</mark>
+                        <mark type="keyword">openmp</mark>
                         <mark type="keyword">mpi</mark>
                     </marks>
                 </answer>
