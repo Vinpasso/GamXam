@@ -1540,7 +1540,9 @@
             <body>What is Sub Numa Clustering (SNC)?</body>
             <answers>
                 <answer>
-                    <body>TODO
+                    <body>Skylake-EP has a memory controller located on each side of the die. SNC allows for creation of localized domains with each
+                    memory controller belonging to each domain. It leads to low LLC and memory latency within its domain compared to accesses outside the 
+                    domain.
                     </body>
                     <marks>
                     </marks>
