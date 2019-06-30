@@ -230,7 +230,7 @@
 
         <!-- Single Node Performance -->
 
-        <question type="extended-answer" id="1000">
+        <question type="extended-answer" id="500">
             <body>How can a programmer determine the influence of the compiler on a program's performance?</body>
             <answers>
                 <answer>
