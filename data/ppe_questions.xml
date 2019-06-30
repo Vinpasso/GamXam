@@ -1416,11 +1416,11 @@
             <body>What are the NUMA domains in the Haswell based nodes?</body>
             <answers>
                 <answer>
-                    <body>The haswell based nodes have 4 NUMA domains including hyperthreads. The grouping is as follows:
-                    Domain: 0 Processors: (0 28 1 29 2 30 3 31 4 32 5 33 6 34) <br>
-                    Domain: 1 Processors: (7 35 8 36 9 37 10 38 11 39 12 40 13 41) <br>
-                    Domain: 2 Processors: (14 42 15 43 16 44 17 45 18 46 19 47 20 48) <br>
-                    Domain: 4 Processors: (21 49 22 50 23 51 24 52 25 53 26 54 27 55) <br>
+                    <body>The haswell based nodes have 4 NUMA domains including hyperthreads. The grouping is as follows:<p/>
+                    Domain: 0 Processors: (0 28 1 29 2 30 3 31 4 32 5 33 6 34) <p/>
+                    Domain: 1 Processors: (7 35 8 36 9 37 10 38 11 39 12 40 13 41) <p/>
+                    Domain: 2 Processors: (14 42 15 43 16 44 17 45 18 46 19 47 20 48) <p/>
+                    Domain: 4 Processors: (21 49 22 50 23 51 24 52 25 53 26 54 27 55) <p/>
                     </body>
                     <marks></marks>
                 </answer>
