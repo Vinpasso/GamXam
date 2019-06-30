@@ -1551,5 +1551,33 @@
                 </answer>
             </answers>
         </question>
+        </question>
+        <question type="extended-answer" id="2001">
+            <body>What is Processor affinity?</body>
+            <answers>
+                <answer>
+                    <body>Cache Affinity enables the binding and unbinding of a process or a thread to CPU or a range of CPUs, so that the process or 
+                          thread will execute only on the designated CPU or CPUs rather than any CPU. This can be viewed as a modification of the 
+                          native central queue scheduling algorithm in a symmetric multiprocessing operating system. 
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="2002">
+            <body>What is NUMA nodes?</body>
+            <answers>
+                <answer>
+                    <body>Non-uniform memory access (NUMA) is a computer memory design used in multiprocessing, where the memory access time depends on 
+                          the memory location relative to the processor. Under NUMA, a processor can access its own local memory faster than non-local 
+                          memory (memory local to another processor or memory shared between processors). The benefits of NUMA are limited to particular 
+                          workloads, notably on servers where the data is often associated strongly with certain tasks or users.
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
