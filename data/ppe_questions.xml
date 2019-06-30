@@ -14,12 +14,17 @@
             <body>What is the difference between a node, socket, core, and a (HW) thread?</body>
             <answers>
                 <answer>
-                    <body>A node is interconnected by network
-                        <p/>
-                        A node contains one or more physical sockets that mount the CPU
-                        <p/>
+                    <body>A node is a collection of hardware connected to other nodes via network. A node has one or
+                        multiple physical sockets where processing units are mounted. A core is a part of the processing
+                        unit that can execute instructions, of which a processing unit can have multiple. A hardware
+                        thread is an execution set (registers, etc.), of which a core can have multiple.
                     </body>
-                    <marks></marks>
+                    <marks>
+                        <mark type="keyword">network</mark>
+                        <mark type="keyword">unit</mark>
+                        <mark type="keyword">instruction</mark>
+                        <mark type="keyword">set</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -1421,7 +1426,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="1004">
-            <body>What are differen work sharing constructs and tasking?</body>
+            <body>What are different work sharing constructs and tasking?</body>
             <answers>
                 <answer>
                     <body>TODO</body>
