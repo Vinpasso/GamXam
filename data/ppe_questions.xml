@@ -92,7 +92,9 @@
             <body>What does Score-P do?</body>
             <answers>
                 <answer>
-                    <body>TODO</body>
+                    <body>Score-P is a scalable tool for profiling, tracing and online analysis of HPC applications. It instruments OMP directives,
+                    MPI function calls and user functions inside an application.
+                    </body>
                     <marks></marks>
                 </answer>
             </answers>
