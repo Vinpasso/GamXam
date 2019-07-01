@@ -13,9 +13,16 @@ function loadExam(file) {
     examFileName = file.name.substring(0, file.name.length - 4);
     let reader = new FileReader();
     reader.onload = function (e) {
-        let xmlStr = reader.result;
-        let domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
-        handleExam(domxml);
+        try {
+            let xmlStr = reader.result;
+            let domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
+            handleExam(domxml);
+        }catch (e) {
+            showAlert("Failed to load exam: " + e.toString(), "alert-danger")
+        }
+    };
+    reader.onerror = function (e) {
+        showAlert("Failed to load exam: " + e.toString(), "alert-danger");
     };
     reader.readAsText(file);
 }
@@ -27,10 +34,17 @@ function loadExamFromURL(url) {
     xmlHTTPRequest.onload = function (e) {
         handleExam(xmlHTTPRequest.responseXML);
     };
+    xmlHTTPRequest.onerror = function (e) {
+        showAlert("Failed to load exam: " + e.toString(), "alert-danger");
+    };
     xmlHTTPRequest.send();
 }
 
 function handleExam(xmlEncodedExam) {
+    if(xmlEncodedExam === null) {
+        showAlert("Failed to load exam. Please check console.", "alert-danger");
+        return;
+    }
     exam = xmlEncodedExam;
     examLength = exam.getElementsByTagName("question").length;
     $("#exam-info").html("<h5>Exam: " +
