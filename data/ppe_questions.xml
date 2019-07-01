@@ -1631,5 +1631,19 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="1018">
+            <body>How does Score-P do OMP instrumentation?</body>
+            <answers>
+                <answer>
+                    <body>
+                    Score-P utilizes OPARI2, which is a source to source instrumentor for OpenMP and hybrid codes. OPARI2 sourrounds the 
+                    OpenMP directives and runtime library calls with calls to POMP2 measurement interface. The instumented source code files can 
+                    be seen by compiling the application with the switch --keep-files in Score-P.
+                    </body>
+                    <marks>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
