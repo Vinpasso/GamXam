@@ -179,7 +179,7 @@
                 <answer>
                     <body>Using the bundled tool scorep_score, which shows you the memory requirements and warns about
                         potential flushes. It allows you to optimize your filters for memory requirements without
-                        actually running your instrumented code (TODO: verify this is actually true).
+                        re-running your instrumented code.
                     </body>
                     <marks>
                         <mark type="keyword">score</mark>
