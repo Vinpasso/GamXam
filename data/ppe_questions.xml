@@ -134,7 +134,10 @@
             <body>What are selective region filters (user regions) in Score-P?</body>
             <answers>
                 <answer>
-                    <body>TODO</body>
+                    <body>The user can manually instrument regions in a program thorugh the functions defined in the header file
+                        SCOREP_User.h. During the compilation of the application using Score-P, the user can use the options --nocompiler
+                        --user. This will lead to instrumentation of only the selected user regions.
+                    </body>
                     <marks></marks>
                 </answer>
             </answers>
@@ -1465,7 +1468,7 @@
             <body>What are different types of instrumentation?</body>
             <answers>
                 <answer>
-                    <body>TODO. (Source-2-Source, Compile-time, Binary)?</body>
+                    <body>Source code, compiler, binary, link-level</body>
                     <marks></marks>
                 </answer>
             </answers>
