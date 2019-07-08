@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exam xmlns="https://vpt1.org">
+    <head>
+        <title>Secure Payment Networks</title>
+        <version>1.0</version>
+        <id>420</id>
+    </head>
+    <body>
+        <!-- Introduction -->
+        <question type="extended-answer" id="1">
+            <body>What is the structure of the banking sector?</body>
+            <answers>
+                <answer>
+                    <body>Country organization, then headquarters of Bank or Saving Bank, then branches</body>
+                    <marks>
+                        <mark type="keyword">country organization</mark>
+                        <mark type="keyword">headquarter</mark>
+                        <mark type="keyword">branch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="2">
+            <body>IT centers can be run per ...?</body>
+            <answers>
+                <answer>
+                    <body>Bank or Bank Group</body>
+                    <marks>
+                        <mark type="keyword">Bank</mark>
+                        <mark type="keyword">Bank Group</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="3">
+            <body>What payment schemes were covered in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Debit payment, credit payment, payment with NFC, and payment via trusted service provider.
+                    </body>
+                    <marks>
+                        <mark type="keyword">debit</mark>
+                        <mark type="keyword">credit</mark>
+                        <mark type="keyword">nfc</mark>
+                        <mark type="keyword">trusted service provider</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="4">
+            <body>What are the types of payment cards?</body>
+            <answers>
+                <answer>
+                    <body>Magnetic stripe card and chip card.</body>
+                    <marks>
+                        <mark type="keyword">magnetic</mark>
+                        <mark type="keyword">chip</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- PKI -->
+    </body>
+</exam>
