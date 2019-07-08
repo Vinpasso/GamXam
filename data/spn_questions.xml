@@ -61,5 +61,152 @@
         </question>
 
         <!-- PKI -->
+        <question type="extended-answer" id="5">
+            <body>What is authentication?</body>
+            <answers>
+                <answer>
+                    <body>The act of confirming the truth of an attribute of a single piece of data claimed true by an
+                        entity.
+                    </body>
+                    <marks>
+                        <mark type="keyword">confirm</mark>
+                        <mark type="keyword">attribute</mark>
+                        <mark type="keyword">claim</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="6">
+            <body>What is identification?</body>
+            <answers>
+                <answer>
+                    <body>The act of stating a claim purportedly attesting to an entity's identity.</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="7">
+            <body>What is authentication in relation to identification?</body>
+            <answers>
+                <answer>
+                    <body>The process of actually confirming an identity.</body>
+                    <marks>
+                        <mark type="keyword">confirm</mark>
+                        <mark type="keyword">identity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="8">
+            <body>What are the two special kinds of authentication mentioned in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Multi-Factor Authentication and Out-of-Band Authentication.</body>
+                    <marks>
+                        <mark type="keyword">multi-factor</mark>
+                        <mark type="keyword">out-of-band</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9">
+            <body>What is a PKI?</body>
+            <answers>
+                <answer>
+                    <body>A typical PKI consists of hardware, software, policies and standards to manage the creation,
+                        administration, distribution and revocation of keys and digital certificates.
+                    </body>
+                    <marks>
+                        <mark type="keyword">creat</mark>
+                        <mark type="keyword">admin</mark>
+                        <mark type="keyword">distribut</mark>
+                        <mark type="keyword">revocat</mark>
+                        <mark type="keyword">key</mark>
+                        <mark type="keyword">certificate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>What are some elements of a PKI?</body>
+            <answers>
+                <answer>
+                    <body>Certificate authority, registration authority, certificate database (stores certificate
+                        requests and issued and revoked certificates), and certificate store (on local computers).
+                    </body>
+                    <marks>
+                        <mark type="keyword">certificate authority</mark>
+                        <mark type="keyword">registration authority</mark>
+                        <mark type="keyword">certificate database</mark>
+                        <mark type="keyword">certificate store</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11">
+            <body>What does CRL stand for?</body>
+            <answers>
+                <answer>
+                    <body>Certificate Revocation List</body>
+                    <marks>
+                        <mark type="keyword">certificate revocation list</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12">
+            <body>What does OCSP stand for?</body>
+            <answers>
+                <answer>
+                    <body>Online Certificate Status Protocol</body>
+                    <marks>
+                        <mark type="keyword">online certificate status protocol</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="13">
+            <body>What is a digital signature?</body>
+            <answers>
+                <answer>
+                    <body>A one-way hash, of the original data, that has been encrypted with the signer's private key.
+                    </body>
+                    <marks>
+                        <mark type="keyword">one-way hash</mark>
+                        <mark type="keyword">encrypt</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="14">
+            <body>What is the analog equivalent to a qualified digital signature?</body>
+            <answers>
+                <answer>
+                    <body>A handwritten signature.</body>
+                    <marks>
+                        <mark type="keyword">handwritten signature</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15">
+            <body>What four types of signatures were presented in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Electronic signature (e.g. on tablet), biometric signature (e.g. data about the handwritten
+                        signature), digital signature (signing a hash with a private key), and advanced signature
+                        (combination of biometric and digital signature).
+                    </body>
+                    <marks>
+                        <mark type="keyword">electronic</mark>
+                        <mark type="keyword">biometric</mark>
+                        <mark type="keyword">digital</mark>
+                        <mark type="keyword">advanced</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Biometrics -->
     </body>
 </exam>
