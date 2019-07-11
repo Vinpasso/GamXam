@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exam xmlns="https://vpt1.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://vpt1.org questions.xsd">
+    <head>
+        <title>Parallel Programming</title>
+        <version>1.0</version>
+        <id>161</id>
+    </head>
+    <body>
+        <!-- TODO: Insert questions -->
+    </body>
+</exam>
