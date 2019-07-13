@@ -208,5 +208,134 @@
         </question>
 
         <!-- Biometrics -->
+        <question type="extended-answer" id="16">
+            <body>What is the definition of biometrics?</body>
+            <answers>
+                <answer>
+                    <body>Biometrics is the technical term for body measurements and calculations. It refers to metrics
+                        related to human characteristics.
+                    </body>
+                    <marks>
+                        <mark type="keyword">body measurement</mark>
+                        <mark type="keyword">calculation</mark>
+                        <mark type="keyword">metric</mark>
+                        <mark type="keyword">human characteristic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17">
+            <body>What are the two types of biometrics mentioned in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Physiological and behavioral.</body>
+                    <marks>
+                        <mark type="keyword">physiological</mark>
+                        <mark type="keyword">behavioral</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="18">
+            <body>What are examples for physiological biometrics?</body>
+            <answers>
+                <answer>
+                    <body>Face, fingerprint, iris, and DNA.</body>
+                    <marks>
+                        <mark type="keyword">face</mark>
+                        <mark type="keyword">fingerprint</mark>
+                        <mark type="keyword">iris</mark>
+                        <mark type="keyword">dna</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="19">
+            <body>What are examples for behavioral biometrics?</body>
+            <answers>
+                <answer>
+                    <body>Keystroke, signature, and voice.</body>
+                    <marks>
+                        <mark type="keyword">keystroke</mark>
+                        <mark type="keyword">signature</mark>
+                        <mark type="keyword">voice</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20">
+            <body>What are the three security levels of biometric identification (strongest to weakest)?</body>
+            <answers>
+                <answer>
+                    <body>Hidden feature, dedicated devices for inspection, and manual inspection or smartphone
+                        camera.
+                    </body>
+                    <marks>
+                        <mark type="keyword">hidden feature</mark>
+                        <mark type="keyword">dedicated devices</mark>
+                        <mark type="keyword">manual inspection</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Secure Smartphone -->
+        <question type="extended-answer" id="21">
+            <body>What are the three security architectures for smartphone security?</body>
+            <answers>
+                <answer>
+                    <body>MicroSD, UICC (Universal Integrated Circuit Card), and embedded (in the phone).</body>
+                    <marks>
+                        <mark type="keyword">microsd</mark>
+                        <mark type="keyword">uicc</mark>
+                        <mark type="keyword">embedded</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="22">
+            <body>What is a sandbox?</body>
+            <answers>
+                <answer>
+                    <body>A sandbox is an isolated testing environment that enables users to run programs or execute
+                        files without affecting the application, system, or platform on which they run.
+                    </body>
+                    <marks>
+                        <mark type="keyword">isolate</mark>
+                        <mark type="keyword">environment</mark>
+                        <mark type="keyword">run program</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="23">
+            <body>What is the key difference between the two presented virtualization types?</body>
+            <answers>
+                <answer>
+                    <body>One uses a host OS beneath the Hypervisor, the other does not.</body>
+                    <marks>
+                        <mark type="keyword">host os</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="24">
+            <body>What are the scenarios A to C for mobile wallets?</body>
+            <answers>
+                <answer>
+                    <body>A is user and provider centric. It is a generic model with an open source approach. B is
+                        operator centric. An issuer defines APIs and makes the selection of one or more applications. C
+                        is application and OEM centric. It is one, classical and unique application.
+                    </body>
+                    <marks>
+                        <mark type="keyword">user and provider centric</mark>
+                        <mark type="keyword">operator centric</mark>
+                        <mark type="keyword">application and oem centric</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- TODO -->
     </body>
 </exam>
