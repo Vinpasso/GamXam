@@ -336,6 +336,104 @@
             </answers>
         </question>
 
-        <!-- TODO -->
+        <!-- Attacks and Countermeasures -->
+        <question type="extended-answer" id="25">
+            <body>What are the three factors that risk is dependent upon?</body>
+            <answers>
+                <answer>
+                    <body>Threat, vulnerability, and consequences.</body>
+                    <marks>
+                        <mark type="keyword">threat</mark>
+                        <mark type="keyword">vulnerability</mark>
+                        <mark type="keyword">consequence</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="26">
+            <body>What are some of the most common types of violations?</body>
+            <answers>
+                <answer>
+                    <body>Breach of Confidentiality, Breach of Integrity, Breach of Availability, Theft of Service, and
+                        Denial of Service.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Breach of Confidentiality</mark>
+                        <mark type="keyword">Breach of Integrity</mark>
+                        <mark type="keyword">Breach of Availability</mark>
+                        <mark type="keyword">Theft of Service</mark>
+                        <mark type="keyword">Denial of Service</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="27">
+            <body>What is Social Engineering?</body>
+            <answers>
+                <answer>
+                    <body>Any act that influences a person to take an action that may or may not be in their best
+                        interest.
+                    </body>
+                    <marks>
+                        <mark type="keyword">influence</mark>
+                        <mark type="keyword">take action</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="28">
+            <body>What kinds of attacks were mentioned in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Password-based attacks, encryption based hacks, sniffer attacks, man in the middle attacks,
+                        phishing, compromised-key attacks, reengineering of chip cards, application-layer attacks, and
+                        denial of service attacks.
+                    </body>
+                    <marks>
+                        <mark type="keyword">password</mark>
+                        <mark type="keyword">encryption</mark>
+                        <mark type="keyword">sniffer</mark>
+                        <mark type="keyword">middle</mark>
+                        <mark type="keyword">phishing</mark>
+                        <mark type="keyword">compromised-key</mark>
+                        <mark type="keyword">reengineering</mark>
+                        <mark type="keyword">application-layer</mark>
+                        <mark type="keyword">denial</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="29">
+            <body>What is a virus?</body>
+            <answers>
+                <answer>
+                    <body>A virus is a fragment of code embedded in an otherwise legitimate program, designed to
+                        replicate
+                        itself (by infecting other programs), and (eventually) wreaking havoc.
+                    </body>
+                    <marks>
+                        <mark type="keyword">code</mark>
+                        <mark type="keyword">replicate</mark>
+                        <mark type="keyword">havoc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30">
+            <body>What is a HSM?</body>
+            <answers><answer>
+                <body>A hardware security module is a physical computing device that safeguards and manages digital keys
+                    for strong authentication and provides cryptoprocessing.
+                </body>
+                <marks>
+                    <mark type="keyword">hardware security module</mark>
+                    <mark type="keyword">computing device</mark>
+                    <mark type="keyword">key</mark>
+                    <mark type="keyword">cryptoprocessing</mark>
+                </marks>
+            </answer></answers>
+        </question>
+
+        <!-- Blockchain-->
     </body>
 </exam>
