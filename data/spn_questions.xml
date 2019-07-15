@@ -421,19 +421,73 @@
         </question>
         <question type="extended-answer" id="30">
             <body>What is a HSM?</body>
-            <answers><answer>
-                <body>A hardware security module is a physical computing device that safeguards and manages digital keys
-                    for strong authentication and provides cryptoprocessing.
-                </body>
-                <marks>
-                    <mark type="keyword">hardware security module</mark>
-                    <mark type="keyword">computing device</mark>
-                    <mark type="keyword">key</mark>
-                    <mark type="keyword">cryptoprocessing</mark>
-                </marks>
-            </answer></answers>
+            <answers>
+                <answer>
+                    <body>A hardware security module is a physical computing device that safeguards and manages digital
+                        keys
+                        for strong authentication and provides cryptoprocessing.
+                    </body>
+                    <marks>
+                        <mark type="keyword">hardware security module</mark>
+                        <mark type="keyword">computing device</mark>
+                        <mark type="keyword">key</mark>
+                        <mark type="keyword">cryptoprocessing</mark>
+                    </marks>
+                </answer>
+            </answers>
         </question>
 
         <!-- Blockchain-->
+        <question type="extended-answer" id="31">
+            <body>What is a cryptocurrency?</body>
+            <answers>
+                <answer>
+                    <body>A cryptocurrency is a virtual or digital money which takes the form of tokens or "coins".
+                    </body>
+                    <marks>
+                        <mark type="regex">virtual|digital</mark>
+                        <mark type="regex">token|coin</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="32">
+            <body>What are the golden eight (transformations for finacial services)?</body>
+            <answers>
+                <answer>
+                    <body>Authenticate &amp; attest to value, transfer value, store value, lend value, exchange value,
+                        fund &amp; invest, insure value &amp; manage risk, and account for &amp; audit value.
+                    </body>
+                    <marks>
+                        <mark type="keyword">authenticate</mark>
+                        <mark type="keyword">transfer</mark>
+                        <mark type="keyword">store</mark>
+                        <mark type="keyword">lend</mark>
+                        <mark type="keyword">exchange</mark>
+                        <mark type="keyword">invest</mark>
+                        <mark type="keyword">insure</mark>
+                        <mark type="keyword">account</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="33">
+            <body>What are some reasons why Blockchain could fail?</body>
+            <answers>
+                <answer>
+                    <body>Energy consumption is unsustainable; Government will stifle or twist it; Job killer; Criminals
+                        will use it.
+                    </body>
+                    <marks>
+                        <mark type="keyword">energy</mark>
+                        <mark type="keyword">government</mark>
+                        <mark type="keyword">job</mark>
+                        <mark type="keyword">criminal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Mobile Payment and SEPA -->
     </body>
 </exam>
