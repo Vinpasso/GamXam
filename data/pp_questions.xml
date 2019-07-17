@@ -10,5 +10,187 @@
     </head>
     <body>
         <!-- TODO: Insert questions -->
+        <!-- Lecture 2: Threading Concepts Threading APIs POSIX Threads -->
+        <question type="extended-answer" id="1">
+            <body>What are the four elements of Flynn's taxonomy?</body>
+            <answers>
+                <answer>
+                    <body>SISD (Conventional processor), SIMD (Single instruction multiple data, vectorization, GPU,
+                        etc.), MISD (not really available), MIMD (Multiple instruction multiple data,
+                        multi-core/processor etc.)
+                    </body>
+                    <marks>
+                        <mark type="keyword">sisd</mark>
+                        <mark type="keyword">simd</mark>
+                        <mark type="keyword">misd</mark>
+                        <mark type="keyword">mimd</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="2">
+            <body>What two major types of MIMD architectures exist?</body>
+            <answers>
+                <answer>
+                    <body>Distributed memory and shared memory</body>
+                    <marks>
+                        <mark type="keyword">distrib</mark>
+                        <mark type="keyword">share</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="3">
+            <body>What type of distributed memory systems exist and what do they do?</body>
+            <answers>
+                <answer>
+                    <body>MPP, NOW, Cluster (What do they do? TODO)</body>
+                    <marks>
+                        <mark type="keyword">mpp</mark>
+                        <mark type="keyword">now</mark>
+                        <mark type="keyword">clust</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="4">
+            <body>What are the types and subtypes of shared memory systems?</body>
+            <answers>
+                <answer>
+                    <body>UMA and NUMA (COMA, ccNUMA, nccNUMA)</body>
+                    <marks>
+                        <mark type="keyword">UMA</mark>
+                        <mark type="keyword">NUMA</mark>
+                        <mark type="keyword">COMA</mark>
+                        <mark type="keyword">cc</mark>
+                        <mark type="keyword">ncc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="5">
+            <body>What is another name for the UMA Architecture? What is the defining feature of a UMA system?</body>
+            <answers>
+                <answer>
+                    <body>SMP: Symmetric multiprocessors. There is a centralized shared memory, to which all processors
+                        have the same latency.
+                    </body>
+                    <marks>
+                        <mark type="keyword">smp</mark>
+                        <mark type="keyword">shared</mark>
+                        <mark type="keyword">latenc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="6">
+            <body>What are some programming models that match shared memory?</body>
+            <answers>
+                <answer>
+                    <body>
+                        POSIX threads, OpenMP, etc.
+                    </body>
+                    <marks>
+                        <mark type="keyword">posix</mark>
+                        <mark type="regex">o(pen)?mp</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="7">
+            <body>What is a thread and what are its essential components?</body>
+            <answers>
+                <answer>
+                    <body>An independent stream of execution that has at least its own PC and its own stack.</body>
+                    <marks>
+                        <mark type="keyword">exec</mark>
+                        <mark type="keyword">pc</mark>
+                        <mark type="keyword">stack</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="8">
+            <body>What is Hyperthreading/SMT?</body>
+            <answers>
+                <answer>
+                    <body>A technology where a processing core can have multiple hardware threads to allow for rapid
+                        context switching in the core, reducing the impact of stalls.
+                    </body>
+                    <marks>
+                        <mark type="keyword">thread</mark>
+                        <mark type="keyword">switch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9">
+            <body>What are some advantages of using threads versus multiple processes.</body>
+            <answers>
+                <answer>
+                    <body>
+                        No data protection boundaries, asynchronous behavior within a process, OS still does scheduling
+                        (preemption and progress)
+                    </body>
+                    <marks>
+                        <mark type="keyword">protect</mark>
+                        <mark type="keyword">async</mark>
+                        <mark type="keyword">schedul</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>What is an advantage of using threads (e.g. pthreads) in parallel programming?</body>
+            <answers>
+                <answer>
+                    <body>Its low-level, allowing the programmer to micro-manage resources.</body>
+                    <marks>
+                        <mark type="keyword">low</mark>
+                        <mark type="keyword">resource</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11">
+            <body>What model does pthreads conform to?</body>
+            <answers>
+                <answer>
+                    <body>The fork/join model</body>
+                    <marks>
+                        <mark type="keyword">fork</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12">
+            <body>Write code to create/destroy a pthread.</body>
+            <answers>
+                <answer>
+                    <body>
+                        Using a kernel:
+                        <pre>void* kernel(void* arg);</pre>
+                        Start a thread:
+                        <pre>
+                            pthread_t thread;
+                            pthread_attr_t attr;
+                            if(!pthread_create(&amp;thread, attr, kernel, arg)) {
+                                abort(0);
+                            }
+                        </pre>
+                        Join a thread:
+                        <pre>
+                            if(!pthread_join(&amp;thread, &amp;retval)) {
+                                abort(0);
+                            }
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">create</mark>
+                        <mark type="keyword">join</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
