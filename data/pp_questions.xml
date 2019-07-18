@@ -175,19 +175,134 @@
                             pthread_t thread;
                             pthread_attr_t attr;
                             if(!pthread_create(&amp;thread, attr, kernel, arg)) {
-                                abort(0);
+                            abort(0);
                             }
                         </pre>
                         Join a thread:
                         <pre>
                             if(!pthread_join(&amp;thread, &amp;retval)) {
-                                abort(0);
+                            abort(0);
                             }
                         </pre>
                     </body>
                     <marks>
                         <mark type="keyword">create</mark>
                         <mark type="keyword">join</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="13">
+            <body>What is a potential issue when using pthreads concerning memory?</body>
+            <answers>
+                <answer>
+                    <body>The stacks of multiple threads need to be stored in the same address space. Usually, this is
+                        done with a pre-defined space between each stack, limiting the amount of available stack space.
+                    </body>
+                    <marks>
+                        <mark type="keyword">stack</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="14">
+            <body>What are the two main concepts for synchronization between threads in POSIX?</body>
+            <answers>
+                <answer>
+                    <body>Mutual exclusion, condition variables</body>
+                    <marks>
+                        <mark type="keyword">excl</mark>
+                        <mark type="keyword">condit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15">
+            <body>Which problem is solved by the mutual exclusion concept?</body>
+            <answers>
+                <answer>
+                    <body>Concurrent access to shared resources (IO, Memory, etc.)</body>
+                    <marks>
+                        <mark type="keyword">resourc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16">
+            <body>Write code for one lifecycle of a POSIX Mutex.</body>
+            <answers>
+                <answer>
+                    <body>
+                        Initialization (to use default attributes, use NULL):
+                        <pre>
+                            //Dynamic case, destruction necessary
+                            pthread_mutex_t lock;
+                            pthread_mutex_init(&amp;lock, attr);
+                            //Static case
+                            pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+                        </pre>
+                        Lock:
+                        <pre>
+                            pthread_mutex_lock(&amp;lock);
+                            pthread_mutex_trylock(&amp;lock);
+                        </pre>
+                        Unlock:
+                        <pre>
+                            pthread_mutex_unlock(&amp;lock);
+                        </pre>
+                        Destroy:
+                        <pre>
+                            pthread_mutex_destroy(&amp;lock);
+                        </pre>
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17">
+            <body>What types of recursive behaviors are available for pthread mutexes?</body>
+            <answers>
+                <answer>
+                    <body>PTHREAD_MUTEX_NORMAL (deadlock), PTHREAD_MUTEX_ERRORCHECK (error code),
+                        PTHREAD_MUTEX_RECURSIVE (lock count). Default: undefined behavior
+                    </body>
+                    <marks>
+                        <mark type="keyword">normal</mark>
+                        <mark type="keyword">error</mark>
+                        <mark type="keyword">recur</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="18">
+            <body>What criteria are there for the implementation of a pthread mutex?</body>
+            <answers>
+                <answer>
+                    <body>Guarantee of mutual exclusion, progress (every waiting thread eventually gets the mutex),
+                        fairness.
+                    </body>
+                    <marks>
+                        <mark type="keyword">excl</mark>
+                        <mark type="keyword">prog</mark>
+                        <mark type="keyword">fair</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="19">
+            <body>What are the two typical implementations for a pthread mutex and what do they do?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Spin-lock: Try to obtain lock in a loop as fast as possible, enable low latency but consuming
+                        resources.
+                        <p/>
+                        Yielding lock: Yields the hardware thread when lock unavailable, freeing resources but
+                        increasing latency.
+                    </body>
+                    <marks>
+                        <mark type="keyword">spin</mark>
+                        <mark type="keyword">yield</mark>
                     </marks>
                 </answer>
             </answers>
