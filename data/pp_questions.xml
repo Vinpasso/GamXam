@@ -392,5 +392,234 @@
         <!-- TODO: Continue Chapter 2 slide 45 -->
 
 
+        <!-- From Exam 2018 -->
+        <question type="extended-answer" id="1000">
+            <body>1a) What can be computed by applying Amdahl's Law [and state the law]?</body>
+            <answers>
+                <answer>
+                    <body>Using Amdahl's Law, we can compute the minimum achievable runtime in a program
+                        consisting of sequential and parallel regions for a given number of processors.
+                        Amdahl's Law states that <pre>T(p)= (1-f)T + f(T/p)</pre>, where f is fraction of parallel
+                        execution and p number of processes. From this, it is possible to derive the maximum speedup
+                        S(p)=1/(1-f+f/p).
+                    </body>
+                    <marks>
+                        <mark type="keyword">speedup</mark>
+                        <mark type="keyword">sequen</mark>
+                        <mark type="keyword">par</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10001">
+            <body>1b) Assume you have a program, which is split into regions that either cannot be parallelized at all
+                or that can be parallelized perfectly. Assuming the regions that cannot be parallelized consume 1% of
+                execution time during a sequential run, what is the maximal speedup that can be achieved?
+            </body>
+            <answers>
+                <answer>
+                    <body>Using Amdahl's Law with f=0.99, the maximum achievable speedup is 1/(1-f+f/p), with p very
+                        large. Thus 1/(1-0.99) = 1/0.01 = 100.
+                    </body>
+                    <marks>
+                        <mark type="keyword">100</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10002">
+            <body>2a) Name one possible reason for a negative performance impact in case lock granularity is chosen too
+                fine.
+            </body>
+            <answers>
+                <answer>
+                    <body>When lock granularity is too fine there are many lock/unlock operations when accessing
+                        resources, the processing of which detracts from the time spent on useful computation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">lock</mark>
+                        <mark type="keyword">time</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10003">
+            <body>2b) Name one possible reason for a negative performance impact in case lock granularity is chosen too
+                coarse:
+            </body>
+            <answers>
+                <answer>
+                    <body>When lock granularity is too coarse, accessing independent resources (such as different
+                        locations in a large array) can block just because they are protected by the same lock (for the
+                        whole array). This requires a process to wait even though the resource could be accessed.
+                    </body>
+                    <marks>
+                        <mark type="keyword">lock</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10004">
+            <body>3a) Parallelize for loop in the following function using OpenMP by replacing &gt;OPENMP HERE&lt;with
+                the appropriate OpenMP directive(s) and clause(s). Write your solution in the box below.
+                <pre>
+                    void function(float* a,float* b,int n) {
+                    int i;
+                    &lt;OPENMP HERE&gt;
+                    for(i = 0; i &lt; n - 1; i++)
+                    a[i] = (b[i] + b[i + 1]) / 2;
+                    a[i] = b[i] / 2;
+                    }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            #pragma omp parallel for private(i) shared(a, b, n)
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">private</mark>
+                        <mark type="keyword">shared</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10005">
+            <body>b)* Parallelize for loop in the following function using OpenMP by replacing &gt;OPENMP HERE&lt; with
+                the appropriate OpenMP directive(s) and clause(s). Write your solution in the box below.
+                <pre>
+                    double function(float* x,int* y,int n)
+                    {
+                    int i, b = y[0];
+                    float a = 1.0;
+                    &gt;OPENMP HERE&lt;
+                    for(i=0; i &gt; n; i++) {
+                    a += x[i];
+                    if(b &lt; y[i])
+                    b = y[i];
+                    }
+                    return a * b;
+                    }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>#pragma omp parallel for private(i) reduction(+: a) reduction(min: b) shared(x, y)</body>
+                    <marks>
+                        <mark type="keyword">reduction</mark>
+                        <mark type="keyword">+</mark>
+                        <mark type="keyword">min</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10006">
+            <body>
+                Consider the following program being executed with OMP_NUM_THREADS set to 16.
+                <pre>
+                    int value[64], k, t;
+                    for(inti=0; i&lt;64; i++)
+                    value[i]=63-i;
+                    t=omp_get_thread_num ();
+                    k=42;
+                    #pragma omp parallel for schedule(static, 2) CLAUSE
+                    for(inti=0; i&lt;64; i++) {
+                    k=value[i]*2+t;
+                    }
+                    printf("Final␣value␣of␣k=%i\n", k);
+                </pre>
+                a)* Which iterations are executed by thread 13 in the parallel for loop?
+            </body>
+            <answers>
+                <answer>
+                    <body>Iterations 26, 27 and 58, 59</body>
+                    <marks>
+                        <mark type="keyword">26</mark>
+                        <mark type="keyword">27</mark>
+                        <mark type="keyword">58</mark>
+                        <mark type="keyword">59</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10007">
+            <body>
+                Consider the following program being executed with OMP_NUM_THREADS set to 16.
+                <pre>
+                    int value[64], k, t;
+                    for(inti=0; i&lt;64; i++)
+                    value[i]=63-i;
+                    t=omp_get_thread_num ();
+                    k=42;
+                    #pragma omp parallel for schedule(static, 2) CLAUSE
+                    for(inti=0; i&lt;64; i++) {
+                    k=value[i]*2+t;
+                    }
+                    printf("Final␣value␣of␣k=%i\n", k);
+                </pre>
+                b)* Fill in the following table. If multiple values are possible, state MULTIPLE.
+                <pre>
+                    CLAUSE set to | Printed value of k
+                    NONE |
+                    private(k,t) |
+                    shared(k,t) |
+                    firstprivate(k,t) |
+                    lastprivate(k,t) |
+                    firstprivate(k,t) |
+                    lastprivate(k,t) |
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            CLAUSE set to | Printed value of k
+                            NONE | MULTIPLE (default shared)
+                            private(k,t) | 42
+                            shared(k,t) | MULTIPLE
+                            firstprivate(k,t) | 42
+                            lastprivate(k,t) | MULTIPLE (due to uninitialized, observed only 0)
+                            firstprivate(k,t) lastprivate(k,t) | 0
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">MULTIPLE</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10008">
+            <body>
+                a)* List the OpenMP pragma used to specify a task [and the clause to ensure a task completes]:
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            #pragma omp task
+                            #pragma omp taskwait
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">task</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10009">
+            <body>b)* What is the difference between a tied and an untied task?</body>
+            <answers>
+                <answer>
+                    <body>A tied task is guaranteed to be started and completed by the single thread, while an untied
+                        task can be migrate between threads during its execution.
+                    </body>
+                    <marks>
+                        <mark type="keyword">thread</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
