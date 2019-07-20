@@ -376,20 +376,203 @@
             </answers>
         </question>
         <question type="extended-answer" id="25">
-            <body>How are pthread condition variables used?</body>
+            <body>How are pthread condition variables used (write one lifecycle of code)?</body>
             <answers>
                 <answer>
                     <body>
-                        Initialization:
+                        Lifecycle:
                         <pre>
-                            pthread_cond_t cond = pthread_cond_init
+                            //Static
+                            pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+                            pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+
+                            ...
+                            //Waiting Thread
+                            pthread_mutex_lock(&amp;lock);
+                            //Do work
+                            // Make sure to guard against sporadic wakes
+                            while(!CONDITION) {
+                            // This unlocks and relocks mutex implicitly so other threads have access
+                            pthread_cond_wait(&amp;cond, &amp;mutex);
+                            }
+                            //Do work
+                            pthread_mutex_unlock(&amp;lock);
+
+                            ...
+                            //Signal thread
+                            pthread_mutex_lock(&amp;lock);
+                            //Work
+                            CONDITION = true;
+                            pthread_cond_signal(&amp;cond);
+                            pthread_mutex_unlock(&amp;mutex);
                         </pre>
                     </body>
-                    <marks></marks>
+                    <marks>
+                        <mark type="keyword">lock</mark>
+                        <mark type="keyword">wait</mark>
+                        <mark type="keyword">signal</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
-        <!-- TODO: Continue Chapter 2 slide 45 -->
+        <question type="extended-answer" id="26">
+            <body>What are some relevant performance aspects of threading?</body>
+            <answers>
+                <answer>
+                    <body>Overhead of thread management (creation/destruction, use thread pools). Lock contention with
+                        many threads. Pinning of threads. Good use of cache and avoiding false sharing.
+                    </body>
+                    <marks>
+                        <mark type="keyword">thread</mark>
+                        <mark type="keyword">lock</mark>
+                        <mark type="keyword">pin</mark>
+                        <mark type="keyword">cache</mark>
+                        <mark type="keyword">shar</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Chapter 3 -->
+        <question type="extended-answer" id="27">
+            <body>What were the design goals of OpenMP?</body>
+            <answers>
+                <answer>
+                    <body>Standard for writing parallel programs (mainly on-node), "lean and mean" (simple API for
+                        complex goals), ease of use and portability
+                    </body>
+                    <marks>
+                        <mark type="keyword">standard</mark>
+                        <mark type="keyword">lean</mark>
+                        <mark type="keyword">ease</mark>
+                        <mark type="keyword">port</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="28">
+            <body>What is OpenMP?</body>
+            <answers>
+                <answer>
+                    <body>An Application Program Interface (API) used to program multi-threaded shared memory
+                        parallelism. It is comprised of 3 components: compiler directives, a runtime library, and
+                        environment variables.
+                    </body>
+                    <marks>
+                        <mark type="keyword">API</mark>
+                        <mark type="keyword">share</mark>
+                        <mark type="keyword">component</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="29">
+            <body>How does OpenMP correspond to the Fork/Join Model?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Step 1: Sequential execution.
+                        Step 2: Begin of parallel region, spawning threads
+                        Step 3: Parallel computation.
+                        Step 4: Synchronization at end of parallel region (implicit/explicit)
+                        Step 5: Sequential execution.
+                    </body>
+                    <marks>
+                        <mark type="keyword">region</mark>
+                        <mark type="keyword">sequen</mark>
+                        <mark type="keyword">parall</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30">
+            <body>What are some misconceptions about nested parallel regions?</body>
+            <answers>
+                <answer>
+                    <body>OpenMP is not required to use more threads (can just continue executing sequentially), mapping
+                        to HW threads is runtime dependent.
+                    </body>
+                    <marks>
+                        <mark type="keyword">sequen</mark>
+                        <mark type="keyword">HW</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="31">
+            <body>What is needed for an OpenMP program?</body>
+            <answers>
+                <answer>
+                    <body>A compiler with OpenMP support as well as a runtime system (usually based on pthreads).
+                        Behavior can be controlled by ICVs (internal control variables).
+                    </body>
+                    <marks>
+                        <mark type="keyword">compile</mark>
+                        <mark type="keyword">runtime</mark>
+                        <mark type="keyword">variable</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="32">
+            <body>What do OpenMP compiler directives apply to?</body>
+            <answers>
+                <answer>
+                    <body>A structured block ("{}") with a single entry and exit point.</body>
+                    <marks>
+                        <mark type="keyword">block</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="33">
+            <body>Which OpenMP directive is used to make sure multiple pieces of code are executed once by one thread in
+                parallel? Where is the synchronization point?
+            </body>
+            <answers>
+                <answer>
+                    <body>A section:
+                        <pre>
+                            0 #pragma omp parallel
+                            1 {
+                            2 #pragma omp sections
+                            3 {
+                            4 #pragma omp section
+                            5 { block }
+                            6 #pragma omp section
+                            7 { block }
+                            8 }
+                            9 }
+                        </pre>
+                        Implicit barrier at the end of a sections block.
+                    </body>
+                    <marks>
+                        <mark type="keyword">section</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="34">
+            <body>Which OpenMP directive is used to parallelize pieces of a loop? What condition needs to hold and are
+                there synchronization points?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Inside a parallel region, use the following to distribute iterations across threads:
+                        <pre>#pragma omp for</pre>
+                        Condition: All iterations must be independent. Synchronization happens implicitly at end of
+                        loop.
+                    </body>
+                    <marks>
+                        <mark type="keyword">for</mark>
+                        <mark type="keyword">independen</mark>
+                        <mark type="keyword">sync</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Continue Chapter 3 Slide 26 -->
 
 
         <!-- From Exam 2018 -->
@@ -796,4 +979,5 @@
             </answers>
         </question>
     </body>
+    <!-- TODO: Problem 11 -->
 </exam>
