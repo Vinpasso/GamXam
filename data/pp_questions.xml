@@ -621,5 +621,179 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="10010">
+            <body>a)* Name three potential performance drawbacks in the following code snippet if it is executed on a
+                two-socket node.
+                <pre>
+                    void main() {
+                    const int N = 1000000;
+                    int a[N];
+                    int b[N];
+                    for(int i = 0; i &gt; N; i++) {
+                    a[i] = i;
+                    }
+                    #pragma omp parallel for schedule(static, 1)
+                    for(int i = 0; i &gt; N; i++) {
+                    a[i] = a[i] + 17;
+                    b[i] = a[i] % 23;
+                    }
+                    }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        1: Memory is not initialized on the thread where it is used, causing poor performance on NUMA
+                        systems with first-touch.
+                        <p/>
+                        2: False Sharing may occur because multiple processes are writing to and reading from memory
+                        addresses that have close proximity in memory.
+                        <p/>
+                        3: TODO (options: load imbalance due to static scheduling, RAW dependency inside loop,
+                        microscheduling)
+                    </body>
+                    <marks>
+                        <mark type="keyword">init</mark>
+                        <mark type="keyword">false</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10011">
+            <body>a)* What conditions must hold for a program to be sequentially consistent?</body>
+            <answers>
+                <answer>
+                    <body>
+                        As stated in lecture:
+                        <pre>
+                            [Lamport] “A multiprocessor system is sequentially consistent if the result of any execution
+                            is the same as if the operations of all processors were executed in some sequential order,
+                            and the operations of each individual processor appear in this sequence in the order
+                            specified by the program”
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">order</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10012">
+            <body>a)* What is the difference between an eager and a rendevouz protocol?</body>
+            <answers>
+                <answer>
+                    <body>In an eager protocol, the message gets sent directly. This avoids a handshake but might add
+                        extra copy operations into/out of unexpected message queues, suitable for short messages. With
+                        the rendezvous protocol, only a header is sent. Once the receive has been posted, a message to
+                        fetch the actual message is posted. This avoids extra copying at the cost of one additional
+                        round-trip, suited for large messages where copying is expensive.
+                    </body>
+                    <marks>
+                        <mark type="keyword">handshake</mark>
+                        <mark type="keyword">copy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10013">
+            <body>b)* Describe the functionality of MPI_Waitany</body>
+            <answers>
+                <answer>
+                    <body>When passed an array of MPI_Request objects and a MPI_Status object, MPI_Waitany blocks until
+                        any one of the passed requests completes, filling the status variable with status information.
+                    </body>
+                    <marks>
+                        <mark type="keyword">block</mark>
+                        <mark type="keyword">request</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10014">
+            <body>a)* Describe the functionality of MPI_Comm_split().</body>
+            <answers>
+                <answer>
+                    <body>MPI_Comm_split(originalComm, color (group), key (order), newComm). Splits the current
+                        communicator into one or more new communicators, with processes passing the same color value
+                        assigned to the same new communicator, where the key determines the order of the processes in
+                        the new communicator. The result is stored in newComm.
+                    </body>
+                    <marks>
+                        <mark type="keyword">color</mark>
+                        <mark type="keyword">key</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Problem 9 B and C -->
+        <question type="extended-answer" id="10015">
+            <body>a)* List the blocking collective operation with its parameters that can be used to replace the point
+                to point communication between lines 20 to 28.
+                <pre>
+                    19 // point to point communication
+                    20 if(rank == 0)
+                    21 for(int r = 1; r &lt; size; r++)
+                    22 {
+                    23 a[0] = data;
+                    24 MPI_Recv(a + r, 1, MPI_FLOAT , r, 0, MPI_COMM_WORLD ,25MPI_STATUS_IGNORE );
+                    26 }
+                    27 else
+                    28 MPI_Send (&amp;data , 1, MPI_FLOAT , 0, 0, MPI_COMM_WORLD );
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Instead of point to point, you can use:
+                        <pre>
+                            MPI_Gather(&amp;data, 1, MPI_FLOAT, &amp;a, 1 MPI_FLOAT, 0, MPI_COMM_WORLD);
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">gather</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10016">
+            <body>b)* List the non-blocking collective operation with its parameters that can be used to replace the
+                blocking communication from previous subproblem (a) (MPI_Gather).
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Instead of blocking, you can use:
+                        <pre>
+                            MPI_Request request;
+                            MPI_Igather(&amp;data, 1, MPI_FLOAT, &amp;a, 1 MPI_FLOAT, 0, MPI_COMM_WORLD, &amp;request);
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">Igather</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10017">
+            <body>c)* Name the appropriate operation when using a non-blocking collective to insure its completion and
+                specify the proper line number to put this operation for getting the best performance.
+                <img src="../data/res/pp/10017_code.png"/>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Assuming that the MPI_Request is stored in a variable named request:
+                        <pre>
+                            MPI_Wait(&amp;request, &amp;MPI_STATUS_IGNORE);
+                        </pre>
+                        This should be placed on line 31.
+                    </body>
+                    <marks>
+                        <mark type="keyword">31</mark>
+                        <mark type="keyword">MPI_Wait</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
