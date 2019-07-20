@@ -307,5 +307,90 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="20">
+            <body>What implementations of a mutex exist with/without hardware support?</body>
+            <answers>
+                <answer>
+                    <body>HW Support: Locking using atomic operations, such as test and set or compare and swap. No HW
+                        Support: Using e.g. Petersen's algorithm.
+                    </body>
+                    <marks>
+                        <mark type="keyword">atomic</mark>
+                        <mark type="keyword">petersen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="21">
+            <body>What is the tradeoff with lock granularity?</body>
+            <answers>
+                <answer>
+                    <body>Too fine and a significant portion of compute time will be spent on obtaining and releasing
+                        locks. Too coarse and threads will need to wait for accessing resources that could be accessed
+                        concurrently.
+                    </body>
+                    <marks>
+                        <mark type="keyword">time</mark>
+                        <mark type="keyword">resourc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="22">
+            <body>When does a deadlock occur?</body>
+            <answers>
+                <answer>
+                    <body>When there is a cyclic dependency when obtaining locks.</body>
+                    <marks>
+                        <mark type="keyword">cycl</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="23">
+            <body>What approaches exist to resolve the deadlock problem and what is a drawback of each?</body>
+            <answers>
+                <answer>
+                    <body>One lock (very coarse). Arbiter (complex central instance, scalability). Lock order
+                        (fairness). Custom/hybrid schemes.
+                    </body>
+                    <marks>
+                        <mark type="keyword">one</mark>
+                        <mark type="keyword">arbit</mark>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">hybrid</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="24">
+            <body>What is the concept behind condition variables for synchronization?</body>
+            <answers>
+                <answer>
+                    <body>One thread blocks while the other thread sends a signal once the condition is met.</body>
+                    <marks>
+                        <mark type="keyword">block</mark>
+                        <mark type="keyword">signal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="25">
+            <body>How are pthread condition variables used?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Initialization:
+                        <pre>
+                            pthread_cond_t cond = pthread_cond_init
+                        </pre>
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Continue Chapter 2 slide 45 -->
+
+
     </body>
 </exam>
