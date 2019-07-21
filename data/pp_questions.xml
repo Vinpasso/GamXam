@@ -572,7 +572,157 @@
                 </answer>
             </answers>
         </question>
-        <!-- TODO: Continue Chapter 3 Slide 26 -->
+        <question type="extended-answer" id="35">
+            <body>What are the available OpenMP Loop schedules and what do they do?</body>
+            <answers>
+                <answer>
+                    <body>Static (preassigned, default size ~n/t), dynamic (fixed size, default 1), guided (chunks
+                        decreasing in size), runtime (using environment variable), auto (let OpenMP choose).
+                    </body>
+                    <marks>
+                        <mark type="keyword">static</mark>
+                        <mark type="keyword">dynamic</mark>
+                        <mark type="keyword">guide</mark>
+                        <mark type="keyword">runtime</mark>
+                        <mark type="keyword">auto</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="36">
+            <body>What is the final value of i in the following code snippet and why?
+                <pre>
+                    int i = 3;
+                    #pragma omp parallel for lastprivate(i)
+                    for(int j=0; j&lt;4; j++) {
+                    i=i+1;
+                    printf("-> i=%d\n", i);
+                    }
+                    printf("FinalValueof I=%d\n", i);
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>Undefined, because the private variable is not initialized.</body>
+                    <marks>
+                        <mark type="keyword">undef</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="37">
+            <body>What is the behavior of the sharing attribute default(none)?</body>
+            <answers>
+                <answer>
+                    <body>All variables need to be explicitly set to shared or private, no implicit sharing.</body>
+                    <marks>
+                        <mark type="keyword">explicit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="38">
+            <body>What are the available OpenMP reduction operators and how is a reduction written? What limitation is
+                placed on the variable?
+            </body>
+            <answers>
+                <answer>
+                    <body>With the following clause:
+                        <pre>
+                            reduction(operator: list)
+                        </pre>
+                        Where operator is one of the following:
+                        <pre>
+                            arithmetic: +, *, - (alert: subtract in local part, then thread results added together),
+                            min, max
+                            logical: &amp;, ^, |, &amp;&amp;, ||
+                            user defined (newer versions)
+                        </pre>
+                        The variable is only allowed to show up in the following operations:
+                        <pre>
+                            x = x operator expr
+                            x operator= expr
+                            x++, ++x, x--, --x
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">reduc</mark>
+                        <mark type="keyword">op</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="39">
+            <body>What is the difference between an OpenMP master region, single region, critical section, and atomic
+                statement?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        A master region enforces that only the (specific) master thread executes the code block (no
+                        synchronization at beginning).
+                        <p/>
+                        A single region allows any one thread to execute the region, others skipping (implicit sync at
+                        end)
+                        <p/>
+                        A critical region is a mutually exclusive block executed by all threads (use naming if multiple,
+                        all unnamed mapped to same name.
+                        <p/>
+                        An atomic statement is like a one statement critical block (limited to x operator= expr,
+                        x++, x--, ...) that may be implemented in hardware to avoid locking.
+                    </body>
+                    <marks>
+                        <mark type="keyword">thread</mark>
+                        <mark type="keyword">excl</mark>
+                        <mark type="keyword">critical</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="40">
+            <body>What constructs does OpenMP provide for locking?</body>
+            <answers>
+                <answer>
+                    <body>Simple locks using omp_init_lock(&amp;lock), omp_destroy_lock(&amp;lock), omp_set_lock(&amp;lock),
+                        omp_unset_lock(&amp;lock), res = omp_test_lock(&amp;lock) (checks and possibly sets lock,
+                        returning true if acquired).
+                       <p/>
+                        Similar routines for nestable locks.
+                    </body>
+                    <marks>
+                        <mark type="keyword">simple</mark>
+                        <mark type="keyword">nestable</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="41">
+            <body>What does the OpenMP ordered construct do and how is it used?</body>
+            <answers>
+                <answer>
+                    <body>Ensures that the ordered block (S2) is executed in sequential order. Blocks outside that
+                        region may float.
+                        <pre>
+                            1 #pragma omp for ordered
+                            2 for (...){
+                            3   S1
+                            4   #pragma omp ordered
+                            5   {
+                            6      S2
+                            7   }
+                            8   S3
+                            9 }
+                        </pre>
+                        <img src="../data/res/pp/42_sequence.png"/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">sequen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- TODO: Continue Chapter 4 Slide 1 -->
 
 
         <!-- From Exam 2018 -->
