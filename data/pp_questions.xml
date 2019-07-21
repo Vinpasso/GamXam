@@ -686,7 +686,7 @@
                     <body>Simple locks using omp_init_lock(&amp;lock), omp_destroy_lock(&amp;lock), omp_set_lock(&amp;lock),
                         omp_unset_lock(&amp;lock), res = omp_test_lock(&amp;lock) (checks and possibly sets lock,
                         returning true if acquired).
-                       <p/>
+                        <p/>
                         Similar routines for nestable locks.
                     </body>
                     <marks>
@@ -705,12 +705,12 @@
                         <pre>
                             1 #pragma omp for ordered
                             2 for (...){
-                            3   S1
-                            4   #pragma omp ordered
-                            5   {
-                            6      S2
-                            7   }
-                            8   S3
+                            3 S1
+                            4 #pragma omp ordered
+                            5 {
+                            6 S2
+                            7 }
+                            8 S3
                             9 }
                         </pre>
                         <img src="../data/res/pp/42_sequence.png"/>
@@ -722,7 +722,449 @@
             </answers>
         </question>
 
-        <!-- TODO: Continue Chapter 4 Slide 1 -->
+        <question type="extended-answer" id="42">
+            <body>What is the difference between omp_get_max_threads() and omp_get_num_threads()?</body>
+            <answers>
+                <answer>
+                    <body>omp_get_max_threads determines the maximum number of threads for team creation, omp get num
+                        threads determines the number of threads in the current team (1 in sequential code).
+                    </body>
+                    <marks>
+                        <mark type="keyword">team</mark>
+                        <mark type="keyword">sequen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="43">
+            <body>What are some drawbacks of work sharing in OpenMP? What is a possible solution?</body>
+            <answers>
+                <answer>
+                    <body>Imbalance caused by workload (especially static, NUMA), and machine (differences in
+                        environment). Limited programming flexibility (sections/for loops) not suited for hierarchical
+                        parallelism. Explicit tasking can be used as a solution.
+                    </body>
+                    <marks>
+                        <mark type="keyword">work</mark>
+                        <mark type="keyword">machine</mark>
+                        <mark type="keyword">hierarch</mark>
+                        <mark type="keyword">task</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="44">
+            <body>What is a task in OpenMP?</body>
+            <answers>
+                <answer>
+                    <body>An independent piece of work (that is guaranteed to be executed, in any order). They are
+                        scheduled using task queues and dispatched to threads.
+                    </body>
+                    <marks>
+                        <mark type="keyword">independen</mark>
+                        <mark type="keyword">work</mark>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">queue</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="45">
+            <body>What is the difference between a tied and an untied task?</body>
+            <answers>
+                <answer>
+                    <body>A tied task is bound to a thread once it starts and can no longer move, while an untied task
+                        might be interrupted and moved elsewhere, offering more flexibility and resource utilization.
+                    </body>
+                    <marks>
+                        <mark type="keyword">thread</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="46">
+            <body>How can OpenMP tasks be used to split work?</body>
+            <answers>
+                <answer>
+                    <body>
+                        By using the task construct inside a parallel region. Make sure that you don't spawn more tasks
+                        than intended (multiple threads).
+                        <pre>
+                            #pragma omp parallel
+                            {
+                            #pragma omp single
+                            {
+                            for ( elem = l->first; elem; elem= elem->next)
+                            #pragma omp task
+                            process(elem)
+                            }
+                            // all tasks are complete by this point
+                            }
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">task</mark>
+                        <mark type="keyword">single</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="47">
+            <body>
+                What does the following clause do if condition is true/false?
+                <pre>
+                    #pragma omp task if(CONDITION)
+                    { ... }
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>If true, creates the task normally. If false, the creating thread executes the new task
+                        immediately, and cannot resume the current task without completing the new one.
+                    </body>
+                    <marks>
+                        <mark type="keyword">task</mark>
+                        <mark type="keyword">thread</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="48">
+            <body>
+                What does the following clause do?
+                <pre>
+                    #pragma omp taskwait
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>Waits for the completion of immediate child tasks, where child tasks are tasks generated since
+                        the beginning of the current task.
+                    </body>
+                    <marks>
+                        <mark type="keyword">child</mark>
+                        <mark type="keyword">task</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="49">
+            <body>What are some explicit/implicit task scheduling points in OpenMP?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Explicit (standalone directive):
+                        <pre>
+                            #pragma omp taskyield
+                        </pre>
+                        Implicit: task creation, end of task, taskwait, barrier
+                    </body>
+                    <marks>
+                        <mark type="keyword">yield</mark>
+                        <mark type="keyword">creat</mark>
+                        <mark type="keyword">end</mark>
+                        <mark type="keyword">wait</mark>
+                        <mark type="keyword">barrier</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="50">
+            <body>What 3 types of OpenMP constructs are there?</body>
+            <answers>
+                <answer>
+                    <body>Worksharing constructs (loops, sections, single), tasking constructs (task, taskyield),
+                        master/synchronization constructs (master, critical, barrier, taskwait, atomic, flush, ordered)
+                    </body>
+                    <marks>
+                        <mark type="keyword">workshar</mark>
+                        <mark type="keyword">task</mark>
+                        <mark type="keyword">sync</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="51">
+            <body>How are OpenMP task dependencies used, how do they work?</body>
+            <answers>
+                <answer>
+                    <body>Using the depend clause:
+                        <pre>#pragma omp task shared(...) depend(in/out/inout: var)</pre>
+                        in: depends on all previously generated tasks with out/inout.
+                        <p/>
+                        out: depends on all previously generated tasks with in/out/inout
+                        <p/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">depend</mark>
+                        <mark type="keyword">in</mark>
+                        <mark type="keyword">out</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="52">
+            <body>What are some advantages and performance considerations in OpenMP tasking?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Advantages: implicit load balancing, simple programming model, complications/bookkeeping pushed
+                        to runtime.
+                        <p/>
+                        Considerations: Granularity and NUMA optimizaton.
+                    </body>
+                    <marks>
+                        <mark type="keyword">balanc</mark>
+                        <mark type="keyword">model</mark>
+                        <mark type="keyword">runtime</mark>
+                        <mark type="keyword">granular</mark>
+                        <mark type="keyword">NUMA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="53">
+            <body>What is the difference between memory/cache coherency and memory consistency?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Coherency: reason about updates to one memory location.
+                        <p/>
+                        Consistency: reason about updates to several memory locations.
+                        <p/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">location</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="54">
+            <body>When is a system coherent?</body>
+            <answers>
+                <answer>
+                    <body>If program order for loads/stores is preserved, all stores eventually become visible, all
+                        processors see same order of writes.
+                    </body>
+                    <marks>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">visib</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="54">
+            <body>What ways are there to establish coherency?</body>
+            <answers>
+                <answer>
+                    <body>Using snoop-based or directory based protocols.</body>
+                    <marks>
+                        <mark type="keyword">snoop</mark>
+                        <mark type="keyword">directory</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="55">
+            <body>What is sequential consistency?</body>
+            <answers>
+                <answer>
+                    <body>[Lamport] “A multiprocessor system is sequentially consistent if the result of any execution
+                        is the same as if the operations of all processors were executed in some sequential order, and
+                        the operations of each individual processor appear in this sequence in the order specified by
+                        the program”
+                        <p/>
+                        In other words, each processor issues memory instructions in program order that can be
+                        sequentialized in any way that does not violate a processor's program order.
+                    </body>
+                    <marks>
+                        <mark type="keyword">program</mark>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">processor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="56">
+            <body>Why is sequential consistency hard?</body>
+            <answers>
+                <answer>
+                    <body>Reordering elements such as compiler optimizations, instruction reordering, network elements,
+                        etc. Write has to be atomic with respect to all processors (all need to see effect immediately).
+                    </body>
+                    <marks>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">atom</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="57">
+            <body>What is processor consistency and how is it weaker than sequential consistency?</body>
+            <answers>
+                <answer>
+                    <body>Writes by any thread seen by all threads in order they were issued. But: Different threads may
+                        see different orders.
+                    </body>
+                    <marks>
+                        <mark type="keyword">issue</mark>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">thread</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="58">
+            <body>What is weak consistency and how is it weaker than sequential consistency?</body>
+            <answers>
+                <answer>
+                    <body>In weak consistency, there are data operations and synchronization operations. Only
+                        synchronization operations are sequentially consistent (flushing the memory pipeline).
+                    </body>
+                    <marks>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">synchronization</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="59">
+            <body>What is release consistency and how is it weaker than sequential consistency?</body>
+            <answers>
+                <answer>
+                    <body>Subdivides synchronization operations into acquire and release (corresponding to lock
+                        operations). Only acquires/releases have to be sequentially consistent.
+                    </body>
+                    <marks>
+                        <mark type="keyword">lock</mark>
+                        <mark type="keyword">sequen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="58">
+            <body>What consistency model does OpenMP loosely conform to, what does that mean?</body>
+            <answers>
+                <answer>
+                    <body>Weak consistency. Only synchronization operations are sequentially consistent.</body>
+                    <marks>
+                        <mark type="keyword">weak</mark>
+                        <mark type="keyword">sync</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="59">
+            <body>
+                Which of the following are not memory synchronization points (flush points)?
+                <p/>
+                <pre>
+                    •Entry and exit of critical regions
+                    •Barriers (implicit and explicit)
+                    •Entry and exit of master regions
+                    •Entry and exit of work sharing regions
+                    •Every task scheduling point
+                    •Use of OpenMP runtime locks
+                    •Entry and exit of parallel regions
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            •Entry and exit of work sharing regions
+                            •Entry and exit of master regions
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">shar</mark>
+                        <mark type="keyword">master</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60">
+            <body>
+                What are potential problems with the following code? What construct is used to solve this?
+                <p/>
+                <pre>
+                    //Thread 1
+                    a = foo();
+                    flag = 1;
+
+                    //Thread 2
+                    while (flag);
+                    b = a;
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>Instruction reordering by compiler (doesn't see dependency). Variables might be kept in
+                        registers. Need the flush directive to ensure that changes are visible and consistent.
+                        <p/>
+                        <pre>
+                            //Thread 1
+                            a = foo();
+                            #pragma omp flush(a, flag)
+                            flag = 1;
+                            #pragma omp flush(flag)
+
+                            //Thread 2
+                            while (flag)
+                            {
+                            #pragma omp flush(flag)
+                            }
+                            #pragma omp flush(a, flag)
+                            b = a;
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">register</mark>
+                        <mark type="keyword">flush</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="61">
+            <body>When is there a control dependency between S1 and S2?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Iff:
+                        <p/>
+                        There exists an execution path from S1 to S2
+                        <p/>
+                        Not all execution paths lead from S1 to S2
+                    </body>
+                    <marks>
+                        <mark type="keyword">path</mark>
+                        <mark type="keyword">exist</mark>
+                        <mark type="keyword">all</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="62">
+            <body>When is there a data dependency between S1 and S2?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Iff:
+                        <p/>
+                        There exists an execution path from S1 to S2
+                        <p/>
+                        S1 and S2 access the same data, at least one is a write.
+                    </body>
+                    <marks>
+                        <mark type="keyword">path</mark>
+                        <mark type="keyword">data</mark>
+                        <mark type="keyword">write</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Continue Chapter 4 Slide 32 -->
 
 
         <!-- From Exam 2018 -->
