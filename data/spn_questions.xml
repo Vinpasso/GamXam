@@ -8,7 +8,7 @@
     <body>
         <!-- Introduction -->
         <question type="extended-answer" id="1">
-            <body>What is the structure of the banking sector?</body>
+            <body>What is the hierarchical structure of the banking sector?</body>
             <answers>
                 <answer>
                     <body>Country organization, then headquarters of Bank or Saving Bank, then branches</body>
@@ -21,7 +21,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="2">
-            <body>IT centers can be run per ...?</body>
+            <body>Banking IT centers can be run per ...?</body>
             <answers>
                 <answer>
                     <body>Bank or Bank Group</body>
@@ -489,5 +489,173 @@
         </question>
 
         <!-- Mobile Payment and SEPA -->
+        <!-- basically unusable -->
+
+        <!-- Question Catalogue -->
+        <question type="extended-answer" id="34">
+            <body>What are the stakeholders of a debit payment scheme?</body>
+            <answers>
+                <answer>
+                    <body>Issuer Bank, Cardholder (Buyer), Merchant, Merchant Bank, and Interchange Organization
+                        (connects both banks).
+                    </body>
+                    <marks>
+                        <mark type="keyword">issuer bank</mark>
+                        <mark type="keyword">cardholder</mark>
+                        <mark type="keyword">merchant</mark>
+                        <mark type="keyword">merchant bank</mark>
+                        <mark type="keyword">interchange organization</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="35">
+            <body>What are the stakeholders of a credit payment scheme?</body>
+            <answers>
+                <answer>
+                    <body>Issuer Bank, Cardholder (Buyer), Merchant, Merchant Bank, Interchange Organization (connects
+                        both
+                        banks), and Trusted Service Provider.
+                    </body>
+                    <marks>
+                        <mark type="keyword">issuer bank</mark>
+                        <mark type="keyword">cardholder</mark>
+                        <mark type="keyword">merchant</mark>
+                        <mark type="keyword">merchant bank</mark>
+                        <mark type="keyword">interchange organization</mark>
+                        <mark type="keyword">trusted service provider</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="36">
+            <body>What is a typical role and responsibility of a trusted service provider?</body>
+            <answers>
+                <answer>
+                    <body>Handing out certificates to other entities within a network to implement a chain of trust.
+                    </body>
+                    <marks>
+                        <mark type="keyword">certificate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="37">
+            <body>What is NFC and how can it be used for payment?</body>
+            <answers>
+                <answer>
+                    <body>Near Field Communication enables wireless communication between a reader and a card. This
+                        allows
+                        for contactless payment.
+                    </body>
+                    <marks>
+                        <mark type="keyword">near field communication</mark>
+                        <mark type="keyword">contactless payment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="38">
+            <body>What is an EPP?</body>
+            <answers>
+                <answer>
+                    <body>An Encrypting PIN Pad is a special keyboard for typing in PINs.</body>
+                    <marks>
+                        <mark type="keyword">encrypting pin pad</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="39">
+            <body>What kind of key management is used for EPP?</body>
+            <answers>
+                <answer>
+                    <body>Approved encryption algorithms are 3DES, RSA, and AES.</body>
+                    <marks>
+                        <mark type="keyword">3DES</mark>
+                        <mark type="keyword">RSA</mark>
+                        <mark type="keyword">AES</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="40">
+            <body>What is a type of certification for EPP?</body>
+            <answers>
+                <answer>
+                    <body>Standardization according to ISO 9564 or certification with Common Criteria.</body>
+                    <marks>
+                        <mark type="regex">ISO 9564|Common Criteria</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="41">
+            <body>What is TLS?</body>
+            <answers>
+                <answer>
+                    <body>Transport Layer Security is a protocol for secure communication.</body>
+                    <marks>
+                        <mark type="keyword">transport layer security</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="42">
+            <body>What are the two principles behind TLS?</body>
+            <answers>
+                <answer>
+                    <body>Two-way authentication and encryption.</body>
+                    <marks>
+                        <mark type="keyword">two-way authentication</mark>
+                        <mark type="keyword">encryption</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="43">
+            <body>What kind of authentication can be used for card payments?</body>
+            <answers>
+                <answer>
+                    <body>Authentication with PIN or authentication with signature.</body>
+                    <marks>
+                        <mark type="keyword">PIN</mark>
+                        <mark type="keyword">Signature</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="44">
+            <body>What kind of data is stored on a card?</body>
+            <answers>
+                <answer>
+                    <body>Account Holder's name, expiration date, service code, and primary account number. Magstripe
+                        cards
+                        additionally store the PIN.
+                    </body>
+                    <marks>
+                        <mark type="keyword">name</mark>
+                        <mark type="keyword">expiration date</mark>
+                        <mark type="keyword">service code</mark>
+                        <mark type="keyword">account number</mark>
+                        <mark type="keyword">PIN</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="45">
+            <body>What are the principles of digital signature?</body>
+            <answers>
+                <answer>
+                    <body>Non-repudiation, integrity of signature, complete automation, and legal binding.</body>
+                    <marks>
+                        <mark type="keyword">non-repudiation</mark>
+                        <mark type="keyword">integrity</mark>
+                        <mark type="keyword">automation</mark>
+                        <mark type="keyword">binding</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
