@@ -953,7 +953,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="54">
+        <question type="extended-answer" id="60054">
             <body>What ways are there to establish coherency?</body>
             <answers>
                 <answer>
@@ -1042,7 +1042,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="58">
+        <question type="extended-answer" id="60058">
             <body>What consistency model does OpenMP loosely conform to, what does that mean?</body>
             <answers>
                 <answer>
@@ -1054,7 +1054,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="59">
+        <question type="extended-answer" id="60059">
             <body>
                 Which of the following are not memory synchronization points (flush points)?
                 <p/>
