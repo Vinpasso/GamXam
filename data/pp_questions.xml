@@ -1164,7 +1164,572 @@
                 </answer>
             </answers>
         </question>
-        <!-- TODO: Continue Chapter 4 Slide 32 -->
+        <question type="extended-answer" id="63">
+            <body>What does O(S_1) and I(S_2) denote?</body>
+            <answers>
+                <answer>
+                    <body>O(S_1) is the set of memory locations written by S_1. I(S_2) is the set of memory location
+                        read by S_2.
+                    </body>
+                    <marks>
+                        <mark type="keyword">writ</mark>
+                        <mark type="keyword">read</mark>
+                        <mark type="keyword">set</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="64">
+            <body>What is the definition of a true dependence and what is the notation?</body>
+            <answers>
+                <answer>
+                    <body>True dependence, iff O(S1) \cap I(S2) \neq \emptyset. Notation: (S1 \delta^t S2)</body>
+                    <marks>
+                        <mark type="keyword">O</mark>
+                        <mark type="keyword">I</mark>
+                        <mark type="keyword">delta</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="65">
+            <body>What is the definition of an antidependence and what is the notation?</body>
+            <answers>
+                <answer>
+                    <body>Antidependence, iff I(S1) \cap O(S2) \neq \emptyset. (S1 \delta^-1 S2).</body>
+                    <marks>
+                        <mark type="keyword">O</mark>
+                        <mark type="keyword">I</mark>
+                        <mark type="keyword">delta</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="66">
+            <body>What is the definition of an output dependence and what is the notation?</body>
+            <answers>
+                <answer>
+                    <body>Output dependence: O(S1) \cap O(S2) \neq \emptyset. Notation: (S1 \delta^o S2)</body>
+                    <marks>
+                        <mark type="keyword">O</mark>
+                        <mark type="keyword">delta</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="67">
+            <body>What types of data dependencies are there and what do they mean?</body>
+            <answers>
+                <answer>
+                    <body>True dependency (RAW), anti dependency (WAR), output dependency (WAW)</body>
+                    <marks>
+                        <mark type="keyword">true</mark>
+                        <mark type="keyword">anti</mark>
+                        <mark type="keyword">output</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="68">
+            <body>What is the meaning of loop independent dependencies?</body>
+            <answers>
+                <answer>
+                    <body>All dependencies are within an iteration, none are across iterations.</body>
+                    <marks>
+                        <mark type="keyword">iteration</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="69">
+            <body>What are loop carried dependencies? What is the problem?</body>
+            <answers>
+                <answer>
+                    <body>A dependency across iterations, where the computation in one iteration depends on data written
+                        in another.
+                        <p/>
+                        Iterations cannot be easily/directly reordered or executed in parallel.
+                    </body>
+                    <marks>
+                        <mark type="keyword">iteration</mark>
+                        <mark type="keyword">reorder</mark>
+                        <mark type="keyword">parallel</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="70">
+            <body>What is the problem with aliasing?</body>
+            <answers>
+                <answer>
+                    <body>Instructions that might not seem like they have dependencies if the variables are at least
+                        partially aliased, preventing potential optimizations.
+                    </body>
+                    <marks>
+                        <mark type="keyword">dependenc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="71">
+            <body>What is needed to guarantee program correctness (ensure validity) if reordering happens?</body>
+            <answers>
+                <answer>
+                    <body>The partial order of all dependencies must not change.</body>
+                    <marks>
+                        <mark type="keyword">dependenc</mark>
+                        <mark type="keyword">order</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="72">
+            <body>When is a dependence preserved?</body>
+            <answers>
+                <answer>
+                    <body>iff the relative execution order of the dependencies' source and sink does not change.</body>
+                    <marks>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">source</mark>
+                        <mark type="keyword">sink</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="73">
+            <body>What is the nesting level of a loop?</body>
+            <answers>
+                <answer>
+                    <body>The number of surrounding loops +1</body>
+                    <marks>
+                        <mark type="keyword">surround</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="74">
+            <body>What is the iteration number?</body>
+            <answers>
+                <answer>
+                    <body>In a normalized loop (0 to n-1), the loop number is equal to the value of the iterator.</body>
+                    <marks>
+                        <mark type="keyword">normal</mark>
+                        <mark type="keyword">iterat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="75">
+            <body>What is the iteration vector?</body>
+            <answers>
+                <answer>
+                    <body>A tuple containing all iteration numbers, outer to inner.</body>
+                    <marks>
+                        <mark type="keyword">number</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="76">
+            <body>What is an iteration space?</body>
+            <answers>
+                <answer>
+                    <body>The set of all possible iteration vectors for a statement is an iteration space.</body>
+                    <marks>
+                        <mark type="keyword">set</mark>
+                        <mark type="keyword">vector</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="77">
+            <body>When does an iteration i precede an iteration j?</body>
+            <answers>
+                <answer>
+                    <body>Iff, \exists k, i[r] = j[r], \forall r: 1&gt;=r&gt;=k and i[k]&gt;j[k]</body>
+                    <marks>
+                        <mark type="keyword">k</mark>
+                        <mark type="keyword">r</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="78">
+            <body>What is a statement instance and what is the notation?</body>
+            <answers>
+                <answer>
+                    <body>For an iteration vector i, a statement instance refers to a statement execution in that
+                        particular iteration vector.
+                    </body>
+                    <marks>
+                        <mark type="keyword">vector</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="79">
+            <body>What is the dependence distance for (S1(i) \delta S2(j))?</body>
+            <answers>
+                <answer>
+                    <body>j-i</body>
+                    <marks>
+                        <mark type="keyword">j-i</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="80">
+            <body>How is the dependence direction calculated?</body>
+            <answers>
+                <answer>
+                    <body>"&gt;", "=", ">", according to sign of the loop dependence distance</body>
+                    <marks>
+                        <mark type="keyword">sign</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60080">
+            <body>What are available transformations?</body>
+            <answers>
+                <answer>
+                    <body>Loop interchange, loop fission/fusion, loop alignment.</body>
+                    <marks>
+                        <mark type="keyword">interchange</mark>
+                        <mark type="keyword">fusion</mark>
+                        <mark type="keyword">fission</mark>
+                        <mark type="keyword">alignment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="81">
+            <body>When is a loop interchange safe?</body>
+            <answers>
+                <answer>
+                    <body>If the direction vectors of all dependencies has only "=", or the direction vectors of all
+                        dependence vectors do not has ">" as the leftmost non-"-" direction.
+                    </body>
+                    <marks>
+                        <mark type="keyword">vector</mark>
+                        <mark type="keyword">=</mark>
+                        <mark type="keyword">></mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="82">
+            <body>When is loop distribution safe?</body>
+            <answers>
+                <answer>
+                    <body>For 2 sets of statements, if no dependency cycle exists between those groups (outer loop
+                        carried dependencies can be ignored). The order of new loops needs to preserve dependencies
+                        between the sets.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cycle</mark>
+                        <mark type="keyword">outer</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="83">
+            <body>What can loop fusion introduce?</body>
+            <answers>
+                <answer>
+                    <body>Loop carried dependencies.</body>
+                    <marks>
+                        <mark type="keyword">carr</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="84">
+            <body>What effect does loop fission/fusion have on granularity?</body>
+            <answers>
+                <answer>
+                    <body>Fusion: reduces granularity. Fission: increases granularity.</body>
+                    <marks>
+                        <mark type="keyword">granularity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="85">
+            <body>What is loop alignment useful for?</body>
+            <answers>
+                <answer>
+                    <body>Changing a carried dependence into an independent dependence.</body>
+                    <marks>
+                        <mark type="keyword">carr</mark>
+                        <mark type="keyword">independen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="86">
+            <body>What types of races can exist?</body>
+            <answers>
+                <answer>
+                    <body>The same ones as in dependencies. RAW, WAR, WAW.</body>
+                    <marks>
+                        <mark type="keyword">dependenc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="87">
+            <body>What do race detection tools do?</body>
+            <answers>
+                <answer>
+                    <body>Static/dynamic instrumentation of all memory accesses and tracking of synchronization to
+                        detect unsynchronized accesses to the same memory.
+                    </body>
+                    <marks>
+                        <mark type="keyword">instrument</mark>
+                        <mark type="keyword">track</mark>
+                        <mark type="keyword">memory</mark>
+                        <mark type="keyword">sync</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="88">
+            <body>What are the 3 performance aspects in parallel code?</body>
+            <answers>
+                <answer>
+                    <body>Synchronization overhead, cache behavior and locality, thread and data locality mapping.
+                    </body>
+                    <marks>
+                        <mark type="keyword">sync</mark>
+                        <mark type="keyword">cache</mark>
+                        <mark type="keyword">local</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="89">
+            <body>What is the ABA Problem?</body>
+            <answers>
+                <answer>
+                    <body>
+                        For example in list removal:
+                        <p/>
+                        A tries to remove an element but has to wait
+                        <p/>
+                        B removes the element, frees it, reallocates it, inserts element again
+                        <p/>
+                        A compares against the new element but thinks it's still the old one (using pointers)
+                        <p/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">remove</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="90">
+            <body>When does the ABA problem occur?</body>
+            <answers>
+                <answer>
+                    <body>If pointers are compared and reallocation occurs. Can be combated by generational counters.
+                    </body>
+                    <marks>
+                        <mark type="keyword">pointer</mark>
+                        <mark type="keyword">realloc</mark>
+                        <mark type="keyword">generation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="91">
+            <body>What is the difference between a lock free data structure and a wait-free data structure?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Lock free: avoids call to mutexes, but can be hard to get right and needs hardware support.
+                        <p/>
+                        Wait free: every operation finishes in a finite number of steps, which is much harder to
+                        guarantee.
+                    </body>
+                    <marks>
+                        <mark type="keyword">mutex</mark>
+                        <mark type="keyword">finite</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="92">
+            <body>What does libnuma offer?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Memory allocation using
+                        <pre>
+                            numa_alloc_onnode
+                            numa_alloc_local
+                        </pre>
+                        and thread binding
+                        <pre>
+                            numa_bind
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">alloc</mark>
+                        <mark type="keyword">bind</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="93">
+            <body>What does the operation vfmadd213pd do?</body>
+            <answers>
+                <answer>
+                    <body>Fused multiply and add, where vfmadd213pd(a, b, c) results in dest[i]=a[i]*b[i]+c[i].</body>
+                    <marks>
+                        <mark type="keyword">mult</mark>
+                        <mark type="keyword">add</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="94">
+            <body>What does SIMD mask do?</body>
+            <answers>
+                <answer>
+                    <body>Masks influence which destination values of the SIMD operation are affected.</body>
+                    <marks>
+                        <mark type="keyword">dest</mark>
+                        <mark type="keyword">valu</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="95">
+            <body>What is an alternative to writing SIMD intrinsics code?</body>
+            <answers>
+                <answer>
+                    <body>Using compiler auto-vectorization, and inspecting the optimization report.</body>
+                    <marks>
+                        <mark type="keyword">vector</mark>
+                        <mark type="keyword">report</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="96">
+            <body>How can a loop with a loop carried dependency be vectorized?</body>
+            <answers>
+                <answer>
+                    <body>Freely, as long as the data width stays smaller than the smallest loop carried dependency
+                        distance.
+                    </body>
+                    <marks>
+                        <mark type="keyword">distance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="97">
+            <body>What are some reasons that auto-vectorization could fail?</body>
+            <answers>
+                <answer>
+                    <body>Alignment, function calls, complex control flow, loop not "countable" (unpredictable while
+                        loop etc).
+                    </body>
+                    <marks>
+                        <mark type="keyword">align</mark>
+                        <mark type="keyword">function</mark>
+                        <mark type="keyword">control</mark>
+                        <mark type="keyword">count</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="98">
+            <body>What does the OpenMP SIMD construct do?</body>
+            <answers>
+                <answer>
+                    <body>Cuts the loop into chunks that fit the target SIMD architecture.</body>
+                    <marks>
+                        <mark type="keyword">chunk</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="99">
+            <body>What do the OpenMP clauses safelen, linear, aligned and collapse do?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Safelen: Maximum number of concurrent iterations that do not break dependence.
+                        <p/>
+                        Linear: Variable's value has linear relationship with iteration number.
+                        <p/>
+                        Aligned: specifies variable alignment
+                        <p/>
+                        Collapse: TODO
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="100">
+            <body>What does the OpenMP clause schedule(simd: static, 5) do?</body>
+            <answers>
+                <answer>
+                    <body>Schedules chunk sizes that are multiples of the SIMD length, changing first/last iteration as
+                        necessary to fix alignment and extra iterations. No remaineder loops are triggered.
+                    </body>
+                    <marks>
+                        <mark type="keyword">length</mark>
+                        <mark type="keyword">align</mark>
+                        <mark type="keyword">remainder</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="101">
+            <body>How can you include a function in a SIMD parallel loop?</body>
+            <answers>
+                <answer>
+                    <body>Using <pre>#pragma omp declare simd</pre> on the function declaration
+                    </body>
+                    <marks>
+                        <mark type="keyword">declare</mark>
+                        <mark type="keyword">simd</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="102">
+            <body>What are common data layouts to be used with SIMD and what are some pros/cons?</body>
+            <answers>
+                <answer>
+                    <body>Array of structs (good locality of members, 1 memory stream). Struct of arrays (contiguous
+                        load/store, but poor locality of members, 3 memory streams necessary). Hybrid (AoSoA).
+                    </body>
+                    <marks>
+                        <mark type="keyword">array</mark>
+                        <mark type="keyword">struct</mark>
+                        <mark type="keyword">locality</mark>
+                        <mark type="keyword">stream</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="103">
+            <body>How can data alignment be ensured for multi-dimensional array?</body>
+            <answers>
+                <answer>
+                    <body>Using padding between rows, etc.</body>
+                    <marks>
+                        <mark type="keyword">pad</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Continue Chapter 7 -->
 
 
         <!-- From Exam 2018 -->
@@ -1617,5 +2182,7 @@
         </question>
     </body>
     <!-- TODO: Problem 11 -->
+
+    <!-- Notes: No need to know intrinsic (SIMD) functions -->
 
 </exam>
