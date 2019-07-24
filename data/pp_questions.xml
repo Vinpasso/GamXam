@@ -1570,6 +1570,52 @@
                 </answer>
             </answers>
         </question>
+        <!-- FAQ -->
+        <question type="extended-answer" id="50001">
+            <body>What are the two ways to return a value from a kernel in pthreads?</body>
+            <answers>
+                <answer>
+                    <body>Using the void retval** in the function return value (and pthread_join argument). Also
+                        possible using an out parameter (pointer) in the function's argument structure.
+                    </body>
+                    <marks>
+                        <mark type="keyword">retval</mark>
+                        <mark type="keyword">arg</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="50002">
+            <body>What are some work sharing constructs in OpenMP?</body>
+            <answers>
+                <answer>
+                    <body>Tasks and sections</body>
+                    <marks>
+                        <mark type="keyword">task</mark>
+                        <mark type="keyword">section</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="50003">
+            <body>What are OpenMP default task data scopes?</body>
+            <answers>
+                <answer>
+                    <body>Task region default: firstprivate (unless shared in enclosing construct). Global and static
+                        variables (shared). Local variables: private. Orphaned task variables (declared private inside a
+                        declared shared and without scoping on task) (firstprivate).
+                    </body>
+                    <marks>
+                        <mark type="keyword">share</mark>
+                        <mark type="keyword">private</mark>
+                        <mark type="keyword">orphan</mark>
+                        <mark type="keyword">static</mark>
+                        <mark type="keyword">local</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
     <!-- TODO: Problem 11 -->
+
 </exam>
