@@ -1398,9 +1398,26 @@
             <body>How is the dependence direction calculated?</body>
             <answers>
                 <answer>
-                    <body>"&gt;", "=", ">", according to sign of the loop dependence distance</body>
+                    <body>"&lt;", "=", ">", according to sign of the loop dependence distance.
+                        <p/>
+                        d(i,j)_k > 0 -> "&lt;",
+                        d(i,j)_k = 0 -> "=",
+                        d(i,j)_k &lt; 0 -> ">"
+                    </body>
                     <marks>
                         <mark type="keyword">sign</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60079">
+            <body>What is the level of a loop carried dependency?</body>
+            <answers>
+                <answer>
+                    <body>The index of the left most non-"=" direction vector entry.</body>
+                    <marks>
+                        <mark type="keyword">=</mark>
+                        <mark type="keyword">vector</mark>
                     </marks>
                 </answer>
             </answers>
@@ -2318,9 +2335,116 @@
                 </answer>
             </answers>
         </question>
+        <!-- TODO: Problem 11 -->
+
+        <!-- Notes: No need to know intrinsic (SIMD) functions -->
+
+        <!-- Some dependence graph tasks -->
+        <question type="extended-answer" id="90000">
+            <body>
+                Give the dependence vectors, direction vectors and draw the dependence graph for the following code
+                statement:
+                <pre>
+                    <!-- @formatter:off -->
+                    1   for(i = 1; i &lt; N; i++) {
+                    2       for(j = 1; j &lt; M; j++) {
+                    3 S1:       A(i + 1,j) = B(i,j + 1)
+                    4 S2:       B(i,j) = A(i,j)
+                    5       }
+                    6   }
+                    <!-- @formatter:on -->
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        TODO
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="90001">
+            <body>
+                Give the dependence vectors, direction vectors and draw the dependence graph for the following code
+                statement:
+                <pre>
+                    <!-- @formatter:off -->
+                    1   for(i = 0; i &lt; N; i++) {
+                    2 S1:   B(i) = A(i)
+                    3 S2:   A(i) = A(i) + B(i + 1)
+                    4 S3:   C(i) = 2 * B(i)
+                    5   }
+                    <!-- @formatter:on -->
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        S2 (B(i+1)) -> S1 (B(i)): WAR (anti) dependency, distance: (1), direction (&lt;), level = 1
+                        <p/>
+                        S2 (A(i)) -> S1 (A(i)): WAR (anti) dependency, distance: (0), direction (=), level = \infty
+                        <p/>
+                        S3 (B(i)) -> S1 (B(i)): RAW (true) dependency, distance: (0), direction (=), level = \infty
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="90002">
+            <body>
+                Give the dependence vectors, direction vectors and draw the dependence graph for the following code
+                statement:
+                <pre>
+                    <!-- @formatter:off -->
+                    1   for(i = 1; i &lt; N; i++) {
+                    2       for(j = 1; j &lt; M; j++) {
+                    3 S1:       A(i) = B(i,j)
+                    4 S2:       B(i,j) = B(i - 1,2 * j)
+                    5       }
+                    6   }
+                    <!-- @formatter:on -->
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        S1 (A(i)) -> S1 (A(i)): WAW (output) dependency, distance: (0, *), direction: (=, *), level = 2
+                        <p/>
+                        S2 (B(i,j)) -> S1 (B(i,j)): WAR (anti) dependency, distance: (0), direction (=), level = \infty
+                        <p/>
+                        S2 (B(i,2)) -> S2 (B(i - 1, 2 * j)): RAW (true) dependency, distance: (1, -j), direction (&lt;, >), level = 1
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="90003">
+            <body>
+                Give the dependence vectors, direction vectors and draw the dependence graph for the following code
+                statement:
+                <pre>
+                    <!-- @formatter:off -->
+                    1   for(i = 0; i &lt; N; i++) {
+                    2       for(j = 0; j &lt; M; j++) {
+                    3 S1:       B(i - 1,j) = C(i,j - 2)
+                    4 S2:       C(i,j) = 2 * B(i,j + 1)
+                    5       }
+                    6   }
+                    <!-- @formatter:on -->
+                </pre>
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        S1 (B(i,j+1)) -> S2 (B(i-1, j)): WAR (anti) dependency, distance: (1, 1), direction: (&lt;, &lt;), level = 1
+                        <p/>
+                        S2 (C(i,j)) -> S1 (C(i, j-2)): RAW (true) dependency, distance: (0, 2), direction: (=, &lt;), level = 2
+                        <p/>
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
     </body>
-    <!-- TODO: Problem 11 -->
-
-    <!-- Notes: No need to know intrinsic (SIMD) functions -->
-
 </exam>
