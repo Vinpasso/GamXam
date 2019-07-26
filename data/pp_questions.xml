@@ -2020,7 +2020,7 @@
             <body>
                 Consider the following program being executed with OMP_NUM_THREADS set to 16.
                 <pre>
-                <![CDATA[
+                    <![CDATA[
                     int value[64], k, t;
                     for(inti=0; i<64; i++)
                         value[i]=63-i;
@@ -2032,6 +2032,7 @@
                     }
                     printf("Final value of k=%i\n", k);
                     ]]>
+                </pre>
                 b)* Fill in the following table. If multiple values are possible, state MULTIPLE.
                 <pre>
                     CLAUSE set to | Printed value of k
