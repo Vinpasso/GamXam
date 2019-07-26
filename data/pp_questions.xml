@@ -1729,6 +1729,116 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="104">
+            <body>What is a problem with ethernet for high performance computing? What is a possible solution?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Sending messages goes through the kernel, across a tcp/ip stack into an ethernet driver and
+                        onto the hardware.
+                        <p/>
+                        User level communication does only the setup through the kernel and all subsequent communication
+                        is possible directly in user space, enabling higher bandwidth and low latency.
+                    </body>
+                    <marks>
+                        <mark type="keyword">kernel</mark>
+                        <mark type="keyword">setup</mark>
+                        <mark type="keyword">user</mark>
+                        <mark type="keyword">bandwidth</mark>
+                        <mark type="keyword">latency</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="105">
+            <body>What is VIA and what are common examples?</body>
+            <answers>
+                <answer>
+                    <body>Virtual Interface Architecture, Infiniband (offloading), Omnipath (onloading)</body>
+                    <marks>
+                        <mark type="keyword">virtual</mark>
+                        <mark type="keyword">infini</mark>
+                        <mark type="keyword">omni</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="106">
+            <body>What is MPI?</body>
+            <answers>
+                <answer>
+                    <body>MPI is an Application Programming Interface specification (no ABI, recompile to change
+                        implementation), implemented as a library.
+                    </body>
+                    <marks>
+                        <mark type="keyword">application programming interface</mark>
+                        <mark type="keyword">specification</mark>
+                        <mark type="keyword">library</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="107">
+            <body>What conditions have to hold with MPI_Finalize?</body>
+            <answers>
+                <answer>
+                    <body>All communication must be completed, needs to be called by all MPI processes and is
+                        collective.
+                    </body>
+                    <marks>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">collective</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="108">
+            <body>How does addressing work in MPI?</body>
+            <answers>
+                <answer>
+                    <body>A process is uniquely identified by a communicator and its rank within that communicator
+                    </body>
+                    <marks>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">rank</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="109">
+            <body>What data is part of the MPI_Status structure?</body>
+            <answers>
+                <answer>
+                    <body>The actual MPI_SOURCE, MPI_TAG, MPI_ERROR</body>
+                    <marks>
+                        <mark type="keyword">source</mark>
+                        <mark type="keyword">tag</mark>
+                        <mark type="keyword">error</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="110">
+            <body>How can you get the size of the actually received data in MPI?</body>
+            <answers>
+                <answer>
+                    <body>Using MPI_Get_Count(*status, dtype, *count)</body>
+                    <marks>
+                        <mark type="keyword">get_count</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="111">
+            <body></body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
         <!-- TODO: Continue Chapter 7 -->
 
 

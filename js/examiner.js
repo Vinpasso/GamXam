@@ -129,6 +129,12 @@ function loadLocalProgress() {
 function handleProgress(xmlString) {
     let numImported = 0;
     let domxml = new DOMParser().parseFromString(xmlString, "text/xml");
+
+    if($(domxml).find("examid").get(0).innerHTML !== $(exam).find("head > id").get(0).innerHTML) {
+        showAlert("Exam has different id to progress. Refusing to load.", "alert-danger");
+        return;
+    }
+
     progressStages = [[], [], [], [], [], []];
     for (let i = 0; i < progressStages.length; i++) {
         $(domxml).find("stage[id='" + i + "']").children("question").each(function (questionIndex) {
@@ -145,8 +151,10 @@ function handleProgress(xmlString) {
     // handle removed questions
     for (let i = 0; i < progressStages.length; i++) {
         for (let j = 0; j < progressStages[i].length; j++) {
-            if ($(exam).find("question[id='" + progressStages[i][j] + "']") === undefined) {
+            if ($(exam).find("question[id='" + progressStages[i][j] + "']").length === 0) {
                 progressStages[i].splice(j, 1);
+                showAlert("Removed progress element " + progressStages[i][j] + " (no such question).");
+                numImported--;
             }
         }
     }
