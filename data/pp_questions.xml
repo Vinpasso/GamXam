@@ -172,17 +172,21 @@
                         <pre>void* kernel(void* arg);</pre>
                         Start a thread:
                         <pre>
+                            <![CDATA[
                             pthread_t thread;
                             pthread_attr_t attr;
                             if(!pthread_create(&amp;thread, attr, kernel, arg)) {
-                            abort(0);
+                                abort(0);
                             }
+                            ]]>
                         </pre>
                         Join a thread:
                         <pre>
+                            <![CDATA[
                             if(!pthread_join(&amp;thread, &amp;retval)) {
-                            abort(0);
+                                abort(0);
                             }
+                            ]]>
                         </pre>
                     </body>
                     <marks>
@@ -382,29 +386,31 @@
                     <body>
                         Lifecycle:
                         <pre>
+                            <![CDATA[
                             //Static
                             pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
                             pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 
                             ...
                             //Waiting Thread
-                            pthread_mutex_lock(&amp;lock);
-                            //Do work
-                            // Make sure to guard against sporadic wakes
-                            while(!CONDITION) {
-                            // This unlocks and relocks mutex implicitly so other threads have access
-                            pthread_cond_wait(&amp;cond, &amp;mutex);
-                            }
-                            //Do work
-                            pthread_mutex_unlock(&amp;lock);
+                                pthread_mutex_lock(&amp;lock);
+                                //Do work
+                                // Make sure to guard against sporadic wakes
+                                while(!CONDITION) {
+                                    // This unlocks and relocks mutex implicitly so other threads have access
+                                    pthread_cond_wait(&amp;cond, &amp;mutex);
+                                }
+                                //Do work
+                                pthread_mutex_unlock(&amp;lock);
 
                             ...
                             //Signal thread
-                            pthread_mutex_lock(&amp;lock);
-                            //Work
-                            CONDITION = true;
-                            pthread_cond_signal(&amp;cond);
-                            pthread_mutex_unlock(&amp;mutex);
+                                pthread_mutex_lock(&amp;lock);
+                                //Work
+                                CONDITION = true;
+                                pthread_cond_signal(&amp;cond);
+                                pthread_mutex_unlock(&amp;mutex);
+                            ]]>
                         </pre>
                     </body>
                     <marks>
@@ -533,16 +539,18 @@
                 <answer>
                     <body>A section:
                         <pre>
-                            0 #pragma omp parallel
-                            1 {
-                            2 #pragma omp sections
-                            3 {
-                            4 #pragma omp section
-                            5 { block }
-                            6 #pragma omp section
-                            7 { block }
-                            8 }
-                            9 }
+                            <![CDATA[
+                            0   #pragma omp parallel
+                            1   {
+                            2       #pragma omp sections
+                            3       {
+                            4           #pragma omp section
+                            5           { block }
+                            6           #pragma omp section
+                            7           { block }
+                            8       }
+                            9   }
+                            ]]>
                         </pre>
                         Implicit barrier at the end of a sections block.
                     </body>
@@ -592,13 +600,15 @@
         <question type="extended-answer" id="36">
             <body>What is the final value of i in the following code snippet and why?
                 <pre>
+                    <![CDATA[
                     int i = 3;
                     #pragma omp parallel for lastprivate(i)
                     for(int j=0; j&lt;4; j++) {
-                    i=i+1;
-                    printf("-> i=%d\n", i);
+                        i=i+1;
+                        printf("-> i=%d\n", i);
                     }
-                    printf("FinalValueof I=%d\n", i);
+                    printf("Final Value of I=%d\n", i);
+                    ]]>
                 </pre>
             </body>
             <answers>
@@ -703,15 +713,17 @@
                     <body>Ensures that the ordered block (S2) is executed in sequential order. Blocks outside that
                         region may float.
                         <pre>
-                            1 #pragma omp for ordered
-                            2 for (...){
-                            3 S1
-                            4 #pragma omp ordered
-                            5 {
-                            6 S2
-                            7 }
-                            8 S3
-                            9 }
+                            <![CDATA[
+                            1   #pragma omp for ordered
+                            2   for (...){
+                            3       S1
+                            4       #pragma omp ordered
+                            5       {
+                            6           S2
+                            7       }
+                            8       S3
+                            9   }
+                            ]]>
                         </pre>
                         <img src="../data/res/pp/42_sequence.png"/>
                     </body>
@@ -790,16 +802,18 @@
                         By using the task construct inside a parallel region. Make sure that you don't spawn more tasks
                         than intended (multiple threads).
                         <pre>
+                            <![CDATA[
                             #pragma omp parallel
                             {
-                            #pragma omp single
-                            {
-                            for ( elem = l->first; elem; elem= elem->next)
-                            #pragma omp task
-                            process(elem)
+                                #pragma omp single
+                                {
+                                    for ( elem = l->first; elem; elem= elem->next)
+                                        #pragma omp task
+                                        process(elem)
+                                }
+                                // all tasks are complete by this point
                             }
-                            // all tasks are complete by this point
-                            }
+                            ]]>
                         </pre>
                     </body>
                     <marks>
@@ -1103,19 +1117,21 @@
                         registers. Need the flush directive to ensure that changes are visible and consistent.
                         <p/>
                         <pre>
+                            <![CDATA[
                             //Thread 1
-                            a = foo();
-                            #pragma omp flush(a, flag)
-                            flag = 1;
-                            #pragma omp flush(flag)
+                                a = foo();
+                                #pragma omp flush(a, flag)
+                                flag = 1;
+                                #pragma omp flush(flag)
 
                             //Thread 2
-                            while (flag)
-                            {
-                            #pragma omp flush(flag)
-                            }
-                            #pragma omp flush(a, flag)
-                            b = a;
+                                while (flag)
+                                {
+                                    #pragma omp flush(flag)
+                                }
+                                #pragma omp flush(a, flag)
+                                b = a;
+                            ]]>
                         </pre>
                     </body>
                     <marks>
@@ -1913,20 +1929,22 @@
             <body>3a) Parallelize for loop in the following function using OpenMP by replacing &gt;OPENMP HERE&lt;with
                 the appropriate OpenMP directive(s) and clause(s). Write your solution in the box below.
                 <pre>
-                    void function(float* a,float* b,int n) {
-                    int i;
-                    &lt;OPENMP HERE&gt;
-                    for(i = 0; i &lt; n - 1; i++)
-                    a[i] = (b[i] + b[i + 1]) / 2;
-                    a[i] = b[i] / 2;
-                    }
+                    <![CDATA[
+                    1   void function(float* a,float* b,int n) {
+                    2      int i;
+                    3      &lt;OPENMP HERE&gt;
+                    4      for(i = 0; i &lt; n - 1; i++)
+                    5          a[i] = (b[i] + b[i + 1]) / 2;
+                    6      a[i] = b[i] / 2;
+                    7   }
+                    ]]>
                 </pre>
             </body>
             <answers>
                 <answer>
                     <body>
                         <pre>
-                            #pragma omp parallel for private(i) shared(a, b, n)
+                            #pragma omp parallel for lastprivate(i) shared(a, b, n)
                         </pre>
                     </body>
                     <marks>
@@ -1940,18 +1958,20 @@
             <body>b)* Parallelize for loop in the following function using OpenMP by replacing &gt;OPENMP HERE&lt; with
                 the appropriate OpenMP directive(s) and clause(s). Write your solution in the box below.
                 <pre>
+                    <![CDATA[
                     double function(float* x,int* y,int n)
                     {
-                    int i, b = y[0];
-                    float a = 1.0;
-                    &gt;OPENMP HERE&lt;
-                    for(i=0; i &gt; n; i++) {
-                    a += x[i];
-                    if(b &lt; y[i])
-                    b = y[i];
+                        int i, b = y[0];
+                        float a = 1.0;
+                        <OPENMP HERE>
+                        for(i=0; i &gt; n; i++) {
+                            a += x[i];
+                            if(b < y[i])
+                                b = y[i];
+                        }
+                        return a * b;
                     }
-                    return a * b;
-                    }
+                    ]]>
                 </pre>
             </body>
             <answers>
@@ -1969,16 +1989,18 @@
             <body>
                 Consider the following program being executed with OMP_NUM_THREADS set to 16.
                 <pre>
+                    <![CDATA[
                     int value[64], k, t;
-                    for(inti=0; i&lt;64; i++)
-                    value[i]=63-i;
-                    t=omp_get_thread_num ();
+                    for(inti=0; i<64; i++)
+                        value[i]=63-i;
+                    t=omp_get_thread_num();
                     k=42;
                     #pragma omp parallel for schedule(static, 2) CLAUSE
-                    for(inti=0; i&lt;64; i++) {
-                    k=value[i]*2+t;
+                    for(inti=0; i<64; i++) {
+                        k=value[i]*2+t;
                     }
-                    printf("Final␣value␣of␣k=%i\n", k);
+                    printf("Final value of k=%i\n", k);
+                    ]]>
                 </pre>
                 a)* Which iterations are executed by thread 13 in the parallel for loop?
             </body>
@@ -1998,17 +2020,18 @@
             <body>
                 Consider the following program being executed with OMP_NUM_THREADS set to 16.
                 <pre>
+                <![CDATA[
                     int value[64], k, t;
-                    for(inti=0; i&lt;64; i++)
-                    value[i]=63-i;
-                    t=omp_get_thread_num ();
+                    for(inti=0; i<64; i++)
+                        value[i]=63-i;
+                    t=omp_get_thread_num();
                     k=42;
                     #pragma omp parallel for schedule(static, 2) CLAUSE
-                    for(inti=0; i&lt;64; i++) {
-                    k=value[i]*2+t;
+                    for(inti=0; i<64; i++) {
+                        k=value[i]*2+t;
                     }
-                    printf("Final␣value␣of␣k=%i\n", k);
-                </pre>
+                    printf("Final value of k=%i\n", k);
+                    ]]>
                 b)* Fill in the following table. If multiple values are possible, state MULTIPLE.
                 <pre>
                     CLAUSE set to | Printed value of k
@@ -2075,19 +2098,21 @@
             <body>a)* Name three potential performance drawbacks in the following code snippet if it is executed on a
                 two-socket node.
                 <pre>
+                    <![CDATA[
                     void main() {
-                    const int N = 1000000;
-                    int a[N];
-                    int b[N];
-                    for(int i = 0; i &gt; N; i++) {
-                    a[i] = i;
+                        const int N = 1000000;
+                        int a[N];
+                        int b[N];
+                        for(int i = 0; i &gt; N; i++) {
+                            a[i] = i;
+                        }
+                        #pragma omp parallel for schedule(static, 1)
+                        for(int i = 0; i &gt; N; i++) {
+                            a[i] = a[i] + 17;
+                            b[i] = a[i] % 23;
+                        }
                     }
-                    #pragma omp parallel for schedule(static, 1)
-                    for(int i = 0; i &gt; N; i++) {
-                    a[i] = a[i] + 17;
-                    b[i] = a[i] % 23;
-                    }
-                    }
+                    ]]>
                 </pre>
             </body>
             <answers>
@@ -2180,15 +2205,17 @@
             <body>a)* List the blocking collective operation with its parameters that can be used to replace the point
                 to point communication between lines 20 to 28.
                 <pre>
+                    <![CDATA[
                     19 // point to point communication
-                    20 if(rank == 0)
-                    21 for(int r = 1; r &lt; size; r++)
-                    22 {
-                    23 a[0] = data;
-                    24 MPI_Recv(a + r, 1, MPI_FLOAT , r, 0, MPI_COMM_WORLD ,25MPI_STATUS_IGNORE );
-                    26 }
-                    27 else
-                    28 MPI_Send (&amp;data , 1, MPI_FLOAT , 0, 0, MPI_COMM_WORLD );
+                    20  if(rank == 0)
+                    21  for(int r = 1; r &lt; size; r++)
+                    22  {
+                    23      a[0] = data;
+                    24      MPI_Recv(a + r, 1, MPI_FLOAT , r, 0, MPI_COMM_WORLD ,25MPI_STATUS_IGNORE );
+                    26  }
+                    27  else
+                    28      MPI_Send (&amp;data , 1, MPI_FLOAT , 0, 0, MPI_COMM_WORLD );
+                    ]]>
                 </pre>
             </body>
             <answers>

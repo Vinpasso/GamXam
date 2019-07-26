@@ -125,3 +125,7 @@ body {
 textarea {
     resize: none;
 }
+
+pre {
+    text-align: left;
+}
