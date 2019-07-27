@@ -725,7 +725,7 @@
                             9   }
                             <!-- @formatter:on -->
                         </pre>
-                        <img src="../data/res/pp/42_sequence.png"/>
+                        <img src="../data/res/pp/41_sequence.png"/>
                     </body>
                     <marks>
                         <mark type="keyword">sequen</mark>
@@ -1384,12 +1384,13 @@
             </answers>
         </question>
         <question type="extended-answer" id="79">
-            <body>What is the dependence distance for (S1(i) \delta S2(j))?</body>
+            <body>What is the dependence distance for (S1(\vec{i}) \delta S2(\vec{j}))?</body>
             <answers>
                 <answer>
-                    <body>j-i</body>
+                    <body>\vec{j}-\vec{i}</body>
                     <marks>
-                        <mark type="keyword">j-i</mark>
+                        <mark type="keyword">j</mark>
+                        <mark type="keyword">i</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1816,12 +1817,13 @@
             <answers>
                 <answer>
                     <body>All communication must be completed, needs to be called by all MPI processes and is
-                        collective.
+                        collective. Must only be called after MPI_Init.
                     </body>
                     <marks>
                         <mark type="keyword">communicat</mark>
                         <mark type="keyword">process</mark>
                         <mark type="keyword">collective</mark>
+                        <mark type="keyword">init</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1860,15 +1862,6 @@
                     <marks>
                         <mark type="keyword">get_count</mark>
                     </marks>
-                </answer>
-            </answers>
-        </question>
-        <question type="extended-answer" id="111">
-            <body></body>
-            <answers>
-                <answer>
-                    <body></body>
-                    <marks></marks>
                 </answer>
             </answers>
         </question>
@@ -2309,10 +2302,11 @@
             <body>What are some work sharing constructs in OpenMP?</body>
             <answers>
                 <answer>
-                    <body>Tasks and sections</body>
+                    <body>Sections, for and single</body>
                     <marks>
-                        <mark type="keyword">task</mark>
                         <mark type="keyword">section</mark>
+                        <mark type="keyword">for</mark>
+                        <mark type="keyword">single</mark>
                     </marks>
                 </answer>
             </answers>
