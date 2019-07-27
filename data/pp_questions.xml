@@ -1479,7 +1479,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="84">
-            <body>What effect does loop fission/fusion have on granularity?</body>
+            <body>What effect does loop fusion/fission have on granularity?</body>
             <answers>
                 <answer>
                     <body>Fusion: reduces granularity. Fission: increases granularity.</body>
