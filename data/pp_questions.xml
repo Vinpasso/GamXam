@@ -2055,8 +2055,7 @@
                     shared(k,t) |
                     firstprivate(k,t) |
                     lastprivate(k,t) |
-                    firstprivate(k,t) |
-                    lastprivate(k,t) |
+                    firstprivate(k,t) lastprivate(k,t) |
                 </pre>
             </body>
             <answers>
