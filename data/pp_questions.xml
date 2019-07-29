@@ -2194,7 +2194,94 @@
                 </answer>
             </answers>
         </question>
-        <!-- TODO: Contiue Chapter 9 Slide 0 -->
+        <question type="extended-answer" id="129">
+            <body>Why should libraries have their own communicators and how is this easily achieved?</body>
+            <answers>
+                <answer>
+                    <body>To avoid cross-talk (especially with wildcards). Could use MPI_Comm_dup(old, new).</body>
+                    <marks>
+                        <mark type="keyword">cross</mark>
+                        <mark type="keyword">dup</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="130">
+            <body>What does MPI_Type_contiguous do?</body>
+            <answers>
+                <answer>
+                    <body>Declares an MPI type that is multiple contiguous occurrences of a data type in memory:
+                        <pre>
+                            MPI_Datatype newtype;
+                            int MPI_Type_contiguous(int count, MPI_Datatype oldtype, MPI_Datatype* newtype)
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">multiple</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="131">
+            <body>How does MPI_Type_vector work and what are the relevant measurements?</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            int MPI_Type_vector(int count, int blocklength, int stride, MPI_Datatype oldtype,
+                            MPI_Datatype *newtype);
+                        </pre>
+                        Creates blocks of oldtypes, which start at distance stride.
+                        Stride: Distance from beginning of one occurrence of a set of oldtypes to beginning of next
+                        occurrence.
+                        Count: The number of blocks/strides.
+                        Blocklength: The size of the of a set of oldtypes.
+                        Extent: The distance from beginning of first set to the end of the last.
+                        <img src="../data/res/pp/131_vector.png"/>
+                    </body>
+                    <marks>
+                        <mark type="keyword">stride</mark>
+                        <mark type="keyword">count</mark>
+                        <mark type="keyword">blocklength</mark>
+                        <mark type="keyword">extent</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Indexed, struct, subarray types -->
+        <question type="extended-answer" id="132">
+            <body>What MPI routines are available for inspecting data types?</body>
+            <answers>
+                <answer>
+                    <body>MPI_Type_get_envelope, returns counts of elements used in construction and a combiner (int:
+                        method used to construct data type). MPI_Type_get_contents, gets the actual information based on
+                        the counts (delimited by max values).
+                    </body>
+                    <marks>
+                        <mark type="keyword">envelope</mark>
+                        <mark type="keyword">contents</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="133">
+            <body>What are MPI_Datatypes useful for?</body>
+            <answers>
+                <answer>
+                    <body>Messages that combine multiple types, access to "spread out" data structures. Allows for
+                        optimization, but incurs overhead.
+                    </body>
+                    <marks>
+                        <mark type="keyword">types</mark>
+                        <mark type="keyword">spread</mark>
+                        <mark type="keyword">optimiz</mark>
+                        <mark type="keyword">overhead</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Indexed, struct, subarray types -->
+        <!-- TODO: Continue Chapter 9 Slide 24 -->
 
         <!-- From Exam 2018 -->
         <question type="extended-answer" id="1000">
