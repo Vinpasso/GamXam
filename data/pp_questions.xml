@@ -2415,7 +2415,7 @@
                     <body>
                         S1 (A(i)) -> S1 (A(i)): WAW (output) dependency, distance: (0, *), direction: (=, *), level = 2
                         <p/>
-                        S2 (B(i,j)) -> S1 (B(i,j)): WAR (anti) dependency, distance: (0), direction (=), level = \infty
+                        S1 (B(i,j)) -> S2 (B(i,j)): WAR (anti) dependency, distance: (0), direction (=), level = \infty
                         <p/>
                         S2 (B(i,2)) -> S2 (B(i - 1, 2 * j)): RAW (true) dependency, distance: (1, -j), direction (&lt;,
                         >), level = 1
