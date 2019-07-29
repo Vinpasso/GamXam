@@ -169,12 +169,16 @@
                 <answer>
                     <body>
                         Using a kernel:
-                        <pre>void* kernel(void* arg);</pre>
+                        <pre>
+                            void* kernel(void* arg);
+                        </pre>
                         Start a thread:
                         <pre>
                             <!-- @formatter:off -->
                             pthread_t thread;
                             pthread_attr_t attr;
+                            //Note: The signature is pthread_create(pthread_t* thread, pthread_attr* attr, void* (*kernel)(void* arg), void* arg);
+                            // However, the kernel does not need to be referenced.
                             if(!pthread_create(&amp;thread, attr, kernel, arg)) {
                                 abort(0);
                             }
