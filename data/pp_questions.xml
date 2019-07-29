@@ -2190,7 +2190,9 @@
             <answers>
                 <answer>
                     <body>When passed an array of MPI_Request objects and a MPI_Status object, MPI_Waitany blocks until
-                        any one of the passed requests completes, filling the status variable with status information.
+                        any one of the passed requests completes, filling the statuses array variable with status
+                        information.<p/>
+                        MPI_Waitany(num, requests, statuses);
                     </body>
                     <marks>
                         <mark type="keyword">block</mark>
@@ -2356,7 +2358,11 @@
             <answers>
                 <answer>
                     <body>
-                        TODO
+                        Student solution:
+                        <pre>
+                            S1 A(i+1, j) to S2 A(i,j) RAW (true) dependency. Distance (1,0), direction (&lt;, =) level 1
+                            S1 B(i, j+1) to S2 B(i,j) WAR (anti) dependency. Distance (0,1), direction (&lt;, =) level 2
+                        </pre>
                     </body>
                     <marks></marks>
                 </answer>
@@ -2411,7 +2417,8 @@
                         <p/>
                         S2 (B(i,j)) -> S1 (B(i,j)): WAR (anti) dependency, distance: (0), direction (=), level = \infty
                         <p/>
-                        S2 (B(i,2)) -> S2 (B(i - 1, 2 * j)): RAW (true) dependency, distance: (1, -j), direction (&lt;, >), level = 1
+                        S2 (B(i,2)) -> S2 (B(i - 1, 2 * j)): RAW (true) dependency, distance: (1, -j), direction (&lt;,
+                        >), level = 1
                     </body>
                     <marks></marks>
                 </answer>
@@ -2435,9 +2442,11 @@
             <answers>
                 <answer>
                     <body>
-                        S2 (B(i,j+1)) -> S1 (B(i-1, j)): WAR (anti) dependency, distance: (1, 1), direction: (&lt;, &lt;), level = 1
+                        S2 (B(i,j+1)) -> S1 (B(i-1, j)): WAR (anti) dependency, distance: (1, 1), direction: (&lt;, &lt;),
+                        level = 1
                         <p/>
-                        S2 (C(i,j)) -> S1 (C(i, j-2)): RAW (true) dependency, distance: (0, 2), direction: (=, &lt;), level = 2
+                        S2 (C(i,j)) -> S1 (C(i, j-2)): RAW (true) dependency, distance: (0, 2), direction: (=, &lt;),
+                        level = 2
                         <p/>
                     </body>
                     <marks></marks>
