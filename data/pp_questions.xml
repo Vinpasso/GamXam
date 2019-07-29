@@ -1801,6 +1801,51 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="100105">
+            <body>How does an application communicate through VIA once setup is complete?</body>
+            <answers>
+                <answer>
+                    <body>The data is written/read by the VI User Agent into/from message queues which interface
+                        directly with hardware.
+                    </body>
+                    <marks>
+                        <mark type="keyword">queue</mark>
+                        <mark type="keyword">agent</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="100106">
+            <body>What are some common network topologies?</body>
+            <answers>
+                <answer>
+                    <body>Fat-Tree, Torus, Dragonfly (intra-connect: full-mesh, inter-connect: partitioned to all),
+                        Hypercube
+                    </body>
+                    <marks>
+                        <mark type="keyword">tree</mark>
+                        <mark type="keyword">torus</mark>
+                        <mark type="keyword">dragonfly</mark>
+                        <mark type="keyword">hypercube</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="100107">
+            <body>What other nodes except for compute nodes does a HPC system usually have?</body>
+            <answers>
+                <answer>
+                    <body>Storage (archive) nodes, login/head/compilation nodes, system nodes (reliability,
+                        availability, servicability)
+                    </body>
+                    <marks>
+                        <mark type="keyword">storage</mark>
+                        <mark type="keyword">login</mark>
+                        <mark type="keyword">system</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
         <question type="extended-answer" id="106">
             <body>What is MPI?</body>
             <answers>
@@ -1869,8 +1914,287 @@
                 </answer>
             </answers>
         </question>
-        <!-- TODO: Continue Chapter 7 -->
-
+        <question type="extended-answer" id="111">
+            <body>What do MPI_Wtime and MPI_Wtick do?</body>
+            <answers>
+                <answer>
+                    <body>Wtime: wall time in seconds (not necessarily synchronized). Wtick: resolution of wall time.
+                    </body>
+                    <marks>
+                        <mark type="keyword">wall</mark>
+                        <mark type="keyword">resolution</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="112">
+            <body>Why is central initialization generally avoided in a MPI application?</body>
+            <answers>
+                <answer>
+                    <body>One node alone might not have enough resources to initialize the data structure and lots of
+                        communication needs to happen to distribute it.
+                    </body>
+                    <marks>
+                        <mark type="keyword">resource</mark>
+                        <mark type="keyword">communicat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="113">
+            <body>What is the logical topology in a MPI Application?</body>
+            <answers>
+                <answer>
+                    <body>The mapping of local pieces into the global data structure. Usually important to know, where
+                        the neighbors are.
+                    </body>
+                    <marks>
+                        <mark type="keyword">local</mark>
+                        <mark type="keyword">global</mark>
+                        <mark type="keyword">neighbor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="114">
+            <body>Which components can an message traverse between the send and receive?</body>
+            <answers>
+                <answer>
+                    <body>Send -> (Send Buffer, optional) -> (Receive Queue, direct delivery)/Unexpected Message Queue
+                        -> Receive
+                    </body>
+                    <marks>
+                        <mark type="keyword">buffer</mark>
+                        <mark type="keyword">queue</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="115">
+            <body>What do the Isend, Bsend, Rsend, Ssend variants of MPI calls do?</body>
+            <answers>
+                <answer>
+                    <body>I: Non-blocking, B: buffered, R: ready (application guarantees receiver ready), S: synchronize
+                        (returns once receive started).
+                    </body>
+                    <marks>
+                        <mark type="keyword">block</mark>
+                        <mark type="keyword">buffer</mark>
+                        <mark type="keyword">ready</mark>
+                        <mark type="keyword">synchroniz</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="116">
+            <body>What does MPI_Probe/MPI_Iprobe do?</body>
+            <answers>
+                <answer>
+                    <body>Waits for an incoming message without actually receiving it, outputs status object (containing
+                        specific source and tag, useful for wildcard).
+                    </body>
+                    <marks>
+                        <mark type="keyword">message</mark>
+                        <mark type="keyword">status</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="117">
+            <body>What is the eager limit?</body>
+            <answers>
+                <answer>
+                    <body>The maximum message size for which the eager protocol is still used instead of a rendezvous.
+                    </body>
+                    <marks>
+                        <mark type="keyword">rendezvous</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="118">
+            <body>What does MPI_Sendrecv do? (Write code).</body>
+            <answers>
+                <answer>
+                    <body>
+                        Does a blocking simultaneous send and receive operations, to avoid deadlocks.
+                        <pre>
+                            <!-- @formatter:off -->
+                            int out = -1; int in = 0;
+                            MPI_Sendrecv(&amp;out, 1 MPI_INT, DEST, TAG, &amp;in, 1, MPI_INT, SOURCE, TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                            <!-- @formatter:on -->
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">deadlock</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="119">
+            <body>What does MPI_Sendrec_replace do? (Write code).</body>
+            <answers>
+                <answer>
+                    <body>
+                        Does a blocking simultaneous send and receive operations, to avoid deadlocks, additionally
+                        reusing send buffer for receive.
+                        <pre>
+                            <!-- @formatter:off -->
+                            int inout = -1;
+                            MPI_Sendrecv_replace(&amp;inout, 1 MPI_INT, DEST, TAG, SOURCE, TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                            <!-- @formatter:on -->
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">buffer</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="120">
+            <body>What does MPI_Test do? (Write code)</body>
+            <answers>
+                <answer>
+                    <body>Checks for completion of MPI non-blocking operation:
+                        <pre>
+                            <!-- @formatter:off -->
+                            int flag = -1;
+                            MPI_Test(&amp;request, &amp;flag, MPI_STATUS_IGNORE);
+                            <!-- @formatter:on -->
+                        </pre>
+                        True, if request completed or request is MPI_REQUEST_NULL. If completed, set to
+                        MPI_REQUEST_NULL.
+                    </body>
+                    <marks>
+                        <mark type="keyword">complet</mark>
+                        <mark type="keyword">null</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="121">
+            <body>What are the three classes of collective operations in MPI?</body>
+            <answers>
+                <answer>
+                    <body>Synchronization (Barrier and flavors), Communication (Broadcast, Gather, Scatter, ...),
+                        Reduction (...)
+                    </body>
+                    <marks>
+                        <mark type="keyword">sync</mark>
+                        <mark type="keyword">communicat</mark>
+                        <mark type="keyword">reduce</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="122">
+            <body>How can a value from one process be copied to all processes in MPI?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Using MPI_Bcast:
+                        <pre>
+                            int MPI_Bcast(void *buf, int count, MPI_Datatype dtype, int root, MPI_Comm comm)
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">bcast</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="123">
+            <body>In what order will the values appear if they are gathered with root 0? P0: {A0,A1} P1: {B0,B1}, P2:
+                {C0,C1}
+            </body>
+            <answers>
+                <answer>
+                    <body>P0: (A0, A1, B0, B1, C0, C1)</body>
+                    <marks>
+                        <mark type="keyword">A0</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="124">
+            <body>Write code that collects information of different sizes from all processes to the process with rank
+                0.
+            </body>
+            <answers>
+                <answer>
+                    <body>Using
+                        <pre>
+                            MPI_Gatherv(void *sendbuf, int sendcount, MPI_Datatype sendtype, void* recvbuf,
+                            int*recvcount, int* displs, MPI_Datatype recvtype, int root, MPI_Comm comm);
+                        </pre>
+                        where displs has the first index in the receive buffer (array?) for each process.
+                    </body>
+                    <marks>
+                        <mark type="keyword">gatherv</mark>
+                        <mark type="keyword">disp</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="125">
+            <body>What does MPI_Alltoall do and what is the problem?</body>
+            <answers>
+                <answer>
+                    <body>Sends data from each process to each other process, which scales badly O(n^2)</body>
+                    <marks>
+                        <mark type="keyword">process</mark>
+                        <mark type="keyword">scale</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="126">
+            <body>How does a reduction work in MPI?</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            int MPI_Reduce(void* sbuf, void* rbuf, int count, MPI_Datatype dtype, MPI_Op op, int root,
+                            MPI_Comm comm)
+                        </pre>
+                        Available Ops: MPI_SUM, ..., User defined, ...
+                        Often implemented as tree structure.
+                    </body>
+                    <marks>
+                        <mark type="keyword">op</mark>
+                        <mark type="keyword">mpi_reduce</mark>
+                        <mark type="keyword">tree</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="127">
+            <body>What is an Ibarrier useful for?</body>
+            <answers>
+                <answer>
+                    <body>To continue doing useful work while other processes catch up to the synchronization.</body>
+                    <marks>
+                        <mark type="keyword">work</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="128">
+            <body>What is persistent communication in MPI?</body>
+            <answers>
+                <answer>
+                    <body>Operations that are initialized once ahead of time using MPI_*Op*_init, and then started using
+                        MPI_Start, allowing for further optimization.
+                    </body>
+                    <marks>
+                        <mark type="keyword">init</mark>
+                        <mark type="keyword">start</mark>
+                        <mark type="keyword">optim</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Contiue Chapter 9 Slide 0 -->
 
         <!-- From Exam 2018 -->
         <question type="extended-answer" id="1000">
@@ -2190,7 +2514,8 @@
                 <answer>
                     <body>When passed an array of MPI_Request objects and a MPI_Status object, MPI_Waitany blocks until
                         any one of the passed requests completes, filling the statuses array variable with status
-                        information.<p/>
+                        information.
+                        <p/>
                         MPI_Waitany(num, requests, statuses);
                     </body>
                     <marks>
