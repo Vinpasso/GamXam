@@ -2431,7 +2431,7 @@
             <answers>
                 <answer>
                     <body>
-                        S1 (B(i,j+1)) -> S2 (B(i-1, j)): WAR (anti) dependency, distance: (1, 1), direction: (&lt;, &lt;), level = 1
+                        S2 (B(i,j+1)) -> S1 (B(i-1, j)): WAR (anti) dependency, distance: (1, 1), direction: (&lt;, &lt;), level = 1
                         <p/>
                         S2 (C(i,j)) -> S1 (C(i, j-2)): RAW (true) dependency, distance: (0, 2), direction: (=, &lt;), level = 2
                         <p/>
