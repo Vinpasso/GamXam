@@ -1,4 +1,4 @@
-let examFileName;
+let examName;
 let exam;
 let question;
 let examLength;
@@ -10,7 +10,6 @@ let history;
 const local_storage_tag = "progress_xml";
 
 function loadExam(file) {
-    examFileName = file.name.substring(0, file.name.length - 4);
     let reader = new FileReader();
     reader.onload = function (e) {
         try {
@@ -47,8 +46,9 @@ function handleExam(xmlEncodedExam) {
     }
     exam = xmlEncodedExam;
     examLength = exam.getElementsByTagName("question").length;
+    examName = $(exam).find("title")[0].innerHTML;
     $("#exam-info").html("<h5>Exam: " +
-        $(exam).find("title")[0].innerHTML + "</h5><hr><h5>" +
+        examName + "</h5><hr><h5>" +
         examLength + " Questions</h5>");
     sanityCheckExam();
     initializeProgressStages();
@@ -224,12 +224,17 @@ function exportProgressToXML() {
     return xml.join("");
 }
 
+function replaceWhitespace(filename) {
+    let whitespaceRegex = /\s/g;
+    return filename.replace(whitespaceRegex, "_");
+}
+
 function saveProgress() {
     let text = exportProgressToXML();
     let blob = new Blob([text], {type: 'text/xml'});
     let anchor = document.createElement('a');
 
-    anchor.download = "progress_" + examFileName + ".xml";
+    anchor.download = "progress_" + replaceWhitespace(examName) + ".xml";
     anchor.href = window.URL.createObjectURL(blob);
     anchor.dataset.downloadurl = ['text/xml', anchor.download, anchor.href].join(':');
     document.body.appendChild(anchor);
