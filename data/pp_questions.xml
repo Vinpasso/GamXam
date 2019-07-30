@@ -2543,8 +2543,281 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="150">
+            <body>What is the difference between a flat profile and a callpath profile?</body>
+            <answers>
+                <answer>
+                    <body>In a flat profile, a function occurs with its aggregated metrics. In a callpath profile, there
+                        is a tree of summaries corresponding to the call path. where functions may occur multiple times.
+                    </body>
+                    <marks>
+                        <mark type="keyword">metric</mark>
+                        <mark type="keyword">tree</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="151">
+            <body>What are issues with offline/online analysis?</body>
+            <answers>
+                <answer>
+                    <body>Offline: suffers from size of information. Online: Scaling, bottlenecks, overhead.</body>
+                    <marks>
+                        <mark type="keyword">size</mark>
+                        <mark type="keyword">overhead</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="152">
+            <body>What does the periscope tuning framework consist of?</body>
+            <answers>
+                <answer>
+                    <body>Periscope, pathway and tuning plugins</body>
+                    <marks>
+                        <mark type="keyword">periscope</mark>
+                        <mark type="keyword">pathway</mark>
+                        <mark type="keyword">tuning</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO: Chapter 10 Some more periscope? -->
+        <question type="extended-answer" id="153">
+            <body>What are some recommendations when going to really large scale?</body>
+            <answers>
+                <answer>
+                    <body>Avoid anything with O(n) where possible, avoid using MPI_COMM_WORLD in favor of more localized
+                        communicaiton.
+                    </body>
+                    <marks>
+                        <mark type="keyword">n</mark>
+                        <mark type="keyword">local</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="154">
+            <body>What is the Gigathread engine? What types of units does it work with?</body>
+            <answers>
+                <answer>
+                    <body>The GPU scheduler that schedules kernels to GPU processing units: SM (Streaming
+                        Multiprocessors), TPC (Texture Processing Clusters), GPC (Graphics Processing Clusters)
+                    </body>
+                    <marks>
+                        <mark type="keyword">schedule</mark>
+                        <mark type="keyword">stream</mark>
+                        <mark type="keyword">texture</mark>
+                        <mark type="keyword">graphic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="155">
+            <body>What are some common options for using accelerators?</body>
+            <answers>
+                <answer>
+                    <body>CUDA, OpenCL, OpenMP, OpenACC</body>
+                    <marks>
+                        <mark type="keyword">CUDA</mark>
+                        <mark type="keyword">opencl</mark>
+                        <mark type="keyword">openmp</mark>
+                        <mark type="keyword">openacc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="156">
+            <body>How are functions annotated in CUDA?</body>
+            <answers>
+                <answer>
+                    <body>__global__(kernels for the GPU), __device__ (functions for GPU, can be called within kernels),
+                        __host__(default, functions for CPU)
+                    </body>
+                    <marks>
+                        <mark type="keyword">global</mark>
+                        <mark type="keyword">gpu</mark>
+                        <mark type="keyword">host</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="157">
+            <body>How is a CUDA kernel called?</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            name&lt;&lt;&lt;dimGrid, dimBlocks>>>(parameter list);
+                        </pre>
+                        Where dimGrid is the number of thread blocks and dimBlock the number of threads per block.
+                    </body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="158">
+            <body>What is a thread block?</body>
+            <answers>
+                <answer>
+                    <body>TODO</body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="159">
+            <body>How is data transferred to/from the GPU in CUDA?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Using a combination of cudaMalloc(devicePtr, size) and cudaMemcpy(devicePtr, hostPtr,
+                        size, direction);
+                    </body>
+                    <marks>
+                        <mark type="keyword">malloc</mark>
+                        <mark type="keyword">memcpy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="160">
+            <body>What CUDA operations are synchronous/asynchronous?</body>
+            <answers>
+                <answer>
+                    <body>Synchronous: cudaMemcpy/cudaThreadSynchronize. Asynchronous: kernel launches.</body>
+                    <marks>
+                        <mark type="keyword">memcpy</mark>
+                        <mark type="keyword">synchronize</mark>
+                        <mark type="keyword">kernel</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="161">
+            <body>What happens when two CUDA kernels are called after each other? How is this fixed?</body>
+            <answers>
+                <answer>
+                    <body>They are executed sequentially. Use cudaStreams to manage parallelism.</body>
+                    <marks>
+                        <mark type="keyword">sequen</mark>
+                        <mark type="keyword">stream</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="162">
+            <body>How can two CUDA kernels be executed in parallel? Write code.</body>
+            <answers>
+                <answer>
+                    <body>
+                        Using CUDA streams:
+                        <pre>
+                            void kernel1();
+                            void kernel2();
+
+                            cudaStream_t stream1;
+                            cudaStream_t stream2;
+
+                            cudaStreamCreate(stream1);
+                            cudaStreamCreate(stream2);
+
+                            kernel1&lt;&lt;&lt;blocks, threads, size=0, stream1>>>();
+                            kernel2&lt;&lt;&lt;blocks, threads, size=0, stream2>>>();
+
+                            cudaStreamDestroy(stream1);
+                            cudaStreamDestroy(stream2);
+
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">stream</mark>
+                        <mark type="keyword">create</mark>
+                        <mark type="keyword">destroy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="163">
+            <body>With what threads do the default CUDA stream stream 0 synchronize?</body>
+            <answers>
+                <answer>
+                    <body>With all threads (no parallelism to default stream).</body>
+                    <marks>
+                        <mark type="keyword">all</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="164">
+            <body>How can you copy memory to a CUDA device without global synchronization?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Using cudaMemcpyAsync(d, s, size, direction, stream) to execute the copy operation on a specific
+                        stream. However, this requires pinned host memory (special calls available).
+                    </body>
+                    <marks>
+                        <mark type="keyword">async</mark>
+                        <mark type="keyword">stream</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="165">
+            <body>What are some advantages/disadvantages of CUDA?</body>
+            <answers>
+                <answer>
+                    <body>Direct mapping of computation to GPUs, however very low level and vendor-locked.</body>
+                    <marks>
+                        <mark type="keyword">gpu</mark>
+                        <mark type="keyword">level</mark>
+                        <mark type="keyword">vendor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="166">
+            <body>Implement fused multiply add on a GPU using OpenMP.</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            <!-- @formatter:off -->
+                            #pragma omp declare target
+                            void vfmadd(int n, double* a, double *b, double *c, double *d)
+                            {
+                                #pragma omp parallel for
+                                for (inti=0; i&lt;n; ++i)
+                                    d[i]=a[i]*b[i]+c[i];
+                            }
+                            #pragma omp end declare target
+                            ...
+                            #pragma omp target map(to:a,b,c),map(from:d)
+                            vfmadd(n,a,b,c,d);
+                            <!-- @formatter:on -->
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">target</mark>
+                        <mark type="keyword">declare</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="167">
+            <body>What are some accelerator programming challenges?</body>
+            <answers>
+                <answer>
+                    <body>Memory management, especially expensive copies. Scheduling.</body>
+                    <marks>
+                        <mark type="keyword">memory</mark>
+                        <mark type="keyword">schedul</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
         <!-- TODO: Indexed, struct, subarray types -->
-        <!-- TODO: Continue Chapter 10 Slide 0 -->
+        <!-- Todo: look at exercises -->
 
         <!-- From Exam 2018 -->
         <question type="extended-answer" id="1000">
