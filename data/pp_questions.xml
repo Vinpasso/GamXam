@@ -2280,8 +2280,271 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="134">
+            <body>What are advantages of two-sided/one-sided communication?</body>
+            <answers>
+                <answer>
+                    <body>Two-sided: Simple concept, clear communication locations, implicit synchronization, no extra
+                        synchronization required. One-sided: Receiver not involved, sender not delayed,
+                    </body>
+                    <marks>
+                        <mark type="keyword">locat</mark>
+                        <mark type="keyword">sync</mark>
+                        <mark type="keyword">receiv</mark>
+                        <mark type="keyword">delay</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="135">
+            <body>What is the idea behind one-sided communication?</body>
+            <answers>
+                <answer>
+                    <body>Provide ability to move data without requiring remote process to synchronize (decouple data
+                        movement with process synchronization).
+                    </body>
+                    <marks>
+                        <mark type="keyword">sync</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="136">
+            <body>What are the necessary steps to use RMA in MPI?</body>
+            <answers>
+                <answer>
+                    <body>Make memory accessible, read/write/update remote memory, add synchronization as needed.</body>
+                    <marks>
+                        <mark type="keyword">access</mark>
+                        <mark type="keyword">memory</mark>
+                        <mark type="keyword">sync</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="137">
+            <body>What is a Window in MPI?</body>
+            <answers>
+                <answer>
+                    <body>An abstraction of a limited memory region, tied to a communicator using the window context.
+                    </body>
+                    <marks>
+                        <mark type="keyword">memory</mark>
+                        <mark type="keyword">region</mark>
+                        <mark type="keyword">communicat</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="138">
+            <body>What options exist to make local memory collectively accessible?</body>
+            <answers>
+                <answer>
+                    <body>
+                        MPI_Win_create for existing memory:
+                        <pre>
+                            int MPI_Win_create(void *base, MPI_Aint size, int disp_unit, MPI_Info info, MPI_Comm comm,
+                            MPI_Win* win);
+                        </pre>
+                        MPI_Win_allocate for memory yet to be allocated:
+                        <pre>
+                            int MPI_Win_allocate(MPI_Aint size, int disp_unit, MPI_Info info, MPI_Comm comm, void *base,
+                            MPI_Win* win);
+                        </pre>
+                        MPI_Win_create_dynamic for when no buffer is currently available. Can later be attached using
+                        MPI_Win_attach.
+                        <pre>
+                            int MPI_Win_create_dynamic(MPI_Info info, MPI_Comm comm, MPI_Win *win);
+                            int MPI_Win_attach(MPI_Win win, void *base, MPI_Aint size);
+                            int MPI_Win_detach(MPI_Win win, void* base);
+                        </pre>
+                    </body>
+                    <marks>
+                        <mark type="keyword">create</mark>
+                        <mark type="keyword">allocate</mark>
+                        <mark type="keyword">dynamic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="139">
+            <body>What does MPI_Get do and how is it called?</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            int MPI_Get(void *origin_addr, int origin_count, MPI_Datatype origin_datatype,
+                            int target_rank, MPI_Aint target_disp, int target_count, MPI_Datatype target_datatype,
+                            MPI_Win win)
+                        </pre>
+                        Fetches data from a target (RMA window) into the origin.
+                    </body>
+                    <marks>
+                        <mark type="keyword">target</mark>
+                        <mark type="keyword">origin</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="140">
+            <body>What does MPI_Put do and how is it called?</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            int MPI_Put(void* origin_addr, int origin_count, MPI_Datatype origin_datatype,
+                            int target_rank, MPI_Aint target_disp, int target_count, MPI_Datatype target_datatype,
+                            MPI_Win win)
+                        </pre>
+                        Stores data from an origin into the target (RMA window).
+                    </body>
+                    <marks>
+                        <mark type="keyword">origin</mark>
+                        <mark type="keyword">target</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="141">
+            <body>Which operation does MPI_Accumulate resemble and what is the difference?</body>
+            <answers>
+                <answer>
+                    <body>Like an MPI_Put, but additionally applies MPI_Op using value already there.</body>
+                    <marks>
+                        <mark type="keyword">put</mark>
+                        <mark type="keyword">op</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="142">
+            <body>Which operation does MPI_Replace resemble and what is the difference?</body>
+            <answers>
+                <answer>
+                    <body>Like an MPI_Put, but does so in an atomic manner. Usually, two puts to the same location can
+                        produce garbage.
+                    </body>
+                    <marks>
+                        <mark type="keyword">put</mark>
+                        <mark type="keyword">atomic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="143">
+            <body>What are the three synchronization models for MPI RMA?</body>
+            <answers>
+                <answer>
+                    <body>Fence (on target), Post(Target)/Start(Origin)/Complete(Origin)/Wait(Target), Lock/Unlock
+                        synchronization (passive target).
+                    </body>
+                    <marks>
+                        <mark type="keyword">fence</mark>
+                        <mark type="keyword">post</mark>
+                        <mark type="keyword">lock</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="144">
+            <body>What does lock/unlock synchronization in MPI RMA not do and what is special about operations within
+                its epoch?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Does not provide mutually exclusive access. All operations in lock/unlock synchronization are
+                        nonblocking.
+                    </body>
+                    <marks>
+                        <mark type="keyword">exclusiv</mark>
+                        <mark type="keyword">nonblock</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="145">
+            <body>How is shared memory used in MPI and what operations can be done on the shared memory?</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            int MPI_Win_allocate_shared(MPI_Aint size, int disp_unit, MPI_Info info, MPI_Comm comm,
+                            void* baseptr, MPI_Win *win)
+                        </pre>
+                        Supports load/store operations
+                    </body>
+                    <marks>
+                        <mark type="keyword">shared</mark>
+                        <mark type="keyword">load</mark>
+                        <mark type="keyword">store</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="146">
+            <body>What are two approaches to combining shared memory and distributed memory, and why?</body>
+            <answers>
+                <answer>
+                    <body>MPI only (single model, portability), hybrid (MPI+OpenMP, etc.)</body>
+                    <marks>
+                        <mark type="keyword">mpi</mark>
+                        <mark type="keyword">openmp</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="147">
+            <body>What levels of MPI threading are available and what call is used to ensure availability?</body>
+            <answers>
+                <answer>
+                    <body>
+                        <pre>
+                            int MPI_Init_thread(int *argc, char ***argv, int required, int *provided)
+                        </pre>
+                        MPI_THREAD_SINGLE, MPI_THREAD_FUNNELED, MPI_THREAD_SERIALIZED, MPI_THREAD_MULTIPLE
+                    </body>
+                    <marks>
+                        <mark type="keyword">init_thread</mark>
+                        <mark type="keyword">single</mark>
+                        <mark type="keyword">funnel</mark>
+                        <mark type="keyword">serialize</mark>
+                        <mark type="keyword">multiple</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="148">
+            <body>What is the consequence of using MPI_THREAD_MULTIPLE?</body>
+            <answers>
+                <answer>
+                    <body>Each call completes on its own, user responsible for ensuring that no racing collectives are
+                        posted.
+                    </body>
+                    <marks>
+                        <mark type="keyword">call</mark>
+                        <mark type="keyword">rac</mark>
+                        <mark type="keyword">collect</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="149">
+            <body>What is the problem with MPI_Probe and threading?</body>
+            <answers>
+                <answer>
+                    <body>If multiple threads probe and return, they may not receive the message they posted. Use
+                        Mprobe/Mrecv to match probe with receive call.
+                    </body>
+                    <marks>
+                        <mark type="keyword">message</mark>
+                        <mark type="keyword">mprobe</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
         <!-- TODO: Indexed, struct, subarray types -->
-        <!-- TODO: Continue Chapter 9 Slide 24 -->
+        <!-- TODO: Continue Chapter 10 Slide 0 -->
 
         <!-- From Exam 2018 -->
         <question type="extended-answer" id="1000">
@@ -2579,7 +2842,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="10012">
-            <body>a)* What is the difference between an eager and a rendevouz protocol?</body>
+            <body>a)* What is the difference between an eager and a rendezvouz protocol?</body>
             <answers>
                 <answer>
                     <body>In an eager protocol, the message gets sent directly. This avoids a handshake but might add
@@ -2769,10 +3032,11 @@
             <answers>
                 <answer>
                     <body>
-                        Student solution:
+                        <p/>
+                        Student solution!
                         <pre>
                             S1 A(i+1, j) to S2 A(i,j) RAW (true) dependency. Distance (1,0), direction (&lt;, =) level 1
-                            S1 B(i, j+1) to S2 B(i,j) WAR (anti) dependency. Distance (0,1), direction (&lt;, =) level 2
+                            S1 B(i, j+1) to S2 B(i,j) WAR (anti) dependency. Distance (0,1), direction (=, &lt;) level 2
                         </pre>
                     </body>
                     <marks></marks>
