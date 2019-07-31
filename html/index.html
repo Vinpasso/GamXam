@@ -75,9 +75,19 @@
                         <label class="custom-file-label text-left" for="question-file">Load question file</label>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary px-3 mb-3" id="load-questions-github"
-                        onclick="loadExamFromURL('../data/pp_questions.xml')">Load Questions from Github
-                </button>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle px-3 mb-3" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Load Questions from Repository
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button" onclick="loadExamFromURL('../data/atse_questions.xml')">Advanced Topics of Software Engineering</button>
+                        <button class="dropdown-item" type="button" onclick="loadExamFromURL('../data/pp_questions.xml')">Parallel Programming</button>
+                        <button class="dropdown-item" type="button" onclick="loadExamFromURL('../data/ppe_questions.xml')">Parallel Program Engineering</button>
+                        <button class="dropdown-item" type="button" onclick="loadExamFromURL('../data/spn_questions.xml')">Secure Payment Networks</button>
+                        <button class="dropdown-item" type="button" onclick="loadExamFromURL('../data/test_questions.xml')">Test Question Catalogue</button>
+                        <button class="dropdown-item" type="button" onclick="loadExamFromURL('../data/vt_questions.xml')">Virtualization Techniques</button>
+                    </div>
+                </div>
                 <div class="input-group container-fluid pb-3">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="progress-file" disabled>
