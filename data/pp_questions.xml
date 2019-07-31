@@ -2032,7 +2032,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="119">
-            <body>What does MPI_Sendrec_replace do? (Write code).</body>
+            <body>What does MPI_Sendrecv_replace do? (Write code).</body>
             <answers>
                 <answer>
                     <body>
