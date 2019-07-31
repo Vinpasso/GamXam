@@ -11,7 +11,6 @@ The current question catalogues available are
 | Advanced Topics of Software Engineering | IN2309, IN2126 | WS 18/19 | comprehensive |
 | Parallel Programming | IN2147 | SS 19 | comprehensive |
 | Parallel Programming Engineering | IN2310 | SS 19 | comprehensive |
-| Parallel Programming Engineering | IN2310 | SS 19 | comprehensive |
 | Secure Payment Networks | IN2161 | SS 19 | unknown |
 | Test Question Catalogue | N/A | N/A | for testing |
 | Virtualization Techniques | IN2125 | WS 18/19 | comprehensive, needs format update |
