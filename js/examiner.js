@@ -256,7 +256,7 @@ function postQuestion(index, newQuestion) {
     $("#answer-ui").css("display", "block");
     $("#solution-ui").css("display", "none");
     $("#no-question-ui").css("display", "none");
-    $("#question-card-header").html("Question " + index + " (stage " + (getStageOfQuestion(index) + 1) + ")");
+    $("#question-card-header").html("Question " + index + " (Stage " + (getStageOfQuestion(index) + 1) + ")");
     question = newQuestion;
     $("#question-card").html($(newQuestion).children("body").html());
     $("#response").val("");
