@@ -191,7 +191,7 @@ function showAlert(content, type = 'alert-primary') {
         "                    </div>\n");
 }
 
-function exportProgressToXML() {
+function exportProgressToXML(dest) {
     let exportedElements = 0;
     let xml = ["<?xml version=\"1.0\" encoding=\"UTF-8\" ?>", "<progress>"];
 
@@ -220,6 +220,8 @@ function exportProgressToXML() {
 
     xml.push("</progress>");
 
+    showAlert("Successfully exported " + exportedElements + " progress elements to " + dest + ".", "alert-success");
+
     return xml.join("");
 }
 
@@ -229,7 +231,7 @@ function replaceWhitespace(filename) {
 }
 
 function saveProgress() {
-    let text = exportProgressToXML();
+    let text = exportProgressToXML('file');
     let blob = new Blob([text], {type: 'text/xml'});
     let anchor = document.createElement('a');
 
@@ -241,14 +243,12 @@ function saveProgress() {
     document.body.removeChild(anchor);
 
     window.URL.revokeObjectURL(blob);
-    showAlert("Successfully exported " + exportedElements + " progress elements to file.", "alert-success");
 }
 
 
 function saveLocalProgress() {
-    let text = exportProgressToXML();
+    let text = exportProgressToXML('local browser storage');
     window.localStorage.setItem(local_storage_tag, text);
-    showAlert("Successfully exported " + exportedElements + " progress elements to browser storage.", "alert-success");
 }
 
 function postQuestion(index, newQuestion) {
