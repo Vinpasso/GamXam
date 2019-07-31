@@ -16,7 +16,7 @@ function loadExam(file) {
             let xmlStr = reader.result;
             let domxml = new DOMParser().parseFromString(xmlStr, "text/xml");
             handleExam(domxml);
-        }catch (e) {
+        } catch (e) {
             showAlert("Failed to load exam: " + e.toString(), "alert-danger")
         }
     };
@@ -40,7 +40,7 @@ function loadExamFromURL(url) {
 }
 
 function handleExam(xmlEncodedExam) {
-    if(xmlEncodedExam === null) {
+    if (xmlEncodedExam === null) {
         showAlert("Failed to load exam. Please check console.", "alert-danger");
         return;
     }
@@ -130,7 +130,7 @@ function handleProgress(xmlString) {
     let numImported = 0;
     let domxml = new DOMParser().parseFromString(xmlString, "text/xml");
 
-    if($(domxml).find("examid").get(0).innerHTML !== $(exam).find("head > id").get(0).innerHTML) {
+    if ($(domxml).find("examid").get(0).innerHTML !== $(exam).find("head > id").get(0).innerHTML) {
         showAlert("Exam has different id to progress. Refusing to load.", "alert-danger");
         return;
     }
@@ -220,7 +220,6 @@ function exportProgressToXML() {
 
     xml.push("</progress>");
 
-    showAlert("Successfully exported " + exportedElements + " progress elements.", "alert-success");
     return xml.join("");
 }
 
@@ -242,12 +241,14 @@ function saveProgress() {
     document.body.removeChild(anchor);
 
     window.URL.revokeObjectURL(blob);
+    showAlert("Successfully exported " + exportedElements + " progress elements to file.", "alert-success");
 }
 
 
 function saveLocalProgress() {
     let text = exportProgressToXML();
     window.localStorage.setItem(local_storage_tag, text);
+    showAlert("Successfully exported " + exportedElements + " progress elements to browser storage.", "alert-success");
 }
 
 function postQuestion(index, newQuestion) {
@@ -255,7 +256,7 @@ function postQuestion(index, newQuestion) {
     $("#answer-ui").css("display", "block");
     $("#solution-ui").css("display", "none");
     $("#no-question-ui").css("display", "none");
-    $("#question-card-header").html("Question " + index);
+    $("#question-card-header").html("Question " + index + " (stage " + (getStageOfQuestion(index) + 1) + ")");
     question = newQuestion;
     $("#question-card").html($(newQuestion).children("body").html());
     $("#response").val("");
