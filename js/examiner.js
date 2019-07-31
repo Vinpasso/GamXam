@@ -469,4 +469,8 @@ $("document").ready(function () {
         let selectedFile = $("#progress-file")[0].files[0];
         loadProgress(selectedFile);
     });
+    // Disable window controls when running in electron
+    if(!(window && window.process && window.process.type)) {
+        $("#window-controls").css("display", "none");
+    }
 });
