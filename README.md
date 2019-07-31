@@ -5,8 +5,9 @@ Go to [GamXam Github Page](https://vinpasso.github.io/GamXam/html/index.html) fo
 
 ### Available question catalogues
 The current question catalogues available are
+
 | Name | Code | Semester | Catalogue status |
-| ---- | ---- | -------- | ---------------- |
+| --- | --- | --- | --- |
 | Advanced Topics of Software Engineering | IN2309, IN2126 | WS 18/19 | comprehensive |
 | Parallel Programming | IN2147 | SS 19 | comprehensive |
 | Parallel Programming Engineering | IN2310 | SS 19 | comprehensive |
