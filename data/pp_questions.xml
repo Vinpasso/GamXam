@@ -1366,7 +1366,7 @@
             <body>When does an iteration i precede an iteration j?</body>
             <answers>
                 <answer>
-                    <body>Iff, \exists k, i[r] = j[r], \forall r: 1&gt;=r&gt;=k and i[k]&gt;j[k]</body>
+                    <body>Iff, \exists k, i[r] = j[r], i[k]&lt;j[k], and \forall r: 1&lt;=r&lt;=k</body>
                     <marks>
                         <mark type="keyword">k</mark>
                         <mark type="keyword">r</mark>
