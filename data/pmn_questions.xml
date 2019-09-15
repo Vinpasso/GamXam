@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exam xmlns="https://vpt1.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://vpt1.org questions.xsd">
+    <head>
+        <title>Question Catalog: Personal Mobile Networks</title>
+        <version>1.0</version>
+        <id>990</id>
+    </head>
+    <body>
+        <!-- Tutorial 1: Qualitative Questions -->
+        <question type="extended-answer" id="0">
+            <body>What are the issues which affect the decision between setting up a wired network or a wireless
+                network?
+            </body>
+            <answers>
+                <answer>
+                    <body>Cost, Ease of Deployment, Scalability, and Flexibility.</body>
+                    <marks>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">deployment</mark>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">flexibility</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1">
+            <body>What are some advantages of wireless networks?</body>
+            <answers>
+                <answer>
+                    <body>Mobility, Ease of deployment, Reduced Cost-of-Ownership, Scalability, and Flexibility.</body>
+                    <marks>
+                        <mark type="keyword">mobility</mark>
+                        <mark type="keyword">ease of deployment</mark>
+                        <mark type="keyword">reduced cost-of-ownership</mark>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">flexibility</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="2">
+            <body>What are some disadvantages of wireless networks?</body>
+            <answers>
+                <answer>
+                    <body>Setup and Configuration, Stability, Security, and Speed.</body>
+                    <marks>
+                        <mark type="keyword">setup and configuration</mark>
+                        <mark type="keyword">stability</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">speed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="3">
+            <body>List and discuss 3 aspects/areas of personal mobile communication impacted by mobility.</body>
+            <answers>
+                <answer>
+                    <body>Mobile Devices: Lighter, more robust, constrained by battery; Network Protocols: Change in
+                        name, address, location, etc.; Security: Endpoint authentication is harder; Performance: Network
+                        is slower and delay and jitter are increased; Operation: Need software resources to track and
+                        manage devices; Applications: Need to deal with changes in connectivity and QoS;
+                    </body>
+                    <marks>
+                        <mark type="keyword">mobile devices</mark>
+                        <mark type="keyword">network protocol</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">performance</mark>
+                        <mark type="keyword">operation</mark>
+                        <mark type="keyword">application</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="4">
+            <body>What is the Hidden Node Problem and how is it solved?</body>
+            <answers>
+                <answer>
+                    <body>When two nodes that are invisible to each other communicate with a third node, their
+                        transmissions interfere, as they can not sense the carrier. Handshaking using RTS/CTS (Request
+                        to Send/Clear to Send) is implemented in conjunction with the CSMA/CA to overcome this problem.
+                    </body>
+                    <marks>
+                        <mark type="keyword">invisible</mark>
+                        <mark type="keyword">interfere</mark>
+                        <mark type="keyword">RTS/CTS</mark>
+                        <mark type="keyword">CSMA/CA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="5">
+            <body>What is the Exposed Node Problem and how is it solved?</body>
+            <answers>
+                <answer>
+                    <body>When a node is transmitting to another node and a third node wants to transmit to a fourth
+                        one, the third node may falsely believe that it can not do so because it would cause
+                        interference. In reality the second node might be outside of transmission range of node three
+                        and the fourth node out of transmission range of node one. RTS/CTS messages may be used to
+                        overcome this problem under certain circumstances.
+                    </body>
+                    <marks>
+                        <mark type="keyword">false</mark>
+                        <mark type="keyword">interfere</mark>
+                        <mark type="keyword">outside</mark>
+                        <mark type="keyword">RTS/CTS</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Tutorial 1: Quantitative Questions -->
+        <question type="extended-answer" id="6">
+            <body>What is the length of a full-wave antenna to receive a 2.4 GHz RF transmission?</body>
+            <answers>
+                <answer>
+                    <body>0,125m</body>
+                    <marks>
+                        <mark type="keyword">0,125m</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="7">
+            <body>What is the length of a full-wave antenna to receive a 90.5 MHz FM transmission?</body>
+            <answers>
+                <answer>
+                    <body>3,32m</body>
+                    <marks>
+                        <mark type="keyword">3,32m</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="8">
+            <body>A signal has an average power of 6W and it experiences noise at an average power of 3W. Calculate the
+                SNR in decimal and in dB.
+            </body>
+            <answers>
+                <answer>
+                    <body>2 or 3,01dB</body>
+                    <marks>
+                        <mark type="keyword">2</mark>
+                        <mark type="keyword">3,01dB</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9">
+            <body>A signal has an average power of 6W and it experiences noise at an average power of 12W. Calculate the
+                SNR in decimal and in dB.
+            </body>
+            <answers>
+                <answer>
+                    <body>4 or 6,02dB</body>
+                    <marks>
+                        <mark type="keyword">4</mark>
+                        <mark type="keyword">6,02dB</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>A signal has an average power of 60W and it experiences noise at an average power of 3W. Calculate the
+                SNR in decimal and in dB.
+            </body>
+            <answers>
+                <answer>
+                    <body>20 or 13,01dB</body>
+                    <marks>
+                        <mark type="keyword">20</mark>
+                        <mark type="keyword">13,01dB</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11">
+            <body>A signal has an average peak amplitude of 4V and it experiences noise at an average peak amplitude of
+                2V. Calculate the SNR in decimal and in dB.
+            </body>
+            <answers>
+                <answer>
+                    <body>4 or 6,02dB</body>
+                    <marks>
+                        <mark type="keyword">4</mark>
+                        <mark type="keyword">6,02dB</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12">
+            <body>A signal has an average peak amplitude of 8V and it experiences noise at an average peak amplitude of
+                2V. Calculate the SNR in decimal and in dB.
+            </body>
+            <answers>
+                <answer>
+                    <body>16 or 12,04dB</body>
+                    <marks>
+                        <mark type="keyword">16</mark>
+                        <mark type="keyword">12,04dB</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="13">
+            <body>A signal has an average peak amplitude of 40V and it experiences noise at an average peak amplitude of
+                2V. Calculate the SNR in decimal and in dB.
+            </body>
+            <answers>
+                <answer>
+                    <body>400 or 26,02dB</body>
+                    <marks>
+                        <mark type="keyword">400</mark>
+                        <mark type="keyword">26,02dB</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+    </body>
+</exam>
