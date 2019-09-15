@@ -111,113 +111,182 @@
             </answers>
         </question>
 
-        <!-- Tutorial 1: Quantitative Questions -->
-        <question type="extended-answer" id="6">
-            <body>What is the length of a full-wave antenna to receive a 2.4 GHz RF transmission?</body>
-            <answers>
-                <answer>
-                    <body>0,125m</body>
-                    <marks>
-                        <mark type="keyword">0,125m</mark>
-                    </marks>
-                </answer>
-            </answers>
-        </question>
-        <question type="extended-answer" id="7">
-            <body>What is the length of a full-wave antenna to receive a 90.5 MHz FM transmission?</body>
-            <answers>
-                <answer>
-                    <body>3,32m</body>
-                    <marks>
-                        <mark type="keyword">3,32m</mark>
-                    </marks>
-                </answer>
-            </answers>
-        </question>
-        <question type="extended-answer" id="8">
-            <body>A signal has an average power of 6W and it experiences noise at an average power of 3W. Calculate the
-                SNR in decimal and in dB.
+        <!-- Tutorial 2: Qualitative Questions -->
+        <question type="extended-answer" id="14">
+            <body>List 3 impairments to wireless signal propagation and explain how each impairment can be alleviated.
             </body>
             <answers>
                 <answer>
-                    <body>2 or 3,01dB</body>
+                    <body>Attenuation and Attenuation Distortion: Adaptive equalizer; Free Space Loss: Boost signal
+                        strength; Multipath Propagation: Forward error correction;
+                    </body>
                     <marks>
-                        <mark type="keyword">2</mark>
-                        <mark type="keyword">3,01dB</mark>
+                        <mark type="keyword">Attenuation and Attenuation Distortion</mark>
+                        <mark type="keyword">Free Space Loss</mark>
+                        <mark type="keyword">Multipath Propagation</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="9">
-            <body>A signal has an average power of 6W and it experiences noise at an average power of 12W. Calculate the
-                SNR in decimal and in dB.
+        <question type="extended-answer" id="15">
+            <body>List 3 common sources of noise in wireless communication systems and explain their causes.</body>
+            <answers>
+                <answer>
+                    <body>Thermal noise: Function of temperature; Intermodulation noise: Occurs if signals with
+                        different frequencies share the same medium; Crosstalk: One circuit accidentally picks up
+                        signals in another
+                    </body>
+                    <marks>
+                        <mark type="keyword">thermal</mark>
+                        <mark type="keyword">intermodulation</mark>
+                        <mark type="keyword">crosstalk</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16">
+            <body>What are the 2 common algorithms used in an adaptive filter to derive the optimum weights of the
+                filter? State the cost functions used by the 2 algorithms to minimize the error signal.
             </body>
             <answers>
                 <answer>
-                    <body>4 or 6,02dB</body>
+                    <body>Least Mean Squares (LMS) and Recursive Least Square (RLS).</body>
                     <marks>
-                        <mark type="keyword">4</mark>
-                        <mark type="keyword">6,02dB</mark>
+                        <mark type="keyword">least mean square</mark>
+                        <mark type="keyword">recursive least square</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="10">
-            <body>A signal has an average power of 60W and it experiences noise at an average power of 3W. Calculate the
-                SNR in decimal and in dB.
+        <question type="extended-answer" id="17">
+            <body>What are the 3 common important signal propagation mechanisms that result in multipath propagation of
+                wireless signals?
             </body>
             <answers>
                 <answer>
-                    <body>20 or 13,01dB</body>
+                    <body>Reflection, Diffraction, and Scattering.</body>
                     <marks>
-                        <mark type="keyword">20</mark>
-                        <mark type="keyword">13,01dB</mark>
+                        <mark type="keyword">reflection</mark>
+                        <mark type="keyword">diffraction</mark>
+                        <mark type="keyword">scattering</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="11">
-            <body>A signal has an average peak amplitude of 4V and it experiences noise at an average peak amplitude of
-                2V. Calculate the SNR in decimal and in dB.
-            </body>
+        <question type="extended-answer" id="18">
+            <body>What are the characteristics of a Rayleigh fading channel?</body>
             <answers>
                 <answer>
-                    <body>4 or 6,02dB</body>
+                    <body>Large number of multipath signals with no dominant signal along line-of-sight.</body>
                     <marks>
-                        <mark type="keyword">4</mark>
-                        <mark type="keyword">6,02dB</mark>
+                        <mark type="keyword">multipath</mark>
+                        <mark type="keyword">no dominant</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="12">
-            <body>A signal has an average peak amplitude of 8V and it experiences noise at an average peak amplitude of
-                2V. Calculate the SNR in decimal and in dB.
-            </body>
+        <question type="extended-answer" id="19">
+            <body>What are the characteristics of a Rician fading channel?</body>
             <answers>
                 <answer>
-                    <body>16 or 12,04dB</body>
+                    <body>Large number of multipath signals with a dominant signal.</body>
                     <marks>
-                        <mark type="keyword">16</mark>
-                        <mark type="keyword">12,04dB</mark>
+                        <mark type="keyword">multipath</mark>
+                        <mark type="keyword">dominant</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="13">
-            <body>A signal has an average peak amplitude of 40V and it experiences noise at an average peak amplitude of
-                2V. Calculate the SNR in decimal and in dB.
-            </body>
+        <question type="extended-answer" id="20">
+            <body>What are the 2 basic properties that determine the quality of digitized speech signal?</body>
             <answers>
                 <answer>
-                    <body>400 or 26,02dB</body>
+                    <body>Sampling rate and bit depth.</body>
                     <marks>
-                        <mark type="keyword">400</mark>
-                        <mark type="keyword">26,02dB</mark>
+                        <mark type="keyword">sampling rate</mark>
+                        <mark type="keyword">bit rate</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
+        <!-- not complete -->
 
+        <!-- Tutorial 3: Qualitative Questions -->
+        <question type="extended-answer" id="30">
+            <body>List and briefly explain the 3 basic types of digital modulation.</body>
+            <answers>
+                <answer>
+                    <body>Amplitude (ASK), Frequency (FSK), Phase (PSK) Shift Keying</body>
+                    <marks>
+                        <mark type="keyword">amplitude</mark>
+                        <mark type="keyword">frequency</mark>
+                        <mark type="keyword">phase</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="31">
+            <body>What are the 2 transmission techniques used?</body>
+            <answers>
+                <answer>
+                    <body>Narrow‐band transmission: Each signal transmits on one radio frequency, or a very narrow range
+                        of frequencies; Spread spectrum transmission: Transmitter takes a narrow band signal and spreads
+                        it over a broader portion of the radio frequency band
+                    </body>
+                    <marks>
+                        <mark type="keyword">narrow-band</mark>
+                        <mark type="keyword">spread spectrum</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="31">
+            <body>What are the 2 common spread spectrum techniques used? Briefly explain their operations.</body>
+            <answers>
+                <answer>
+                    <body>Frequency Hopping Spread Spectrum (FHSS): Use a range of frequencies and change frequency
+                        multiple times during transmission; Direct Sequence Spread Spectrum (DSSS): Uses an expanded
+                        redundant code to encode each data bit before transmitting
+                    </body>
+                    <marks>
+                        <mark type="keyword">frequency hopping spread spectrum</mark>
+                        <mark type="keyword">direct sequence spread spectrum</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="32">
+            <body>What are the 3 most common techniques adopted to support multiple access in wireless communication?
+            </body>
+            <answers>
+                <answer>
+                    <body>Frequency Division Multiple Access (FDMA), Time Division Multiple Access (TDMA), and Code
+                        Division Multiple Access (CDMA)
+                    </body>
+                    <marks>
+                        <mark type="keyword">Frequency Division Multiple Access</mark>
+                        <mark type="keyword">Time Division Multiple Access</mark>
+                        <mark type="keyword">Code Division Multiple Access</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="33">
+            <body>FDMA is susceptible to crosstalk. Suggest a common mechanism to reduce crosstalk. What is the
+                disadvantage of using this mechanism.
+            </body>
+            <answers>
+                <answer>
+                    <body>Special guard band frequencies are used to prevent the frequencies from “bleeding” over one
+                        another. This reduces usable bandwidth.
+                    </body>
+                    <marks>
+                        <mark type="keyword">guard band</mark>
+                        <mark type="keyword">reduce</mark>
+                        <mark type="keyword">bandwidth</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
