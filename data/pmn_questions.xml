@@ -240,7 +240,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="31">
+        <question type="extended-answer" id="32">
             <body>What are the 2 common spread spectrum techniques used? Briefly explain their operations.</body>
             <answers>
                 <answer>
@@ -255,7 +255,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="32">
+        <question type="extended-answer" id="33">
             <body>What are the 3 most common techniques adopted to support multiple access in wireless communication?
             </body>
             <answers>
@@ -271,7 +271,7 @@
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="33">
+        <question type="extended-answer" id="34">
             <body>FDMA is susceptible to crosstalk. Suggest a common mechanism to reduce crosstalk. What is the
                 disadvantage of using this mechanism.
             </body>
@@ -284,6 +284,192 @@
                         <mark type="keyword">guard band</mark>
                         <mark type="keyword">reduce</mark>
                         <mark type="keyword">bandwidth</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Tutorial 4: Qualitative Questions -->
+        <question type="extended-answer" id="35">
+            <body>How many active master device(s) and active slave device(s) can be supported in a Bluetooth piconet?
+            </body>
+            <answers>
+                <answer>
+                    <body>1 active master and 7 active slaves.</body>
+                    <marks>
+                        <mark type="keyword">1</mark>
+                        <mark type="keyword">7</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="36">
+            <body>Bluetooth slave devices can communicate with one another directly. Is this statement true or false?
+            </body>
+            <answers>
+                <answer>
+                    <body>False. Slave devices can only communicate with the master.</body>
+                    <marks>
+                        <mark type="keyword">False</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="37">
+            <body>How does Bluetooth enable all devices in a Piconet to communicate without interference and to allow
+                them to share the channel?
+            </body>
+            <answers>
+                <answer>
+                    <body>It uses FHSS to allow devices to communicate without interference and TDD-TDMA to share the
+                        channel.
+                    </body>
+                    <marks>
+                        <mark type="keyword">FHSS</mark>
+                        <mark type="keyword">TDD-TDMA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="38">
+            <body>Explain how a Bluetooth device performs the discovery of the other Bluetooth devices within its
+                range.
+            </body>
+            <answers>
+                <answer>
+                    <body>Inquiry and Page from the Inquiring Device, Inquiry and Page Scan from the other devices
+                    </body>
+                    <marks>
+                        <mark type="keyword">Inquiry</mark>
+                        <mark type="keyword">Page</mark>
+                        <mark type="keyword">Page Scan</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="39">
+            <body>With FHSS, explain how the Bluetooth discovery process ensure that the receiver can be discovered
+                since they may be using different frequency channels?
+            </body>
+            <answers>
+                <answer>
+                    <body>Inquiring device inquires using many channels and receivers can issue multiple inquiry
+                        responses.
+                    </body>
+                    <marks>
+                        <mark type="keyword">many channels</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="40">
+            <body>Explain why the Bluetooth discovery process can take as long as 10.24s.</body>
+            <answers>
+                <answer>
+                    <body>Full scan of 32 frequencies (with 128 repetitions) is repeated up to 4 times: 4 * 2,56s.
+                    </body>
+                    <marks>
+                        <mark type="keyword">32 frequencies</mark>
+                        <mark type="keyword">128 repetitions</mark>
+                        <mark type="keyword">4 times</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="41">
+            <body>Explain the difference in the operation of a Bluetooth slave device being assigned a 3‐bit Active
+                Member Address (AMA) versus one being assigned an 8‐bit Passive Member Address (PMA)!
+            </body>
+            <answers>
+                <answer>
+                    <body>Active devices (with AMA) can send and receive data. Parked devices release the AMA and are
+                        assigned a PMA. They cannot send data but can listen on a beacon interval.
+                    </body>
+                    <marks>
+                        <mark type="keyword">send</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="42">
+            <body>What is the AMA of the Bluetooth Master? What address is used by the Bluetooth Master to send a
+                broadcast message?
+            </body>
+            <answers>
+                <answer>
+                    <body>Both are 0.</body>
+                    <marks>
+                        <mark type="keyword">0</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="43">
+            <body>List and explain the 3 power saving modes for Bluetooth devices!</body>
+            <answers>
+                <answer>
+                    <body>Hold: Master and slave agree on a one‐time HOLD duration after which the slave synchronizes
+                        with the channel traffic and data transfer restarts. Slave keeps AMA.; Sniff: Slave listens at a
+                        reduced rate and keeps AMA.; Park: Slave looses AMA, gets PMA, and can not send any more.
+                    </body>
+                    <marks>
+                        <mark type="keyword">hold</mark>
+                        <mark type="keyword">sniff</mark>
+                        <mark type="keyword">park</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="44">
+            <body>What is the purpose of Bluetooth pairing?</body>
+            <answers>
+                <answer>
+                    <body>Pairing using PIN is a security mechanism to restrict access to authorised users only.</body>
+                    <marks>
+                        <mark type="keyword">security</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="45">
+            <body>Explain the digital modulation used by Bluetooth!</body>
+            <answers>
+                <answer>
+                    <body>GFSK has a carrier frequency, called the center frequency (fc) and it uses 2 different
+                        frequencies to indicate a 1 (higher) or a 0 (lower) being tx.
+                    </body>
+                    <marks>
+                        <mark type="keyword">center frequency</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="46">
+            <body>List and explain the 2 types of links that can be created between the Bluetooth master and slave!
+            </body>
+            <answers>
+                <answer>
+                    <body>Syn Connection Oriented (SCO): faster, for real‐time data, max 3 links to 1 master; Asyn
+                        Connection‐Less (ACL): slower, best effort transfer, max 1 link to 1 master
+                    </body>
+                    <marks>
+                        <mark type="keyword">SCO</mark>
+                        <mark type="keyword">ACL</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="47">
+            <body>What are some of the differences between Standard Bluetooth and Bluetooth Low Energy (BLE)?</body>
+            <answers>
+                <answer>
+                    <body>BLE uses Adaptive Frequency Hopping (AFH) and has no limit on the number of slaves. It also
+                        features very low-power sleep modes. (AND MORE)
+                    </body>
+                    <marks>
+                        <mark type="keyword">AFH</mark>
+                        <mark type="keyword">number of slaves</mark>
+                        <mark type="keyword">low-power sleep</mark>
                     </marks>
                 </answer>
             </answers>
