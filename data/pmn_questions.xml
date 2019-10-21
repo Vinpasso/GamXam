@@ -474,5 +474,306 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Tutorial 5: Qualitative Questions -->
+        <question type="extended-answer" id="48">
+            <body>What are two factors that affect the throughput of a user in a WLAN?</body>
+            <answers>
+                <answer>
+                    <body>Distance from AP; Number of users sharing the aggregate bandwidth of the AP</body>
+                    <marks>
+                        <mark type="keyword">distance</mark>
+                        <mark type="keyword">number of users</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="49">
+            <body>What are the two general modes for WLAN?</body>
+            <answers>
+                <answer>
+                    <body>Infrastructure mode and Ad-hoc mode</body>
+                    <marks>
+                        <mark type="keyword">infrastructure</mark>
+                        <mark type="keyword">ad-hoc</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="50">
+            <body>What are characteristics of WLAN in infrastructure mode?</body>
+            <answers>
+                <answer>
+                    <body>Stations communicate with AP only; AP requires strategic placement; AP connects to wired
+                        backbone network
+                    </body>
+                    <marks>
+                        <mark type="keyword">communicate with AP</mark>
+                        <mark type="keyword">strategic placement</mark>
+                        <mark type="keyword">wired backbone network</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="51">
+            <body>What are characteristics of WLAN in ad-hoc mode?</body>
+            <answers>
+                <answer>
+                    <body>No fixed connection; Nodes transmit directly to each other; Poor performance as users are
+                        spread out
+                    </body>
+                    <marks>
+                        <mark type="keyword">no fixed connection</mark>
+                        <mark type="keyword">transmit directly</mark>
+                        <mark type="keyword">poor performance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="52">
+            <body>List and briefly explain the services provided by a WLAN stationt!</body>
+            <answers>
+                <answer>
+                    <body>Authetication: proves identity of one station to another; Deauthentication: removes
+                        previously authenticated station; Privacy: prevents messages from being read by unintended
+                        recipient; Data Delivery: provides reliable delivery from MAC of one station to MAC of other
+                        stations
+                    </body>
+                    <marks>
+                        <mark type="keyword">authentication</mark>
+                        <mark type="keyword">deauthentication</mark>
+                        <mark type="keyword">privacy</mark>
+                        <mark type="keyword">data delivery</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="53">
+            <body>List and briefly explain the services provided by a WLAN Access Point!</body>
+            <answers>
+                <answer>
+                    <body>Association: makes logical connection between stations and AP; Disassociation: used to inform
+                        AP that station is no longer requiring service; Reassociation: used when station moves to new
+                        BSS (new AP); Distribution: determines where to send packets; Integration: allows connection to
+                        other wired and wireless LANs
+                    </body>
+                    <marks>
+                        <mark type="keyword">association</mark>
+                        <mark type="keyword">disassociation</mark>
+                        <mark type="keyword">reassociation</mark>
+                        <mark type="keyword">distribution</mark>
+                        <mark type="keyword">integration</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="54">
+            <body>List any three general types of Media Access Control!</body>
+            <answers>
+                <answer>
+                    <body>TDMA, FDMA, FHSS, DSSS, CDMA, SDMA, and Random Access</body>
+                    <marks>
+                        <mark type="keyword">TDMA</mark>
+                        <mark type="keyword">FDMA</mark>
+                        <mark type="keyword">FHSS</mark>
+                        <mark type="keyword">DSSS</mark>
+                        <mark type="keyword">CDMA</mark>
+                        <mark type="keyword">SDMA</mark>
+                        <mark type="keyword">Random Access</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="55">
+            <body>List the two coordination functions used for media access in WLAN and list two characteristics for
+                each function.
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        DCF (Distributed Coordination Function): For infrastructure and ad-hoc mode, uses CSMA/CA+ACK
+                        and contention resolution; PCF(Point Coordination Function): For infrastructure mode only, the
+                        AP has to allow a station to send
+                    </body>
+                    <marks>
+                        <mark type="keyword">DCF</mark>
+                        <mark type="keyword">PCF</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="56">
+            <body>What is Inter Frame Spacing (IFS) and what is its purpose?</body>
+            <answers>
+                <answer>
+                    <body>Refers to time interval between two successive frames by any station. Used to reduce collision
+                        probability and prioritize different packets.
+                    </body>
+                    <marks>
+                        <mark type="keyword">interval between two frames</mark>
+                        <mark type="keyword">reduce collision</mark>
+                        <mark type="keyword">prioritize</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="57">
+            <body>List and explain the 4 IFS used in the basic 802.11 WLAN operation!</body>
+            <answers>
+                <answer>
+                    <body>SIFS (Short IFS): Used for immediate response actions (e.g. ACK); PIFS (Point coordination
+                        function IFS): Used by centralized controller in PCF scheme; DIFS (Distributed coordination
+                        function IFS): Used as minimum delay of asynchronous frames contending for access; EIFS
+                        (Extended IFS): Used for resynchronization when PHY detects incorrect MAC frame reception
+                    </body>
+                    <marks>
+                        <mark type="keyword">SIFS</mark>
+                        <mark type="keyword">PIFS</mark>
+                        <mark type="keyword">DIFS</mark>
+                        <mark type="keyword">EIFS</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="58">
+            <body>List 3 control access techniques in DCF and explain the scenario in which the control access technique
+                is most applicable!
+            </body>
+            <answers>
+                <answer>
+                    <body>CSMA/CA+ACK: Error-free channel; RTS/CTS: presence of hidden terminal/ interference;
+                        Fragmentation: high number of retransmissions
+                    </body>
+                    <marks>
+                        <mark type="keyword">CSMA/CA+ACK</mark>
+                        <mark type="keyword">RTS/CTS</mark>
+                        <mark type="keyword">fragmentation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="59">
+            <body>What is the function of the Network Allocation Vector (NAV) in 802.11?</body>
+            <answers>
+                <answer>
+                    <body>It is used for the implementation of virtual carrier sense that works by specifying the
+                        duration of a transmission in the frame header. Stations can copy the duration value into their
+                        NAV and count down until the medium is not busy any more. It also helps conserving power by
+                        reducing the need for physical carrier sensing.
+                    </body>
+                    <marks>
+                        <mark type="keyword">virtual carrier sense</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60">
+            <body>Explain what happens when the Contention Period in one superframe (i.e. contention-free repetition
+                period) overruns into the next superframe!
+            </body>
+            <answers>
+                <answer>
+                    <body>The CFP is foreshortened.</body>
+                    <marks>
+                        <mark type="keyword">foreshorten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="61">
+            <body>Briefly explain how OFDM and MIMO operate!</body>
+            <answers>
+                <answer>
+                    <body>Orthogonal Frequency Division Multiplexing: Divides the wide channel into many subchannels
+                        (called subcarriers), Sends part of the message frame in each subcarrier in parallel, Subcarrier
+                        tx are redundant; Multiple Input/Multiple Output: Two or more spatial streams can be sent at the
+                        same time in the same channel but from different sending antennas, Reveiver uses multipath time
+                        differences to distinguish between them
+                    </body>
+                    <marks>
+                        <mark type="keyword">orthogonal frequency division multiplexing</mark>
+                        <mark type="keyword">multiple input/multiple output</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="62">
+            <body>What are the advantages of OFDM and MIMO?</body>
+            <answers>
+                <answer>
+                    <body>OFDM: Very easy and efficient in dealing with multi‐path, Robust against narrow‐band
+                        interference; MIMO: Increases throughput, Robust against multipath fading
+                    </body>
+                    <marks>
+                        <mark type="keyword">multipath</mark>
+                        <mark type="keyword">narrow-band interference</mark>
+                        <mark type="keyword">throughput</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="63">
+            <body>List and briefly explain the techniques used in 802.11n to improve throughput.</body>
+            <answers>
+                <answer>
+                    <body>MIMO: up to 4 spatial streams; Channel Bonding: use two separate channels at once; Frame
+                        Aggregation: combine small frames to decrease protocol overhead; Utilization of
+                        dual‐radio RF band: one radio for 2,5GHz and 5GHz region each
+                    </body>
+                    <marks>
+                        <mark type="keyword">mimo</mark>
+                        <mark type="keyword">channel bonding</mark>
+                        <mark type="keyword">frame aggregation</mark>
+                        <mark type="keyword">dual-radio rf band</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="64">
+            <body>List and briefly explain the techniques used in 802.11ac to improve throughput.</body>
+            <answers>
+                <answer>
+                    <body>Beamforming with MIMO: up to 8 spatial streams that are directed towards the target; Channel
+                        Bonding: use two separate channels at once; MU-MIMO (Multi-User MIMO): AP can transmit multiple
+                        frames to different clients simultaneously on the same frequency spectrum; Denser Modulation:
+                        256 QAM
+                    </body>
+                    <marks>
+                        <mark type="keyword">beamforming</mark>
+                        <mark type="keyword">channel bonding</mark>
+                        <mark type="keyword">mu-mimo</mark>
+                        <mark type="keyword">denser modulation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="65">
+            <body>What are the 2 coordination functions used in 802.11e?</body>
+            <answers>
+                <answer>
+                    <body>EDCF (Enhanced DCF): Station with higher priority traffic waits less to transmit, Used in CP
+                        only; HCF (Hybrid coordination function): Combination of DCF and PCF, Uses ECDF in CP, AP
+                        controls access in CFP and allocates more timeslots to stations with high-priority traffic
+                    </body>
+                    <marks>
+                        <mark type="keyword">enhanced DCF</mark>
+                        <mark type="keyword">hybrid coordination function</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="66">
+            <body>How does HCF gain access to the channel during the Contention Period?</body>
+            <answers>
+                <answer>
+                    <body>HC can allocate polled TXOPs (Transmit Opportunity) by issuing QoS CF-Poll after detecting the
+                        channel as being idle for PIFS, which is shorter than DIFS. Hence HC has priority.
+                    </body>
+                    <marks>
+                        <mark type="keyword">QoS CF-Poll</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
