@@ -129,5 +129,48 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Tutorial 3: Qualitative Questions -->
+        <question type="extended-answer" id="8">
+            <body>Describe three schemes for streaming stored media. What are the advantages and disadvantages of each
+                scheme?
+            </body>
+            <answers>
+                <answer>
+                    <body>From web server to browser: has to download entire file before playing; From web server
+                        using direct connection to the media-player (using a meta-file): allows actual streaming; From
+                        streaming server to media-player: does not need to use HTTP (and thus does not need to use
+                        TCP)
+                    </body>
+                    <marks>
+                        <mark type="keyword">server to browser</mark>
+                        <mark type="keyword">direct connection</mark>
+                        <mark type="keyword">streaming server</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9">
+            <body>What is the relation between end-to-end delay and packet jitter?</body>
+            <answers>
+                <answer>
+                    <body>Jitter is the variance of end-to-end delay.</body>
+                    <marks>
+                        <mark type="keyword">variance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>What is the main difference between RTSP and HTTP?</body>
+            <answers>
+                <answer>
+                    <body>RTSP maintains state information.</body>
+                    <marks>
+                        <mark type="keyword">state</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
