@@ -99,5 +99,35 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Tutorial 2: Qualitative Questions -->
+        <question type="extended-answer" id="6">
+            <body>What are features of SMTP? What port does it (usually) use?</body>
+            <answers>
+                <answer>
+                    <body>It is an e-mail delivery protocol. It transfers data from client to server. It transfers data
+                        between e-mail servers. It uses port 25.
+                    </body>
+                    <marks>
+                        <mark type="keyword">client to server</mark>
+                        <mark type="keyword">server to server</mark>
+                        <mark type="keyword">25</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="7">
+            <body>Why do HTTP, FTP, SMTP and POP3 run on top of TCP and not UDP?
+            </body>
+            <answers>
+                <answer>
+                    <body>They require that all data is received correctly and in correct order.</body>
+                    <marks>
+                        <mark type="keyword">received correctly</mark>
+                        <mark type="keyword">order</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
