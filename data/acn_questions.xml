@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exam xmlns="https://vpt1.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://vpt1.org questions.xsd">
+    <head>
+        <title>Question Catalog: Advanced Computer Networks</title>
+        <version>1.0</version>
+        <id>991</id>
+    </head>
+    <body>
+        <!-- Tutorial 1: Qualitative Questions -->
+        <question type="extended-answer" id="0">
+            <body>What is the major difference between an Internet application and a normal application such as
+                Microsoft Word?
+            </body>
+            <answers>
+                <answer>
+                    <body>The Internet application is distributed.</body>
+                    <marks>
+                        <mark type="keyword">distributed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1">
+            <body>What are the four sources of packet delay?</body>
+            <answers>
+                <answer>
+                    <body>Nodal processing, queueing delay, transmission delay, and propagation delay.</body>
+                    <marks>
+                        <mark type="keyword">nodal processing</mark>
+                        <mark type="keyword">queuing</mark>
+                        <mark type="keyword">transmission</mark>
+                        <mark type="keyword">propagation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="2">
+            <body>What are the two types of services that the Internet provides to its applications? What are their
+                characteristics?
+            </body>
+            <answers>
+                <answer>
+                    <body>TCP: connection-oriented service, providers reliable transfer; UDP: connectionless service, no
+                        transfer guarantees
+                    </body>
+                    <marks>
+                        <mark type="keyword">TCP</mark>
+                        <mark type="keyword">UDP</mark>
+                        <mark type="keyword">connection</mark>
+                        <mark type="keyword">reliable</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="3">
+            <body>What is the most important difference in the circuit switching and packet switching techniques?</body>
+            <answers>
+                <answer>
+                    <body>Circuit switching: dedicated communication path between two stations; Packet switching:
+                        resources are dynamically shared on a per-packet basis
+                    </body>
+                    <marks>
+                        <mark type="keyword">dedicated communication path</mark>
+                        <mark type="keyword">dynamically shared</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="4">
+            <body>What is the main advantage of using a packet switching network?</body>
+            <answers>
+                <answer>
+                    <body>It allows for more efficient use of the network resources.</body>
+                    <marks>
+                        <mark type="keyword">more efficient</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="5">
+            <body>List six different access technologies. Classify each one as residential, company or mobile access.
+            </body>
+            <answers>
+                <answer>
+                    <body>Dial-up modem over telephone line: residential; DSL over telephone line: residential (or small
+                        office); Cable to HFC: residential; 100Mbps switched Ethernet: company; WLAN: mobile; Cellular
+                        mobile access: mobile
+                    </body>
+                    <marks>
+                        <mark type="keyword">dial-up modem</mark>
+                        <mark type="keyword">DSL</mark>
+                        <mark type="keyword">Cable to HFC</mark>
+                        <mark type="keyword">100Mbps switched Ethernet</mark>
+                        <mark type="keyword">WLAN</mark>
+                        <mark type="keyword">Cellular</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+    </body>
+</exam>
