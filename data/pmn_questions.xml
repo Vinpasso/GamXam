@@ -775,5 +775,235 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Tutorial 6: Qualitative Questions -->
+        <question type="extended-answer" id="67">
+            <body>List 2 characteristics each for Circuit Switching, Packet Switching and Message Switching
+                technologies.
+            </body>
+            <answers>
+                <answer>
+                    <body>Circuit Switching: allocates resources for entire duration of transfer, all data takes the
+                        same path; Packet Switching: all data is divided into packets, each packet is routed separately;
+                        Message Switching: messages are sent in their entirety, store and forward
+                    </body>
+                    <marks>
+                        <mark type="keyword">allocate</mark>
+                        <mark type="keyword">same path</mark>
+                        <mark type="keyword">data is divided</mark>
+                        <mark type="keyword">routed separately</mark>
+                        <mark type="keyword">entire</mark>
+                        <mark type="keyword">store and forward</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="68">
+            <body>Discuss the advantages and disadvantages of circuit switching technology and packet switching
+                technology.
+            </body>
+            <answers>
+                <answer>
+                    <body>Circuit switching provides low delays, but needs a setup phase and blocks resources during the
+                        entire connection time, even if no data is sent. Packet switching provides better line
+                        efficiency and is more reliable, but may have higher delays and has jitter.
+                    </body>
+                    <marks>
+                        <mark type="keyword">low delay</mark>
+                        <mark type="keyword">setup phase</mark>
+                        <mark type="keyword">blocks</mark>
+                        <mark type="keyword">line efficiency</mark>
+                        <mark type="keyword">reliable</mark>
+                        <mark type="keyword">jitter</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="69">
+            <body>Name and explain the 3 common cellular phone codes used.</body>
+            <answers>
+                <answer>
+                    <body>International Mobile Station Equipment Identity (IMEI) or equivalent: Unique and permanent ID
+                        programmed into phone; Mobile Identification Number (MIN): 10‐digit # derived from the phone #;
+                        System Identification Code (SID): unique 5‐digit # that is assigned to each carrier by the FCC
+                    </body>
+                    <marks>
+                        <mark type="keyword">IMEI</mark>
+                        <mark type="keyword">MIN</mark>
+                        <mark type="keyword">SID</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="70">
+            <body>What is the main design characteristic of cellular networks which allow them to offer high capacity in
+                a limited frequency spectrum?
+            </body>
+            <answers>
+                <answer>
+                    <body>Frequency reuse.</body>
+                    <marks>
+                        <mark type="keyword">frequency reuse</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="71">
+            <body>Explain how the cellular phone system is able to support frequency reuse.</body>
+            <answers>
+                <answer>
+                    <body>BS and cell phones operate at low power. Adjacent cells are assigned different frequencies.
+                        Frequencies are reused every few cells.
+                    </body>
+                    <marks>
+                        <mark type="keyword">low power</mark>
+                        <mark type="keyword">adjacent</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="72">
+            <body>Explain why a cluster size of 1 is not recommended in a cellular system using FDMA.</body>
+            <answers>
+                <answer>
+                    <body>Too much interference.</body>
+                    <marks>
+                        <mark type="keyword">interference</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="73">
+            <body>Explain why IS-95 cellular system using CDMA/DSSS can have a frequency reuse factor of 1.</body>
+            <answers>
+                <answer>
+                    <body>CDMA allows multiple transmissions on the same frequency.</body>
+                    <marks>
+                        <mark type="keyword">CDMA</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="74">
+            <body>Explain the difference between handoff and roaming in the context of a cellular phone network.</body>
+            <answers>
+                <answer>
+                    <body>Handoff means a user is switching cells within a network. Roaming means a user is switching
+                        between networks.
+                    </body>
+                    <marks>
+                        <mark type="keyword">cell</mark>
+                        <mark type="keyword">network</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="75">
+            <body>Explain the difference between hard and soft handoffs.</body>
+            <answers>
+                <answer>
+                    <body>Hard handoff means cutting communications with one BS before connecting to the new BS, while
+                        soft handoff is the opposite.
+                    </body>
+                    <marks>
+                        <mark type="keyword">BS</mark>
+                        <mark type="keyword">before connecting</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="76">
+            <body>Explain why handoff margin cannot be too large or too small.</body>
+            <answers>
+                <answer>
+                    <body>If it is too large it will cause unnecessary handoffs and if it is too small calls will be
+                        lost before the handoff is complete.
+                    </body>
+                    <marks>
+                        <mark type="keyword">unnecessary</mark>
+                        <mark type="keyword">lost</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="77">
+            <body>Explain how a call is received on a cell phone.</body>
+            <answers>
+                <answer>
+                    <body>The phone registers with cell it has the strongest signal to. This registration is forwarded
+                        to the MTSO as well. When a call comes in the MTSO finds the called phone by registration and
+                        sets a frequency pair for phone and BS to use. Once the phone accepted the call the MTSO sets up
+                        a circuit between calling and called BS as well as traffic channels within the caller and called
+                        BS.
+                    </body>
+                    <marks>
+                        <mark type="keyword">MTSO</mark>
+                        <mark type="keyword">BS</mark>
+                        <mark type="keyword">registration</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="78">
+            <body>AMPS uses FDMA to divide a 25 MHz band into 30 kHz channels. However, only 832 channels are defined as
+                available for use. Explain the use of the 833rd channel.
+            </body>
+            <answers>
+                <answer>
+                    <body>It is used as a guard band.</body>
+                    <marks>
+                        <mark type="keyword">guard band</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="79">
+            <body>Explain the 2 key factors which allows the 2G and above cellular technologies to increase system
+                capacity over 1G cellular technologies.
+            </body>
+            <answers>
+                <answer>
+                    <body>Efficient use of frequency spectrum and less transmitter power.
+                    </body>
+                    <marks>
+                        <mark type="keyword">efficient use of frequency spectrum</mark>
+                        <mark type="keyword">less transmitter power</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="80">
+            <body>In GSM, a 25 MHz band is divided into 124 200 kHz physical channels using FDMA. What and where is the
+                125th channel used for.
+            </body>
+            <answers>
+                <answer>
+                    <body>The last channel is split into two 100 kHz channels. They are guard bands at the beginning and
+                        end of the 124 carrier channels.
+                    </body>
+                    <marks>
+                        <mark type="keyword">split</mark>
+                        <mark type="keyword">guard band</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="81">
+            <body>List 3 advantages of CDMA based cellular phone systems.</body>
+            <answers>
+                <answer>
+                    <body>Frequency diversity: everyone is allocated the entire frequency spectrum which reduces
+                        frequency-dependant transmission impairments; Multipath resistance: chipping codes used for CDMA
+                        exhibit low cross correlation and low autocorrelation; Privacy: since signals are noise-like and
+                        encoded
+                    </body>
+                    <marks>
+                        <mark type="keyword">frequency diversity</mark>
+                        <mark type="keyword">multipath resistance</mark>
+                        <mark type="keyword">privacy</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
