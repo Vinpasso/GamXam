@@ -1005,5 +1005,144 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Tutorial 7: Qualitative Questions -->
+        <question type="extended-answer" id="82">
+            <body>What are the roles of the Master Ground station in the GPS system?</body>
+            <answers>
+                <answer>
+                    <body>The Master Ground station sends orbital data and clock corrections it receives from other
+                        ground stations to the satellites. The satellites can then incorporate these updates into the
+                        signals they send to GPS receivers.
+                    </body>
+                    <marks>
+                        <mark type="keyword">send</mark>
+                        <mark type="keyword">orbital data</mark>
+                        <mark type="keyword">clock correction</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="83">
+            <body>What is the number of satellites needed to compute the location of a GPS user?</body>
+            <answers>
+                <answer>
+                    <body>4</body>
+                    <marks>
+                        <mark type="keyword">4</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="84">
+            <body>List and briefly explain the 3 sets of signals transmitted by the GPS space vehicles.</body>
+            <answers>
+                <answer>
+                    <body>C/A Code (Coarse Aquisition): modulated onto L1 carrier and can be accessed by everyone; P
+                        Code (Precise): modulated onto L1 and L2 carriers and can only be accessed by US military;
+                        Navigation Message: contains positional and timing data and health of the satellite
+                    </body>
+                    <marks>
+                        <mark type="keyword">C/A Code</mark>
+                        <mark type="keyword">P Code</mark>
+                        <mark type="keyword">Navigation Message</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="85">
+            <body>Explain how the measurements from the 4th satellite can be used by a GPS receiver to determine a
+                correction factor to offset the drift in the receiver’s clock from the satellite clock.
+            </body>
+            <answers>
+                <answer>
+                    <body>The receiver can look for a single correction factor for its timings that would lead to all 4
+                        satellites measurements to have one single intersection. This correction brings the Receiver
+                        back in sync.
+                    </body>
+                    <marks>
+                        <mark type="keyword">correction factor</mark>
+                        <mark type="keyword">single intersection</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="86">
+            <body>List and briefly explain 2 methods used for time measurements in GPS receivers.</body>
+            <answers>
+                <answer>
+                    <body>Carrier phase ranging: phase difference of a received carrier compared to a reference carrier
+                        can be used to compute time on arrival; Code phase ranging: phase difference of a received code
+                        compared to a reference code can be used to compute time on arrival
+                    </body>
+                    <marks>
+                        <mark type="keyword">carrier phase ranging</mark>
+                        <mark type="keyword">code phase ranging</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="87">
+            <body>Which pilot signal(s) is/are used in Standard Positioning Services (SPS) and Precision Positioning
+                Services (PPS)?
+            </body>
+            <answers>
+                <answer>
+                    <body>SPS: code phase ranging using spread pilot signal on L1; PPS: code phase ranging using spread
+                        pilot signals on L1 and L2
+                    </body>
+                    <marks>
+                        <mark type="keyword">L1</mark>
+                        <mark type="keyword">L1 and L2</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="88">
+            <body>List and briefly explain the sources of errors in GPS positioning system.</body>
+            <answers>
+                <answer>
+                    <body>Ionospheric error: ionosphere slows signal propagation; Tropospheric error: troposphere slows
+                        signal propagation; Clock and ephemeris errors; Receiver noise; Multipath
+                    </body>
+                    <marks>
+                        <mark type="keyword">ionospheric error</mark>
+                        <mark type="keyword">tropospheric error</mark>
+                        <mark type="keyword">clock and ephemeris error</mark>
+                        <mark type="keyword">receiver noise</mark>
+                        <mark type="keyword">multipath</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="89">
+            <body>Explain how satellite alignment affects the Dilution of Precision (DoP).</body>
+            <answers>
+                <answer>
+                    <body>GPS satellites close together lead to a large area of uncertainty when calculating an
+                        intersection and hence high DoP.
+                    </body>
+                    <marks>
+                        <mark type="keyword">area of uncertainty</mark>
+                        <mark type="keyword">intersection</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="90">
+            <body>How does Differential GPS improve the accuracy of the location determined?</body>
+            <answers>
+                <answer>
+                    <body>A reference station constantly computes the difference between actual distance and measured
+                        distance to all visible satellites. From this difference it computes correction data for each
+                        satellite and directly broadcasts it to mobile receivers nearby.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reference station</mark>
+                        <mark type="keyword">correction data</mark>´
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
