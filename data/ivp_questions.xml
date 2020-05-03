@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exam xmlns="https://vpt1.org">
+    <head>
+        <title>Intelligent vernetzte Produktion</title>
+        <version>1.0</version>
+        <id>421</id>
+    </head>
+    <body>
+        <!-- Begrifflichkeiten -->
+        <question type="extended-answer" id="0">
+            <body>Was beschreibt intelligent vernetzte Produktion?</body>
+            <answers>
+                <answer>
+                    <body>Die intelligent vernetzte Produktion beschreibt die Herstellung von Produkten auf Basis einer
+                        durchgängigen informationstechnischen Vernetzung durch Nutzung digitaler Technologien in
+                        Produkt, Prozess &amp; Ressource im Produktentstehungsprozess.
+                    </body>
+                    <marks>
+                        <mark type="keyword">durchgängig</mark>
+                        <mark type="keyword">Vernetzung</mark>
+                        <mark type="keyword">digital</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1">
+            <body>Was sind die 4 Schritte im Produktentstehungsprozess?</body>
+            <answers>
+                <answer>
+                    <body>Produktplanung, Produktentwicklung, Produktionsplanung, und Produktion.</body>
+                    <marks>
+                        <mark type="keyword">Produktplanung</mark>
+                        <mark type="keyword">Produktentwicklung</mark>
+                        <mark type="keyword">Produktionsplanung</mark>
+                        <mark type="keyword">Produktion</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="2">
+            <body>Was sind die 3 Schritte des Produktlebenszyklus, die nicht zum Produktentstehungsprozess gehören?
+            </body>
+            <answers>
+                <answer>
+                    <body>Produktvertrieb, Produktnutzung, und Recycling/Entsorgung.</body>
+                    <marks>
+                        <mark type="keyword">Produktvertrieb</mark>
+                        <mark type="keyword">Produktnutzung</mark>
+                        <mark type="keyword">Entsorgung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="3">
+            <body>Was ist ein intelligentes Objekt?</body>
+            <answers>
+                <answer>
+                    <body>Ein object, dass in der Lage ist, seinen Zustand oder sein Handeln als Reaktion auf
+                        unterschiedliche Situationen und ERfahrungen aus der Vergangenheit zu verändern.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Zustand</mark>
+                        <mark type="keyword">Handeln</mark>
+                        <mark type="keyword">Reaktion</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="4">
+            <body>Was ist horizontale Integration?</body>
+            <answers>
+                <answer>
+                    <body>Vernetzung der Wertschöpfungspartner innerhalb des Wertschöpfungsnetzwerks.</body>
+                    <marks>
+                        <mark type="keyword">Wertschöpfungspartner</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="5">
+            <body>Was ist vertikale Integration?</body>
+            <answers>
+                <answer>
+                    <body>Vernetzung über die Ebenen der Automatisierungspyramide von Feld- bis Unternehmensebene.</body>
+                    <marks>
+                        <mark type="keyword">pyramide</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="6">
+            <body>Was ist durchgängiges Engineering?</body>
+            <answers>
+                <answer>
+                    <body>Vernetzung der einzelnen Engineering-Prozesse über alle  Phasen des Produktlebenszyklus.</body>
+                    <marks>
+                        <mark type="keyword">produktlebenszyklus</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+    </body>
+</exam>
