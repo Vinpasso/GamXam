@@ -81,7 +81,8 @@
             <body>Was ist vertikale Integration?</body>
             <answers>
                 <answer>
-                    <body>Vernetzung über die Ebenen der Automatisierungspyramide von Feld- bis Unternehmensebene.</body>
+                    <body>Vernetzung über die Ebenen der Automatisierungspyramide von Feld- bis Unternehmensebene.
+                    </body>
                     <marks>
                         <mark type="keyword">pyramide</mark>
                     </marks>
@@ -92,9 +93,367 @@
             <body>Was ist durchgängiges Engineering?</body>
             <answers>
                 <answer>
-                    <body>Vernetzung der einzelnen Engineering-Prozesse über alle  Phasen des Produktlebenszyklus.</body>
+                    <body>Vernetzung der einzelnen Engineering-Prozesse über alle Phasen des Produktlebenszyklus.</body>
                     <marks>
+                        <mark type="keyword">vernetzung</mark>
                         <mark type="keyword">produktlebenszyklus</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Definitionen -->
+        <question type="extended-answer" id="7">
+            <body>Was ist ein Cyber-Physisches System (CPS)?</body>
+            <answers>
+                <answer>
+                    <body>Ein CPS ist gekennzeichnet durch eine Verknüpfung von realen (physischen) Objekten und
+                        Prozessen mit informationsverarbeitenden (virtuellen) Objekten und Prozessen über offene,
+                        teilweise globale und jederzeit miteinander verbundene Informationsnetze.
+                    </body>
+                    <marks>
+                        <mark type="keyword">physisch</mark>
+                        <mark type="keyword">virtuell</mark>
+                        <mark type="keyword">Verknüpfung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="8">
+            <body>Was ist Internet of Things (IoT)?</body>
+            <answers>
+                <answer>
+                    <body>IoT bezeichnet die Vernetzung von Gegenständen mit dem Internet, damit diese Gegenstände
+                        selbstständig über das Internet kommunizieren und so verschiedene Aufgaben für den Besitzer
+                        erledigen können.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Vernetzung</mark>
+                        <mark type="keyword">Internet</mark>
+                        <mark type="keyword">selbstständig</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9">
+            <body>Was sind die 4 wesentlichen Eigenschaften von BigData?</body>
+            <answers>
+                <answer>
+                    <body>Volume (große, wachsende Menge an Daten), Velocity (hohe Geschwindigkeit bei der
+                        Datenentstehung und -veränderung, also kurze Halbwertszeit des Erkenntniswertes der Daten),
+                        Variety (Heterogenität der Datenquellen und -formate), und Veracity (Berücksichtigung von
+                        Richtigkeit und Verlässlichkeit der Daten bei der Analyse).
+                    </body>
+                    <marks>
+                        <mark type="keyword">Volume</mark>
+                        <mark type="keyword">Velocity</mark>
+                        <mark type="keyword">Variety</mark>
+                        <mark type="keyword">Veracity</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>Was ist der digitale Zwilling?</body>
+            <answers>
+                <answer>
+                    <body>Ein digitaler Zwilling ist das hinreichend genaue Abbild der Prozesse in der Produktion, der
+                        Entwicklung und im Betrieb des Produkts mit dem Zweck, eine echtzeitfähige Auswertungsbasis
+                        aller relevanten Daten zu schaffen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Abbild</mark>
+                        <mark type="keyword">Prozess</mark>
+                        <mark type="keyword">Entwicklung</mark>
+                        <mark type="keyword">Betrieb</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11">
+            <body>Was sind die zwei Arten von Assistenzsystemen?</body>
+            <answers>
+                <answer>
+                    <body>Es gibt kognitive und physische Assistenz.</body>
+                    <marks>
+                        <mark type="keyword">kognitiv</mark>
+                        <mark type="keyword">physisch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Consumer und Office Automation vs industrielle Produktion -->
+        <question type="extended-answer" id="12">
+            <body>Was sind die übergreifenden Hemmnisse der produzierenden Industrie im Bezug auf die Adoption von
+                Technologien der Consumer Industrie und Office Automation?
+            </body>
+            <answers>
+                <answer>
+                    <body>Keine umfassenden Standards; Keine geeigneten IT-Sicherheitskonzepte und rechtliche
+                        Rahmenbedingungen zur Sicherung der Datenhaltung außerhalb des Unternehmens; Hohe
+                        Investitionskosten zur Integration geeigneter Technologien; Starre Strukturen und Prozesse in
+                        Unternehmen
+                    </body>
+                    <marks>
+                        <mark type="keyword">standards</mark>
+                        <mark type="keyword">it-sicherheit</mark>
+                        <mark type="keyword">kosten</mark>
+                        <mark type="keyword">starr</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Grundlegende Modelle für die IVP -->
+        <question type="extended-answer" id="13">
+            <body>Was sind die 4 vorgestellten grundlegenden Modelle der IVP?</body>
+            <answers>
+                <answer>
+                    <body>Die Automatisierungspyramide, das Auftragsabwicklungsmodell, das Y-Modell, und das T-Modell.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Automatisierungspyramide</mark>
+                        <mark type="keyword">Auftragsabwicklungsmodell</mark>
+                        <mark type="keyword">Y-Modell</mark>
+                        <mark type="keyword">T-Modell</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="14">
+            <body>Was sind die beiden Achsen des T-Modells?</body>
+            <answers>
+                <answer>
+                    <body>Time to Customer und Time to Market.</body>
+                    <marks>
+                        <mark type="keyword">time to market</mark>
+                        <mark type="keyword">time to customer</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15">
+            <body>Was sind die drei Dimensionen des Referenzarchitecturmodells Industrie 4.0 (RAMI 4.0)?</body>
+            <answers>
+                <answer>
+                    <body>Hierarchy Levels (Abbildung vertikale Integration des Unternehmens), Life Cycle und Value
+                        Stream (Abbildungen des Lebenszyklus von Anlagen und Produkten), Layers (Sechs Schichten der
+                        IT-Repräsentanz der einzelnen Ebenen)
+                    </body>
+                    <marks>
+                        <mark type="keyword">hierarchy levels</mark>
+                        <mark type="keyword">life cycle</mark>
+                        <mark type="keyword">layers</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Grundlegende Technologien -->
+        <question type="extended-answer" id="16">
+            <body>Was sind die zwei Arten der Identifikation von Objekten und wie funktionieren sie?</body>
+            <answers>
+                <answer>
+                    <body>Indirekte Identifikation (über RFID oder Barcode) und direkte Identifikation (über Erfassung
+                        von Merkmalen, wie z.B. Form).
+                    </body>
+                    <marks>
+                        <mark type="keyword">direkt</mark>
+                        <mark type="keyword">indirekt</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17">
+            <body>Was sind Vorteile von indirekter Identifikation?</body>
+            <answers>
+                <answer>
+                    <body>Einfache Integration in Produktionsumgebungen; Robuste Technologien verfügbar; Auch
+                        Lokalisierung der Objekte möglich
+                    </body>
+                    <marks>
+                        <mark type="keyword">Integration</mark>
+                        <mark type="keyword">robuste tech</mark>
+                        <mark type="keyword">lokalisierung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="18">
+            <body>Was sind Nachteile von indirekter Identifikation?</body>
+            <answers>
+                <answer>
+                    <body>Mengenabhängige Kosten durch Aufkleber/Chips/usw.; Eingeschränkte Be- und Verarbeitung durch
+                        Sticker oder Chip
+                    </body>
+                    <marks>
+                        <mark type="keyword">kosten</mark>
+                        <mark type="keyword">eingeschränkt</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="19">
+            <body>Was sind Vorteile von direkter Identifikation?</body>
+            <answers>
+                <answer>
+                    <body>Abdeckung der gesamten Prozesskette möglich; Keine mengenabhängigen Kosten; Zusätzliche
+                        Qualitätskontrolle
+                    </body>
+                    <marks>
+                        <mark type="keyword">abdeckung</mark>
+                        <mark type="keyword">kosten</mark>
+                        <mark type="keyword">qualitätskontrolle</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20">
+            <body>Was sind Nachteile von direkter Identifikation?</body>
+            <answers>
+                <answer>
+                    <body>Eingeschränkte Möglichkeit zur Lokalisierung; Teils aufwändige Integration in den
+                        Produktionsprozess; Schwierige Identifikation einzelner Produkte in der Serie
+                    </body>
+                    <marks>
+                        <mark type="keyword">lokalisierung</mark>
+                        <mark type="keyword">integration</mark>
+                        <mark type="keyword">identifikation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="21">
+            <body>Wofür stehen RFID und NFC und wie stehen sie zueinander in Beziehung?</body>
+            <answers>
+                <answer>
+                    <body>Near Field Communication ist ein auf Radio-Frequency Identification basierender
+                        Übertragungsstandard.
+                    </body>
+                    <marks>
+                        <mark type="keyword">near field communication</mark>
+                        <mark type="keyword">Radio-Frequency Identification</mark>
+                        <mark type="keyword">basierend</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="22">
+            <body>Wofür steht OPC UA?</body>
+            <answers>
+                <answer>
+                    <body>Open Platform Communication Unified Architecture</body>
+                    <marks>
+                        <mark type="keyword">Open Platform Communication Unified Architecture</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Von Big Data zu Knowledge Discovery in Databases -->
+        <question type="extended-answer" id="23">
+            <body>Was ist ein Data Lake und worin besteht der Unterschied zu einem Data Warehouse?</body>
+            <answers>
+                <answer>
+                    <body>Ein Data Lake ist ein zentraler Speicher für Rohdaten, die in einer flachen Architektur und im
+                        Ursprungsformat abgelegt werden. Im Gegensatz dazu nutzt ein Data Warehouse fest definierte
+                        Strukturen und Ordner.
+                    </body>
+                    <marks>
+                        <mark type="keyword">zentraler Speicher</mark>
+                        <mark type="keyword">Rohdaten</mark>
+                        <mark type="keyword">Struktur</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="24">
+            <body>Was sind die 5 Schritte des "Knowledge Discovery in Databases"-Prozesses (KDD)?</body>
+            <answers>
+                <answer>
+                    <body>Selektion, Vorverarbeitung, Transformation, Data Mining, und Interpretation/Evaluation.</body>
+                    <marks>
+                        <mark type="keyword">Selektion</mark>
+                        <mark type="keyword">Vorverarbeitung</mark>
+                        <mark type="keyword">Transformation</mark>
+                        <mark type="keyword">Data Mining</mark>
+                        <mark type="keyword">Interpretation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="25">
+            <body>Für welche Schritte im KDD-Prozess ist ein Data Analyst zuständig?</body>
+            <answers>
+                <answer>
+                    <body>Transformation, Data Mining, sowie Interpretation/Evaluation.</body>
+                    <marks>
+                        <mark type="keyword">Transformation</mark>
+                        <mark type="keyword">Data Mining</mark>
+                        <mark type="keyword">Interpretation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="26">
+            <body>Was sind die 3 gängigen Methoden des Maschinellen Lernens die im Data Mining für IVP verwendet
+                werden?
+            </body>
+            <answers>
+                <answer>
+                    <body>Künstliche Neuronale Netze, Entscheidungsbäume, und Support Vector Machines.</body>
+                    <marks>
+                        <mark type="keyword">Künstliche Neuronale Netze</mark>
+                        <mark type="keyword">Entscheidungsbäume</mark>
+                        <mark type="keyword">Support Vector Machines</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="27">
+            <body>Was ist Data Mining?</body>
+            <answers>
+                <answer>
+                    <body>Data Mining ist die Extraktion von implizierten, bisher unbekannten und potentiell nützlichen
+                        Informationen aus Daten.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Extraktion</mark>
+                        <mark type="keyword">Information</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Rahmenbedingungen -->
+        <question type="extended-answer" id="28">
+            <body>Was sind noch zu addressierende Themen, um Rahmenbedingungen für IVP zu schaffen?</body>
+            <answers>
+                <answer>
+                    <body>Security (im Produktionsumfeld), Datenhoheit, und Datenschutz.</body>
+                    <marks>
+                        <mark type="keyword">Security</mark>
+                        <mark type="keyword">Datenhoheit</mark>
+                        <mark type="keyword">Datenschutz</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="29">
+            <body>Welche 4 großen Herausforderungen resultieren aus der Industrie 4.0?</body>
+            <answers>
+                <answer>
+                    <body>Veränderung der Rolle des Menschen (zum Entscheider und Kontrolleur hin),
+                        Informationsgeschwindigkeit (Fehlentscheidungen haben sofortige Auswirkungen), Informationsflut
+                        (welche Informationen sind relevant), Informationsaustausch (ständige, ortsunabhängige
+                        Erreichbarkeit)
+                    </body>
+                    <marks>
+                        <mark type="keyword">Rolle des Menschen</mark>
+                        <mark type="keyword">Informationsgeschwindigkeit</mark>
+                        <mark type="keyword">Informationsflut</mark>
+                        <mark type="keyword">Informationsaustausch</mark>
                     </marks>
                 </answer>
             </answers>
