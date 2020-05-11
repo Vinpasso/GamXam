@@ -459,5 +459,200 @@
             </answers>
         </question>
 
+        <!-- Anforderungen an cyberphysische Produktionssysteme -->
+        <question type="extended-answer" id="30">
+            <body>Was sind die 3 Ecken des "Magischen Dreiecks"?</body>
+            <answers>
+                <answer>
+                    <body>Qualität, Kosten, und Zeit.</body>
+                    <marks>
+                        <mark type="keyword">qualität</mark>
+                        <mark type="keyword">kosten</mark>
+                        <mark type="keyword">zeit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="31">
+            <body>Was ist der Vorteil des Einsatzes eines Digitalen Zwillings in der Entwicklungs eines cyberphysischen
+                Produktionssystems?
+            </body>
+            <answers>
+                <answer>
+                    <body>Geplante Produkteigenschaften können in der Simulation bestätigt werden, und nicht erst im
+                        physischen Aufbau. Das spart Zeit und somit Geld.
+                    </body>
+                    <marks>
+                        <mark type="keyword">produkteigenschaften</mark>
+                        <mark type="keyword">zeit</mark>
+                        <mark type="keyword">geld</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="32">
+            <body>Was sind die Schritte im digitalen Engineering eines cyberphysischen Systems?</body>
+            <answers>
+                <answer>
+                    <body>Definieren, Generieren, Virtualisieren, Validieren, Analysieren, und Optimieren.</body>
+                    <marks>
+                        <mark type="keyword">definieren</mark>
+                        <mark type="keyword">generieren</mark>
+                        <mark type="keyword">virtualisieren</mark>
+                        <mark type="keyword">validieren</mark>
+                        <mark type="keyword">analysieren</mark>
+                        <mark type="keyword">optimieren</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Digitale Werkzeuge und digitales Engineering -->
+        <question type="extended-answer" id="33">
+            <body>Was ist "Digitales Engineering"?</body>
+            <answers>
+                <answer>
+                    <body>Digitales Engineering ist die durchgängige Nutzung digitaler Methoden und Werkzeuge über den
+                        Produktentstehungs- und Produktionsprozess und zielt auf eine verbesserte Planungsqualität,
+                        sowie auf die Prozessbeherrschung über den gesamten Produktlebenszyklus ab.
+                    </body>
+                    <marks>
+                        <mark type="keyword">durchgängig</mark>
+                        <mark type="keyword">Methode</mark>
+                        <mark type="keyword">Werkzeug</mark>
+                        <mark type="keyword">Produktentstehung</mark>
+                        <mark type="keyword">Produktion</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="34">
+            <body>Welche 3 Arten von Interoperabilität sind im digitalen Engineering relevant?</body>
+            <answers>
+                <answer>
+                    <body>Technische Interoperabilität, Semantische Operabilität, und Organisatorische
+                        Interoperabilität.
+                    </body>
+                    <marks>
+                        <mark type="keyword">technisch</mark>
+                        <mark type="keyword">semantisch</mark>
+                        <mark type="keyword">organisatorisch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="35">
+            <body>Was sind die 5 Ebenen des Digitalen Engineerings?</body>
+            <answers>
+                <answer>
+                    <body>Datenerzeugung, Datenmanagement, System-Integration, Engineering Organisation, und
+                        Kommunkikation und Zugriff.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Datenerzeugung</mark>
+                        <mark type="keyword">Datenmanagement</mark>
+                        <mark type="keyword">System-Integration</mark>
+                        <mark type="keyword">Engineering Organisation</mark>
+                        <mark type="keyword">Kommunkikation und Zugriff</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="36">
+            <body>Was sind die zwei Meta-Ebenen des Digital Engineering?</body>
+            <answers>
+                <answer>
+                    <body>IT-Infrastruktur und Prozessinfrastruktur.</body>
+                    <marks>
+                        <mark type="keyword">IT-Infrastruktur</mark>
+                        <mark type="keyword">Prozessinfrastruktur</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="37">
+            <body>Was sind die 4 Ebenen einer Fabrik?</body>
+            <answers>
+                <answer>
+                    <body>Prozess, Modul, Anlage, und Fabrik.</body>
+                    <marks>
+                        <mark type="keyword">Prozess</mark>
+                        <mark type="keyword">Modul</mark>
+                        <mark type="keyword">Anlage</mark>
+                        <mark type="keyword">Fabrik</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Vorgehensmodelle -->
+        <question type="extended-answer" id="38">
+            <body>Was sind die 4 in der Vorlesung behandelten prinzipiellen Vorgehensmodelle zur Entwicklung eines
+                CPS?
+            </body>
+            <answers>
+                <answer>
+                    <body>Seriell, Simultan, Modellgestützt, und Agil.</body>
+                    <marks>
+                        <mark type="keyword">Seriell</mark>
+                        <mark type="keyword">Simultan</mark>
+                        <mark type="keyword">Modellgestützt</mark>
+                        <mark type="keyword">Agil</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="39">
+            <body>Von welchem Vorgehensmodell in der Entwicklung von CPS weg hat sich die Industrie zu Welchem hin
+                entwickelt?
+            </body>
+            <answers>
+                <answer>
+                    <body>Von dokumentzentrierter zu modellbasierter Entwicklung.</body>
+                    <marks>
+                        <mark type="keyword">dokument</mark>
+                        <mark type="keyword">modell</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--   Agiles Engineering  -->
+        <question type="extended-answer" id="40">
+            <body>Was sind die 4 agilen Werte?</body>
+            <answers>
+                <answer>
+                    <body>Individuent und Interaktionen (stehen über Prozessen und Werkzeugen), Funktionierende
+                        Softwaware (steht über einer umfassenden Dokumentation), Zusammenarbeit mit dem Kunden (steht
+                        über der Vertragsverhandlung), und Reagieren auf Veränderung (steht über dem Befolgen eines
+                        Plans).
+                    </body>
+                    <marks>
+                        <mark type="keyword">Individuent und Interaktionen</mark>
+                        <mark type="keyword">Funktionierende Softwaware</mark>
+                        <mark type="keyword">Zusammenarbeit mit dem Kunden</mark>
+                        <mark type="keyword">Reagieren auf Veränderung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="41">
+            <body>Was sind die 6 in der Vorlesung genannten Beispiele zu agilen Vorgehensmodellen?</body>
+            <answers>
+                <answer>
+                    <body>Scrum, Kanban, Lean, eXtreme Programming, DSDM, und Crystal.</body>
+                    <marks>
+                        <mark type="keyword">scrum</mark>
+                        <mark type="keyword">kanban</mark>
+                        <mark type="keyword">lean</mark>
+                        <mark type="keyword">extreme programming</mark>
+                        <mark type="keyword">dsdm</mark>
+                        <mark type="keyword">crystal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <!-- TODO Fragen zu SCRUM  -->
+
     </body>
 </exam>
