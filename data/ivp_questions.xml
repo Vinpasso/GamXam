@@ -654,5 +654,236 @@
         </question>
         <!-- TODO Fragen zu SCRUM  -->
 
+        <!--  Produktdaten- und Produktlebenszyklusmanagement  -->
+        <question type="extended-answer" id="42">
+            <body>Was ist ein PDM/PLM System?</body>
+            <answers>
+                <answer>
+                    <body>Produktdaten- und Produktlybenszyklusmanagement Systeme sind technische Datenbank- und
+                        Kommunikationssysteme, die dazu dienen, Informationen über Produkte
+                        und deren Entstehungsprozesse bzw. Lebenszyklen konsistent zu speichern, zu verwalten und allen
+                        relevanten Bereichen eines Unternehmens bereitzustellen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Entstehungsprozess</mark>
+                        <mark type="keyword">Lebenszyklus</mark>
+                        <mark type="keyword">Information</mark>
+                        <mark type="keyword">verwalten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="43">
+            <body>Was ist ein integriertes Produktmodell?</body>
+            <answers>
+                <answer>
+                    <body>Ein integriertes Produktmodell ist die Dokumentation aller relevanten internen und externen
+                        Daten, Vorgänge, Informationen und Ergebnisse, die für einen Auftrag von der Angebotsbearbeitung
+                        über die Fertigung und Auslieferung bis zum Ablauf der Produktverantwortung anfallen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Dokumentation</mark>
+                        <mark type="keyword">intern</mark>
+                        <mark type="keyword">extern</mark>
+                        <mark type="keyword">Daten</mark>
+                        <mark type="keyword">Vorgänge</mark>
+                        <mark type="keyword">Informationen</mark>
+                        <mark type="keyword">Ergebnisse</mark>
+                        <mark type="keyword">Auftrag</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="44">
+            <body>Was sind die 7 Schritte des Produktlebenszyklus?</body>
+            <answers>
+                <answer>
+                    <body>Anforderungen, Produktplanung, Entwicklung, Prozessplanung, Produktion, Betrieb, und
+                        Recycling.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Anforderungen</mark>
+                        <mark type="keyword">Produktplanung</mark>
+                        <mark type="keyword">Entwicklung</mark>
+                        <mark type="keyword">Prozessplanung</mark>
+                        <mark type="keyword">Produktion</mark>
+                        <mark type="keyword">Betrieb</mark>
+                        <mark type="keyword">Recycling</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="45">
+            <body>Welche Schritte des Produktlebenszyklus werden vom Produktdatenmanagement abgedeckt?</body>
+            <answers>
+                <answer>
+                    <body>Produktplanung und Entwicklung.</body>
+                    <marks>
+                        <mark type="keyword">Produktplanung</mark>
+                        <mark type="keyword">Entwicklung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="46">
+            <body>Was sind 4 der Funktionen von PDM/PLM-Systemen?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Dokumentenmanagement, Projektmanagement, Versionsmanagement, und Datenverteilung.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Dokumentenmanagement</mark>
+                        <mark type="keyword">Projektmanagement</mark>
+                        <mark type="keyword">Versionsmanagement</mark>
+                        <mark type="keyword">Datenverteilung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Softwareeinsatz in der Mechanik-Entwicklung  -->
+        <question type="extended-answer" id="47">
+            <body>Welche CAx-Systeme werden in der Mechanik verwendet?</body>
+            <answers>
+                <answer>
+                    <body>M-CAD (Mechanical Computer Aided Design) für Konstruktion und CAE (Computer Aided Engineering)
+                        zur Simulation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">M-CAD</mark>
+                        <mark type="keyword">CAE</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="48">
+            <body>Was sind Vorteile einer rechnerbasierten 3D-Konstruktion?</body>
+            <answers>
+                <answer>
+                    <body>Vollständige Produktmodelle; Viele Unterlagen können automatisch aus den Modellen erzeugt
+                        werden; Frühes Erkennen von funktionalen und fertigungstechnischen Problemen; uvm...
+                    </body>
+                    <marks>
+                        <mark type="keyword">vollständige produktmodelle</mark>
+                        <mark type="keyword">unterlagen</mark>
+                        <mark type="keyword">probleme</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="49">
+            <body>Was sind die grundlegenden 4 Arten von 3D Modellen in CAD Systemen?</body>
+            <answers>
+                <answer>
+                    <body>Kantenmodell, Flächenmodell, Volumenmodell, Zellenmodell.</body>
+                    <marks>
+                        <mark type="keyword">Kantenmodell</mark>
+                        <mark type="keyword">Flächenmodell</mark>
+                        <mark type="keyword">Volumenmodell</mark>
+                        <mark type="keyword">Zellenmodell</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="50">
+            <body>Welche 3 Arten von Volumenmodellen gibt es in CAD Systemen?</body>
+            <answers>
+                <answer>
+                    <body>B-Rep (Boundary-Representation), CSG (Constructive Solid Geometry), Hybridmodell.</body>
+                    <marks>
+                        <mark type="keyword">b-rep</mark>
+                        <mark type="keyword">csg</mark>
+                        <mark type="keyword">hybrid</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="51">
+            <body>Welche Arten von CAD Systemen gibt es im Bezug auf die Komplexität?</body>
+            <answers>
+                <answer>
+                    <body>Konventionelles CAD, parametrisches CAD, Featurebasiertes CAD, Wissensbasiertes CAD.</body>
+                    <marks>
+                        <mark type="keyword">konventionell</mark>
+                        <mark type="keyword">parametrisch</mark>
+                        <mark type="keyword">featurebasiert</mark>
+                        <mark type="keyword">wissensbasiert</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="52">
+            <body>Welche 3 Methoden zur Simulation von Baugruppen wurden in der Vorlesung genannt?</body>
+            <answers>
+                <answer>
+                    <body>MKS (Mehrkörpersimulation), FEM (Finite Elemente Methode) und Flexible MKS (Einbindung
+                        flexibler Körper in die MKS-Berechnung; Kombination der Vorteile von MKS und FEM).
+                    </body>
+                    <marks>
+                        <mark type="keyword">MKS</mark>
+                        <mark type="keyword">FEM</mark>
+                        <mark type="keyword">flex</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Softwareeinsatz in der Elektronik-Entwicklung  -->
+        <question type="extended-answer" id="53">
+            <body>Welche CAx-Systeme werden in der Elektronik verwendet?</body>
+            <answers>
+                <answer>
+                    <body>E-CAD (Electronic Computer Aided Design) für Konstruktion und CAE (Computer Aided Engineering)
+                        zur Simulation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">E-CAD</mark>
+                        <mark type="keyword">CAE</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="54">
+            <body>Was sind die 3 Teilaufgaben der Elektronikentwicklung?</body>
+            <answers>
+                <answer>
+                    <body>Chipentwurf, Leiterplattenentwurf und Elektrokonstruktion.</body>
+                    <marks>
+                        <mark type="keyword">Chipentwurf</mark>
+                        <mark type="keyword">Leiterplattenentwurf</mark>
+                        <mark type="keyword">Elektrokonstruktion</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="55">
+            <body>Womit beschäftigt sich Elektrokonstruktion?</body>
+            <answers>
+                <answer>
+                    <body>Mit der Realisierung von Elektroinstallationen, wobei es sich überwiegend um analoge
+                        Schaltungen handelt.
+                    </body>
+                    <marks>
+                        <mark type="keyword">elektroinstallation</mark>
+                        <mark type="keyword">analog</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="56">
+            <body>Was sind Vorteile von E-CAD?</body>
+            <answers>
+                <answer>
+                    <body>Automatische Ableitung technischer Dokumentation; umfangreiche Bibliotheken; Makros.</body>
+                    <marks>
+                        <mark type="keyword">Dokumentation</mark>
+                        <mark type="keyword">Bibliothek</mark>
+                        <mark type="keyword">Makro</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
