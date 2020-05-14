@@ -885,5 +885,125 @@
             </answers>
         </question>
 
+        <!--  Softwareentwicklung  -->
+        <question type="extended-answer" id="53">
+            <body>Welche CAx-Systeme werden in der Softwareentwicklung verwendet?</body>
+            <answers>
+                <answer>
+                    <body>CASE (Computer Aided Software Engineering) für Synthese und CAE (Computer Aided Engineering)
+                        zur Simulation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">CASE</mark>
+                        <mark type="keyword">CAE</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="54">
+            <body>Welche Vorgehensmodelle der Softwareentwicklung wurden in der Vorlesung genannt?</body>
+            <answers>
+                <answer>
+                    <body>Phasenmodelle, Prototypische Entwicklung und Iterative Entwicklung.</body>
+                    <marks>
+                        <mark type="keyword">phasenmodell</mark>
+                        <mark type="keyword">prototypisch</mark>
+                        <mark type="keyword">iterativ</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="55">
+            <body>Wofür werden Upper-CASE Tools eingesetzt?</body>
+            <answers>
+                <answer>
+                    <body>Zur Beschreibung gesamter Systemarchitekturen auf abstraktem Level.</body>
+                    <marks>
+                        <mark type="keyword">architektur</mark>
+                        <mark type="keyword">abstrakt</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="56">
+            <body>Wofür werden Lower-CASE Tools eingesetzt?</body>
+            <answers>
+                <answer>
+                    <body>Zur Unterstützung der Programmierung durch hochentwickelte Texteditoren.</body>
+                    <marks>
+                        <mark type="keyword">editor</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Integrierte Absicherung der Produktionsanlage  -->
+        <question type="extended-answer" id="57">
+            <body>Welche Arten von Ansätzen zur integrierten Absicherung einer Produktionsanlage wurden vorgestellt?
+            </body>
+            <answers>
+                <answer>
+                    <body>Domäneübergreifende, gleichungsbasierte Lösungsansätze; 3D-basierte Ansätze; Kombination
+                        konventioneller Simulationsansätze (Co-Simulation)
+                    </body>
+                    <marks>
+                        <mark type="keyword">gleichungsbasiert</mark>
+                        <mark type="keyword">3d-basiert</mark>
+                        <mark type="keyword">kombination</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Physiksimulation  -->
+        <question type="extended-answer" id="58">
+            <body>Was ist eine Physiksimulation?</body>
+            <answers>
+                <answer>
+                    <body>Physiksimulation bezeichnet die auf Basis eines Physikmodells durchgeführte Berechnung der
+                        Dynamik der Bauteile und folglich der Dynamik des Gesamtsystems unter Verwendung einer
+                        Physik-Engine.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Dynamik</mark>
+                        <mark type="keyword">physik-engine</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="59">
+            <body>Was sind Probleme einer konventionellen Physiksimulation?</body>
+            <answers>
+                <answer>
+                    <body>Hoher manueller Aufwand; Kostenintensiv; keine automatischen Anpassungen;
+                        anwendungsspezifische Lösungen
+                    </body>
+                    <marks>
+                        <mark type="keyword">manuell</mark>
+                        <mark type="keyword">kosten</mark>
+                        <mark type="keyword">anpassung</mark>
+                        <mark type="keyword">anwendungsspezifisch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60">
+            <body>Was sind die Stufen (und Arbeitsschritte) bei der Modellbildung für Physiksimulation?</body>
+            <answers>
+                <answer>
+                    <body>CAD-Modell -Vorverarbeitung-> Trianguliertes Modell -Ableitung-> Kollisionsmodell
+                        -Anreicherung-> Physikmodell -Kinematisierung-> Simulationsmodell
+                    </body>
+                    <marks>
+                        <mark type="keyword">CAD-Modell</mark>
+                        <mark type="keyword">Trianguliertes Modell</mark>
+                        <mark type="keyword">Kollisionsmodell</mark>
+                        <mark type="keyword">Physikmodell</mark>
+                        <mark type="keyword">Simulationsmodell</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
