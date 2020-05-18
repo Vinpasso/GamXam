@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exam xmlns="https://vpt1.org">
+    <head>
+        <title>Blockchain Based Systems Engineering</title>
+        <version>1.0</version>
+        <id>422</id>
+    </head>
+    <body>
+        <!-- Exercise 1 -->
+        <question type="extended-answer" id="0">
+            <body>What are two general properties of hash functions?</body>
+            <answers>
+                <answer>
+                    <body>Compression (maps an input space of arbitrary finite length to an output of fixed length) and
+                        ease of computation.
+                    </body>
+                    <marks>
+                        <mark type="keyword">compression</mark>
+                        <mark type="keyword">ease of computation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="1">
+            <body>What 3 properties constitute cryptographic hash functions?</body>
+            <answers>
+                <answer>
+                    <body>Pre-image resistance (impossible to find the original x if only h(x) is given), second
+                        pre-image resistance (impossible to find y (different from x) if x and h(x) are given s.t.
+                        h(x)==h(y)), collision resistance (impossible to find distinct x and y s.t. h(x)==h(y)).
+                    </body>
+                    <marks>
+                        <mark type="keyword">pre-image resistance</mark>
+                        <mark type="keyword">second pre-image resistance</mark>
+                        <mark type="keyword">collision resistance</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="2">
+            <body>What is an additionally beneficial (but not required) property of cryptographic hash functions?</body>
+            <answers>
+                <answer>
+                    <body>Hiding (impossible to determine x in h(r||x) given only the result of the hash)</body>
+                    <marks>
+                        <mark type="keyword">hiding</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="3">
+            <body>Why are public keys of identities hashed before they are used as an address? Name two reasons and
+                explain.
+            </body>
+            <answers>
+                <answer>
+                    <body>Hashes are shorter and quantum computers can not break hash functions, preventing them from
+                        finding the private key.
+                    </body>
+                    <marks>
+                        <mark type="keyword">short</mark>
+                        <mark type="keyword">quantum</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+    </body>
+</exam>
