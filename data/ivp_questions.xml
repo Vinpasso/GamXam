@@ -1005,5 +1005,210 @@
             </answers>
         </question>
 
+        <!--  CNC-Steuerungen für Werkzeugmaschinen  -->
+        <question type="extended-answer" id="61">
+            <body>Wofür steht CNC?</body>
+            <answers>
+                <answer>
+                    <body>Computerized Numeric Control</body>
+                    <marks>
+                        <mark type="keyword">Computerized Numeric Control</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="62">
+            <body>Welche CNC Steuerungsarten werden unterschieden?</body>
+            <answers>
+                <answer>
+                    <body>Punktsteuerung, Streckensteuerung, Bahnsteuerung.</body>
+                    <marks>
+                        <mark type="keyword">Punktsteuerung</mark>
+                        <mark type="keyword">Streckensteuerung</mark>
+                        <mark type="keyword">Bahnsteuerung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="63">
+            <body>Welche Interpolationsarten gibt es bei CNC Bahnsteuerung?</body>
+            <answers>
+                <answer>
+                    <body>Linear-Interpolation, Zirkular-Interpolation, Spline-Interpolation.</body>
+                    <marks>
+                        <mark type="keyword">Linear</mark>
+                        <mark type="keyword">Zirkular</mark>
+                        <mark type="keyword">Spline</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="64">
+            <body>Wie können Werkzeugmaschinen programmiert werden?</body>
+            <answers>
+                <answer>
+                    <body>Manuelle Programmierung, Werkstattorientierte Programmierung, Maschinelle Programmierung.
+                    </body>
+                    <marks>
+                        <mark type="keyword">namuell</mark>
+                        <mark type="keyword">werkstattorientiert</mark>
+                        <mark type="keyword">maschinell</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  RC-Steurung für Roboter  -->
+        <question type="extended-answer" id="65">
+            <body>Wofür steht SCARA?</body>
+            <answers>
+                <answer>
+                    <body>Selective Compliance Arm for Robotized Assembly</body>
+                    <marks>
+                        <mark type="keyword">Selective Compliance Arm for Robotized Assembly</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="66">
+            <body>Welche Arten von Industrierobotern werden in der Vorlesung genannt?</body>
+            <answers>
+                <answer>
+                    <body>Portalroboter, SCARA-Roboter, Delta-Roboter, Vertikal-Knickarmroboter.</body>
+                    <marks>
+                        <mark type="keyword">portal</mark>
+                        <mark type="keyword">scara</mark>
+                        <mark type="keyword">delta</mark>
+                        <mark type="keyword">vertikal-knickarm</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="67">
+            <body>Welche wesentlichen Aufgaben übernehmen Robotersteuerungen?</body>
+            <answers>
+                <answer>
+                    <body>Steuerung der Verfahrbewegungen des Roboters, Steuerung der Greiferfunktionen, Steuerung von
+                        Zuführsystemen, Annahme und Auswertung von Sensorsignalen, Fehlererkennung und -diagnose am
+                        Roboter.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Steuerung der Verfahrbewegung</mark>
+                        <mark type="keyword">Steuerung der Greiferfunktionen</mark>
+                        <mark type="keyword">Steuerung von Zuführsystemen</mark>
+                        <mark type="keyword">Sensorsignale</mark>
+                        <mark type="keyword">Fehlererkennung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="68">
+            <body>Welche Online-Programmierverfahren existieren für RC-Steuerungen (und wie funktionieren sie)?</body>
+            <answers>
+                <answer>
+                    <body>Teach-In Programmierung (Roboter wird per Handbediengerät in charakteristische Posen bewegt),
+                        Playback Programmierung (Roboter wird händisch entlang der gewünschten Bahn geführt) und
+                        Sensorunterstützte Programmierung (grobe Bahn wird per Teach-In vorgegeben und dann mit
+                        Sensordaten verfeinert).
+                    </body>
+                    <marks>
+                        <mark type="keyword">Teach-In</mark>
+                        <mark type="keyword">Playback</mark>
+                        <mark type="keyword">Sensorunterstützt</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="69">
+            <body>Welche Offline-Programmierverfahren existieren für RC-Steuerungen (und wie funktionieren sie)?</body>
+            <answers>
+                <answer>
+                    <body>Simulationsgestützte Programmierung (Programmierung entwickeln und testen in der Simulation),
+                        Textuelle Programmierung, Grafische Programmierung.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Simulationsgestützt</mark>
+                        <mark type="keyword">textuell</mark>
+                        <mark type="keyword">grafisch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Speicherprogrammierbare Steuerungen  -->
+        <question type="extended-answer" id="70">
+            <body>Wofür steht SPS?</body>
+            <answers>
+                <answer>
+                    <body>Speicherprogrammierbare Steuerung</body>
+                    <marks>
+                        <mark type="keyword">Speicherprogrammierbare Steuerung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="71">
+            <body>Was ist die englische Bezeichnung für SPS?</body>
+            <answers>
+                <answer>
+                    <body>LC (Logic Control)</body>
+                    <marks>
+                        <mark type="keyword">logic control</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="72">
+            <body>Wie ist eine SPS grob aufgebaut?</body>
+            <answers>
+                <answer>
+                    <body>Eine SPS besteht aus mehreren Modulen, die üßber einen Bus verbundne sind. Es gibt
+                        Eingangskarten, Ausgangskarten, Prozessor und Programmspeicher.
+                    </body>
+                    <marks>
+                        <mark type="keyword">bus</mark>
+                        <mark type="keyword">eingangskarte</mark>
+                        <mark type="keyword">ausgangskarte</mark>
+                        <mark type="keyword">prozessor</mark>
+                        <mark type="keyword">programmspeicher</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="73">
+            <body>Wie läuft ein SPS-Programm ab?</body>
+            <answers>
+                <answer>
+                    <body>Ein SPS läuft in Zyklen. Zu Anfang eines Zyklus wird das Eingangsabbild aktualisiert, bevor
+                        dann seriell die Anweisungen ausgeführt werden. Am Ende eines Zyklus wird das Ausgangsabbild auf
+                        die Ausgänge übertragen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Zyklus</mark>
+                        <mark type="keyword">Eingangsabbild</mark>
+                        <mark type="keyword">seriell</mark>
+                        <mark type="keyword">Ausgangsabbild</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="74">
+            <body>Mit welchen Programmiersprachen (nach IEC 61131-3) kann eine SPS programmiert werden?</body>
+            <answers>
+                <answer>
+                    <body>Anweisungsliste (AWL), Strukturierter Text (ST), Kontaktplan (KOP), Funktionsbaustein-Sprache
+                        (FUP), Ablaufsprache (AS)
+                    </body>
+                    <marks>
+                        <mark type="keyword">Anweisungsliste</mark>
+                        <mark type="keyword">Strukturierter Text</mark>
+                        <mark type="keyword">Kontaktplan</mark>
+                        <mark type="keyword">Funktionsbaustein-Sprache</mark>
+                        <mark type="keyword">Ablaufsprache</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
