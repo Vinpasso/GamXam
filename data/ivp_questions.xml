@@ -1204,7 +1204,168 @@
                         <mark type="keyword">Strukturierter Text</mark>
                         <mark type="keyword">Kontaktplan</mark>
                         <mark type="keyword">Funktionsbaustein-Sprache</mark>
-                        <mark type="keyword">Ablaufsprache</mark>
+                        <mark type="keyword">Ausgangsabbild</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Innovative Programmierverfahren  -->
+        <question type="extended-answer" id="75">
+            <body>Was versteht man unter aufgabenorientierter Programmierung?</body>
+            <answers>
+                <answer>
+                    <body>Der Nutzer definiert das WAS, nicht das WIE. Es werden ein Aufgabenmodell und ein Umweltmodell
+                        erstellt, aus denen dann ein geeigneter Prozessablauf abgeleitet und schließlich ein
+                        Steuerungsprogramm generiert wird.
+                    </body>
+                    <marks>
+                        <mark type="keyword">was</mark>
+                        <mark type="keyword">aufgabenmodell</mark>
+                        <mark type="keyword">umweltmodell</mark>
+                        <mark type="keyword">prozessablauf</mark>
+                        <mark type="keyword">generiert</mark>
+                        <mark type="keyword">steuerungsprogramm</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="76">
+            <body>Was kennzeichnet kognitive, hybride Roboterarchitekturen?</body>
+            <answers>
+                <answer>
+                    <body>Der Roboter wertet konstant seine Sensoren aus (Sense), evaluiert die Situation (Think) und
+                        handelt unter Berücksichtigung dieser Informationen (Act). Die Steuerung wird in drei Ebenen
+                        gegliedert: Planning stellt die globale blanung der Aufgabenbearbeitung, Executive übersetzt
+                        diese Pläne in konkrete Handlungen und Behavioral Control steuert die low-level
+                        Funktionalitäten.
+                    </body>
+                    <marks>
+                        <mark type="keyword">sense</mark>
+                        <mark type="keyword">think</mark>
+                        <mark type="keyword">act</mark>
+                        <mark type="keyword">planning</mark>
+                        <mark type="keyword">executive</mark>
+                        <mark type="keyword">behavioral control</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="77">
+            <body>Wozu dient das Robot Operating System (ROS)?</body>
+            <answers>
+                <answer>
+                    <body>Es ist eine Open Source Community zum Aufbau von Programmen und Bibliotheken zur
+                        Robotersteuerung. Diese Programme werden von zahlreichen Herstellern unterstützt.
+                    </body>
+                    <marks>
+                        <mark type="keyword">open source</mark>
+                        <mark type="keyword">bibliothek</mark>
+                        <mark type="keyword">hersteller</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Virtuelle Inbetriebnahme  -->
+        <question type="extended-answer" id="78">
+            <body>Was versteht man unter virtueller Inbetriebnahme?</body>
+            <answers>
+                <answer>
+                    <body>Virtuelle Inbetriebnahme ist die entwicklungsbegleitende, kontinuierliche Validierung der
+                        Steuerungslogik einer Produktionsanlage anhand eines Simulationsmodells. Die Steuerung selbst
+                        kann, muss aber nicht, virtuell sein.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Validierung</mark>
+                        <mark type="keyword">Steuerungslogik</mark>
+                        <mark type="keyword">Simulation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="79">
+            <body>Was sind die Vorteile von virtueller Inbetriebnahme?</body>
+            <answers>
+                <answer>
+                    <body>Die Anlage muss weniger zur Fehlersuche stillstehen und das Risiko die Anlage zu beschädigen
+                        sinkt.
+                    </body>
+                    <marks>
+                        <mark type="keyword">stillstehen</mark>
+                        <mark type="keyword">beschädigen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="80">
+            <body>Wie wirkt sich die virtuelle Inbetriebnahme auf die Software-Qualität aus?</body>
+            <answers>
+                <answer>
+                    <body>Die Qualität wird erhöht.</body>
+                    <marks>
+                        <mark type="keyword">erhöht</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="81">
+            <body>Was sind die drei wesentlichen Varianten der virtuellen Inbetriebnahme (und was charakterisiert
+                sie)?
+            </body>
+            <answers>
+                <answer>
+                    <body>Hardware in the Loop (HiL) nutzt die reale Steuerung, Software in the Loop (SiL) nutzt einen
+                        Steuerungsemulator und Model in the Loop (MiL) nutzt lediglich ein Modell der Steuerung.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Hardware in the Loop</mark>
+                        <mark type="keyword">Software in the Loop</mark>
+                        <mark type="keyword">Model in the Loop</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!--  Betriebsparallele Absicherung durch Simulation  -->
+        <question type="extended-answer" id="82">
+            <body>Was ist der Unterschied zwischen Diagnose und Betriebsüberwachung?</body>
+            <answers>
+                <answer>
+                    <body>Diagnose beschäftigt sich mit der effektiven Fehlererkennung, während Überwachung sich mit
+                        effizientem Anlagenbetrieb auseinandersetzt.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Fehlererkennung</mark>
+                        <mark type="keyword">Anlagenbetrieb</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="83">
+            <body>Was versteht man unter betriebsbegleitender Simulation?</body>
+            <answers>
+                <answer>
+                    <body>Parallel zum Betrieb der Anlage wird die Anlage auch simuliert und mit der realen Anlage
+                        verglichen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">parallel</mark>
+                        <mark type="keyword">simuliert</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="84">
+            <body>Was ist ein Palettierprozess?</body>
+            <answers>
+                <answer>
+                    <body>Es ist ein Prozess in dem fertige Produkte (meist am Ende eines Fertigungsprozesses) auf
+                        Ladungsträger gestapelt werden.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Produkt</mark>
+                        <mark type="keyword">Ladungsträger</mark>
                     </marks>
                 </answer>
             </answers>
