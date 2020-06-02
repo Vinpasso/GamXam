@@ -65,5 +65,134 @@
             </answers>
         </question>
 
+        <!-- Exercise 2 -->
+        <question type="extended-answer" id="4">
+            <body>Name the three key properties of the Bitcoin Blockchain according to the lecture and explain them.
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Trust-free, tamper-proof, and transparent.
+                    </body>
+                    <marks>
+                        <mark type="keyword">trust-free</mark>
+                        <mark type="keyword">tamper-proof</mark>
+                        <mark type="keyword">transparent</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="5">
+            <body>Decide if changing the following contents of the block alters the hash of the block header: Tx
+                ordering, Tx add/remove, difficulty, previous blocks, nonce
+            </body>
+            <answers>
+                <answer>
+                    <body>Changing any of these changes the hash.</body>
+                    <marks>
+                        <mark type="keyword">any</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="6">
+            <body>How is chaining implemented in a blockchain?</body>
+            <answers>
+                <answer>
+                    <body>Each block contains the previous block's hash in its header.</body>
+                    <marks>
+                        <mark type="keyword">hash</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="7">
+            <body>Name two possible reasons, why Nakamoto might have included a newspaper article in the genesis
+                block!
+            </body>
+            <answers>
+                <answer>
+                    <body>He wanted to prove that he did not create the Blockchain before that date or he wanted to
+                        criticize the behavior of saving banks.
+                    </body>
+                    <marks>
+                        <mark type="keyword">date</mark>
+                        <mark type="keyword">criticize</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="8">
+            <body>In what field did Nakamoto store the newspaper article information in the genesis block?</body>
+            <answers>
+                <answer>
+                    <body>He stored it in the ScriptSig of the first transaction (coinbase transaction).</body>
+                    <marks>
+                        <mark type="keyword">scriptsig</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="9">
+            <body>What are the four roles in the Bitcoin network discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Wallet Owner (owns private keys to UTXOs and can spend them by publishing transactions), Light
+                        Node (can only validate single transactions and needs connections to full node), Full Node
+                        (maintains complete blockchain, validates and relays new TX and blocks), Miner (full node that
+                        tries to solve the mining puzzle)
+                    </body>
+                    <marks>
+                        <mark type="keyword">wallet owner</mark>
+                        <mark type="keyword">light node</mark>
+                        <mark type="keyword">full node</mark>
+                        <mark type="keyword">miner</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="10">
+            <body>What is the function of the memory pool?</body>
+            <answers>
+                <answer>
+                    <body>It stores all transactions which are not contained in a block yet.</body>
+                    <marks>
+                        <mark type="keyword">transactions</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="11">
+            <body>What five steps does a (valid) BTC TX take?</body>
+            <answers>
+                <answer>
+                    <body>Sender signs TX; TX is sent to full node for validation; full node publishes TX to network;
+                        miner publishes block with TX; other nodes receive block and validate it
+                    </body>
+                    <marks>
+                        <mark type="keyword">sign</mark>
+                        <mark type="keyword">validation</mark>
+                        <mark type="keyword">publish</mark>
+                        <mark type="keyword">miner</mark>
+                        <mark type="keyword">block</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="12">
+            <body>What is the difference between hot storage and cold storage?</body>
+            <answers>
+                <answer>
+                    <body>Hot storage is immediately available to use (e.g. exchange wallet) while cold storage stores
+                        the keys in an isolated environment (e.g. printed paper).
+                    </body>
+                    <marks>
+                        <mark type="keyword">immediately available</mark>
+                        <mark type="keyword">isolated environment</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
