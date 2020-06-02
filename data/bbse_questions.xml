@@ -194,5 +194,60 @@
             </answers>
         </question>
 
+        <!-- Exercise 3 -->
+        <question type="extended-answer" id="13">
+            <body>What fundamental commands are missing in Bitcoin script's opcodes and why?</body>
+            <answers>
+                <answer>
+                    <body>It does not contain loops or jumps in order to avoid the halting problem.</body>
+                    <marks>
+                        <mark type="keyword">loop</mark>
+                        <mark type="keyword">jump</mark>
+                        <mark type="keyword">halting problem</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="14">
+            <body>Why is it not advisable to protect an unspent transaction output with a password via Bitcoin script
+                (and ONLY checking that password)?
+            </body>
+            <answers>
+                <answer>
+                    <body>Once you decide to spend the password-protected output, the transaction contains the password
+                        in plain-text and anyone can use it to create a rivaling transaction transferring the money to
+                        their wallet (i.e. stealing it).
+                    </body>
+                    <marks>
+                        <mark type="keyword">plain-text</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="15">
+            <body>What is the difference between the opcode locktimeverify and the time lock in the transaction
+                itself?
+            </body>
+            <answers>
+                <answer>
+                    <body>The use of the opcode allows a transaction to be mined and makes the output spendable later.
+                        The time lock in the TX itself prevents the TX from being mined before that time.
+                    </body>
+                    <marks>
+                        <mark type="keyword">plain-text</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="16">
+            <body></body>
+            <answers>
+                <answer>
+                    <body></body>
+                    <marks></marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
