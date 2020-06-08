@@ -239,12 +239,162 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Exercise 4 -->
         <question type="extended-answer" id="16">
-            <body></body>
+            <body>The nonce field is 32-bit long. This is not enough variation for very high difficulty times (e.g. May
+                2020). How can a miner change a block to change the hash without making the block invalid (in ascending
+                order in terms of difficulty)?
+            </body>
             <answers>
                 <answer>
-                    <body></body>
-                    <marks></marks>
+                    <body>Possible fields are timestamp, scriptsig in coinbase tx, coinbase tx address, tx
+                        ordering, and adding/removing tx.
+                    </body>
+                    <marks>
+                        <mark type="keyword">time</mark>
+                        <mark type="keyword">scriptsig</mark>
+                        <mark type="keyword">address</mark>
+                        <mark type="keyword">ordering</mark>
+                        <mark type="keyword">add</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="17">
+            <body>What does probabilistic consensus mean?</body>
+            <answers>
+                <answer>
+                    <body>It means that, if a network agrees on a certain set of transactions to be executed, it is not
+                        100% certain to be valid in the long term. Bitcoin and other blockchains which have a
+                        probabilistic consensus have no settlement finality directive. This means, it is possible that
+                        transactions can be reverted, however with a very low (and decreasing) probability.
+                    </body>
+                    <marks>
+                        <mark type="keyword">reverted</mark>
+                        <mark type="regex">decreasing.*probability</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="18">
+            <body>Briefly describe two incentives for mining and full nodes to participate in the Bitcoin network.
+            </body>
+            <answers>
+                <answer>
+                    <body>Miners get block rewards and transaction fees. Full nodes have only indirect incentives. They
+                        could be running the node to connect their wallet software or have a business which relies on
+                        the data.
+                    </body>
+                    <marks>
+                        <mark type="keyword">block reward</mark>
+                        <mark type="keyword">transaction fee</mark>
+                        <mark type="keyword">wallet software</mark>
+                        <mark type="keyword">data</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="19">
+            <body>Suppose a miner creates a double spending transaction and manages to mine the transaction in a block.
+                What happens to the other transactions in the block?
+            </body>
+            <answers>
+                <answer>
+                    <body>These transactions still wait to be mined by a legit miner into a valid block.</body>
+                    <marks>
+                        <mark type="keyword">wait</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="20">
+            <body>Explain two reasons behind transaction fees. Why is the block reward not sufficient?</body>
+            <answers>
+                <answer>
+                    <body>Block rewards decrease over time (to limit total coins in circulation) which is why another
+                        mining incentive is needed. Wallet owners can give their tx a higher priority by increasing tx
+                        fee.
+                    </body>
+                    <marks>
+                        <mark type="keyword">block reward decreases</mark>
+                        <mark type="keyword">priority</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="21">
+            <body>Explain why the mining difficulty in the Bitcoin network is adjusted every 2016th block.</body>
+            <answers>
+                <answer>
+                    <body>The idea is to keep the block time at roughly 10 minutes to ensure a stable network.</body>
+                    <marks>
+                        <mark type="keyword">block time</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="22">
+            <body>Why should the block time never get too slow?</body>
+            <answers>
+                <answer>
+                    <body>Tx take longer to be included and the network capacity decreases.</body>
+                    <marks>
+                        <mark type="keyword">longer</mark>
+                        <mark type="keyword">capacity decrease</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="23">
+            <body>Why should the block time never get too fast?</body>
+            <answers>
+                <answer>
+                    <body>Higher possibility of orphan blocks, empty blocks, and the network needs to keep up with the
+                        blocks (at very high speed).
+                    </body>
+                    <marks>
+                        <mark type="keyword">orphan</mark>
+                        <mark type="keyword">empty</mark>
+                        <mark type="keyword">network</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="24">
+            <body>How many bitcoins will there be at the end?</body>
+            <answers>
+                <answer>
+                    <body>21.000.000</body>
+                    <marks>
+                        <mark type="keyword">21.000.000</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="25">
+            <body>How often is the mining reward halved?</body>
+            <answers>
+                <answer>
+                    <body>Every 210.000 blocks.</body>
+                    <marks><mark type="keyword">210.000</mark></marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="26">
+            <body>A company accepts cryptocurrencies as a payment. What factors should it consider regarding the
+                confirmation time to receive transactions safely?
+            </body>
+            <answers>
+                <answer>
+                    <body>The confirmation time should be adjusted based on: the maturity of the network, the amount of
+                        the payment, and whether the counterparty can be identified.
+                    </body>
+                    <marks>
+                        <mark type="keyword">maturity</mark>
+                        <mark type="keyword">amount</mark>
+                        <mark type="keyword">identif</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
