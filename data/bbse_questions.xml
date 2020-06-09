@@ -377,7 +377,9 @@
             <answers>
                 <answer>
                     <body>Every 210.000 blocks.</body>
-                    <marks><mark type="keyword">210.000</mark></marks>
+                    <marks>
+                        <mark type="keyword">210.000</mark>
+                    </marks>
                 </answer>
             </answers>
         </question>
@@ -398,6 +400,70 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Exercise 5 -->
+        <question type="extended-answer" id="27">
+            <body>Assume, that the Bitcoin development team plans to increase the maximum block size limit from 1MB
+                to 10MB. Explain if this change requires a hard fork or soft fork.
+            </body>
+            <answers>
+                <answer>
+                    <body>It requires a hard fork, because the block validation is becoming more permissive, making old
+                        clients incompatible.
+                    </body>
+                    <marks>
+                        <mark type="keyword">hard</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="28">
+            <body>What are two risks of a hard fork?</body>
+            <answers>
+                <answer>
+                    <body>The fork can lead to two chains, if the hash power of the new chain is bigger than the hash
+                        power of the old version. If the chain splits, there is a risk of a replay attack, because tx on
+                        the new chain are also valid on the old chain. A malicious node could propagate tx of the new
+                        chain to the old chain.
+                    </body>
+                    <marks>
+                        <mark type="keyword">two chains</mark>
+                        <mark type="keyword">replay attack</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="29">
+            <body>An adversary has more than 50% of the network hash power. Explain his options to attack the network.
+            </body>
+            <answers>
+                <answer>
+                    <body>He can block tx from the chain, he can DoS by proposing empty blocks, he can claim all mining
+                        rewards, and he can perform double spend attacks.
+                    </body>
+                    <marks>
+                        <mark type="keyword">block tx</mark>
+                        <mark type="keyword">DoS</mark>
+                        <mark type="keyword">claim all mining rewards</mark>
+                        <mark type="keyword">double spend</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="30">
+            <body>Explain the minimum hashrate required to launch a selfish mining attack, if alpha is 100%.</body>
+            <answers>
+                <answer>
+                    <body>There is no hashrate requirement. When alpha is 100% there is never a downside to selfish
+                        mining.
+                    </body>
+                    <marks>
+                        <mark type="keyword">no</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
 
     </body>
 </exam>
