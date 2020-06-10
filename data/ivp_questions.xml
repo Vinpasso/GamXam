@@ -1371,5 +1371,517 @@
             </answers>
         </question>
 
+        <!-- Grundlagen der Produktionsplanung und -steuerung -->
+        <question type="extended-answer" id="85">
+            <body>Was versteht man unter Planung?</body>
+            <answers>
+                <answer>
+                    <body>Planung ist die gedankliche Vorwegnahme der Zukunft.</body>
+                    <marks>
+                        <mark type="keyword">gedankliche Vorwegnahme</mark>
+                        <mark type="keyword">Zukunft</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="86">
+            <body>Was unterscheidet die Produktionsplanung von der Produktionssteuerung?</body>
+            <answers>
+                <answer>
+                    <body>Die Produktionssteuerung hat die Aufgabe die Produktionsplanung umzusetzen. Sie arbeitet dazu
+                        kurzfristiger und kann korrigieren, falls die Planung nicht exakt umgesetzt werden kann.
+                    </body>
+                    <marks>
+                        <mark type="keyword">umzusetzen</mark>
+                        <mark type="keyword">kurzfristiger</mark>
+                        <mark type="keyword">korrigieren</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="87">
+            <body>Was ist ERP?</body>
+            <answers>
+                <answer>
+                    <body>Enterprise Resource Planning</body>
+                    <marks>
+                        <mark type="keyword">Enterprise Resource Planning</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="88">
+            <body>Was ist MES?</body>
+            <answers>
+                <answer>
+                    <body>Manufacturing Execution System</body>
+                    <marks>
+                        <mark type="keyword">Manufacturing Execution System</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="89">
+            <body>Was ist PPS?</body>
+            <answers>
+                <answer>
+                    <body>Produktionsplanung und Produktionssteuerung.</body>
+                    <marks>
+                        <mark type="keyword">Produktionsplanung</mark>
+                        <mark type="keyword">Produktionssteuerung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="90">
+            <body>Was versteht man unter dem PDCA-Zyklus?</body>
+            <answers>
+                <answer>
+                    <body>Plan-Do-Check-Action bezeichnet das Vorgehen zu planen, die Planung umzusetzen, zu
+                        kontrollieren und gegebenermaßen anpassen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">plan</mark>
+                        <mark type="keyword">do</mark>
+                        <mark type="keyword">check</mark>
+                        <mark type="keyword">action</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="91">
+            <body>Wie grenzen sich PPS von ERP und MES ab?</body>
+            <answers>
+                <answer>
+                    <body>PPS ist Teil von ERP und MES.</body>
+                    <marks>
+                        <mark type="keyword">Teil</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="92">
+            <body>Was ist für die meisten Firmen die wichtigste Logistische Zielgröße?</body>
+            <answers>
+                <answer>
+                    <body>Liefertermintreue</body>
+                    <marks>
+                        <mark type="keyword">Liefertermintreue</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Grundlagen der Produktionsplanung und -steuerung – Kennzahlen -->
+        <question type="extended-answer" id="93">
+            <body>Welche Voraussetzungen müssen Kennzahlen erfüllen?</body>
+            <answers>
+                <answer>
+                    <body>Sie müssen exakt definiert werden, ausreichende Aktualität besitzen, verständlich und
+                        eindeutig sein, wirtschaftlich ermittelt werden können, eindeutige Verantwortung zugeordnet
+                        bekommen und für den Empfänger entscheidungsrelevant sein.
+                    </body>
+                    <marks>
+                        <mark type="keyword">exakt</mark>
+                        <mark type="keyword">Aktualität</mark>
+                        <mark type="keyword">verständlich und eindeutig</mark>
+                        <mark type="keyword">wirtschaftlich</mark>
+                        <mark type="keyword">Verantwortung</mark>
+                        <mark type="keyword">entscheidungsrelevant</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="94">
+            <body>Was ist OEE?</body>
+            <answers>
+                <answer>
+                    <body>Overall Equipment Effectiveness = Anlagenverfügbarkeit * Anlageneffizienz * Qualitätsrate
+                    </body>
+                    <marks>
+                        <mark type="keyword">Overall Equipment Effectiveness</mark>
+                        <mark type="keyword">Anlagenverfügbarkeit * Anlageneffizienz * Qualitätsrate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="95">
+            <body>Was ist TEEP?</body>
+            <answers>
+                <answer>
+                    <body>Total Effective Equipment Performance = Anlagenauslastung = (Arbeitszeit - geplanter
+                        Stilltand) / Arbeitszeit
+                    </body>
+                    <marks>
+                        <mark type="keyword">Total Effective Equipment Performance</mark>
+                        <mark type="keyword">Anlagenauslastung</mark>
+                        <mark type="keyword">(Arbeitszeit - geplanter Stilltand) / Arbeitszeit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Grundlagen der Produktionsplanung und -steuerung – Produktionsprogrammplanung -->
+        <question type="extended-answer" id="96">
+            <body>Was versteht man unter einem Verkaufsprogramm?</body>
+            <answers>
+                <answer>
+                    <body>Das Verkaufprogramm umfasst sämtliche Produkte, die eine Firma verkauft.</body>
+                    <marks>
+                        <mark type="keyword">produkt</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="97">
+            <body>Was versteht man unter einem Produktionsprogramm?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Die Planung zukünftiger Produktion für alle Produkte einer Firma. Es legt fest, was wann
+                        produziert wird.
+                    </body>
+                    <marks>
+                        <mark type="keyword">planung</mark>
+                        <mark type="keyword">produktion</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="98">
+            <body>Wie unterscheiden sich Brutto- und Nettobedarf?</body>
+            <answers>
+                <answer>
+                    <body>Der Bruttobedarf umfasst alle Absätze für einen Zeitraum, während der Nettobedarf
+                        Lagerbestände berücksichtigt und daher nur zusätzlich nötige Produktion umfasst.
+                    </body>
+                    <marks>
+                        <mark type="keyword">absätze</mark>
+                        <mark type="keyword">lagerbestände</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Grundlagen der Produktionsplanung und -steuerung – Mengenplanung -->
+        <question type="extended-answer" id="99">
+            <body>Welche Methoden der Bedarfsermittlung kennen Sie?</body>
+            <answers>
+                <answer>
+                    <body>Deterministische Bedarfsermittlung (fertigen, was bestellt ist), stochastische
+                        Bedarfsermittlung (extrapoliere den Bedarf aus alten Daten), heuristische Bedarsermittlung
+                        (erfahrungsbasierte Schätzung).
+                    </body>
+                    <marks>
+                        <mark type="keyword">deterministisch</mark>
+                        <mark type="keyword">stochastisch</mark>
+                        <mark type="keyword">heuristisch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="100">
+            <body>Welche empirische Erkenntnis liegt der ABC-Analyse zugrunde?</body>
+            <answers>
+                <answer>
+                    <body>Pareto-Prinzip (oder auch 80/20 Regel).</body>
+                    <marks>
+                        <mark type="keyword">Pareto</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="101">
+            <body>Was sind A-, B-, und C-Teile?</body>
+            <answers>
+                <answer>
+                    <body>A-Teile sind kostenintensive Teile, C-Teile sind Massenware und B-Teile liegen dazwischen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">kostenintensiv</mark>
+                        <mark type="keyword">massenware</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="102">
+            <body>Wie läuft die Mengenplanung für A-, B-, und C-Teile?</body>
+            <answers>
+                <answer>
+                    <body>A- und B-Teile werden bedarfsorientiert (z.B. Fertigungsstufenverfahren) beschafft, während
+                        C-Teile verbrauchsorientiert (z.B. Bestellrhytmus) beschafft werden.
+                    </body>
+                    <marks>
+                        <mark type="keyword">bedarfsorientiert</mark>
+                        <mark type="keyword">verbrauchsorientiert</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="103">
+            <body>Was ist der Unterschied zwischen dem Bestellrythmusverfahren und dem Bestellpunktverfahren.</body>
+            <answers>
+                <answer>
+                    <body>Ersteres ist terminbezogen, während letzteres bestandsbezogen ist.</body>
+                    <marks>
+                        <mark type="keyword">termin</mark>
+                        <mark type="keyword">bestand</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="104">
+            <body>Welche Vorraussetzungen unterstellt das Lösgrößenmodell nach Andler?</body>
+            <answers>
+                <answer>
+                    <body>keine Fehlmengen, kontinuierlicher Lagerabgang, keine Lieferzeit, unbegrenzte
+                        Lageraufnahmekapazität, gleichbleibende Lagerungskosten pro Menge und Zeit, Bestellkosten
+                        basieren auf Fixkosten plus Preis pro Menge
+                    </body>
+                    <marks>
+                        <mark type="keyword">keine Fehlmenge</mark>
+                        <mark type="keyword">kontinuierlicher Lagerabgang</mark>
+                        <mark type="keyword">keine Lieferzeit</mark>
+                        <mark type="keyword">unbegrenzte Lageraufnahmekapazität</mark>
+                        <mark type="keyword">gleichbleibende Lagerungskosten</mark>
+                        <mark type="keyword">Fixkosten plus Preis pro Menge</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="105">
+            <body>Wofür kann man die Gleichung nach Andler noch einsetzen?</body>
+            <answers>
+                <answer>
+                    <body>Planung von (kurzen) Produktionszyklen? (note: Vorlesung sagt nur, man soll sich selbst
+                        Gedanken machen)
+                    </body>
+                    <marks>
+                        <mark type="keyword">Produktion</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Grundlagen der Produktionsplanung und -steuerung – Termin- und Kapazitätsplanung -->
+        <question type="extended-answer" id="106">
+            <body>Welcher Zeitanteil dominiert die Durchlaufzeit?</body>
+            <answers>
+                <answer>
+                    <body>Liegezeit</body>
+                    <marks>
+                        <mark type="keyword">Liegezeit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="107">
+            <body>Weshalb spricht man vom Dilemma der PPS?</body>
+            <answers>
+                <answer>
+                    <body>Terminplanung und Kapazitätsplanung konkurrieren. Es muss eine Balance zwischen Termintreue
+                        und Kapazitätsauslastung erzielt werden.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Termintreue</mark>
+                        <mark type="keyword">Kapazitätsauslastung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="108">
+            <body>Was sind die beiden Hauptaufgaben der Produktionssteuerung?</body>
+            <answers>
+                <answer>
+                    <body>Auftragsveranlassung und Auftragsüberwachung.</body>
+                    <marks>
+                        <mark type="keyword">Auftragsveranlassung</mark>
+                        <mark type="keyword">Auftragsüberwachung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="109">
+            <body>Welche wesentlichen Datengruppen kennt die PPS?</body>
+            <answers>
+                <answer>
+                    <body>Stammdaten (z.B. Produkte und Umfeld) und Bewegungsdaten (z.B. Dynamik der Fertigung).</body>
+                    <marks>
+                        <mark type="keyword">stammdaten</mark>
+                        <mark type="keyword">bewegungsdaten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Logistische Zielgrößen -->
+        <question type="extended-answer" id="110">
+            <body>Worin bestehen die vier konfligierenden Zielgrößen der Logistik?</body>
+            <answers>
+                <answer>
+                    <body>Liefertreue, Lieferzeit, Prozesskosten und Kapitalbindungskosten.</body>
+                    <marks>
+                        <mark type="keyword">Liefertreue</mark>
+                        <mark type="keyword">Lieferzeit</mark>
+                        <mark type="keyword">Prozesskosten</mark>
+                        <mark type="keyword">Kapitalbindungskosten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="111">
+            <body>Wozu dient das Trichtermodell der Auftragssteuerung?</body>
+            <answers>
+                <answer>
+                    <body>Das Trichtermodell modelliert die Zusammenhänge zwischen den vier konfligierenden Zielgrößen
+                        der Logistik.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Zusammenhänge</mark>
+                        <mark type="keyword">Zielgrößen der Logistik</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="112">
+            <body>Welche Vorteile haben Bestände in der Produktion?</body>
+            <answers>
+                <answer>
+                    <body>Sie führen zu hoher Termintreue und kurzer Lieferzeit.</body>
+                    <marks>
+                        <mark type="keyword">Termintreue</mark>
+                        <mark type="keyword">Lieferzeit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="113">
+            <body>Welchen Nachteil haben Bestände in der Produktion?</body>
+            <answers>
+                <answer>
+                    <body>
+                        Sie verursachen Kapitalbindungskosten.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Kapitalbindungskosten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Eigenfertigungsplanung und -steuerung -->
+        <question type="extended-answer" id="114">
+            <body>Wofür steht BKT?</body>
+            <answers>
+                <answer>
+                    <body>Betriebskalendertag</body>
+                    <marks>
+                        <mark type="keyword">Betriebskalendertag</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="115">
+            <body>Welchen Zusammenhang drückt eine Betriebskennlinie in der PPS aus?</body>
+            <answers>
+                <answer>
+                    <body>Den Zusammenhang zwischen Bestand (in Auftragsstunden) und entweder Leistung (in Stunden pro
+                        BKT) oder Durchlaufzeit (in BKT).
+                    </body>
+                    <marks>
+                        <mark type="keyword">Bestand</mark>
+                        <mark type="keyword">Leistung</mark>
+                        <mark type="keyword">Durchlaufzeit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="116">
+            <body>Wie ermittelt man den idealen Mindestbestand?</body>
+            <answers>
+                <answer>
+                    <body>Der ideale Mindestbestand wird so gewählt, dass die Leistung der Anlage maximalist.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Leistung</mark>
+                        <mark type="keyword">maximal</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="117">
+            <body>Welcher Zusammenhang besteht zwischen Beständen und Durchlaufzeit?</body>
+            <answers>
+                <answer>
+                    <body>Es gibt einen nahezu proportionalen Zusammenhang.</body>
+                    <marks>
+                        <mark type="keyword">proportional</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Auftragsfreigabe -->
+        <question type="extended-answer" id="118">
+            <body>Welche Auftragsfreigabeverfahren werden in der Vorlesung genannt?</body>
+            <answers>
+                <answer>
+                    <body>Constant Work In Process (ConWIP: Freigabe sobald der Bestand eine Grenze unterschreitet),
+                        Engpass-Steuerung (ganze Planung richtet sich nach dem Engpass) und Belastungsorientierte
+                        Auftragsfreigabe (BOA: Freigabe wenn Auslastung sinkt).
+                    </body>
+                    <marks>
+                        <mark type="keyword">Constant Work In Process</mark>
+                        <mark type="keyword">Engpass-Steuerung</mark>
+                        <mark type="keyword">Belastungsorientierte Auftragsfreigabe</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="119">
+            <body>Was sind vier Beispiele für Prioritätsregeln?</body>
+            <answers>
+                <answer>
+                    <body>First In - First Out (FIFO), Schlupfzeitregelung, Frühester Plan-Starttermin (FPS) und
+                        Frühester Plan-Endtermin (FPE).
+                    </body>
+                    <marks>
+                        <mark type="keyword">First In - First Out</mark>
+                        <mark type="keyword">Schlupfzeitregelung</mark>
+                        <mark type="keyword">Frühester Plan-Starttermin</mark>
+                        <mark type="keyword">Frühester Plan-Endtermin</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="120">
+            <body>Welchen Effekt erzeugt die KOZ-Regel?</body>
+            <answers>
+                <answer>
+                    <body>Die Regel der kürzestesten Operationszeit ist eine Prioritätsregel, die dazu führt, dass die
+                        Bestände reduziert werden.
+                    </body>
+                    <marks>
+
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="121">
+            <body>Was versteht man unter harter Echtzeit?</body>
+            <answers>
+                <answer>
+                    <body>Harte Echtzeit bezieht sich auf ein System, dass kritisch (bzw. mit einem Fehler) auf
+                        Überschreitung von zeitlichen Erwartungen reagiert.
+                    </body>
+                    <marks>
+                        <mark type="keyword">system</mark>
+                        <mark type="keyword">kritisch</mark>
+                        <mark type="keyword">überschreitung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
