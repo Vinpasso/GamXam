@@ -1883,5 +1883,154 @@
             </answers>
         </question>
 
+        <!-- Betriebs- und Maschinendatenerfassung -->
+        <question type="extended-answer" id="122">
+            <body>Wofür stehen die Abkürzungen BDE und MDE?</body>
+            <answers>
+                <answer>
+                    <body>Betriebsdatenerfassung und Maschinendatenerfassung.</body>
+                    <marks>
+                        <mark type="keyword">Betriebsdatenerfassung</mark>
+                        <mark type="keyword">Maschinendatenerfassung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="123">
+            <body>Was ist der Unterschied zwischen BDE und MDE?</body>
+            <answers>
+                <answer>
+                    <body>MDE beschäftigt sich primär mit dem Zustand einer Maschine, während BDE sich mit einem
+                        größeren Bereich (z.B. Arbeitsplatz) beschäftigt.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Zustand einer Maschine</mark>
+                        <mark type="keyword">Bereich</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="124">
+            <body>Welche Rolle spielen die BDE und MDE für die PPS?</body>
+            <answers>
+                <answer>
+                    <body>BDE und MDE liefern Daten zur effektiven PPS.</body>
+                    <marks>
+                        <mark type="keyword">Daten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Einführung von PPS-Systemen -->
+        <question type="extended-answer" id="125">
+            <body>Wie lässt sich die starke Verbreitung von ERP-Systemen im Kontext der PPS erklären?</body>
+            <answers>
+                <answer>
+                    <body>ERP-Systeme als übergeordnete Systeme sind schon länger für viele Bereiche der
+                        Unternehmensverwaltung im Einsatz und
+                        beinhalten häufig auch PPS Funktionalität.
+                    </body>
+                    <marks>
+                        <mark type="keyword">übergeordnet</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="126">
+            <body>Was sind (4 ausgewählte) Anforderungen an PPS-Systeme?</body>
+            <answers>
+                <answer>
+                    <body>Integrität, Effizienz, Zuverlässigkeit und Verknüpfbarkeit.</body>
+                    <marks>
+                        <mark type="keyword">Integrität</mark>
+                        <mark type="keyword">Effizienz</mark>
+                        <mark type="keyword">Zuverlässigkeit</mark>
+                        <mark type="keyword">Verknüpfbarkeit</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Lean Production / Ganzheitliche Produktion -->
+        <question type="extended-answer" id="127">
+            <body>Was ist Schlanke Produktion (i.e. Lean Production)?</body>
+            <answers>
+                <answer>
+                    <body>Es ist ein Produktionssystem, dass den Fokus auf die Vermeidung von Verschwendung legt.</body>
+                    <marks>
+                        <mark type="keyword">Verschwendung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="128">
+            <body>Was ist Ganzheitliche Produktion?</body>
+            <answers>
+                <answer>
+                    <body>Es ist ein Produktionssystem, dass auf intelligenter Automation und kontinuierlicher
+                        Verbesserung basiert.
+                    </body>
+                    <marks>
+                        <mark type="keyword">intelligent</mark>
+                        <mark type="keyword">Verbesserung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="129">
+            <body>Was sind die Zusammenhänge von TPS, der schlanke Produktion und der Ganzheitliche Produktion?</body>
+            <answers>
+                <answer>
+                    <body>TPS ist ein Vertreter der Ganzheitlichen Produktionssysteme, aus denen dann wiederum schlanke
+                        Produktion hervorgegangen ist.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Vertreter</mark>
+                        <mark type="keyword">hervorgegangen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="130">
+            <body>Was sind die drei Mu's des Toyota-Produktionssystems?</body>
+            <answers>
+                <answer>
+                    <body>Muda (Verschwendung), Muri (Überlastung) und Mura (Unausgeglichenheit).</body>
+                    <marks>
+                        <mark type="keyword">muda</mark>
+                        <mark type="keyword">muri</mark>
+                        <mark type="keyword">mura</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="131">
+            <body>Warum spielt die Vermeidung von Verschwendung für die PPS eine besondere Rolle?</body>
+            <answers>
+                <answer>
+                    <body>Weil Verschwendung die logistischen Zielgrößen negativ beeinflusst.</body>
+                    <marks>
+                        <mark type="keyword">logistisch</mark>
+                        <mark type="keyword">Zielgröße</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="132">
+            <body>Welchen Einfluss hat die Digitalisierung auf die Vermeidung von Verschwendung in Produktionssystemen?
+            </body>
+            <answers>
+                <answer>
+                    <body>Die Möglichkeiten, welche die Digitalisierung bietet, können helfen, um Verschwendung
+                        schneller und sicherer zu erkennen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">helfen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
