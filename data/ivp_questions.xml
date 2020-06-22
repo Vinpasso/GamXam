@@ -2032,5 +2032,142 @@
             </answers>
         </question>
 
+        <!-- GPS – Null-Fehler-Prinzip, Poka Yoke -->
+        <question type="extended-answer" id="133">
+            <body>Was ist das Null-Fehler-Prinzip?</body>
+            <answers>
+                <answer>
+                    <body>Das Null-Fehler-Prinzip umfasst Methoden zur Vermeidung von Fehlerweitergabe,
+                        Fehlervermeidung, sowie zur Sicherstellung einer hohen Produkt- und Prozessqualität.
+                    </body>
+                    <marks>
+                        <mark type="keyword">fehlerweitergabe</mark>
+                        <mark type="keyword">fehlervermeidung</mark>
+                        <mark type="keyword">qualität</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="134">
+            <body>Was ist Poka Yoke?</body>
+            <answers>
+                <answer>
+                    <body>Poka Yoke (Fehlervermeidung) ist eine Methode des Null-Fehler-Prinzips. Es dient der
+                        Vermeidung zufälliger Fehler durch technische Vorkehrungen oder Vorgehensweise.
+                    </body>
+                    <marks>
+                        <mark type="keyword">fehlervermeidung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="135">
+            <body>Inwiefern kann Digitalisierung auch zu einem Problem in der Produktion werden?</body>
+            <answers>
+                <answer>
+                    <body>Mitarbeiter können mit zu viel Information überflutet werden.</body>
+                    <marks>
+                        <mark type="keyword">zu viel</mark>
+                        <mark type="keyword">Information</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- GPS – Pull-Prinzip, Kanban -->
+        <question type="extended-answer" id="136">
+            <body>Warum ist das Pull-Prinzip dem Push-Prinzip in einer schlanken Produktion vorzuziehen?</body>
+            <answers>
+                <answer>
+                    <body>Das Pull-Prinzip richtet sich in der Produktionsmenge nach den Bedarfen der Kunden und sorgt
+                        somit zu geringen Beständen in der Fertigung.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Bedarf</mark>
+                        <mark type="keyword">Bestände</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="137">
+            <body>Was ist Kanban?</body>
+            <answers>
+                <answer>
+                    <body>Kanban ist eine Methode des Pull-Prinzips. Karten werden verwendet um innerhalb eines
+                        geschlossenen Kreislaufs Materialbedarf zu signalisieren.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Pull</mark>
+                        <mark type="keyword">Karte</mark>
+                        <mark type="keyword">Materialbedarf</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="138">
+            <body>Inwiefern begünstigt ein digitalisiertes Kanban (z.B. E-Kanban) die Reduzierung von Beständen?
+            </body>
+            <answers>
+                <answer>
+                    <body>Da die Bestellaufgabe durch Mitarbeiter nicht mehr vergessen werden kann, müssen weniger
+                        Bestände vorgehalten werden, um eventuelle menschliche Fehler auszugleichen.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Bestellaufgabe</mark>
+                        <mark type="keyword">vergessen</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- GPS – Wertstrommanagement -->
+        <question type="extended-answer" id="139">
+            <body>Welche Vorteile bietet klassisches Wertstrommanagement?</body>
+            <answers>
+                <answer>
+                    <body>Es ist einfach (Papier und Bleistift auf einer Seite), schnell (ungefilterte Information
+                        direkt aus der Produktion), ganzheitlich (Abbildung der gesamten Prozesskette) und
+                        zielorientiert (ein Soll-Zustand muss immer vorliegen).
+                    </body>
+                    <marks>
+                        <mark type="keyword">einfach</mark>
+                        <mark type="keyword">schnell</mark>
+                        <mark type="keyword">ganzheitlich</mark>
+                        <mark type="keyword">zielorientiert</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="140">
+            <body>Welche Nachteile hat klassisches Wertstrommanagement?</body>
+            <answers>
+                <answer>
+                    <body>Wenn der Wertstrom an einem nicht repräsentativen Tag analysiert wird, entsteht ein falsches
+                        Bild der Produktion. Außerdem ist die manuelle Datenerhebung aufwändig.
+                    </body>
+                    <marks>
+                        <mark type="keyword">repräsentativ</mark>
+                        <mark type="keyword">aufwändig</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="141">
+            <body>Welche Ansatzpunkte bietet die Digitalisierung im Kontext der Wertstromanalyse?</body>
+            <answers>
+                <answer>
+                    <body>Digitalisierung ermöglicht die Einbindung von Sensor- und Maschinendaten, Daten von Smart
+                        Devices, sowie Benutzerdaten. Diese Daten können dann automatisiert ausgewertet werden.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Einbindung</mark>
+                        <mark type="keyword">daten</mark>
+                        <mark type="keyword">automatisiert</mark>
+                        <mark type="keyword">ausgewertet</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
