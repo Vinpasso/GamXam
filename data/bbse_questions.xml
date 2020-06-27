@@ -637,7 +637,94 @@
                 </answer>
             </answers>
         </question>
-        
+
+        <!-- Exercise 7 -->
+        <question type="extended-answer" id="43">
+            <body>What is the difference between an abstract contract, an interface, and a library in Solidity?</body>
+            <answers>
+                <answer>
+                    <body>An abstract contract is a smart contract with at least one unimplemented function and can not
+                        be compiled. An interface is not allowed to define a constructor, variables, structs, and enums.
+                        Also it can not inherit from a contract or implement another interface. A library is a deployed
+                        contract whose code can be reused by other contracts using a delegate call.
+                    </body>
+                    <marks>
+                        <mark type="keyword">unimplemented</mark>
+                        <mark type="keyword">not allowed to define</mark>
+                        <mark type="keyword">deployed</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="44">
+            <body>In Solidity every pure function is a view function. True or false?</body>
+            <answers>
+                <answer>
+                    <body>True. Pure functions are a subset of view function that do not read from the state.</body>
+                    <marks>
+                        <mark type="keyword">true</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="45">
+            <body>In Solidity a transaction that calls a view function does not cost any gas because it does not change
+                state. True or false?
+            </body>
+            <answers>
+                <answer>
+                    <body>False. View functions do consume gas. However, they can be called without sending the
+                        transaction to the network. Then the execution will not cost anything because there is no record
+                        of it on the blockchain.
+                    </body>
+                    <marks>
+                        <mark type="keyword">false</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="46">
+            <body>In Ethereum, a smart contract that has no functions that are declared payable cannot receive any
+                Ether. True or false?
+            </body>
+            <answers>
+                <answer>
+                    <body>False. It can receive Ether as result of a coinbase transaction or as a destination of a
+                        selfdestruct.
+                    </body>
+                    <marks>
+                        <mark type="keyword">false</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="47">
+            <body>Solidity’s standard int and uint datatypes can each hold 2^32 different values. True or false?</body>
+            <answers>
+                <answer>
+                    <body>False. They are 256bit long and thus can hold 2^256 different values.</body>
+                    <marks>
+                        <mark type="keyword">false</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="48">
+            <body>If msg.sender == tx.origin, then this code was called directly by an externally owned account and not
+                by another smart contract. True or false?
+            </body>
+            <answers>
+                <answer>
+                    <body>True. tx.origin is the externally owned account that issued the transaction and msg.sender
+                        is the direct caller of the function. If they are equal, the code was called directly by the
+                        issuer of the transaction and therefore not by a smart contract.
+                    </body>
+                    <marks>
+                        <mark type="keyword">true</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
     </body>
 </exam>
