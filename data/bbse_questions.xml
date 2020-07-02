@@ -726,5 +726,98 @@
             </answers>
         </question>
 
+        <!-- Exercise 8 -->
+        <question type="extended-answer" id="49">
+            <body>In the context of Solidity, what is an oracle and what is it used for?</body>
+            <answers>
+                <answer>
+                    <body>Oracles are third-party services that collect data from web services and write the data via a
+                        special smart contract to the blockchain. They are used by smart contracts that rely on external
+                        data from the oracle for computation of future states.
+                    </body>
+                    <marks>
+                        <mark type="keyword">external data</mark>
+                        <mark type="keyword">service</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="50">
+            <body>In the context of Solidity, explain the difference between a synchronous and an asynchronous oracle.
+            </body>
+            <answers>
+                <answer>
+                    <body>Synchronous oracles write the data regularly to the blockchain. Asynchronous oracles expect
+                        the requesting contract to provide a callback function, which the oracle calls with the data.
+                    </body>
+                    <marks>
+                        <mark type="keyword">external data</mark>
+                        <mark type="keyword">service</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="51">
+            <body>In the context of Solidity, explain the advantages and disadvantages of synchronous and asynchronous
+                oracles.
+            </body>
+            <answers>
+                <answer>
+                    <body>Data from synchronous oracles can be accessed instantly, but may be outdated. Asynchronous
+                        yield more up-to-date data, but delay the execution of the smart contract as this method takes
+                        two transactions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">instantly</mark>
+                        <mark type="keyword">outdated</mark>
+                        <mark type="keyword">up-to-date</mark>
+                        <mark type="keyword">delay</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="52">
+            <body>In the context of Solidity, what are the advantages and disadvantages of an oracle in general?</body>
+            <answers>
+                <answer>
+                    <body>Advantages: Enables data retrieval from external sources, Flexible in terms of purpose.
+                        Disadvantages: Costly in terms of gas consumption, Dependence on a third party.
+                    </body>
+                    <marks>
+                        <mark type="keyword">external</mark>
+                        <mark type="keyword">flexible</mark>
+                        <mark type="keyword">cost</mark>
+                        <mark type="keyword">dependence</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="53">
+            <body>What are the three Solidity idioms discussed in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Access restriciton, Secure ether transfer, and Safe arithmetic.</body>
+                    <marks>
+                        <mark type="keyword">access restriction</mark>
+                        <mark type="keyword">secure ether transfer</mark>
+                        <mark type="keyword">safe arithmetic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="54">
+            <body>What are the two standards for tokens in Ethereum and how do they differ?</body>
+            <answers>
+                <answer>
+                    <body>There is ERC20 for fungible tokens and ERC721 implements non-fungible tokens.</body>
+                    <marks>
+                        <mark type="keyword">ERC20</mark>
+                        <mark type="keyword">ERC721</mark>
+                        <mark type="keyword">fungible</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
