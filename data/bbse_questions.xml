@@ -819,5 +819,293 @@
             </answers>
         </question>
 
+        <!-- Hyperledger -->
+        <question type="extended-answer" id="55">
+            <body>What are the three general types of Blockchains?</body>
+            <answers>
+                <answer>
+                    <body>There are public Blockchains, private Blockchains, and Consortium Blockchains.</body>
+                    <marks>
+                        <mark type="keyword">public</mark>
+                        <mark type="keyword">private</mark>
+                        <mark type="keyword">consortium</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="56">
+            <body>What types of Blockchains are permissioned by definition ?</body>
+            <answers>
+                <answer>
+                    <body>Private and Consortium Blockchains are permissioned by definition.</body>
+                    <marks>
+                        <mark type="keyword">private</mark>
+                        <mark type="keyword">consortium</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="57">
+            <body>What problem motivates Consortium Blockchains?</body>
+            <answers>
+                <answer>
+                    <body>Having multiple parties that do not fully trust each other and need to share information in a
+                        tamper proof and secure way.
+                    </body>
+                    <marks>
+                        <mark type="keyword">parties</mark>
+                        <mark type="keyword">trust</mark>
+                        <mark type="keyword">share information</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="58">
+            <body>What are the four business requirements for blockchain-based systems?</body>
+            <answers>
+                <answer>
+                    <body>Privacy, Smart Contracts, Trust, and a Single source of truth.</body>
+                    <marks>
+                        <mark type="keyword">privacy</mark>
+                        <mark type="keyword">smart contracts</mark>
+                        <mark type="keyword">trust</mark>
+                        <mark type="keyword">single source of truth</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="59">
+            <body>What is Hyperledger?</body>
+            <answers>
+                <answer>
+                    <body>Hyperledger is an umbrella project hosted by the Linux foundation. The goal is to create open
+                        source software that enables the setup of a shared and trustless ledger databases for
+                        collaboration.
+                    </body>
+                    <marks>
+                        <mark type="keyword">umbrella project</mark>
+                        <mark type="keyword">linux foundation</mark>
+                        <mark type="keyword">open source</mark>
+                        <mark type="keyword">ledger</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="60">
+            <body>What is Corda?</body>
+            <answers>
+                <answer>
+                    <body>Corda is an open source project initiated by the R3 consortium and is used to set up the
+                        infrastructure for a permissioned network. Corda is developed in Kotlin and
+                        specifically designed for enterprise use cases.
+                    </body>
+                    <marks>
+                        <mark type="keyword">open source</mark>
+                        <mark type="keyword">R3 consortium</mark>
+                        <mark type="keyword">Kotlin</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="61">
+            <body>What are some key differences between Corda and public Blockchain systems?</body>
+            <answers>
+                <answer>
+                    <body>Corda is not based on a Blockchain and has no built-in coin. There is no central ledger shared
+                        by all participants and transactions are directly sent to a specified set of receivers.
+                    </body>
+                    <marks>
+                        <mark type="keyword">not based on a blockchain</mark>
+                        <mark type="keyword">no built-in coin</mark>
+                        <mark type="keyword">no central ledger</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="62">
+            <body>What are the five Hyperledger projects briefly mentioned in the lecture?</body>
+            <answers>
+                <answer>
+                    <body>Sawtooth (on-chain governance, parallel tx execution, dynamic consensus algorithm), Iroha
+                        (identity management, asset management), Burrow (basically an Ethereum client), Indy
+                        (permissioned and public, zero-knowledge proofs), and Grid (supply chain-centric, high level
+                        access to the underlying Blockchain).
+                    </body>
+                    <marks>
+                        <mark type="keyword">Sawtooth</mark>
+                        <mark type="keyword">Iroha</mark>
+                        <mark type="keyword">Burrow</mark>
+                        <mark type="keyword">Indy</mark>
+                        <mark type="keyword">Grid</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="63">
+            <body>What is Hyperledger Fabric?</body>
+            <answers>
+                <answer>
+                    <body>Fabric is a permissioned network. A core feature are so-called channels that maintain their
+                        own ledger. Chaincode allows network operators and developers to define business logic for a
+                        whole channel or for particular transactions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">permissioned</mark>
+                        <mark type="keyword">channel</mark>
+                        <mark type="keyword">chaincode</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="64">
+            <body>How is access to a Hyperledger Fabric network granted?</body>
+            <answers>
+                <answer>
+                    <body>The network has a membership service provider (MSP) that uses a certificate authority (CA) to
+                        authenticate and authorize clients.
+                    </body>
+                    <marks>
+                        <mark type="keyword">membership service provider</mark>
+                        <mark type="keyword">certificate authority</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="65">
+            <body>What languages can be used to write Hyperledger Fabric Applications?</body>
+            <answers>
+                <answer>
+                    <body>NodeJS and Go.</body>
+                    <marks>
+                        <mark type="keyword">nodejs</mark>
+                        <mark type="keyword">go</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="66">
+            <body>What is the ordering service of Hyperledger Fabric?</body>
+            <answers>
+                <answer>
+                    <body>The ordering service consists of one or more ordering nodes. They do not store any chaincode
+                        and do not hold the ledger. The service enforces the network policy and takes care of the
+                        authentication and authorization of the peers. The node(s) collect tx from applications and
+                        order(s) them sequentially. Then the tx are put into a new block and delivered to all peers of a
+                        specific channel.
+                    </body>
+                    <marks>
+                        <mark type="keyword">network policy</mark>
+                        <mark type="keyword">authentication and authorization of the peers</mark>
+                        <mark type="keyword">order</mark>
+                        <mark type="keyword">block</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="67">
+            <body>What are the three roles for peers in Hyperledger Fabric and what do they do?</body>
+            <answers>
+                <answer>
+                    <body>They can be a committing peer (maintains state, commits tx, verifies endorsements,
+                        validates results of tx), or an endorsing peer (same as committing peer + executing tx proposals
+                        to create endorsements), or an ordering service node.
+                    </body>
+                    <marks>
+                        <mark type="keyword">committing</mark>
+                        <mark type="keyword">endorsing</mark>
+                        <mark type="keyword">ordering</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="68">
+            <body>What is the typical 7-step process of a tx in Hyperledger Fabric?</body>
+            <answers>
+                <answer>
+                    <body>1) Application submits tx proposal to endorsing peer; 2) Endorsing peer executes/simulates
+                        chaincode; 3) Endorsing peer returns response; 4) Application submits tx (with endorsements) to
+                        ordering service; 5) Ordering service orders txs in a batch according to consensus; 6) Ordering
+                        service delivers batch to committing peers; 7) Committing peers validate and commit tx
+                    </body>
+                    <marks>
+                        <mark type="keyword">tx proposal</mark>
+                        <mark type="keyword">execute</mark>
+                        <mark type="keyword">endorsing peer</mark>
+                        <mark type="keyword">submit</mark>
+                        <mark type="keyword">ordering service</mark>
+                        <mark type="keyword">batch</mark>
+                        <mark type="keyword">committing peer</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="69">
+            <body>What is the software architecture used by Hyperledger Fabric?</body>
+            <answers>
+                <answer>
+                    <body>Execution-Order-Validate Architecture</body>
+                    <marks>
+                        <mark type="keyword">Execution-Order-Validate</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="70">
+            <body>What is the most used ordering service implementation for Hyperledger Fabric?</body>
+            <answers>
+                <answer>
+                    <body>Apache Kafka</body>
+                    <marks>
+                        <mark type="keyword">apache kafka</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="71">
+            <body>How does Hyperledger Fabric increase read performance on the Blockchain?</body>
+            <answers>
+                <answer>
+                    <body>Fabric uses a database that contains the current state of the ledger. Per default this state
+                        database is based on LevelDB, which is a key-value store.
+                    </body>
+                    <marks>
+                        <mark type="keyword">database</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="72">
+            <body>What is Hyperledger Composer and what motivates its existence?</body>
+            <answers>
+                <answer>
+                    <body>Composer is a toolset to develop and deploy Blockchain solutions. Developing blockchain-based
+                        solutions using Fabric is usually a complex process. Besides programming the actual business
+                        logic, a lot of management and policy overhead comes on top.
+                    </body>
+                    <marks>
+                        <mark type="keyword">toolset</mark>
+                        <mark type="keyword">develop</mark>
+                        <mark type="keyword">complex</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="73">
+            <body>What are the three components a business service provider needs to develop for Hyperledger Fabric?
+            </body>
+            <answers>
+                <answer>
+                    <body>Smart Contracts (logic deployed to the Blockchain), Business Logic (services that interact
+                        with registries), and Presentation Logic (front-end for the end user).
+                    </body>
+                    <marks>
+                        <mark type="keyword">smart contract</mark>
+                        <mark type="keyword">business logic</mark>
+                        <mark type="keyword">presentation logic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
