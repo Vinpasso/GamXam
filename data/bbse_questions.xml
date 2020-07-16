@@ -1107,5 +1107,201 @@
             </answers>
         </question>
 
+        <!-- Corda -->
+        <question type="extended-answer" id="74">
+            <body>What are 5 of the Corda Business Principles?</body>
+            <answers>
+                <answer>
+                    <body>Assured Identity, Inclusion, Privacy, Shared Logic, and Immutability.</body>
+                    <marks>
+                        <mark type="keyword">assured identity</mark>
+                        <mark type="keyword">inclusion</mark>
+                        <mark type="keyword">privacy</mark>
+                        <mark type="keyword">shared logic</mark>
+                        <mark type="keyword">immutability</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="75">
+            <body>What are the 5 Corda Architectural Principles?</body>
+            <answers>
+                <answer>
+                    <body>Scalability, Longevity, Security, Stability, and Interoperability.</body>
+                    <marks>
+                        <mark type="keyword">scalability</mark>
+                        <mark type="keyword">longevity</mark>
+                        <mark type="keyword">security</mark>
+                        <mark type="keyword">stability</mark>
+                        <mark type="keyword">interoperability</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="76">
+            <body>What are the 5 entities making up the Corda Foundation?</body>
+            <answers>
+                <answer>
+                    <body>Governing Board (11 directors), Technical Advisory Committee, Governance Advisory Committee,
+                        Network Operator, and Participant Community.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Governing Board</mark>
+                        <mark type="keyword">Technical Advisory Committee</mark>
+                        <mark type="keyword">Governance Advisory Committee</mark>
+                        <mark type="keyword">Network Operator</mark>
+                        <mark type="keyword">Participant Community</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="77">
+            <body>How is Corda financed?</body>
+            <answers>
+                <answer>
+                    <body>There is an annual participation fee (fixed fee) as well as a transaction notary fee (per-use
+                        basis) for all participants.
+                    </body>
+                    <marks>
+                        <mark type="keyword">participation fee</mark>
+                        <mark type="keyword">transaction notary fee</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="78">
+            <body>What are some novel features of Corda?</body>
+            <answers>
+                <answer>
+                    <body>Entities behind nodes are legally identifiable. Nodes are arranged in a peer to peer
+                        permissioned network. All communication is direct. Transactions may execute in parallel. There
+                        is no central ledger shared by all participants resulting in private transactions.
+                    </body>
+                    <marks>
+                        <mark type="keyword">legally identifiable</mark>
+                        <mark type="keyword">peer to peer permissioned network</mark>
+                        <mark type="keyword">communication is direct</mark>
+                        <mark type="keyword">execute in parallel</mark>
+                        <mark type="keyword">private transaction</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="79">
+            <body>What is a Vault in Corda?</body>
+            <answers>
+                <answer>
+                    <body>Every node on the network maintains its own vault being a set of facts. Facts are shared by
+                        several nodes.
+                    </body>
+                    <marks>
+                        <mark type="keyword">set of facts</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="80">
+            <body>What is a State in Corda?</body>
+            <answers>
+                <answer>
+                    <body>A state is an immutable object representing a fact over which agreement is reached. It
+                        contains arbitrary data to represent any kind of fact.
+                    </body>
+                    <marks>
+                        <mark type="keyword">immutable object</mark>
+                        <mark type="keyword">arbitrary data</mark>
+                        <mark type="keyword">fact</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="81">
+            <body>What is a Contract in Corda?</body>
+            <answers>
+                <answer>
+                    <body>It is a set of functions which specify constraints that ensure state transitions are valid
+                        according to pre-agreed rules. Contracts are deterministic.
+                    </body>
+                    <marks>
+                        <mark type="keyword">set of functions</mark>
+                        <mark type="keyword">specify constraints</mark>
+                        <mark type="keyword">deterministic</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="82">
+            <body>What are the two prerequisites for a transaction to be valid in Corda?</body>
+            <answers>
+                <answer>
+                    <body>All required signers must have digitally signed the transaction and it has to be contractually
+                        valid.
+                    </body>
+                    <marks>
+                        <mark type="keyword">digitally signed</mark>
+                        <mark type="keyword">contractually valid</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="83">
+            <body>What are Flows in Corda?</body>
+            <answers>
+                <answer>
+                    <body>Flows automate the process of a ledger update. A flow is a sequence of steps that tells a node
+                        how to achieve a specific ledger update. It enables parties to coordinate actions without a
+                        central controller
+                    </body>
+                    <marks>
+                        <mark type="keyword">sequence of steps</mark>
+                        <mark type="keyword">ledger update</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="84">
+            <body>What are the two types of consensus that must be reached before a transaction can be committed in
+                Corda?
+            </body>
+            <answers>
+                <answer>
+                    <body>Validity consensus and uniqueness consensus.</body>
+                    <marks>
+                        <mark type="keyword">validity</mark>
+                        <mark type="keyword">uniqueness</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="85">
+            <body>What is a Notary Cluster in Corda?</body>
+            <answers>
+                <answer>
+                    <body>It is a network service that provides uniqueness consensus. It notarises a transaction either
+                        through signing or rejecting it. Every state has an appointed notary cluster.
+                    </body>
+                    <marks>
+                        <mark type="keyword">service</mark>
+                        <mark type="keyword">uniqueness consensus</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="86">
+            <body>What is a CorDapp?</body>
+            <answers>
+                <answer>
+                    <body>CorDapps (Corda Distributed Applications) are distributed applications that run on the Corda
+                        platform. The goal of a CorDapp is to allow nodes to reach agreement on updates to the ledger.
+                        They achieve this goal by defining flows that Corda node owners can invoke over RPC
+                    </body>
+                    <marks>
+                        <mark type="keyword">distributed applications</mark>
+                        <mark type="keyword">RPC</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
     </body>
 </exam>
