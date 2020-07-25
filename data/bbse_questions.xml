@@ -568,7 +568,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="38">
-            <body>Name two different ways how a mined transaction can fail.</body>
+            <body>Name two different ways how a mined transaction can fail in Ethereum.</body>
             <answers>
                 <answer>
                     <body>Transaction runs out of gas; Transaction gets reverted</body>
@@ -1303,77 +1303,22 @@
             </answers>
         </question>
 
-        <!-- Zero Knowledge Proofs -->
-        <question type="extended-answer" id="87">
-            <body>What is a zero-knowledge proof (ZKP)?</body>
+        <!-- Additions -->
+        <question type="extended-answer" id="1000">
+            <body>What are three of the properties of the Ethereum World Computer?</body>
             <answers>
                 <answer>
-                    <body>A zero-knowledge proof is a method by which one party (the prover) can prove to another party
-                        (the verifier) that the prover knows a value x, without conveying any further information apart
-                        from the fact that they know the value x.
+                    <body>All participants are using the same computer; Users issue transactions to call programs on the
+                        computer; Using the computer's resources costs money
                     </body>
                     <marks>
-                        <mark type="keyword">know</mark>
-                        <mark type="keyword">without conveying any further information</mark>
+                        <mark type="keyword">same computer</mark>
+                        <mark type="keyword">transactions to call programs</mark>
+                        <mark type="keyword">cost</mark>
                     </marks>
                 </answer>
             </answers>
         </question>
-        <question type="extended-answer" id="88">
-            <body>What are the three properties of ZKP?</body>
-            <answers>
-                <answer>
-                    <body>Completeness (statement is true if an honest prover can convince an honest verifier),
-                        soundness (a dishonest prover can not fool the verifier), and zero knowledge (no information is
-                        revealed to the verifier).
-                    </body>
-                    <marks>
-                        <mark type="keyword">completeness</mark>
-                        <mark type="keyword">soundness</mark>
-                        <mark type="keyword">zero knowledge</mark>
-                    </marks>
-                </answer>
-            </answers>
-        </question>
-        <question type="extended-answer" id="89">
-            <body>What are the properties involved in the Blockchain Trilemma?</body>
-            <answers>
-                <answer>
-                    <body>Scalability, security, and decentralization.</body>
-                    <marks>
-                        <mark type="keyword">scalability</mark>
-                        <mark type="keyword">security</mark>
-                        <mark type="keyword">decentralization</mark>
-                    </marks>
-                </answer>
-            </answers>
-        </question>
-        <question type="extended-answer" id="90">
-            <body>What are the properties involved in the privacy dilemma?</body>
-            <answers>
-                <answer>
-                    <body>Transparency and privacy.</body>
-                    <marks>
-                        <mark type="keyword">transparency</mark>
-                        <mark type="keyword">privacy</mark>
-                    </marks>
-                </answer>
-            </answers>
-        </question>
-        <question type="extended-answer" id="91">
-            <body>What does the PCP theorem state?</body>
-            <answers>
-                <answer>
-                    <body>Every decision problem in the NP complexity class has probabilistically checkable proofs of
-                        constant query complexity and logarithmic randomness complexity.
-                    </body>
-                    <marks>
-                        <mark type="keyword">probabilistically checkable proofs</mark>
-                        <mark type="keyword">constant query complexity</mark>
-                        <mark type="keyword">logarithmic randomness complexity</mark>
-                    </marks>
-                </answer>
-            </answers>
-        </question>
+
     </body>
 </exam>
