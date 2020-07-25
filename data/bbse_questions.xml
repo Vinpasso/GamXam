@@ -466,17 +466,15 @@
 
         <!-- Exercise 6 -->
         <question type="extended-answer" id="31">
-            <body>Name the four use case examples of smart contracts from the lecture.</body>
+            <body>Name three use case examples of smart contracts.</body>
             <answers>
                 <answer>
-                    <body>Token systems, Identity and reputation systems, Decentralized Autonomous Organization, and
-                        Election and voting systems.
+                    <body>Gambling, Voting, Name registrars (e.g. DNS).
                     </body>
                     <marks>
-                        <mark type="keyword">token</mark>
-                        <mark type="keyword">Identity and reputation</mark>
-                        <mark type="keyword">decentralized autonomous organization</mark>
-                        <mark type="keyword">election and voting</mark>
+                        <mark type="keyword">gambling</mark>
+                        <mark type="keyword">voting</mark>
+                        <mark type="keyword">name registrar</mark>
                     </marks>
                 </answer>
             </answers>
