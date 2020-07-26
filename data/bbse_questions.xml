@@ -1317,6 +1317,20 @@
                 </answer>
             </answers>
         </question>
+        <question type="extended-answer" id="1001">
+            <body>What is the 4-tuple representing an account for Ethereum?</body>
+            <answers>
+                <answer>
+                    <body>Nonce, balance, contract_code, and storage.</body>
+                    <marks>
+                        <mark type="keyword">nonce</mark>
+                        <mark type="keyword">balance</mark>
+                        <mark type="keyword">contract_code</mark>
+                        <mark type="keyword">storage</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
 
     </body>
 </exam>
