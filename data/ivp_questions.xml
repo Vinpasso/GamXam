@@ -1982,12 +1982,12 @@
             <body>Was sind die Zusammenhänge von TPS, der schlanke Produktion und der Ganzheitliche Produktion?</body>
             <answers>
                 <answer>
-                    <body>TPS ist ein Vertreter der Ganzheitlichen Produktionssysteme, aus denen dann wiederum schlanke
-                        Produktion hervorgegangen ist.
+                    <body>Das TPS ist der Ursprung der schlanken Produktion. Ganzheitliche Produktion ist das Anwenden
+                        der Grundsätze schlanker Produktion auf alle Prozesse im Unternehmen.
                     </body>
                     <marks>
-                        <mark type="keyword">Vertreter</mark>
-                        <mark type="keyword">hervorgegangen</mark>
+                        <mark type="keyword">Ursprung</mark>
+                        <mark type="keyword">alle Prozesse</mark>
                     </marks>
                 </answer>
             </answers>
@@ -2169,5 +2169,191 @@
             </answers>
         </question>
 
+        <!-- Einführung in die Fabrikplanung -->
+        <question type="extended-answer" id="142">
+            <body>Wie ist Fabrikplanung definiert?</body>
+            <answers>
+                <answer>
+                    <body>Der systematische, zielorientierte, in aufeinander aufbauende Phasen strukturierte und unter
+                        Zuhilfenahme von Methoden und Werkzeugen durchgeführte Prozess zur Planung einer Fabrik von der
+                        Zielfestlegung bis zum Hochlauf der Produktion.
+                    </body>
+                    <marks>
+                        <mark type="keyword">systematisch</mark>
+                        <mark type="keyword">Prozess</mark>
+                        <mark type="keyword">Zielfestlegung</mark>
+                        <mark type="keyword">Hochlauf</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="143">
+            <body>Was unterscheidet die Green Field von der Brown Field Planung?</body>
+            <answers>
+                <answer>
+                    <body>Bei ersterer handelt es sich um Neuplanung, bei letzterer um Umplanung.</body>
+                    <marks>
+                        <mark type="keyword">Neuplanung</mark>
+                        <mark type="keyword">Umplanung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="144">
+            <body>Welche Rolle spielen die Kundenwünsche bei der Fabrikplanung?</body>
+            <answers>
+                <answer>
+                    <body>Die Produktion benötigt Wandlungsfähigkeit, um auf Kundenwünsche zu reagieren. In der Planung
+                        muss gesichert werden, dass diese Wandlungsfähigkeit besteht, während gleichzeitig Stabilität
+                        gewahrt wird.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Wandlungsfähigkeit</mark>
+                        <mark type="keyword">Stabilität</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Phasenmodell des Fabrikplanungsprozesses -->
+        <question type="extended-answer" id="145">
+            <body>Was sind die 7 Phasen des Phasenmodells des Fabrikplanungsprozesses?</body>
+            <answers>
+                <answer>
+                    <body>Zielfestlegung, Grundlagenermittlung, Konzeptplanung, Detailplanung,
+                        Realisierungsvorbereitung, Realisierungsüberwachung und Hochlaufbetreuung.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Zielfestlegung</mark>
+                        <mark type="keyword">Grundlagenermittlung</mark>
+                        <mark type="keyword">Konzeptplanung</mark>
+                        <mark type="keyword">Detailplanung</mark>
+                        <mark type="keyword">Realisierungsvorbereitung</mark>
+                        <mark type="keyword">Realisierungsüberwachung</mark>
+                        <mark type="keyword">Hochlaufbetreuung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Bestandsdigitalisierung -->
+        <question type="extended-answer" id="146">
+            <body>In welcher Phase des Laserscannings fallen die größten Aufwände an?</body>
+            <answers>
+                <answer>
+                    <body>Bei der Nachbereitung. Die Verarbeitung der angefallenen Daten geschieht hauptsächlich
+                        manuell.
+                    </body>
+                    <marks>
+                        <mark type="keyword">nachbereitung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="147">
+            <body>In welche Phase des Fabrikplanungsprozesses ist die Bestandsdigitalisierung einzuordnen?</body>
+            <answers>
+                <answer>
+                    <body>Grundlagenermittlung</body>
+                    <marks>
+                        <mark type="keyword">Grundlagenermittlung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Building Information Modeling -->
+        <question type="extended-answer" id="148">
+            <body>Was ist BIM?</body>
+            <answers>
+                <answer>
+                    <body>Building Information Modeling ist eine kollaborative Arbeitsmethodik, mit der auf der
+                        Grundlage digitaler Modelle eines Bauwerks die für seinen Lebenszyklus relevanten Daten und
+                        Informationen konsistent erfasst, verwaltet und in einer transparenten Kommunikation zwischen
+                        den Beteiligten ausgetauscht oder für die weitere Bearbeitung übergeben werden.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Building Information Modeling</mark>
+                        <mark type="keyword">kollaborative Arbeitsmethodik</mark>
+                        <mark type="keyword">Modelle</mark>
+                        <mark type="keyword">Daten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="149">
+            <body>Inwiefern kann BIM bei der Zielerreichung in der Fabrikplanung unterstützen?</body>
+            <answers>
+                <answer>
+                    <body>BIM hilft beispielsweise bei der Layoutplanung und dient generell als Datenschnittstelle. Auch
+                        Visualisierung, sowie Zeit-und Kostenmanagement sind Nutzungsmöglichkeiten von BIM.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Layoutplanung</mark>
+                        <mark type="keyword">Datenschnittstelle</mark>
+                        <mark type="keyword">Visualisierung</mark>
+                        <mark type="keyword">management</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="150">
+            <body>In welchen Phasen des Fabrikplanungsprozesses kann BIM unterstützen?</body>
+            <answers>
+                <answer>
+                    <body>Grundlagenermittlung, Konzeptplanung, Detailplanung, Realisierungsvorbereitung,
+                        Realisierungsüberwachung und Hochlaufbetreuung.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Grundlagenermittlung</mark>
+                        <mark type="keyword">Konzeptplanung</mark>
+                        <mark type="keyword">Detailplanung</mark>
+                        <mark type="keyword">Realisierungsvorbereitung</mark>
+                        <mark type="keyword">Realisierungsüberwachung</mark>
+                        <mark type="keyword">Hochlaufbetreuung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Digitale Planungstools -->
+        <question type="extended-answer" id="151">
+            <body>Welche Kosten sind für die Layoutplanung am relevantesten?</body>
+            <answers>
+                <answer>
+                    <body>Materialflusskosten</body>
+                    <marks>
+                        <mark type="keyword">Materialflusskosten</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="152">
+            <body>Wofür werden mathematische Zuordnungsverfahren in der Fabrikplanung eingesetzt?</body>
+            <answers>
+                <answer>
+                    <body>Um ein optimales Layout für die Idealplanung zu erstellen.</body>
+                    <marks>
+                        <mark type="keyword">layout</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="153">
+            <body>Was ist der Unterschied zwischen Planungs- und Simulationswerkzeugen?</body>
+            <answers>
+                <answer>
+                    <body>Simulationssoftware abstrahiert ein bereits ausgelegtes Produktionsmodell in ein
+                        Simulationsmodell und erlaubt virtuelle Experimente zur Bestimmung des Produktionsprogramms.
+                        Gegenteilig dazu startet Planungssoftware mit einem Produktionsprogramm und legt das
+                        Produktionsmodell passend dazu aus.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Produktionsmodell</mark>
+                        <mark type="keyword">Produktionsprogramm</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
