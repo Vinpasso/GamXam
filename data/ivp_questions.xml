@@ -2355,5 +2355,57 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Visualisierungstechniken -->
+        <question type="extended-answer" id="154">
+            <body>Welche 4 Visualisierungstechniken zur Fabrikplanung werden in der Vorlesung genannt?</body>
+            <answers>
+                <answer>
+                    <body>Virtual Reality (VR), Augmented Reality (AR), Cave Automatic Virtual Environment (CAVE) und
+                        Partizipativer Planungstisch.
+                    </body>
+                    <marks>
+                        <mark type="keyword">VR</mark>
+                        <mark type="keyword">AR</mark>
+                        <mark type="keyword">cave</mark>
+                        <mark type="keyword">partizipativer planungstisch</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+
+        <!-- Matrixproduktion -->
+        <question type="extended-answer" id="155">
+            <body>Was ist Matrixproduktion?</body>
+            <answers>
+                <answer>
+                    <body>Die Matrixproduktion ist ein flexibles, flussorientiertes, taktzeitunabhängiges
+                        Produktionssystem basierend auf individuellen Produktionszellen. Im Umfeld einer zunehmenden
+                        Individualisierung von Produkten wird dadurch eine flexible Massenproduktion realisiert, ohne
+                        auf die Wirtschaftlichkeit einer Fließfertigung zu verzichten.
+                    </body>
+                    <marks>
+                        <mark type="keyword">flex</mark>
+                        <mark type="keyword">flussorientiert</mark>
+                        <mark type="keyword">Produktionszelle</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="156">
+            <body>Welche Vorteile bietet die Matrixproduktion gegenüber konventionellen Produktionssystemen?</body>
+            <answers>
+                <answer>
+                    <body>Große Flexibilität der Stückzahl, produktflexible Produktion und keine Taktzeitsynchronisation
+                        ist notwendig.
+                    </body>
+                    <marks>
+                        <mark type="keyword">stückzahl</mark>
+                        <mark type="keyword">produktflexib</mark>
+                        <mark type="keyword">Taktzeitsynchronisation</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
