@@ -56,7 +56,7 @@
             <answers>
                 <answer>
                     <body>Ein object, dass in der Lage ist, seinen Zustand oder sein Handeln als Reaktion auf
-                        unterschiedliche Situationen und ERfahrungen aus der Vergangenheit zu verändern.
+                        unterschiedliche Situationen und Erfahrungen aus der Vergangenheit zu verändern.
                     </body>
                     <marks>
                         <mark type="keyword">Zustand</mark>
@@ -622,13 +622,13 @@
             <body>Was sind die 4 agilen Werte?</body>
             <answers>
                 <answer>
-                    <body>Individuent und Interaktionen (stehen über Prozessen und Werkzeugen), Funktionierende
+                    <body>Individuen und Interaktionen (stehen über Prozessen und Werkzeugen), Funktionierende
                         Softwaware (steht über einer umfassenden Dokumentation), Zusammenarbeit mit dem Kunden (steht
                         über der Vertragsverhandlung), und Reagieren auf Veränderung (steht über dem Befolgen eines
                         Plans).
                     </body>
                     <marks>
-                        <mark type="keyword">Individuent und Interaktionen</mark>
+                        <mark type="keyword">Individuen und Interaktionen</mark>
                         <mark type="keyword">Funktionierende Softwaware</mark>
                         <mark type="keyword">Zusammenarbeit mit dem Kunden</mark>
                         <mark type="keyword">Reagieren auf Veränderung</mark>
@@ -1010,9 +1010,9 @@
             <body>Wofür steht CNC?</body>
             <answers>
                 <answer>
-                    <body>Computerized Numeric Control</body>
+                    <body>Computerized Numerical Control</body>
                     <marks>
-                        <mark type="keyword">Computerized Numeric Control</mark>
+                        <mark type="keyword">Computerized Numerical Control</mark>
                     </marks>
                 </answer>
             </answers>
@@ -1800,7 +1800,7 @@
             <body>Wie ermittelt man den idealen Mindestbestand?</body>
             <answers>
                 <answer>
-                    <body>Der ideale Mindestbestand wird so gewählt, dass die Leistung der Anlage maximalist.
+                    <body>Der ideale Mindestbestand wird so gewählt, dass die Leistung der Anlage maximal ist.
                     </body>
                     <marks>
                         <mark type="keyword">Leistung</mark>
@@ -2340,7 +2340,7 @@
             </answers>
         </question>
         <question type="extended-answer" id="153">
-            <body>Was ist der Unterschied zwischen Planungs- und Simulationswerkzeugen?</body>
+            <body>Was ist der Unterschied zwischen Planungs- und Simulationswerkzeugen für die Fabrikplanung?</body>
             <answers>
                 <answer>
                     <body>Simulationssoftware abstrahiert ein bereits ausgelegtes Produktionsmodell in ein
