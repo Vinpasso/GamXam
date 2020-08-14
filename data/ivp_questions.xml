@@ -1453,7 +1453,7 @@
             <body>Wie grenzen sich PPS von ERP und MES ab?</body>
             <answers>
                 <answer>
-                    <body>PPS ist Teil von ERP und MES.</body>
+                    <body>PPS ist Teil von ERP und MES ist die Schnittstelle zwischen ERP und der Fertigung.</body>
                     <marks>
                         <mark type="keyword">Teil</mark>
                     </marks>
