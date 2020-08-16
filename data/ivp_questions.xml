@@ -2407,5 +2407,41 @@
                 </answer>
             </answers>
         </question>
+
+        <!-- Klausurvorbereitung -->
+        <question type="extended-answer" id="200">
+            <body>Die Vernetzung in der Produktion ist durch drei wesentliche Grundelemente gekennzeichnet. Welche sind
+                es?
+            </body>
+            <answers>
+                <answer>
+                    <body>
+                        Horizontale Integration, Vertikale Integration und Durchgängiges Engineering.
+                    </body>
+                    <marks>
+                        <mark type="keyword">Horizontale Integration</mark>
+                        <mark type="keyword">Vertikale Integration</mark>
+                        <mark type="keyword">Durchgängiges Engineering</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
+        <question type="extended-answer" id="201">
+            <body>Was sind die 5 Funktionsgruppen im PPS-Modell nach Hackstein (von oben nach unten)?</body>
+            <answers>
+                <answer>
+                    <body>Produktionsprogrammplanung, Mengenplanung, Termin- u. Kapazitätsplanung, Auftragsveranlassung,
+                        Auftragsüberwachung
+                    </body>
+                    <marks>
+                        <mark type="keyword">Produktionsprogrammplanung</mark>
+                        <mark type="keyword">Mengenplanung</mark>
+                        <mark type="keyword">Termin- u. Kapazitätsplanung</mark>
+                        <mark type="keyword">Auftragsveranlassung</mark>
+                        <mark type="keyword">Auftragsüberwachung</mark>
+                    </marks>
+                </answer>
+            </answers>
+        </question>
     </body>
 </exam>
